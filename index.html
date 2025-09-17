@@ -93,5 +93,19 @@
         </p>
       </span>
     </footer>
+    <script>
+      (function() {
+        const source = (new URLSearchParams(window.location.search)).get('utm_source');
+        if (!source) return;
+
+        document.querySelectorAll('a').forEach(function(link) {
+          if (link.href.startsWith('https://chromewebstore.google.com/')) {
+            link.href += '?utm_source=' + encodeURIComponent(source);
+          } else if (link.href.startsWith('https://apps.apple.com/')) {
+            link.href += '?ct=' + encodeURIComponent(source);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
