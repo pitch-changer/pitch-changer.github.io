@@ -12,6 +12,13 @@
     <meta property="og:description" content="Change key of songs, shift pitch and transpose music for practice, karaoke or production. Available as a Chrome extension and Mac app." />
     <meta property="og:url" content="https://pitch-changer.com/" />
     <meta property="og:type" content="website" />
+    <script>
+      if (navigator.userAgentData.platform !== 'macOS') {
+        let st = document.createElement('style');
+        st.innerText = '.hide-if-not-mac { display: none; }';
+        document.head.appendChild(st);
+      }
+    </script>
   </head>
   <body class="bg-white dark:bg-gray-900">
     <header class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
@@ -29,22 +36,21 @@
         for practice, karaoke, teaching or&nbsp;production.
       </p>
       <p class="text-2xl">
-        Use it online on any website in your browser or offline on your Mac.
+        Use it online on any website in your browser<span class="hide-if-not-mac"> or offline on your Mac</span>.
       </p>
       <div>
         <a
             target="_blank"
             href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
-            class="mt-10 inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
           <div>
             <div>Add Pitch Changer Online</div>
             <div class="text-xl">to your browser</div>
           </div>
-        </a>
-        <a
+        </a><a
             target="_blank"
             href="https://apps.apple.com/app/id6749900880"
-            class="mt-10 inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            class="hide-if-not-mac mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
           <div>
             <div>Add Pitch Changer Offline</div>
             <div class="text-xl">to your Mac</div>
