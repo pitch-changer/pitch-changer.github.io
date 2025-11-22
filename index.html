@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://pitch-changer.com/" />
     <meta property="og:type" content="website" />
     <script>
-      if (navigator.userAgentData.platform !== 'macOS') {
+      if (navigator.userAgentData && navigator.userAgentData.platform !== 'macOS') {
         let st = document.createElement('style');
         st.innerText = '.hide-if-not-mac { display: none; }';
         document.head.appendChild(st);
