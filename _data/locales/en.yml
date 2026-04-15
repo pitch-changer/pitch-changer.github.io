@@ -161,20 +161,21 @@ get_started:
     one: review
     other: reviews
 llms:
-  index_intro: Localized LLMS documents for Pitch Changer.
-  full_index_intro: Localized LLMS documents for Pitch Changer, including the broader listing for each available locale.
-  locale_index_heading: Available locales
+  index_intro: Quick reference documents for musicians using Pitch Changer in each supported language.
+  full_index_intro: Reference documents for musicians using Pitch Changer in each supported language, with the fuller version for every available locale.
+  locale_index_heading: Available languages
   home_link_label: Home
   concise_link_label: LLMS
   full_link_label: LLMS Full
-  concise_intro: Curated overview of the main Pitch Changer page in this locale.
-  full_intro: Broader overview of the available Pitch Changer pages in this locale.
+  lead: Pitch Changer helps you rehearse, teach, sing, and prepare tracks in a more comfortable key, whether you work in the browser or with audio files on Apple devices.
+  concise_intro: This short guide covers the main place to learn when Pitch Changer is the right fit and how it helps in practice.
+  full_intro: This reference covers the available Pitch Changer pages in this language and keeps the focus on musical tasks, file handling, and choosing the right version of the tool.
   sections:
     site: Site
   pages:
     home:
       title: Pitch Changer
-      summary: Change key of songs for practice, karaoke, teaching, and production online in the browser or offline on iPhone, iPad, and Mac.
+      summary: Start here to see how Pitch Changer helps singers, teachers, instrumentalists, producers, and DJs change key, transpose songs, and choose between the browser extension for websites and the offline app for files.
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee

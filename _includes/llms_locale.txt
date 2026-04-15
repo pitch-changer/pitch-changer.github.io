@@ -2,7 +2,7 @@
 {%- assign locale_data = site.data.locales[locale_code] -%}
 # {{ locale_data.hero.title }}
 
-> {{ locale_data.meta.description }}
+> {{ locale_data.llms.lead }}
 
 {% if include.level == "full" %}
 {{ locale_data.llms.full_intro }}
