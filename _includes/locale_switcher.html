@@ -11,22 +11,21 @@
 
     <div class="locale-switcher-menu">
       <ul class="grid gap-1">
-        {% for locale_code in site.locales %}
-          <li>
-            <a
-              href="{{ site.data.locales[locale_code].site.path | relative_url }}"
-              class="locale-switcher-link"
-              lang="{{ site.data.locales[locale_code].site.lang }}"
-              hreflang="{{ site.data.locales[locale_code].site.lang }}"
-              {% if locale_code == include.locale_code %}aria-current="page"{% endif %}
-              data-locale-link
-              data-locale-code="{{ locale_code }}"
-            >
-              <span class="whitespace-nowrap">{{ site.data.locales[locale_code].site.native_label }}</span>
-              <span class="locale-switcher-abbr">{{ site.data.locales[locale_code].site.locale_label }}</span>
-            </a>
-          </li>
-        {% endfor %}
+{% for locale_code in site.locales -%}
+        <li>
+          <a
+            href="{{ site.data.locales[locale_code].site.path | relative_url }}"
+            class="locale-switcher-link"
+            lang="{{ site.data.locales[locale_code].site.lang }}"
+            hreflang="{{ site.data.locales[locale_code].site.lang }}"{% if locale_code == include.locale_code %} aria-current="page"{% endif %}
+            data-locale-link
+            data-locale-code="{{ locale_code }}"
+          >
+            <span class="whitespace-nowrap">{{ site.data.locales[locale_code].site.native_label }}</span>
+            <span class="locale-switcher-abbr">{{ site.data.locales[locale_code].site.locale_label }}</span>
+          </a>
+        </li>
+{% endfor -%}
       </ul>
     </div>
   </details>

@@ -1,8 +1,8 @@
-{% assign locale_data = site.data.locales[page.locale] %}
-{% assign product_facts = site.data.product_facts.pitch_changer %}
-{% assign online_facts = product_facts.online %}
-{% assign offline_facts = product_facts.offline %}
-{% assign page_absolute_url = page.url | absolute_url %}
+{%- assign locale_data = site.data.locales[page.locale] -%}
+{%- assign product_facts = site.data.product_facts.pitch_changer -%}
+{%- assign online_facts = product_facts.online -%}
+{%- assign offline_facts = product_facts.offline -%}
+{%- assign page_absolute_url = page.url | absolute_url -%}
 <!DOCTYPE html>
 <html lang="{{ locale_data.site.lang }}">
   <head>
@@ -19,9 +19,9 @@
     <link rel="icon" sizes="16x16" type="image/png" href="{{ '/icons/16.png' | relative_url }}" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="canonical" href="{{ page_absolute_url }}" />
-    {% for locale_code in site.locales %}
-      <link rel="alternate" hreflang="{{ site.data.locales[locale_code].site.lang }}" href="{{ site.data.locales[locale_code].site.path | absolute_url }}" />
-    {% endfor %}
+{% for locale_code in site.locales -%}
+    <link rel="alternate" hreflang="{{ site.data.locales[locale_code].site.lang }}" href="{{ site.data.locales[locale_code].site.path | absolute_url }}" />
+{% endfor -%}
     <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}" />
     <style>
       .locale-switcher {
@@ -209,16 +209,16 @@
         ]
       }
     </script>
-    {% include faq_structured_data.html
-      faq_schema_key=page.faq_schema_key
-      locale_code=page.locale
-      locale_data=locale_data
-      page_url=page_absolute_url
-      in_language=locale_data.site.lang
-    %}
+{% include faq_structured_data.html
+  faq_schema_key=page.faq_schema_key
+  locale_code=page.locale
+  locale_data=locale_data
+  page_url=page_absolute_url
+  in_language=locale_data.site.lang
+%}
   </head>
   <body class="bg-white dark:bg-gray-900">
-    {% include home_sections.html locale_code=page.locale %}
+{% include home_sections.html locale_code=page.locale %}
     <script>
       (function() {
         var localeLinks = document.querySelectorAll("[data-locale-link]");
