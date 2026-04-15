@@ -1,10 +1,11 @@
 <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
   <div class="mt-6 text-center">
-    <div class="mb-7 flex flex-wrap items-center gap-3">
+    <div class="mb-7 grid w-full items-center gap-3 md:grid-cols-[1fr_auto_1fr]">
+      <div aria-hidden="true" class="hidden md:block"></div>
       <a
         target="_blank"
         href="#offline"
-        class="inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
+        class="justify-self-center inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
         role="alert"
       >
         <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">{{ site.data.locales[include.locale_code].hero.badge_label }}</span>
@@ -13,7 +14,9 @@
           <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
         </svg>
       </a>
-      {% include locale_switcher.html locale_code=include.locale_code %}
+      <div class="justify-self-center md:justify-self-end">
+        {% include locale_switcher.html locale_code=include.locale_code %}
+      </div>
     </div>
     <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].hero.title }}</h1>
     <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ site.data.locales[include.locale_code].hero.subtitle }}</h2>
