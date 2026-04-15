@@ -160,6 +160,21 @@ get_started:
   review_count_labels:
     one: review
     other: reviews
+llms:
+  index_intro: Localized LLMS documents for Pitch Changer.
+  full_index_intro: Localized LLMS documents for Pitch Changer, including the broader listing for each available locale.
+  locale_index_heading: Available locales
+  home_link_label: Home
+  concise_link_label: LLMS
+  full_link_label: LLMS Full
+  concise_intro: Curated overview of the main Pitch Changer page in this locale.
+  full_intro: Broader overview of the available Pitch Changer pages in this locale.
+  sections:
+    site: Site
+  pages:
+    home:
+      title: Pitch Changer
+      summary: Change key of songs for practice, karaoke, teaching, and production online in the browser or offline on iPhone, iPad, and Mac.
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee

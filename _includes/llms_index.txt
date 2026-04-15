@@ -1,0 +1,14 @@
+{%- assign default_locale = site.default_locale -%}
+{%- assign default_locale_data = site.data.locales[default_locale] -%}
+# {{ default_locale_data.hero.title }}
+
+> {% if include.level == "full" %}{{ default_locale_data.llms.full_index_intro }}{% else %}{{ default_locale_data.llms.index_intro }}{% endif %}
+
+## {{ default_locale_data.llms.locale_index_heading }}
+
+{% for locale_code in site.locales %}
+{% assign locale_data = site.data.locales[locale_code] %}
+{% assign concise_path = "/" | append: locale_code | append: "/llms.txt" %}
+{% assign full_path = "/" | append: locale_code | append: "/llms-full.txt" %}
+- {{ locale_data.site.native_label }} ({{ locale_code }}): [{{ default_locale_data.llms.home_link_label }}]({{ locale_data.site.path | absolute_url }}) | [{{ default_locale_data.llms.concise_link_label }}]({{ concise_path | absolute_url }}) | [{{ default_locale_data.llms.full_link_label }}]({{ full_path | absolute_url }})
+{% endfor %}

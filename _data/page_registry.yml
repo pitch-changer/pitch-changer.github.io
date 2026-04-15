@@ -1,0 +1,8 @@
+pages:
+  - id: home
+    sitemap: true
+    llms_level: concise
+    llms_section: site
+    paths:
+      en: /
+      ru: /ru/

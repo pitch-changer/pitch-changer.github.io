@@ -161,6 +161,21 @@ get_started:
     one: отзыв
     few: отзыва
     many: отзывов
+llms:
+  index_intro: Локализованные LLMS-документы для Pitch Changer.
+  full_index_intro: Локализованные LLMS-документы для Pitch Changer с более полным списком страниц для каждого доступного языка.
+  locale_index_heading: Доступные языки
+  home_link_label: Главная
+  concise_link_label: LLMS
+  full_link_label: LLMS Full
+  concise_intro: Краткий обзор основной страницы Pitch Changer для этого языка.
+  full_intro: Более полный обзор доступных страниц Pitch Changer для этого языка.
+  sections:
+    site: Сайт
+  pages:
+    home:
+      title: Pitch Changer
+      summary: Меняйте тональность песен для репетиций, караоке, преподавания и продакшена онлайн в браузере или офлайн на iPhone, iPad и Mac.
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee

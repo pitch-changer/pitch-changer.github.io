@@ -4,13 +4,26 @@ permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {% for locale_code in site.locales %}
+  {% for registry_page in site.data.page_registry.pages %}
+    {% if registry_page.sitemap %}
+      {% for locale_code in site.locales %}
+        {% assign page_path = registry_page.paths[locale_code] %}
+        {% if page_path %}
     <url>
-      <loc>{{ site.data.locales[locale_code].site.path | absolute_url }}</loc>
+      <loc>{{ page_path | absolute_url }}</loc>
       {% for alternate_code in site.locales %}
-        <xhtml:link rel="alternate" hreflang="{{ site.data.locales[alternate_code].site.lang }}" href="{{ site.data.locales[alternate_code].site.path | absolute_url }}" />
+        {% assign alternate_path = registry_page.paths[alternate_code] %}
+        {% if alternate_path %}
+        <xhtml:link rel="alternate" hreflang="{{ site.data.locales[alternate_code].site.lang }}" href="{{ alternate_path | absolute_url }}" />
+        {% endif %}
       {% endfor %}
-      <xhtml:link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}" />
+      {% assign default_path = registry_page.paths[site.default_locale] %}
+      {% if default_path %}
+      <xhtml:link rel="alternate" hreflang="x-default" href="{{ default_path | absolute_url }}" />
+      {% endif %}
     </url>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 </urlset>

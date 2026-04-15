@@ -1,0 +1,42 @@
+{%- assign locale_code = include.locale -%}
+{%- assign locale_data = site.data.locales[locale_code] -%}
+# {{ locale_data.hero.title }}
+
+> {{ locale_data.meta.description }}
+
+{% if include.level == "full" %}
+{{ locale_data.llms.full_intro }}
+{% else %}
+{{ locale_data.llms.concise_intro }}
+{% endif %}
+
+{%- for section in locale_data.llms.sections %}
+{%- assign section_key = section[0] -%}
+{%- assign section_title = section[1] -%}
+{%- capture section_body -%}
+{%- for registry_page in site.data.page_registry.pages -%}
+{%- assign localized_path = registry_page.paths[locale_code] -%}
+{%- assign include_page = false -%}
+{%- if localized_path and registry_page.llms_section == section_key -%}
+  {%- if include.level == "full" -%}
+    {%- if registry_page.llms_level == "concise" or registry_page.llms_level == "full" -%}
+      {%- assign include_page = true -%}
+    {%- endif -%}
+  {%- elsif registry_page.llms_level == "concise" -%}
+    {%- assign include_page = true -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if include_page -%}
+{%- assign page_copy = locale_data.llms.pages[registry_page.id] -%}
+- [{{ page_copy.title }}]({{ localized_path | absolute_url }}): {{ page_copy.summary }}
+{%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign section_body = section_body | strip -%}
+{%- if section_body != "" %}
+## {{ section_title }}
+
+{{ section_body }}
+
+{%- endif %}
+{%- endfor %}
