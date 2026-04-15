@@ -3,6 +3,8 @@ site:
   locale_label: RU
   native_label: Русский
   path: /ru/
+formatting:
+  decimal_separator: ','
 meta:
   title: "Изменить тональность: легко менять тональность песен онлайн и офлайн"
   description: Меняйте тональность песен на любом сайте, транспонируйте музыку для репетиций, караоке и продакшена. Доступно как расширение для браузера и приложение для iPhone, iPad и Mac.
@@ -141,7 +143,11 @@ faq:
       answer_html: Попробуйте наш <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. Он удаляет вокал из песни онлайн или офлайн и отлично сочетается с Pitch Changer.
     - question: Как изменить темп песни?
       answers: []
-      answer_html: Если нужно замедлить или ускорить музыку прямо на сайте, пока она уже играет, используйте <a href="https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj" class="underline">расширение «Изменить темп песни»</a>.<br /><br />Если нужно изменить темп собственного файла, сохранив тональность, используйте <a href="https://www.musiciantools.online/ru/изменить-темп-песни" class="underline">инструмент «Изменить темп песни» для файлов</a>.
+      linked_answers:
+        - tool_key: bpm_extension
+          template: Если нужно замедлить или ускорить музыку прямо на сайте, пока она уже играет, используйте TOOL_LINK.
+        - tool_key: speed_tool
+          template: Если нужно изменить темп собственного файла, сохранив тональность, используйте TOOL_LINK.
     - question: Есть ли бесплатный пробный период? Как устроена оплата?
       answers:
         - И расширение, и приложение для iPhone, iPad и Mac предлагают бесплатный пробный период без привязки карты.
@@ -160,6 +166,7 @@ get_started:
   line_1: Работаете ли вы в браузере или с локальными файлами на iPhone, iPad и Mac,
   line_2: Pitch Changer помогает менять тональность песен, сдвигать высоту и подстраивать музыку под вас, а не наоборот.
   rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL в Chrome Web Store"
+  review_count_rule: slavic
   review_count_labels:
     one: отзыв
     few: отзыва

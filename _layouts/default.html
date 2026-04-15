@@ -211,6 +211,7 @@
     </script>
     {% include faq_structured_data.html
       faq_schema_key=page.faq_schema_key
+      locale_code=page.locale
       locale_data=locale_data
       page_url=page_absolute_url
       in_language=locale_data.site.lang
@@ -259,25 +260,44 @@
             return;
           }
 
+          var localePaths = {
+            {% for locale_code in site.locales %}
+              {{ locale_code | jsonify }}: {{ site.data.locales[locale_code].site.path | jsonify }}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          };
+
           var targetLocale = null;
           try {
             targetLocale = window.localStorage.getItem("preferred_locale");
           } catch (error) {
           }
 
-          if (!targetLocale) {
-            var requestedLanguages = window.navigator.languages || [window.navigator.language || ""];
-            var prefersRussian = requestedLanguages.some(function(language) {
-              return /^ru(?:-|$)/i.test(language || "");
-            });
-
-            if (prefersRussian) {
-              targetLocale = "ru";
-            }
+          if (targetLocale && !localePaths[targetLocale]) {
+            targetLocale = null;
           }
 
-          if (targetLocale === "ru") {
-            window.location.replace("/ru/" + currentSearch + currentHash);
+          if (!targetLocale) {
+            var requestedLanguages = window.navigator.languages || [window.navigator.language || ""];
+            requestedLanguages.some(function(language) {
+              var normalizedLanguage = (language || "").toLowerCase();
+              var languageCode = normalizedLanguage.split("-")[0];
+
+              if (localePaths[normalizedLanguage]) {
+                targetLocale = normalizedLanguage;
+                return true;
+              }
+
+              if (localePaths[languageCode]) {
+                targetLocale = languageCode;
+                return true;
+              }
+
+              return false;
+            });
+          }
+
+          if (targetLocale && targetLocale !== {{ site.default_locale | jsonify }} && localePaths[targetLocale]) {
+            window.location.replace(localePaths[targetLocale] + currentSearch + currentHash);
           }
         {% endif %}
 

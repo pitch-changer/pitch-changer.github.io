@@ -4,6 +4,8 @@
 {% assign offline_facts = product_facts.offline %}
 {% assign rating_count = online_facts.rating.count | plus: 0 %}
 {% assign rating_value_display = online_facts.rating.value %}
+{% assign decimal_separator = locale_data.formatting.decimal_separator | default: '.' %}
+{% assign tempo_tools = site.data.cross_tool_links.tempo_tools[include.locale_code] %}
 
 {% assign online_weekly_price = online_facts.offers.weekly.price %}
 {% assign online_yearly_price = online_facts.offers.yearly.price %}
@@ -11,13 +13,13 @@
 {% assign offline_weekly_price = offline_facts.offers.weekly.price %}
 {% assign offline_yearly_price = offline_facts.offers.yearly.price %}
 
-{% if include.locale_code == "ru" %}
-  {% assign rating_value_display = rating_value_display | replace: '.', ',' %}
-  {% assign online_weekly_price = online_weekly_price | replace: '.', ',' %}
-  {% assign online_yearly_price = online_yearly_price | replace: '.', ',' %}
-  {% assign online_lifetime_price = online_lifetime_price | replace: '.', ',' %}
-  {% assign offline_weekly_price = offline_weekly_price | replace: '.', ',' %}
-  {% assign offline_yearly_price = offline_yearly_price | replace: '.', ',' %}
+{% if decimal_separator != '.' %}
+  {% assign rating_value_display = rating_value_display | replace: '.', decimal_separator %}
+  {% assign online_weekly_price = online_weekly_price | replace: '.', decimal_separator %}
+  {% assign online_yearly_price = online_yearly_price | replace: '.', decimal_separator %}
+  {% assign online_lifetime_price = online_lifetime_price | replace: '.', decimal_separator %}
+  {% assign offline_weekly_price = offline_weekly_price | replace: '.', decimal_separator %}
+  {% assign offline_yearly_price = offline_yearly_price | replace: '.', decimal_separator %}
 {% endif %}
 
 {% capture online_weekly_offer %}{{ locale_data.online.offer_templates.weekly | replace: 'PRICE_VALUE', online_weekly_price }}{% endcapture %}
@@ -216,6 +218,11 @@
     <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.question }}</h3>
     {% for answer in item.answers %}
       <p class="text-xl mb-4">{{ answer }}</p>
+    {% endfor %}
+    {% for linked_answer in item.linked_answers %}
+      {% assign linked_tool = tempo_tools[linked_answer.tool_key] %}
+      {% capture linked_tool_html %}<a href="{{ linked_tool.url }}" class="underline">{{ linked_tool.name }}</a>{% endcapture %}
+      <p class="text-xl mb-4">{{ linked_answer.template | replace: 'TOOL_LINK', linked_tool_html }}</p>
     {% endfor %}
     {% if item.answer_html %}
       <p class="text-xl mb-4">{{ item.answer_html }}</p>

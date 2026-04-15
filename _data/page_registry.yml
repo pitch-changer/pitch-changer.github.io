@@ -5,4 +5,10 @@ pages:
     llms_section: site
     paths:
       en: /
+      it: /it/
+      es: /es/
+      de: /de/
+      fr: /fr/
+      ja: /ja/
       ru: /ru/
+      uk: /uk/

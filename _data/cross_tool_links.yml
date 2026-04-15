@@ -1,0 +1,57 @@
+tempo_tools:
+  en:
+    bpm_extension:
+      name: BPM Changer
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Audio Speed Changer
+      url: https://www.musiciantools.online/en/audio-speed-changer
+  it:
+    bpm_extension:
+      name: Cambiatore BPM
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Cambiatore BPM
+      url: https://www.musiciantools.online/it/cambiatore-bpm
+  es:
+    bpm_extension:
+      name: Cambiador de BPM
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Cambiador de BPM
+      url: https://www.musiciantools.online/es/cambiador-de-bpm
+  de:
+    bpm_extension:
+      name: BPM Changer
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Tempo ändern
+      url: https://www.musiciantools.online/de/tempo-ändern
+  fr:
+    bpm_extension:
+      name: Changer le BPM
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Changer le BPM
+      url: https://www.musiciantools.online/fr/changer-le-bpm
+  ja:
+    bpm_extension:
+      name: BPM Changer
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: BPM Changer
+      url: https://www.musiciantools.online/ja/テンポ変更
+  ru:
+    bpm_extension:
+      name: Изменить темп песни
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Изменить темп песни
+      url: https://www.musiciantools.online/ru/изменить-темп-песни
+  uk:
+    bpm_extension:
+      name: Змінити темп пісні онлайн
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Змінити темп пісні
+      url: https://www.musiciantools.online/uk/змінити-темп-пісні

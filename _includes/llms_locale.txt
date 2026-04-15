@@ -1,5 +1,6 @@
 {%- assign locale_code = include.locale -%}
 {%- assign locale_data = site.data.locales[locale_code] -%}
+{%- assign tempo_tools = site.data.cross_tool_links.tempo_tools[locale_code] -%}
 # {{ locale_data.hero.title }}
 
 > {{ locale_data.llms.lead }}
@@ -53,18 +54,23 @@
 
 ## {{ locale_data.faq.title }}
 
-{%- for item in locale_data.faq.items %}
+{% for item in locale_data.faq.items %}
 ### {{ item.question }}
 
-{%- if item.answers and item.answers != empty %}
-{%- for answer in item.answers %}
+{% if item.answers and item.answers != empty %}
+{% for answer in item.answers %}
 - {{ answer }}
-{%- endfor %}
-{%- elsif item.answer_html %}
+{% endfor %}
+{% elsif item.linked_answers and item.linked_answers != empty %}
+{% for linked_answer in item.linked_answers %}
+{% assign linked_tool = tempo_tools[linked_answer.tool_key] %}
+- {{ linked_answer.template | replace: 'TOOL_LINK', linked_tool.name }}
+{% endfor %}
+{% elsif item.answer_html %}
 {{ item.answer_html | strip_html | strip }}
-{%- endif %}
+{% endif %}
 
-{%- endfor %}
+{% endfor %}
 
 {% if include.show_languages -%}
 {%- capture languages_body -%}

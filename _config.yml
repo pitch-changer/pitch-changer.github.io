@@ -4,4 +4,10 @@ baseurl: ""
 default_locale: en
 locales:
   - en
+  - it
+  - es
+  - de
+  - fr
+  - ja
   - ru
+  - uk

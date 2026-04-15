@@ -11,9 +11,15 @@ This repo contains the Jekyll source for the product website hosted on GitHub Pa
 
 ## Localization
 - English lives at `/`.
+- Italian lives at `/it/`.
+- Spanish lives at `/es/`.
+- German lives at `/de/`.
+- French lives at `/fr/`.
+- Japanese lives at `/ja/`.
 - Russian lives at `/ru/`.
+- Ukrainian lives at `/uk/`.
 - Locale copy is stored in `_data/locales/`.
-- Shared layout and partials render both locales as static HTML for search engines.
+- Shared layout and partials render all locales as static HTML for search engines.
 
 ## Deployment
 - GitHub Pages is deployed through the workflow in [.github/workflows/pages.yml](/Users/navi/projects/extensions/pitch-changer.github.io/.github/workflows/pages.yml).

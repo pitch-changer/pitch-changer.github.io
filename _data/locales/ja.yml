@@ -1,8 +1,8 @@
 site:
-  lang: en
-  locale_label: EN
-  native_label: English
-  path: /
+  lang: ja
+  locale_label: JA
+  native_label: 日本語
+  path: /ja/
 formatting:
   decimal_separator: '.'
 meta:
@@ -166,9 +166,9 @@ get_started:
   line_1: Whether you prefer working in the browser or with local files on your iPhone, iPad or Mac,
   line_2: Pitch Changer helps you change song key, shift pitch and make music fit you, not the other way around.
   rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL on Chrome Web Store"
-  review_count_rule: one_other
+  review_count_rule: invariant
   review_count_labels:
-    one: review
+    one: reviews
     other: reviews
 llms:
   languages_heading: Available languages
@@ -203,14 +203,14 @@ footer:
 structured_data:
   online:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/#online
+    "@id": https://pitch-changer.com/ja/#online
     name: Pitch Changer
     alternateName: Pitch Changer Online
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Pitch Changer is a browser extension that lets you change the key of songs on any website directly in your browser. Shift pitch in semitones while listening on sites like YouTube and other audio or video platforms.
-    inLanguage: en
-    url: https://pitch-changer.com/#online
+    inLanguage: ja
+    url: https://pitch-changer.com/ja/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization
@@ -222,14 +222,14 @@ structured_data:
       lifetime: One-time payment
   offline:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/#offline
+    "@id": https://pitch-changer.com/ja/#offline
     name: Pitch Changer
     alternateName: Pitch Changer for iPhone, iPad and Mac
     applicationCategory: MultimediaApplication
     operatingSystem: macOS 15.0 or iOS 18.0
     description: Pitch Changer for Mac lets you change pitch, transpose songs and batch-process audio files offline. Import tracks, shift key without changing tempo, and export new versions for practice, teaching or production.
-    inLanguage: en
-    url: https://pitch-changer.com/#offline
+    inLanguage: ja
+    url: https://pitch-changer.com/ja/#offline
     installUrl: https://apps.apple.com/app/id6749900880
     publisher:
       "@type": Organization
