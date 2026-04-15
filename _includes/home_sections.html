@@ -1,11 +1,11 @@
 <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
   <div class="mt-6 text-center">
-    <div class="mb-7 grid w-full items-center gap-3 md:grid-cols-[1fr_auto_1fr]">
-      <div aria-hidden="true" class="hidden md:block"></div>
+    <div class="hero-topbar mb-7 w-full" data-ui-review="hero-topbar">
+      <div aria-hidden="true" class="hero-topbar-spacer"></div>
       <a
         target="_blank"
         href="#offline"
-        class="justify-self-center inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
+        class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
         role="alert"
       >
         <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">{{ site.data.locales[include.locale_code].hero.badge_label }}</span>
@@ -14,7 +14,7 @@
           <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
         </svg>
       </a>
-      <div class="justify-self-center md:justify-self-end">
+      <div class="hero-topbar-switcher">
         {% include locale_switcher.html locale_code=include.locale_code %}
       </div>
     </div>

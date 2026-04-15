@@ -35,6 +35,10 @@
 - Run `bundle exec jekyll build` after user-visible or metadata-affecting changes.
 - Spot-check generated files in `_site/` when changing localized metadata, canonicals, `hreflang`, sitemap output, or switcher behavior.
 - When changing the locale switcher or redirect logic, verify both `/` and `/ru/` output and make sure the generated HTML still exposes crawlable language links.
+- For user-visible visual changes, also run `PYENV_VERSION=3.10.16 python scripts/visual_review.py` after `bundle exec jekyll build` and inspect the generated screenshots in `tmp/ui_reviews/` before finishing.
+- When the changed area is narrower than the full page, pass a stable selector such as `--selector '[data-ui-review="hero-topbar"]'` so the screenshot focuses on the affected UI.
+- Always run Playwright screenshot review outside the sandbox.
+- During screenshot review, verify the visual result itself, not just element presence. Check alignment, spacing, wrapping, clipping, and whether the intended control actually reads correctly in context, following the same visual-review discipline used in `musiciantools-online`.
 
 ## Commit Policy
 - Default behavior: commit meaningful completed changes with a descriptive message.
