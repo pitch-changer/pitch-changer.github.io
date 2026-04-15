@@ -1,16 +1,19 @@
 {%- assign locale_code = include.locale -%}
 {%- assign locale_data = site.data.locales[locale_code] -%}
+{%- capture intro -%}
+{%- if include.level == "full" -%}
+{{ locale_data.llms.full_intro }}
+{%- else -%}
+{{ locale_data.llms.concise_intro }}
+{%- endif -%}
+{%- endcapture -%}
 # {{ locale_data.hero.title }}
 
 > {{ locale_data.llms.lead }}
 
-{% if include.level == "full" %}
-{{ locale_data.llms.full_intro }}
-{% else %}
-{{ locale_data.llms.concise_intro }}
-{% endif %}
+{{ intro }}
 
-{%- for section in locale_data.llms.sections %}
+{% for section in locale_data.llms.sections -%}
 {%- assign section_key = section[0] -%}
 {%- assign section_title = section[1] -%}
 {%- capture section_body -%}
@@ -38,10 +41,10 @@
 
 {{ section_body }}
 
-{%- endif %}
-{%- endfor %}
+{% endif -%}
+{% endfor %}
 
-{% if include.level == "full" %}
+{%- if include.level == "full" %}
 ## {{ locale_data.llms.versions_heading }}
 
 ### {{ locale_data.online.title }}
@@ -76,19 +79,25 @@
 {%- endif %}
 
 {%- endfor %}
-{% endif %}
+{%- endif %}
 
-{% if include.show_languages %}
+{% if include.show_languages -%}
+{%- capture languages_body -%}
+{% for candidate_locale in site.locales -%}
+{%- assign candidate_locale_data = site.data.locales[candidate_locale] -%}
+{%- assign concise_path = "/" | append: candidate_locale | append: "/llms.txt" -%}
+{%- assign full_path = "/" | append: candidate_locale | append: "/llms-full.txt" -%}
+{%- if include.root_links and candidate_locale == site.default_locale -%}
+{%- assign concise_path = "/llms.txt" -%}
+{%- assign full_path = "/llms-full.txt" -%}
+{%- endif -%}
+- {{ candidate_locale_data.site.native_label }} ({{ candidate_locale }}): [{{ locale_data.llms.home_link_label }}]({{ candidate_locale_data.site.path | absolute_url }}) | [{{ locale_data.llms.concise_link_label }}]({{ concise_path | absolute_url }}) | [{{ locale_data.llms.full_link_label }}]({{ full_path | absolute_url }})
+{% endfor -%}
+{%- endcapture -%}
+{%- assign languages_body = languages_body | strip -%}
+{% if languages_body != "" %}
 ## {{ locale_data.llms.languages_heading }}
 
-{% for candidate_locale in site.locales %}
-{% assign candidate_locale_data = site.data.locales[candidate_locale] %}
-{% assign concise_path = "/" | append: candidate_locale | append: "/llms.txt" %}
-{% assign full_path = "/" | append: candidate_locale | append: "/llms-full.txt" %}
-{% if include.root_links and candidate_locale == site.default_locale %}
-  {% assign concise_path = "/llms.txt" %}
-  {% assign full_path = "/llms-full.txt" %}
+{{ languages_body }}
 {% endif %}
-- {{ candidate_locale_data.site.native_label }} ({{ candidate_locale }}): [{{ locale_data.llms.home_link_label }}]({{ candidate_locale_data.site.path | absolute_url }}) | [{{ locale_data.llms.concise_link_label }}]({{ concise_path | absolute_url }}) | [{{ locale_data.llms.full_link_label }}]({{ full_path | absolute_url }})
-{% endfor %}
-{% endif %}
+{%- endif %}
