@@ -6,8 +6,7 @@
 > {{ locale_data.llms.lead }}
 
 {{ locale_data.llms.intro }}
-
-{% for section in locale_data.llms.sections -%}
+{%- for section in locale_data.llms.sections -%}
 {%- assign section_key = section[0] -%}
 {%- assign section_title = section[1] -%}
 {%- capture section_body -%}
@@ -25,10 +24,10 @@
 {%- endcapture -%}
 {%- assign section_body = section_body | strip -%}
 {%- if section_body != "" %}
+
 ## {{ section_title }}
 
 {{ section_body }}
-
 {% endif -%}
 {% endfor %}
 
@@ -48,31 +47,30 @@
 
 ## {{ locale_data.use_cases.title }}
 
-{%- for item in locale_data.use_cases.items %}
+{% for item in locale_data.use_cases.items -%}
 - **{{ item.title }}**: {{ item.body }}
-{%- endfor %}
+{% endfor -%}
 
 ## {{ locale_data.faq.title }}
 
-{% for item in locale_data.faq.items %}
+{%- for item in locale_data.faq.items %}
+
 ### {{ item.question }}
 
-{% if item.answers and item.answers != empty %}
-{% for answer in item.answers %}
+{% if item.answers and item.answers != empty -%}
+{% for answer in item.answers -%}
 - {{ answer }}
-{% endfor %}
-{% elsif item.linked_answers and item.linked_answers != empty %}
-{% for linked_answer in item.linked_answers %}
-{% assign linked_tool = tempo_tools[linked_answer.tool_key] %}
+{% endfor -%}
+{% elsif item.linked_answers and item.linked_answers != empty -%}
+{% for linked_answer in item.linked_answers -%}
+{% assign linked_tool = tempo_tools[linked_answer.tool_key] -%}
 - {{ linked_answer.template | replace: 'TOOL_LINK', linked_tool.name }}
-{% endfor %}
-{% elsif item.answer_html %}
+{% endfor -%}
+{% elsif item.answer_html -%}
 {{ item.answer_html | strip_html | strip }}
 {% endif %}
-
-{% endfor %}
-
-{% if include.show_languages -%}
+{% endfor -%}
+{%- if include.show_languages -%}
 {%- capture languages_body -%}
 {% for candidate_locale in site.locales -%}
 {%- assign candidate_locale_data = site.data.locales[candidate_locale] -%}
@@ -84,7 +82,8 @@
 {% endfor -%}
 {%- endcapture -%}
 {%- assign languages_body = languages_body | strip -%}
-{% if languages_body != "" %}
+{%- if languages_body != "" %}
+
 ## {{ locale_data.llms.languages_heading }}
 
 {{ languages_body }}
