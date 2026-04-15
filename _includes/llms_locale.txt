@@ -40,3 +40,55 @@
 
 {%- endif %}
 {%- endfor %}
+
+{% if include.level == "full" %}
+## {{ locale_data.llms.versions_heading }}
+
+### {{ locale_data.online.title }}
+
+{{ locale_data.online.paragraphs[0] }}
+
+{{ locale_data.online.perfect_for_label }} {{ locale_data.online.perfect_for_text }}
+
+### {{ locale_data.offline.title }}
+
+{{ locale_data.offline.paragraphs[0] }}
+
+{{ locale_data.offline.perfect_for_label }} {{ locale_data.offline.perfect_for_text }}
+
+## {{ locale_data.use_cases.title }}
+
+{%- for item in locale_data.use_cases.items %}
+- **{{ item.title }}**: {{ item.body }}
+{%- endfor %}
+
+## {{ locale_data.faq.title }}
+
+{%- for item in locale_data.faq.items %}
+### {{ item.question }}
+
+{%- if item.answers and item.answers != empty %}
+{%- for answer in item.answers %}
+- {{ answer }}
+{%- endfor %}
+{%- elsif item.answer_html %}
+{{ item.answer_html | strip_html | strip }}
+{%- endif %}
+
+{%- endfor %}
+{% endif %}
+
+{% if include.show_languages %}
+## {{ locale_data.llms.languages_heading }}
+
+{% for candidate_locale in site.locales %}
+{% assign candidate_locale_data = site.data.locales[candidate_locale] %}
+{% assign concise_path = "/" | append: candidate_locale | append: "/llms.txt" %}
+{% assign full_path = "/" | append: candidate_locale | append: "/llms-full.txt" %}
+{% if include.root_links and candidate_locale == site.default_locale %}
+  {% assign concise_path = "/llms.txt" %}
+  {% assign full_path = "/llms-full.txt" %}
+{% endif %}
+- {{ candidate_locale_data.site.native_label }} ({{ candidate_locale }}): [{{ locale_data.llms.home_link_label }}]({{ candidate_locale_data.site.path | absolute_url }}) | [{{ locale_data.llms.concise_link_label }}]({{ concise_path | absolute_url }}) | [{{ locale_data.llms.full_link_label }}]({{ full_path | absolute_url }})
+{% endfor %}
+{% endif %}
