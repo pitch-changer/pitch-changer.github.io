@@ -51,11 +51,14 @@
 {% endif %}
 
 {% if faq_question_nodes != '' %}
-  ,{
-    "@type": "FAQPage",
-    "@id": {{ include.page_url | append: '#faq' | jsonify }},
-    "url": {{ include.page_url | jsonify }},
-    "inLanguage": {{ include.in_language | jsonify }},
-    "mainEntity": [{{ faq_question_nodes }}]
-  }
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": {{ include.page_url | append: '#faq' | jsonify }},
+      "url": {{ include.page_url | jsonify }},
+      "inLanguage": {{ include.in_language | jsonify }},
+      "mainEntity": [{{ faq_question_nodes }}]
+    }
+  </script>
 {% endif %}

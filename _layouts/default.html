@@ -206,15 +206,15 @@
               }
             ]
           }
-          {% include faq_structured_data.html
-            faq_schema_key=page.faq_schema_key
-            locale_data=locale_data
-            page_url=page_absolute_url
-            in_language=locale_data.site.lang
-          %}
         ]
       }
     </script>
+    {% include faq_structured_data.html
+      faq_schema_key=page.faq_schema_key
+      locale_data=locale_data
+      page_url=page_absolute_url
+      in_language=locale_data.site.lang
+    %}
   </head>
   <body class="bg-white dark:bg-gray-900">
     {% include home_sections.html locale_code=page.locale %}
