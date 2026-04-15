@@ -1,15 +1,15 @@
 <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
   <div class="mt-6 text-center">
-    <div class="mb-7 flex flex-wrap items-center justify-center gap-3 lg:justify-between">
+    <div class="mb-7 flex w-full items-center justify-between gap-3">
       <a
         target="_blank"
         href="#offline"
-        class="inline-flex justify-between items-center py-1 px-1 pr-4 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200"
+        class="flex min-w-0 flex-1 items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
         role="alert"
       >
-        <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">{{ site.data.locales[include.locale_code].hero.badge_label }}</span>
-        <span class="text-sm font-medium">{{ site.data.locales[include.locale_code].hero.badge_text }}</span>
-        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">{{ site.data.locales[include.locale_code].hero.badge_label }}</span>
+        <span class="min-w-0 text-left text-sm font-medium">{{ site.data.locales[include.locale_code].hero.badge_text }}</span>
+        <svg class="ml-2 h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
         </svg>
       </a>
