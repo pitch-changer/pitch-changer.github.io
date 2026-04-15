@@ -2,6 +2,7 @@
 {% assign product_facts = site.data.product_facts.pitch_changer %}
 {% assign online_facts = product_facts.online %}
 {% assign offline_facts = product_facts.offline %}
+{% assign page_absolute_url = page.url | absolute_url %}
 <!DOCTYPE html>
 <html lang="{{ locale_data.site.lang }}">
   <head>
@@ -11,13 +12,13 @@
     <meta name="description" content="{{ locale_data.meta.description }}" />
     <meta property="og:title" content="{{ locale_data.meta.og_title }}" />
     <meta property="og:description" content="{{ locale_data.meta.og_description }}" />
-    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:url" content="{{ page_absolute_url }}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="{{ '/online.png' | absolute_url }}" />
     <link rel="icon" sizes="32x32" type="image/png" href="{{ '/icons/32.png' | relative_url }}" />
     <link rel="icon" sizes="16x16" type="image/png" href="{{ '/icons/16.png' | relative_url }}" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="canonical" href="{{ page_absolute_url }}" />
     {% for locale_code in site.locales %}
       <link rel="alternate" hreflang="{{ site.data.locales[locale_code].site.lang }}" href="{{ site.data.locales[locale_code].site.path | absolute_url }}" />
     {% endfor %}
@@ -205,6 +206,12 @@
               }
             ]
           }
+          {% include faq_structured_data.html
+            faq_schema_key=page.faq_schema_key
+            locale_data=locale_data
+            page_url=page_absolute_url
+            in_language=locale_data.site.lang
+          %}
         ]
       }
     </script>
