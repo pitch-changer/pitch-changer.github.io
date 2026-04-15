@@ -29,22 +29,9 @@
 {% capture online_pricing %}{{ locale_data.online.pricing_template | replace: 'WEEKLY_PRICE', online_weekly_offer | replace: 'YEARLY_PRICE', online_yearly_offer | replace: 'LIFETIME_PRICE', online_lifetime_offer }}{% endcapture %}
 {% capture offline_pricing %}{{ locale_data.offline.pricing_template | replace: 'WEEKLY_PRICE', offline_weekly_offer | replace: 'YEARLY_PRICE', offline_yearly_offer }}{% endcapture %}
 
-{% assign review_label_key = "other" %}
-{% if include.locale_code == "ru" %}
-  {% assign review_mod10 = rating_count | modulo: 10 %}
-  {% assign review_mod100 = rating_count | modulo: 100 %}
-  {% if review_mod10 == 1 and review_mod100 != 11 %}
-    {% assign review_label_key = "one" %}
-  {% elsif review_mod10 >= 2 and review_mod10 <= 4 and review_mod100 != 12 and review_mod100 != 13 and review_mod100 != 14 %}
-    {% assign review_label_key = "few" %}
-  {% else %}
-    {% assign review_label_key = "many" %}
-  {% endif %}
-{% elsif rating_count == 1 %}
-  {% assign review_label_key = "one" %}
-{% endif %}
-{% assign reviews_label = locale_data.get_started.review_count_labels[review_label_key] %}
 {% assign rating_count_display = rating_count | append: "" %}
+{% capture reviews_label %}{% include review_count_label.html locale_code=include.locale_code count=rating_count %}{% endcapture %}
+{% assign reviews_label = reviews_label | strip %}
 {% capture get_started_rating %}{{ locale_data.get_started.rating_template | replace: 'RATING_VALUE', rating_value_display | replace: 'REVIEW_COUNT', rating_count_display | replace: 'REVIEW_LABEL', reviews_label }}{% endcapture %}
 
 <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
