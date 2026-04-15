@@ -6,210 +6,210 @@ site:
 formatting:
   decimal_separator: ','
 meta:
-  title: "Pitch Changer: Easy Pitch Shifter Online and Offline"
-  description: Change key of songs on any website, pitch-shift and transpose music for practice, karaoke or production. Available as a browser extension, iPhone, iPad and Mac app.
-  og_title: "Pitch Changer: Easy Pitch Shifter Online and Offline"
-  og_description: Change key of songs on any website, pitch-shift and transpose music for practice, karaoke or production. Available as a browser extension, iPhone, iPad and Mac app.
+  title: "Змінити тональність пісні онлайн: змінюйте тональність пісень онлайн і офлайн"
+  description: Змінюйте тональність пісень на будь-якому сайті, транспонуйте музику для занять, караоке або продакшену. Доступно як розширення для браузера та застосунок для iPhone, iPad і Mac.
+  og_title: "Змінити тональність пісні онлайн: змінюйте тональність пісень онлайн і офлайн"
+  og_description: Змінюйте тональність пісень на будь-якому сайті, транспонуйте музику для занять, караоке або продакшену. Доступно як розширення для браузера та застосунок для iPhone, iPad і Mac.
 switcher:
-  aria_label: Language switcher
-  button_label: Choose language
+  aria_label: Перемикач мови
+  button_label: Вибрати мову
 hero:
-  badge_label: New
-  badge_text: Pitch Changer for iPhone and iPad is out! See what's new
+  badge_label: Нове
+  badge_text: Pitch Changer для iPhone та iPad уже доступний. Подивіться, що нового
   title: Pitch Changer
-  subtitle: Easily change key of songs
-  description_line_1: Pitch Changer makes it easy to shift pitch, change key and transpose songs
-  description_line_2: for practice, karaoke, teaching or production.
-  description_line_3: Use it online on any website in your browser or offline on your iPhone, iPad or Mac.
-  online_cta_title: Add Pitch Changer Online
-  online_cta_subtitle: to your browser
-  offline_cta_title: Add Pitch Changer Offline
-  offline_cta_subtitle: to your iPhone, iPad or Mac
+  subtitle: Легко змінюйте тональність пісень
+  description_line_1: Pitch Changer допомагає швидко зміщувати висоту, змінювати тональність і транспонувати пісні
+  description_line_2: для занять, караоке, викладання чи продакшену.
+  description_line_3: Користуйтеся ним онлайн на будь-якому сайті в браузері або офлайн на iPhone, iPad чи Mac.
+  online_cta_title: Додати Змінити тональність пісні онлайн
+  online_cta_subtitle: у браузер
+  offline_cta_title: Додати Pitch Changer Offline
+  offline_cta_subtitle: на iPhone, iPad або Mac
 nav:
-  aria_label: Page sections
-  overview: What is Pitch Changer?
-  online: For websites
-  offline: For files
-  use_cases: Who is it for?
-  reviews: Reviews
+  aria_label: Розділи сторінки
+  overview: Що таке Pitch Changer?
+  online: Для сайтів
+  offline: Для файлів
+  use_cases: Для кого він?
+  reviews: Відгуки
   faq: FAQ
 overview:
-  title: What is Pitch Changer?
+  title: Що таке Pitch Changer?
   paragraphs:
-    - Pitch Changer lets you change the key of songs on any website and pitch-shift and transpose music on your computer without complicated audio software. It is built for real-world use like practicing, teaching, recording, and simply having fun with your favorite tracks.
-    - "You can:"
+    - Pitch Changer дає змогу змінювати тональність пісень на будь-якому сайті та транспонувати музику на комп'ютері без складних аудіоредакторів. Його створено для реальних задач — занять, викладання, запису й просто задоволення від улюблених треків у зручнішій тональності.
+    - "За допомогою Pitch Changer можна:"
   bullets:
-    - Change song key up or down in semitones.
-    - Practice in the key that fits your voice or instrument.
-    - Prepare backing tracks, karaoke versions and teaching materials.
-    - Experiment with arrangements, harmonies and creative pitch shifts.
-  versions_intro: "Pitch Changer comes in two versions:"
-  online_link_label: Pitch Changer Online
-  online_link_suffix: a browser extension for websites, and
+    - Піднімати або опускати тональність пісні на півтони.
+    - Займатися в тональності, яка краще підходить вашому голосу або інструменту.
+    - Готувати мінусовки, караоке-версії та навчальні матеріали.
+    - Шукати нові аранжування, гармонії та творчі варіанти зміни висоти.
+  versions_intro: "Pitch Changer доступний у двох версіях:"
+  online_link_label: Змінити тональність пісні онлайн
+  online_link_suffix: як розширення для сайтів, і
   offline_link_label: Pitch Changer Offline
-  offline_link_suffix: an iPhone, iPad and Mac app for files.
+  offline_link_suffix: як застосунок для iPhone, iPad і Mac для роботи з файлами.
 online:
-  title: Pitch Changer Online
+  title: Змінити тональність пісні онлайн
   paragraphs:
-    - Use Pitch Changer to easily change key of songs. Add this intuitive online pitch shifter and transpose music effortlessly.
-    - With Pitch Changer Online, you add a pitch shifter extension directly into your browser. Adjust the key of songs on platforms like YouTube and many other audio websites in just a few clicks.
+    - Скористайтеся Змінити тональність пісні онлайн, щоб легко змінювати тональність треків просто під час прослуховування. Це зручний спосіб транспонувати музику, не виходячи з браузера.
+    - Pitch Changer Online додає керування тональністю прямо в браузер. Змінюйте тональність на YouTube та інших аудіосайтах усього за кілька кліків.
   bullets:
-    - Change song key online directly on any website.
-    - Works as a YouTube pitch changer and on other music platforms too.
-    - Adjust pitch in semitones with intuitive controls.
-    - Perfect for practicing along, karaoke or casual listening.
-  perfect_for_label: "Perfect for:"
-  perfect_for_text: singers, vocal coaches, teachers, schools, instrumentalists and anyone who practices with online videos.
-  pricing_template: "After free trial: WEEKLY_PRICE, YEARLY_PRICE, or LIFETIME_PRICE."
+    - Змінюйте тональність пісні онлайн прямо на будь-якому сайті.
+    - Працює як інструмент для зміни тональності на YouTube та інших музичних платформах.
+    - Налаштовуйте висоту по півтонах через зрозумілі елементи керування.
+    - Добре підходить для занять під трек, караоке та комфортнішого прослуховування.
+  perfect_for_label: "Чудово підходить для:"
+  perfect_for_text: співаків, вокальних педагогів, викладачів, шкіл, інструменталістів і всіх, хто займається під онлайн-відео.
+  pricing_template: "Після безкоштовного пробного періоду: WEEKLY_PRICE, YEARLY_PRICE або LIFETIME_PRICE."
   offer_templates:
-    weekly: "$PRICE_VALUE per week"
-    yearly: "$PRICE_VALUE per year"
-    lifetime: "$PRICE_VALUE one-time payment"
-  cta: Add Pitch Changer to your browser
-  image_alt: Install Pitch Changer Extension and add it to your browser in seconds.
+    weekly: "PRICE_VALUE $ на тиждень"
+    yearly: "PRICE_VALUE $ на рік"
+    lifetime: "разова покупка за PRICE_VALUE $"
+  cta: Додати Змінити тональність пісні онлайн у браузер
+  image_alt: Установіть розширення Pitch Changer і додайте його до браузера за кілька секунд.
 offline:
   title: Pitch Changer Offline
   paragraphs:
-    - From practice to production, Pitch Changer helps you transpose, shift pitch, change song key and process audio batches with power and precision.
-    - Take full control of your sound with Pitch Changer for iPhone, iPad and Mac. Import audio files, change pitch without changing speed, and batch-process entire folders to prepare practice tracks, teaching material or professional projects.
+    - Від занять до продакшену — Pitch Changer допомагає транспонувати, змінювати висоту, змінювати тональність пісень і пакетно обробляти аудіо з точністю.
+    - Із Pitch Changer для iPhone, iPad і Mac ви імпортуєте аудіофайли, змінюєте висоту без зміни швидкості та обробляєте цілі папки, щоб готувати треки для занять, уроків або професійних проєктів.
   bullets:
-    - Change pitch of audio files instantly and accurately.
-    - Transpose music up or down with no tempo change.
-    - Batch process multiple songs in one go.
-    - Works offline with no internet connection required.
-    - Supports common formats like MP3, WAV, FLAC and more.
-  perfect_for_label: "Perfect for:"
-  perfect_for_text: producers, DJs, teachers and musicians working with local audio files.
-  pricing_template: "After free trial: WEEKLY_PRICE or YEARLY_PRICE."
+    - Швидко й точно змінюйте висоту аудіофайлів.
+    - Транспонуйте музику вгору або вниз без зміни темпу.
+    - Обробляйте кілька пісень за один запуск.
+    - Працює офлайн без активного інтернет-з'єднання.
+    - Підтримує популярні формати на кшталт MP3, WAV, FLAC та інші.
+  perfect_for_label: "Чудово підходить для:"
+  perfect_for_text: продюсерів, діджеїв, викладачів і музикантів, які працюють із локальними аудіофайлами.
+  pricing_template: "Після безкоштовного пробного періоду: WEEKLY_PRICE або YEARLY_PRICE."
   offer_templates:
-    weekly: "$PRICE_VALUE per week"
-    yearly: "$PRICE_VALUE per year"
-  cta: Add Pitch Changer to your iPhone, iPad or Mac
-  image_alt: Download Pitch Changer for iPhone, iPad or Mac and keep your projects in the right key.
+    weekly: "PRICE_VALUE $ на тиждень"
+    yearly: "PRICE_VALUE $ на рік"
+  cta: Додати Pitch Changer на iPhone, iPad або Mac
+  image_alt: Завантажте Pitch Changer для iPhone, iPad або Mac і тримайте свої проєкти в правильній тональності.
 use_cases:
-  title: Who uses Pitch Changer?
+  title: Хто використовує Pitch Changer?
   items:
-    - title: Vocal coaches & singers
-      body: Quickly adjust the key of any song to match a student's vocal range. Run exercises in different keys, explore alternative tonalities and make challenging songs more comfortable to sing.
-    - title: Instrumentalists
-      body: Guitarists and other instrumentalists can transpose tracks to the key that best suits their instrument or tuning without re-recording or retuning.
-    - title: Producers & DJs
-      body: Test ideas, remixes and transitions by shifting pitch and key in seconds. Prepare backing tracks, stems and sketches for your DAW or live sets.
-    - title: Teachers & learners
-      body: Create custom versions of songs for lessons, music theory demonstrations and focused practice sessions.
+    - title: Вокальні педагоги та співаки
+      body: Швидко підлаштовуйте тональність будь-якої пісні під діапазон учня. Робіть вправи в різних тональностях, пробуйте інші варіанти звучання й робіть складні пісні зручнішими для виконання.
+    - title: Інструменталісти
+      body: Гітаристи та інші музиканти можуть транспонувати треки в тональність, яка краще пасує інструменту або строю, без перезапису й переналаштування.
+    - title: Продюсери та діджеї
+      body: Перевіряйте ідеї, ремікси та переходи, зміщуючи висоту й тональність за секунди. Готуйте мінуси, стеми й заготовки для DAW або лайв-сетів.
+    - title: Викладачі та учні
+      body: Створюйте власні версії пісень для уроків, пояснення музичної теорії та більш зосереджених занять.
 reviews:
-  title: What our users say
-  subtitle: Hear from people who tried and loved Pitch Changer
+  title: Що кажуть користувачі
+  subtitle: Відгуки людей, яким сподобався Pitch Changer
   items:
     - name: Grant Kimbell
-      text: I cannot recommend enough picking a random setting, not too extreme, and shuffling your playlist. It feels like hearing a song you love for the first time again in a whole different vibe. The pitch shift quality is excellent.
+      text: Дуже раджу вибрати випадкове налаштування, тільки не надто екстремальне, і ввімкнути плейлист. Відчуття таке, ніби чуєш улюблену пісню вперше, але в зовсім іншому настрої. Якість зміни висоти чудова.
     - name: Vadim Makarov
-      text: I am a vocal coach and often need to adjust song keys for students. The extension works perfectly across different websites, not just YouTube, without bugs or crashes. It is also very simple, and that is a huge advantage.
+      text: Я вокальний педагог і часто підлаштовую тональність пісень для своїх учнів. Розширення чудово працює на різних сайтах, не лише на YouTube, без збоїв і зависань. І воно дуже просте, а це великий плюс.
     - name: Nikola Negovanovic
-      text: After several months of using it, I can confirm it is the best pitch changer app for Chrome. Definitely worth the price.
+      text: Після кількох місяців використання можу сказати, що це найкращий застосунок для зміни тональності в Chrome. Своїх грошей він точно вартий.
     - name: The Real Spiro Agnew
-      text: Excellent, works like a dream.
+      text: Чудово, працює як мрія.
     - name: Ice
-      text: This is exactly what I expect from a browser extension.
+      text: Саме цього я й очікую від хорошого браузерного розширення.
     - name: maryam seddigh
-      text: It is amazing. I have been looking for this for a long time.
+      text: Це неймовірно. Я дуже давно шукала щось подібне.
     - name: Hans Harding
-      text: Great tool for me as a bass player when a song needs to be played in a new key.
+      text: Для мене як для басиста це чудовий інструмент, коли пісню потрібно зіграти в іншій тональності.
     - name: Kieran Brown
-      text: There is this one YouTuber who makes really good videos but I cannot stand his whiny grandma voice. This makes it much easier on the ears.
+      text: Є один ютубер, який робить дуже хороші відео, але я не витримую його писклявий голос. З цим розширенням слухати стало значно легше.
     - name: lilly imaginator
-      text: A must-have extension in my opinion. Great for karaoke, learning music, or just playing around with songs and hearing them in a higher or lower pitch.
+      text: На мою думку, це розширення з категорії must-have. Воно чудово підходить для караоке, вивчення музики або просто для експериментів із тим, як пісня звучить вище чи нижче.
 faq:
-  title: Frequently Asked Questions
+  title: Часті запитання
   items:
-    - question: What's the difference between Pitch Changer Online and Pitch Changer Offline?
+    - question: У чому різниця між Pitch Changer Online та Pitch Changer Offline?
       answers:
-        - Pitch Changer Online is a browser extension that changes the key of songs directly on websites like YouTube and other audio or video platforms.
-        - Pitch Changer Offline is a standalone iPhone, iPad and Mac app that works offline with your own audio files and can batch process multiple tracks at once.
-    - question: Do I need an internet connection to use Pitch Changer?
+        - Pitch Changer Online — це браузерне розширення, яке змінює тональність пісень прямо на сайтах на кшталт YouTube та інших аудіо- й відеоплатформ.
+        - Pitch Changer Offline — окремий застосунок для iPhone, iPad і Mac. Він працює офлайн із вашими аудіофайлами та може пакетно обробляти кілька треків одразу.
+    - question: Чи потрібен інтернет для роботи Pitch Changer?
       answers:
-        - The Pitch Changer extension runs in your browser and is designed for online content, so you will typically use it while connected to the internet.
-        - The iPhone, iPad and Mac app works fully offline with local audio files, so once it is installed you can use it without an active connection.
-    - question: Which audio formats does Pitch Changer Offline support?
+        - Розширення Pitch Changer працює в браузері та розраховане на онлайн-контент, тому зазвичай ви використовуватимете його з підключенням до інтернету.
+        - Застосунок для iPhone, iPad і Mac повністю працює офлайн із локальними аудіофайлами, тож після встановлення активне з'єднання не потрібне.
+    - question: Які аудіоформати підтримує Pitch Changer Offline?
       answers:
-        - The iPhone, iPad and Mac app works with common audio formats such as MP3, WAV, FLAC and more, so you can process the files you already have without converting them first.
-        - You can also add videos, regions from your DAW and whole folders. Pitch Changer extracts the audio for you.
-    - question: Will changing pitch affect audio quality?
+        - Застосунок для iPhone, iPad і Mac підтримує популярні формати на кшталт MP3, WAV, FLAC та інші, тож ви можете обробляти файли, які вже маєте, без попереднього конвертування.
+        - Також можна додавати відео, регіони з DAW і цілі папки. Pitch Changer сам дістане з них аудіо.
+    - question: Чи впливає зміна висоти на якість звуку?
       answers:
-        - Pitch Changer is designed to preserve audio quality while you adjust the key. Our users regularly say the pitch shift quality is excellent.
-        - As with any digital pitch shifting, very extreme changes may sound less natural, but in most cases the result stays clean and musical.
-    - question: I can't find instrumental versions of songs. Can you help?
+        - Pitch Changer створений так, щоб зберігати якість звуку, поки ви змінюєте тональність. Користувачі регулярно пишуть, що якість зміни висоти справді чудова.
+        - Як і під час будь-якої цифрової обробки, надто екстремальні зміни можуть звучати менш природно, але в більшості випадків результат лишається чистим і музичним.
+    - question: Не можу знайти інструментальні версії пісень. Можете допомогти?
       answers: []
-      answer_html: Check out our <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. It removes vocals from a song online or offline and works beautifully with Pitch Changer.
-    - question: How can I change the tempo of a song?
+      answer_html: Спробуйте наш <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. Він прибирає вокал із пісні онлайн або офлайн і чудово поєднується з Pitch Changer.
+    - question: Як змінити темп пісні?
       answers: []
       linked_answers:
         - tool_key: bpm_extension
-          template: If you want to slow down or speed up music on a website while it is already playing, use TOOL_LINK.
+          template: Якщо потрібно сповільнити або пришвидшити музику прямо на сайті, поки вона вже грає, скористайтеся TOOL_LINK.
         - tool_key: speed_tool
-          template: If you want to change the tempo of your own file while keeping the pitch steady, use TOOL_LINK.
-    - question: Is there a free trial? How does pricing work?
+          template: Якщо потрібно змінити темп власного файла, зберігши тональність, скористайтеся TOOL_LINK.
+    - question: Чи є безкоштовний пробний період? Як працює оплата?
       answers:
-        - Both the extension and the iPhone, iPad and Mac app include a free trial period with no card required.
-        - After the trial, Pitch Changer Online offers weekly, yearly and one-time purchase options, and Pitch Changer Offline offers weekly and yearly subscriptions, as listed above.
-        - All payments are handled securely through Paddle for the extension or Apple for the app.
-    - question: How do I cancel my subscription?
+        - І розширення, і застосунок для iPhone, iPad і Mac мають безкоштовний пробний період без картки.
+        - Після пробного періоду Pitch Changer Online пропонує тижневі, річні та разову покупку, а Pitch Changer Offline — тижневі та річні підписки, як указано вище.
+        - Усі платежі безпечно обробляються через Paddle для розширення або через Apple для застосунку.
+    - question: Як скасувати підписку?
       answers:
-        - Click the Manage Subscription button inside the app or extension and follow the instructions there.
-        - The process is fully automatic, so there is no need to call or write emails.
-    - question: Who is Pitch Changer for?
+        - Натисніть кнопку Manage Subscription у застосунку або розширенні та дотримуйтеся підказок.
+        - Процес повністю автоматичний, тож телефонувати чи писати листи не потрібно.
+    - question: Для кого створено Pitch Changer?
       answers:
-        - Pitch Changer is made for singers, musicians, producers, DJs, teachers and anyone who needs to adjust the key of songs.
-        - Whether you are practicing at home, performing live, teaching students or preparing content, it gives you a quick way to get music into the key that works for you.
+        - Pitch Changer створений для співаків, музикантів, продюсерів, діджеїв, викладачів і всіх, кому потрібно змінювати тональність пісень.
+        - Якщо ви займаєтеся вдома, виступаєте наживо, навчаєте учнів або готуєте матеріали, він допомагає швидко перевести музику в тональність, яка підходить саме вам.
 get_started:
-  title: Get started with Pitch Changer
-  line_1: Whether you prefer working in the browser or with local files on your iPhone, iPad or Mac,
-  line_2: Pitch Changer helps you change song key, shift pitch and make music fit you, not the other way around.
-  rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL on Chrome Web Store"
+  title: Почніть із Pitch Changer
+  line_1: Працюєте ви в браузері чи з локальними файлами на iPhone, iPad або Mac,
+  line_2: Pitch Changer допомагає змінювати тональність пісень, зрушувати висоту й підлаштовувати музику під вас, а не навпаки.
+  rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL у Chrome Web Store"
   review_count_rule: slavic
   review_count_labels:
-    one: review
-    few: reviews
-    many: reviews
+    one: відгук
+    few: відгуки
+    many: відгуків
 llms:
-  languages_heading: Available languages
-  home_link_label: Home
+  languages_heading: Доступні мови
+  home_link_label: Головна
   link_label: LLMS
-  lead: Pitch Changer helps you rehearse, teach, sing, and prepare tracks in a more comfortable key, whether you work in the browser or with audio files on Apple devices.
-  intro: This reference covers the available Pitch Changer pages in this language and keeps the focus on musical tasks, file handling, and choosing the right version of the tool.
-  versions_heading: Choose the right version
+  lead: Pitch Changer допомагає репетирувати, викладати, співати й готувати треки в комфортнішій тональності, незалежно від того, працюєте ви в браузері чи з аудіофайлами на пристроях Apple.
+  intro: Цей довідник охоплює доступні сторінки Pitch Changer цією мовою та тримає фокус на музичних задачах, роботі з файлами й виборі правильної версії інструмента.
+  versions_heading: Оберіть потрібну версію
   sections:
-    site: Site
+    site: Сайт
   pages:
     home:
       title: Pitch Changer
-      summary: Start here to see how Pitch Changer helps singers, teachers, instrumentalists, producers, and DJs change key, transpose songs, and choose between the browser extension for websites and the offline app for files.
+      summary: Почніть тут, щоб побачити, як Pitch Changer допомагає співакам, викладачам, інструменталістам, продюсерам і діджеям змінювати тональність, транспонувати пісні та обирати між розширенням для сайтів і офлайн-застосунком для файлів.
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee
-  contact: "Contact: info@extensions.ee."
-  payments_label: "Payments and refunds:"
+  contact: "Контакт: info@extensions.ee."
+  payments_label: "Оплата та повернення:"
   paddle_label: Paddle
   apple_label: Apple
-  terms_label: Terms and Conditions
-  refund_label: Refund Policy
-  privacy_label: Privacy Policy
+  terms_label: Умови використання
+  refund_label: Політика повернення
+  privacy_label: Політика конфіденційності
   paragraphs:
-    - Purchases made through our website are processed by our online reseller Paddle.com, which is the Merchant of Record for these orders. Paddle provides customer service for website orders and handles returns, billing and applicable taxes.
-    - Purchases made through the App Store are processed directly by Apple, which acts as the Merchant of Record for App Store orders. Apple manages billing, receipts, taxes, refunds and all related customer service inquiries for App Store purchases.
-    - If you are unsure where you purchased, please check your order confirmation email or receipt sent by Paddle or Apple.
-  acknowledgements_prefix: Third-party trademarks and components are listed on the
+    - Покупки на нашому сайті обробляє наш онлайн-реселер Paddle.com, який виступає Merchant of Record для цих замовлень. Paddle відповідає за підтримку клієнтів, повернення, білінг і застосовні податки для замовлень із сайту.
+    - Покупки в App Store обробляє безпосередньо Apple, яка виступає Merchant of Record для замовлень з App Store. Apple веде білінг, чеки, податки, повернення й усі пов'язані звернення до підтримки.
+    - Якщо ви не впевнені, де саме купували, перевірте лист із підтвердженням замовлення або чек від Paddle чи Apple.
+  acknowledgements_prefix: Сторонні торговельні марки та компоненти перелічено на сторінці
   acknowledgements_label: Acknowledgements
-  acknowledgements_suffix: page.
+  acknowledgements_suffix: .
 structured_data:
   online:
     "@type": SoftwareApplication
     "@id": https://pitch-changer.com/uk/#online
-    name: Pitch Changer
+    name: Змінити тональність пісні онлайн
     alternateName: Pitch Changer Online
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
-    description: Pitch Changer is a browser extension that lets you change the key of songs on any website directly in your browser. Shift pitch in semitones while listening on sites like YouTube and other audio or video platforms.
+    description: Змінити тональність пісні онлайн — це браузерне розширення, яке допомагає змінювати тональність пісень на будь-якому сайті прямо в браузері. Зсувайте висоту по півтонах під час прослуховування на YouTube та інших аудіо- й відеоплатформах.
     inLanguage: uk
     url: https://pitch-changer.com/uk/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
@@ -218,17 +218,17 @@ structured_data:
       name: extensions.ee
       url: https://extensions.ee
     offer_names:
-      weekly: Weekly subscription
-      yearly: Yearly subscription
-      lifetime: One-time payment
+      weekly: Тижнева підписка
+      yearly: Річна підписка
+      lifetime: Разова покупка
   offline:
     "@type": SoftwareApplication
     "@id": https://pitch-changer.com/uk/#offline
-    name: Pitch Changer
-    alternateName: Pitch Changer for iPhone, iPad and Mac
+    name: Pitch Changer Offline
+    alternateName: Pitch Changer для iPhone, iPad і Mac
     applicationCategory: MultimediaApplication
     operatingSystem: macOS 15.0 or iOS 18.0
-    description: Pitch Changer for Mac lets you change pitch, transpose songs and batch-process audio files offline. Import tracks, shift key without changing tempo, and export new versions for practice, teaching or production.
+    description: Pitch Changer для iPhone, iPad і Mac допомагає змінювати висоту, транспонувати пісні та пакетно обробляти аудіофайли офлайн. Імпортуйте треки, змінюйте тональність без зміни темпу й експортуйте нові версії для занять, уроків або продакшену.
     inLanguage: uk
     url: https://pitch-changer.com/uk/#offline
     installUrl: https://apps.apple.com/app/id6749900880
@@ -237,5 +237,5 @@ structured_data:
       name: extensions.ee
       url: https://extensions.ee
     offer_names:
-      weekly: Weekly subscription
-      yearly: Yearly subscription
+      weekly: Тижнева підписка
+      yearly: Річна підписка
