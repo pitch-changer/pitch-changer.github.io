@@ -139,6 +139,9 @@ faq:
     - question: I can't find instrumental versions of songs. Can you help?
       answers: []
       answer_html: Check out our <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. It removes vocals from a song online or offline and works beautifully with Pitch Changer.
+    - question: How can I change the tempo of a song?
+      answers: []
+      answer_html: If you want to slow down or speed up music on a website while it is already playing, use the <a href="https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj?utm_source=www.musiciantools.online" class="underline">BPM Changer extension</a>. If you want to change the tempo of your own file while keeping the pitch steady, use <a href="https://www.musiciantools.online/en/audio-speed-changer" class="underline">Audio Speed Changer</a>.
     - question: Is there a free trial? How does pricing work?
       answers:
         - Both the extension and the iPhone, iPad and Mac app include a free trial period with no card required.

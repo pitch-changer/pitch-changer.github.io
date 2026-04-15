@@ -139,6 +139,9 @@ faq:
     - question: Не могу найти инструментальные версии песен. Можете помочь?
       answers: []
       answer_html: Попробуйте наш <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. Он удаляет вокал из песни онлайн или офлайн и отлично сочетается с Pitch Changer.
+    - question: Как изменить темп песни?
+      answers: []
+      answer_html: Если нужно замедлить или ускорить музыку прямо на сайте, пока она уже играет, используйте <a href="https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj?utm_source=www.musiciantools.online" class="underline">расширение «Изменить темп песни»</a>. Если нужно изменить темп собственного файла, сохранив тональность, используйте <a href="https://www.musiciantools.online/ru/изменить-темп-песни" class="underline">инструмент «Изменить темп песни» для файлов</a>.
     - question: Есть ли бесплатный пробный период? Как устроена оплата?
       answers:
         - И расширение, и приложение для iPhone, iPad и Mac предлагают бесплатный пробный период без привязки карты.
