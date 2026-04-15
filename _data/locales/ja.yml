@@ -6,209 +6,209 @@ site:
 formatting:
   decimal_separator: '.'
 meta:
-  title: "Pitch Changer: Easy Pitch Shifter Online and Offline"
-  description: Change key of songs on any website, pitch-shift and transpose music for practice, karaoke or production. Available as a browser extension, iPhone, iPad and Mac app.
-  og_title: "Pitch Changer: Easy Pitch Shifter Online and Offline"
-  og_description: Change key of songs on any website, pitch-shift and transpose music for practice, karaoke or production. Available as a browser extension, iPhone, iPad and Mac app.
+  title: "ピッチシフター: 曲のキーをオンラインでもオフラインでも変える"
+  description: どのサイトでも曲のキーを変え、練習、カラオケ、制作のために音楽を移調できます。ブラウザ拡張機能と iPhone、iPad、Mac 向けアプリとして使えます。
+  og_title: "ピッチシフター: 曲のキーをオンラインでもオフラインでも変える"
+  og_description: どのサイトでも曲のキーを変え、練習、カラオケ、制作のために音楽を移調できます。ブラウザ拡張機能と iPhone、iPad、Mac 向けアプリとして使えます。
 switcher:
-  aria_label: Language switcher
-  button_label: Choose language
+  aria_label: 言語切り替え
+  button_label: 言語を選ぶ
 hero:
-  badge_label: New
-  badge_text: Pitch Changer for iPhone and iPad is out! See what's new
+  badge_label: 新着
+  badge_text: Pitch Changer の iPhone・iPad 版が登場しました。新機能をチェックしてください
   title: Pitch Changer
-  subtitle: Easily change key of songs
-  description_line_1: Pitch Changer makes it easy to shift pitch, change key and transpose songs
-  description_line_2: for practice, karaoke, teaching or production.
-  description_line_3: Use it online on any website in your browser or offline on your iPhone, iPad or Mac.
-  online_cta_title: Add Pitch Changer Online
-  online_cta_subtitle: to your browser
-  offline_cta_title: Add Pitch Changer Offline
-  offline_cta_subtitle: to your iPhone, iPad or Mac
+  subtitle: 曲のキーを手軽に変えられます
+  description_line_1: Pitch Changer は曲のピッチ移動、キー変更、移調を
+  description_line_2: 練習、カラオケ、指導、制作のために手早く行えます。
+  description_line_3: ブラウザではどのサイトでも、iPhone、iPad、Mac ではオフラインでも使えます。
+  online_cta_title: ピッチシフターを追加
+  online_cta_subtitle: ブラウザへ
+  offline_cta_title: Pitch Changer Offline を追加
+  offline_cta_subtitle: iPhone、iPad、Mac へ
 nav:
-  aria_label: Page sections
-  overview: What is Pitch Changer?
-  online: For websites
-  offline: For files
-  use_cases: Who is it for?
-  reviews: Reviews
+  aria_label: ページ内セクション
+  overview: Pitch Changer とは？
+  online: サイト向け
+  offline: ファイル向け
+  use_cases: どんな人向け？
+  reviews: レビュー
   faq: FAQ
 overview:
-  title: What is Pitch Changer?
+  title: Pitch Changer とは？
   paragraphs:
-    - Pitch Changer lets you change the key of songs on any website and pitch-shift and transpose music on your computer without complicated audio software. It is built for real-world use like practicing, teaching, recording, and simply having fun with your favorite tracks.
-    - "You can:"
+    - Pitch Changer を使えば、どのサイトでも曲のキーを変えたり、複雑な音声ソフトなしでパソコン上の音楽を移調したりできます。練習、指導、録音、そして好きな曲をもっと気持ちよく聴くための実用的な道具です。
+    - "Pitch Changer でできること:"
   bullets:
-    - Change song key up or down in semitones.
-    - Practice in the key that fits your voice or instrument.
-    - Prepare backing tracks, karaoke versions and teaching materials.
-    - Experiment with arrangements, harmonies and creative pitch shifts.
-  versions_intro: "Pitch Changer comes in two versions:"
-  online_link_label: Pitch Changer Online
-  online_link_suffix: a browser extension for websites, and
+    - 曲のキーを半音単位で上げ下げする。
+    - 声や楽器に合ったキーで練習する。
+    - バッキングトラック、カラオケ版、教材用素材を用意する。
+    - アレンジ、ハーモニー、創作的なピッチ移動を試す。
+  versions_intro: "Pitch Changer には 2 つのバージョンがあります:"
+  online_link_label: ピッチシフター
+  online_link_suffix: はサイト向けのブラウザ拡張機能、そして
   offline_link_label: Pitch Changer Offline
-  offline_link_suffix: an iPhone, iPad and Mac app for files.
+  offline_link_suffix: はファイル向けの iPhone、iPad、Mac アプリです。
 online:
-  title: Pitch Changer Online
+  title: ピッチシフター
   paragraphs:
-    - Use Pitch Changer to easily change key of songs. Add this intuitive online pitch shifter and transpose music effortlessly.
-    - With Pitch Changer Online, you add a pitch shifter extension directly into your browser. Adjust the key of songs on platforms like YouTube and many other audio websites in just a few clicks.
+    - ピッチシフターを使えば、再生中の曲でもすぐにキーを変えられます。ブラウザを離れずに音楽を移調したいときに便利です。
+    - Pitch Changer Online はブラウザの中にキー変更コントロールを追加します。YouTube やそのほか多くの音声サイトで、数クリックでキーを調整できます。
   bullets:
-    - Change song key online directly on any website.
-    - Works as a YouTube pitch changer and on other music platforms too.
-    - Adjust pitch in semitones with intuitive controls.
-    - Perfect for practicing along, karaoke or casual listening.
-  perfect_for_label: "Perfect for:"
-  perfect_for_text: singers, vocal coaches, teachers, schools, instrumentalists and anyone who practices with online videos.
-  pricing_template: "After free trial: WEEKLY_PRICE, YEARLY_PRICE, or LIFETIME_PRICE."
+    - どのサイトでもオンラインで曲のキーを変えられる。
+    - YouTube のキー変更ツールとしても、ほかの音楽サイトでも使える。
+    - 半音単位でわかりやすくピッチを調整できる。
+    - 合わせ練習、カラオケ、聴きやすいキー探しに向いている。
+  perfect_for_label: "向いているのは:"
+  perfect_for_text: 歌手、ボイストレーナー、先生、学校、演奏者、そしてオンライン動画で練習するすべての人です。
+  pricing_template: "無料体験後: WEEKLY_PRICE、YEARLY_PRICE、または LIFETIME_PRICE。"
   offer_templates:
-    weekly: "$PRICE_VALUE per week"
-    yearly: "$PRICE_VALUE per year"
-    lifetime: "$PRICE_VALUE one-time payment"
-  cta: Add Pitch Changer to your browser
-  image_alt: Install Pitch Changer Extension and add it to your browser in seconds.
+    weekly: "週額 PRICE_VALUE $"
+    yearly: "年額 PRICE_VALUE $"
+    lifetime: "買い切り PRICE_VALUE $"
+  cta: ピッチシフターをブラウザに追加
+  image_alt: Pitch Changer 拡張機能をインストールして、すぐにブラウザへ追加します。
 offline:
   title: Pitch Changer Offline
   paragraphs:
-    - From practice to production, Pitch Changer helps you transpose, shift pitch, change song key and process audio batches with power and precision.
-    - Take full control of your sound with Pitch Changer for iPhone, iPad and Mac. Import audio files, change pitch without changing speed, and batch-process entire folders to prepare practice tracks, teaching material or professional projects.
+    - 練習から制作まで、Pitch Changer は移調、ピッチ変更、キー変更、まとめての音声処理を正確にこなします。
+    - iPhone、iPad、Mac 向け Pitch Changer では、音声ファイルを読み込み、速度を変えずにピッチを動かし、フォルダ単位でまとめて処理して練習用トラック、教材、制作素材を用意できます。
   bullets:
-    - Change pitch of audio files instantly and accurately.
-    - Transpose music up or down with no tempo change.
-    - Batch process multiple songs in one go.
-    - Works offline with no internet connection required.
-    - Supports common formats like MP3, WAV, FLAC and more.
-  perfect_for_label: "Perfect for:"
-  perfect_for_text: producers, DJs, teachers and musicians working with local audio files.
-  pricing_template: "After free trial: WEEKLY_PRICE or YEARLY_PRICE."
+    - 音声ファイルのピッチをすばやく正確に変える。
+    - テンポを変えずに音楽を上下に移調する。
+    - 複数の曲をまとめて処理する。
+    - インターネット接続なしでオフライン動作する。
+    - MP3、WAV、FLAC など一般的な形式に対応する。
+  perfect_for_label: "向いているのは:"
+  perfect_for_text: ローカルの音声ファイルを扱うプロデューサー、DJ、先生、ミュージシャンです。
+  pricing_template: "無料体験後: WEEKLY_PRICE または YEARLY_PRICE。"
   offer_templates:
-    weekly: "$PRICE_VALUE per week"
-    yearly: "$PRICE_VALUE per year"
-  cta: Add Pitch Changer to your iPhone, iPad or Mac
-  image_alt: Download Pitch Changer for iPhone, iPad or Mac and keep your projects in the right key.
+    weekly: "週額 PRICE_VALUE $"
+    yearly: "年額 PRICE_VALUE $"
+  cta: Pitch Changer を iPhone、iPad、Mac に追加
+  image_alt: Pitch Changer を iPhone、iPad、Mac にダウンロードして、曲をちょうどよいキーに整えましょう。
 use_cases:
-  title: Who uses Pitch Changer?
+  title: Pitch Changer はどんな人が使う？
   items:
-    - title: Vocal coaches & singers
-      body: Quickly adjust the key of any song to match a student's vocal range. Run exercises in different keys, explore alternative tonalities and make challenging songs more comfortable to sing.
-    - title: Instrumentalists
-      body: Guitarists and other instrumentalists can transpose tracks to the key that best suits their instrument or tuning without re-recording or retuning.
-    - title: Producers & DJs
-      body: Test ideas, remixes and transitions by shifting pitch and key in seconds. Prepare backing tracks, stems and sketches for your DAW or live sets.
-    - title: Teachers & learners
-      body: Create custom versions of songs for lessons, music theory demonstrations and focused practice sessions.
+    - title: ボイストレーナーと歌手
+      body: 生徒の声域に合わせて曲のキーをすばやく調整できます。いろいろなキーで練習したり、別の選択肢を試したり、難しい曲を歌いやすくしたりできます。
+    - title: 演奏者
+      body: ギタリストをはじめとする演奏者は、録り直しや再チューニングなしで、自分の楽器やチューニングに合うキーへトラックを移調できます。
+    - title: プロデューサーと DJ
+      body: ピッチやキーを数秒で動かしながら、アイデア、リミックス、つなぎを試せます。DAW やライブ用のバッキング、ステム、スケッチの準備にも役立ちます。
+    - title: 先生と学習者
+      body: 授業、音楽理論の説明、集中した練習セッションのために、曲のカスタム版を作れます。
 reviews:
-  title: What our users say
-  subtitle: Hear from people who tried and loved Pitch Changer
+  title: ユーザーの声
+  subtitle: Pitch Changer を使った人たちの感想です
   items:
     - name: Grant Kimbell
-      text: I cannot recommend enough picking a random setting, not too extreme, and shuffling your playlist. It feels like hearing a song you love for the first time again in a whole different vibe. The pitch shift quality is excellent.
+      text: 極端すぎない範囲でランダムな設定を選んでプレイリストを流してみるのを本当におすすめします。大好きな曲をまるで初めて別の雰囲気で聴くような感覚になります。ピッチ変更の質もとても高いです。
     - name: Vadim Makarov
-      text: I am a vocal coach and often need to adjust song keys for students. The extension works perfectly across different websites, not just YouTube, without bugs or crashes. It is also very simple, and that is a huge advantage.
+      text: 私はボイストレーナーで、生徒のために曲のキーをよく調整します。この拡張機能は YouTube だけでなくいろいろなサイトで安定して動き、バグやクラッシュもありません。しかもとても簡単で、それが大きな強みです。
     - name: Nikola Negovanovic
-      text: After several months of using it, I can confirm it is the best pitch changer app for Chrome. Definitely worth the price.
+      text: 何か月も使ってきましたが、Chrome で使うキー変更アプリとしてこれが一番だと言えます。十分に価値があります。
     - name: The Real Spiro Agnew
-      text: Excellent, works like a dream.
+      text: 素晴らしいです。夢のように動きます。
     - name: Ice
-      text: This is exactly what I expect from a browser extension.
+      text: まさにブラウザ拡張機能に期待する通りのものです。
     - name: maryam seddigh
-      text: It is amazing. I have been looking for this for a long time.
+      text: 最高です。こういうものをずっと探していました。
     - name: Hans Harding
-      text: Great tool for me as a bass player when a song needs to be played in a new key.
+      text: 曲を別のキーで弾かなければならないとき、ベーシストの自分には本当に助かるツールです。
     - name: Kieran Brown
-      text: There is this one YouTuber who makes really good videos but I cannot stand his whiny grandma voice. This makes it much easier on the ears.
+      text: とても良い動画を作る YouTuber がいるのですが、あの鼻にかかった声が苦手でした。これを使うとずっと聴きやすくなります。
     - name: lilly imaginator
-      text: A must-have extension in my opinion. Great for karaoke, learning music, or just playing around with songs and hearing them in a higher or lower pitch.
+      text: 個人的には必須の拡張機能です。カラオケ、音楽学習、あるいは曲が高くなったり低くなったりするとどう聴こえるか試したいときにぴったりです。
 faq:
-  title: Frequently Asked Questions
+  title: よくある質問
   items:
-    - question: What's the difference between Pitch Changer Online and Pitch Changer Offline?
+    - question: Pitch Changer Online と Pitch Changer Offline の違いは何ですか？
       answers:
-        - Pitch Changer Online is a browser extension that changes the key of songs directly on websites like YouTube and other audio or video platforms.
-        - Pitch Changer Offline is a standalone iPhone, iPad and Mac app that works offline with your own audio files and can batch process multiple tracks at once.
-    - question: Do I need an internet connection to use Pitch Changer?
+        - Pitch Changer Online は、YouTube などのサイトやほかの音声・動画プラットフォーム上で曲のキーを直接変えられるブラウザ拡張機能です。
+        - Pitch Changer Offline は、iPhone、iPad、Mac 向けの単体アプリで、自分の音声ファイルをオフラインで扱い、複数トラックをまとめて処理できます。
+    - question: Pitch Changer を使うのにインターネット接続は必要ですか？
       answers:
-        - The Pitch Changer extension runs in your browser and is designed for online content, so you will typically use it while connected to the internet.
-        - The iPhone, iPad and Mac app works fully offline with local audio files, so once it is installed you can use it without an active connection.
-    - question: Which audio formats does Pitch Changer Offline support?
+        - Pitch Changer 拡張機能はブラウザ上で動作し、オンラインコンテンツ向けなので、通常はインターネット接続中に使います。
+        - iPhone、iPad、Mac アプリはローカル音声ファイルで完全にオフライン動作するため、インストール後は接続がなくても使えます。
+    - question: Pitch Changer Offline はどの音声形式に対応していますか？
       answers:
-        - The iPhone, iPad and Mac app works with common audio formats such as MP3, WAV, FLAC and more, so you can process the files you already have without converting them first.
-        - You can also add videos, regions from your DAW and whole folders. Pitch Changer extracts the audio for you.
-    - question: Will changing pitch affect audio quality?
+        - iPhone、iPad、Mac アプリは MP3、WAV、FLAC などの一般的な形式に対応しているので、手元のファイルをそのまま処理できます。
+        - 動画、DAW のリージョン、フォルダ全体も追加できます。Pitch Changer が音声を取り出します。
+    - question: ピッチを変えると音質は変わりますか？
       answers:
-        - Pitch Changer is designed to preserve audio quality while you adjust the key. Our users regularly say the pitch shift quality is excellent.
-        - As with any digital pitch shifting, very extreme changes may sound less natural, but in most cases the result stays clean and musical.
-    - question: I can't find instrumental versions of songs. Can you help?
+        - Pitch Changer はキーを調整している間も音質を保てるように設計されています。ユーザーからもピッチ変更の品質が高いという声が多く届いています。
+        - どんなデジタル処理でも極端な変化では不自然に聴こえることがありますが、多くの場合はきれいで音楽的なままです。
+    - question: 曲のインスト版が見つかりません。助けてもらえますか？
       answers: []
-      answer_html: Check out our <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. It removes vocals from a song online or offline and works beautifully with Pitch Changer.
-    - question: How can I change the tempo of a song?
+      answer_html: <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a> を試してください。曲からボーカルをオンラインでもオフラインでも取り除けて、Pitch Changer と相性がとても良いです。
+    - question: 曲のテンポはどうやって変えられますか？
       answers: []
       linked_answers:
         - tool_key: bpm_extension
-          template: If you want to slow down or speed up music on a website while it is already playing, use TOOL_LINK.
+          template: すでに再生中のサイト上の音楽を遅くしたり速くしたりしたいなら、TOOL_LINK を使ってください。
         - tool_key: speed_tool
-          template: If you want to change the tempo of your own file while keeping the pitch steady, use TOOL_LINK.
-    - question: Is there a free trial? How does pricing work?
+          template: 自分のファイルのテンポを変えつつピッチを保ちたいなら、TOOL_LINK を使ってください。
+    - question: 無料体験はありますか？ 料金はどうなりますか？
       answers:
-        - Both the extension and the iPhone, iPad and Mac app include a free trial period with no card required.
-        - After the trial, Pitch Changer Online offers weekly, yearly and one-time purchase options, and Pitch Changer Offline offers weekly and yearly subscriptions, as listed above.
-        - All payments are handled securely through Paddle for the extension or Apple for the app.
-    - question: How do I cancel my subscription?
+        - 拡張機能にも iPhone、iPad、Mac アプリにも、カード不要の無料体験期間があります。
+        - 体験後は、Pitch Changer Online では週額、年額、買い切りの選択肢があり、Pitch Changer Offline では週額と年額のサブスクリプションがあります。
+        - 支払いは拡張機能では Paddle、アプリでは Apple を通じて安全に処理されます。
+    - question: サブスクリプションはどうやって解約しますか？
       answers:
-        - Click the Manage Subscription button inside the app or extension and follow the instructions there.
-        - The process is fully automatic, so there is no need to call or write emails.
-    - question: Who is Pitch Changer for?
+        - アプリまたは拡張機能内の Manage Subscription ボタンを押して案内に従ってください。
+        - 手続きは完全に自動なので、電話やメールは必要ありません。
+    - question: Pitch Changer はどんな人向けですか？
       answers:
-        - Pitch Changer is made for singers, musicians, producers, DJs, teachers and anyone who needs to adjust the key of songs.
-        - Whether you are practicing at home, performing live, teaching students or preparing content, it gives you a quick way to get music into the key that works for you.
+        - Pitch Changer は歌手、ミュージシャン、プロデューサー、DJ、先生、そして曲のキーを調整したいすべての人のために作られています。
+        - 自宅で練習するときも、ライブで演奏するときも、指導するときも、素材を準備するときも、自分に合うキーへすばやく音楽を持っていけます。
 get_started:
-  title: Get started with Pitch Changer
-  line_1: Whether you prefer working in the browser or with local files on your iPhone, iPad or Mac,
-  line_2: Pitch Changer helps you change song key, shift pitch and make music fit you, not the other way around.
-  rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL on Chrome Web Store"
+  title: Pitch Changer を始めよう
+  line_1: ブラウザで作業する場合でも、iPhone、iPad、Mac のローカルファイルで作業する場合でも、
+  line_2: Pitch Changer は曲のキー変更やピッチ移動を助け、音楽のほうをあなたに合わせやすくしてくれます。
+  rating_template: "RATING_VALUE/5 ・ Chrome Web StoreでREVIEW_COUNT REVIEW_LABEL"
   review_count_rule: invariant
   review_count_labels:
-    one: reviews
-    other: reviews
+    one: 件のレビュー
+    other: 件のレビュー
 llms:
-  languages_heading: Available languages
-  home_link_label: Home
+  languages_heading: 対応言語
+  home_link_label: ホーム
   link_label: LLMS
-  lead: Pitch Changer helps you rehearse, teach, sing, and prepare tracks in a more comfortable key, whether you work in the browser or with audio files on Apple devices.
-  intro: This reference covers the available Pitch Changer pages in this language and keeps the focus on musical tasks, file handling, and choosing the right version of the tool.
-  versions_heading: Choose the right version
+  lead: Pitch Changer は、ブラウザでも Apple デバイス上の音声ファイルでも、より無理のないキーで練習、指導、歌唱、トラック準備を進められるようにします。
+  intro: このリファレンスでは、この言語で利用できる Pitch Changer のページをまとめ、音楽的な作業、ファイルの扱い、使うべきバージョン選びに焦点を当てています。
+  versions_heading: 自分に合うバージョンを選ぶ
   sections:
-    site: Site
+    site: サイト
   pages:
     home:
       title: Pitch Changer
-      summary: Start here to see how Pitch Changer helps singers, teachers, instrumentalists, producers, and DJs change key, transpose songs, and choose between the browser extension for websites and the offline app for files.
+      summary: ここから始めると、Pitch Changer が歌手、先生、演奏者、プロデューサー、DJ にどう役立つか、そしてサイト向け拡張機能とファイル向けオフラインアプリのどちらを選ぶべきかをすぐに確認できます。
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee
-  contact: "Contact: info@extensions.ee."
-  payments_label: "Payments and refunds:"
+  contact: "連絡先: info@extensions.ee."
+  payments_label: "支払いと返金:"
   paddle_label: Paddle
   apple_label: Apple
-  terms_label: Terms and Conditions
-  refund_label: Refund Policy
-  privacy_label: Privacy Policy
+  terms_label: 利用規約
+  refund_label: 返金ポリシー
+  privacy_label: プライバシーポリシー
   paragraphs:
-    - Purchases made through our website are processed by our online reseller Paddle.com, which is the Merchant of Record for these orders. Paddle provides customer service for website orders and handles returns, billing and applicable taxes.
-    - Purchases made through the App Store are processed directly by Apple, which acts as the Merchant of Record for App Store orders. Apple manages billing, receipts, taxes, refunds and all related customer service inquiries for App Store purchases.
-    - If you are unsure where you purchased, please check your order confirmation email or receipt sent by Paddle or Apple.
-  acknowledgements_prefix: Third-party trademarks and components are listed on the
+    - ウェブサイト上での購入は、オンライン販売代理店である Paddle.com が処理し、これらの注文の Merchant of Record を務めます。Paddle はサイト注文のサポート、返金、請求、適用税の処理を担当します。
+    - App Store での購入は Apple が直接処理し、App Store 注文の Merchant of Record を務めます。Apple は請求、領収書、税、返金、そのほか関連するサポート問い合わせを管理します。
+    - どこで購入したかわからない場合は、Paddle または Apple から届いた注文確認メールや領収書を確認してください。
+  acknowledgements_prefix: サードパーティーの商標とコンポーネントは
   acknowledgements_label: Acknowledgements
-  acknowledgements_suffix: page.
+  acknowledgements_suffix: ページに掲載されています。
 structured_data:
   online:
     "@type": SoftwareApplication
     "@id": https://pitch-changer.com/ja/#online
-    name: Pitch Changer
+    name: ピッチシフター
     alternateName: Pitch Changer Online
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
-    description: Pitch Changer is a browser extension that lets you change the key of songs on any website directly in your browser. Shift pitch in semitones while listening on sites like YouTube and other audio or video platforms.
+    description: ピッチシフターは、どのサイトでもブラウザの中で曲のキーを変えられるブラウザ拡張機能です。YouTube やほかの音声・動画プラットフォームで聴きながら、半音単位でピッチを動かせます。
     inLanguage: ja
     url: https://pitch-changer.com/ja/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
@@ -217,17 +217,17 @@ structured_data:
       name: extensions.ee
       url: https://extensions.ee
     offer_names:
-      weekly: Weekly subscription
-      yearly: Yearly subscription
-      lifetime: One-time payment
+      weekly: 週間サブスクリプション
+      yearly: 年間サブスクリプション
+      lifetime: 買い切り
   offline:
     "@type": SoftwareApplication
     "@id": https://pitch-changer.com/ja/#offline
-    name: Pitch Changer
+    name: Pitch Changer Offline
     alternateName: Pitch Changer for iPhone, iPad and Mac
     applicationCategory: MultimediaApplication
     operatingSystem: macOS 15.0 or iOS 18.0
-    description: Pitch Changer for Mac lets you change pitch, transpose songs and batch-process audio files offline. Import tracks, shift key without changing tempo, and export new versions for practice, teaching or production.
+    description: Pitch Changer for iPhone、iPad、Mac は、ピッチ変更、曲の移調、音声ファイルのバッチ処理をオフラインで行えます。トラックを読み込み、テンポを変えずにキーを動かし、練習、指導、制作向けの新しい版を書き出せます。
     inLanguage: ja
     url: https://pitch-changer.com/ja/#offline
     installUrl: https://apps.apple.com/app/id6749900880
@@ -236,5 +236,5 @@ structured_data:
       name: extensions.ee
       url: https://extensions.ee
     offer_names:
-      weekly: Weekly subscription
-      yearly: Yearly subscription
+      weekly: 週間サブスクリプション
+      yearly: 年間サブスクリプション
