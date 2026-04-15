@@ -1,3 +1,52 @@
+{% assign locale_data = site.data.locales[include.locale_code] %}
+{% assign product_facts = site.data.product_facts.pitch_changer %}
+{% assign online_facts = product_facts.online %}
+{% assign offline_facts = product_facts.offline %}
+{% assign rating_count = online_facts.rating.count | plus: 0 %}
+{% assign rating_value_display = online_facts.rating.value %}
+
+{% assign online_weekly_price = online_facts.offers.weekly.price %}
+{% assign online_yearly_price = online_facts.offers.yearly.price %}
+{% assign online_lifetime_price = online_facts.offers.lifetime.price %}
+{% assign offline_weekly_price = offline_facts.offers.weekly.price %}
+{% assign offline_yearly_price = offline_facts.offers.yearly.price %}
+
+{% if include.locale_code == "ru" %}
+  {% assign rating_value_display = rating_value_display | replace: '.', ',' %}
+  {% assign online_weekly_price = online_weekly_price | replace: '.', ',' %}
+  {% assign online_yearly_price = online_yearly_price | replace: '.', ',' %}
+  {% assign online_lifetime_price = online_lifetime_price | replace: '.', ',' %}
+  {% assign offline_weekly_price = offline_weekly_price | replace: '.', ',' %}
+  {% assign offline_yearly_price = offline_yearly_price | replace: '.', ',' %}
+{% endif %}
+
+{% capture online_weekly_offer %}{{ locale_data.online.offer_templates.weekly | replace: 'PRICE_VALUE', online_weekly_price }}{% endcapture %}
+{% capture online_yearly_offer %}{{ locale_data.online.offer_templates.yearly | replace: 'PRICE_VALUE', online_yearly_price }}{% endcapture %}
+{% capture online_lifetime_offer %}{{ locale_data.online.offer_templates.lifetime | replace: 'PRICE_VALUE', online_lifetime_price }}{% endcapture %}
+{% capture offline_weekly_offer %}{{ locale_data.offline.offer_templates.weekly | replace: 'PRICE_VALUE', offline_weekly_price }}{% endcapture %}
+{% capture offline_yearly_offer %}{{ locale_data.offline.offer_templates.yearly | replace: 'PRICE_VALUE', offline_yearly_price }}{% endcapture %}
+
+{% capture online_pricing %}{{ locale_data.online.pricing_template | replace: 'WEEKLY_PRICE', online_weekly_offer | replace: 'YEARLY_PRICE', online_yearly_offer | replace: 'LIFETIME_PRICE', online_lifetime_offer }}{% endcapture %}
+{% capture offline_pricing %}{{ locale_data.offline.pricing_template | replace: 'WEEKLY_PRICE', offline_weekly_offer | replace: 'YEARLY_PRICE', offline_yearly_offer }}{% endcapture %}
+
+{% assign review_label_key = "other" %}
+{% if include.locale_code == "ru" %}
+  {% assign review_mod10 = rating_count | modulo: 10 %}
+  {% assign review_mod100 = rating_count | modulo: 100 %}
+  {% if review_mod10 == 1 and review_mod100 != 11 %}
+    {% assign review_label_key = "one" %}
+  {% elsif review_mod10 >= 2 and review_mod10 <= 4 and review_mod100 != 12 and review_mod100 != 13 and review_mod100 != 14 %}
+    {% assign review_label_key = "few" %}
+  {% else %}
+    {% assign review_label_key = "many" %}
+  {% endif %}
+{% elsif rating_count == 1 %}
+  {% assign review_label_key = "one" %}
+{% endif %}
+{% assign reviews_label = locale_data.get_started.review_count_labels[review_label_key] %}
+{% assign rating_count_display = rating_count | append: "" %}
+{% capture get_started_rating %}{{ locale_data.get_started.rating_template | replace: 'RATING_VALUE', rating_value_display | replace: 'REVIEW_COUNT', rating_count_display | replace: 'REVIEW_LABEL', reviews_label }}{% endcapture %}
+
 <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
   <div class="mt-6 text-center">
     <div class="hero-topbar mb-7 w-full" data-ui-review="hero-topbar">
@@ -8,8 +57,8 @@
         class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
         role="alert"
       >
-        <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">{{ site.data.locales[include.locale_code].hero.badge_label }}</span>
-        <span class="text-left text-sm font-medium">{{ site.data.locales[include.locale_code].hero.badge_text }}</span>
+        <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">{{ locale_data.hero.badge_label }}</span>
+        <span class="text-left text-sm font-medium">{{ locale_data.hero.badge_text }}</span>
         <svg class="ml-2 h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
         </svg>
@@ -18,13 +67,13 @@
         {% include locale_switcher.html locale_code=include.locale_code %}
       </div>
     </div>
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].hero.title }}</h1>
-    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ site.data.locales[include.locale_code].hero.subtitle }}</h2>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ locale_data.hero.title }}</h1>
+    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ locale_data.hero.subtitle }}</h2>
     <p class="text-2xl mb-4">
-      {{ site.data.locales[include.locale_code].hero.description_line_1 }}<br />
-      {{ site.data.locales[include.locale_code].hero.description_line_2 }}
+      {{ locale_data.hero.description_line_1 }}<br />
+      {{ locale_data.hero.description_line_2 }}
     </p>
-    <p class="text-2xl">{{ site.data.locales[include.locale_code].hero.description_line_3 }}</p>
+    <p class="text-2xl">{{ locale_data.hero.description_line_3 }}</p>
     <div>
       <a
         target="_blank"
@@ -32,8 +81,8 @@
         class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
       >
         <div>
-          <div>{{ site.data.locales[include.locale_code].hero.online_cta_title }}</div>
-          <div class="text-xl">{{ site.data.locales[include.locale_code].hero.online_cta_subtitle }}</div>
+          <div>{{ locale_data.hero.online_cta_title }}</div>
+          <div class="text-xl">{{ locale_data.hero.online_cta_subtitle }}</div>
         </div>
       </a>
       <a
@@ -42,39 +91,39 @@
         class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
       >
         <div>
-          <div>{{ site.data.locales[include.locale_code].hero.offline_cta_title }}</div>
-          <div class="text-xl">{{ site.data.locales[include.locale_code].hero.offline_cta_subtitle }}</div>
+          <div>{{ locale_data.hero.offline_cta_title }}</div>
+          <div class="text-xl">{{ locale_data.hero.offline_cta_subtitle }}</div>
         </div>
       </a>
     </div>
   </div>
 </header>
 
-<nav aria-label="{{ site.data.locales[include.locale_code].nav.aria_label }}" class="text-center text-3xl mb-10 mt-10 px-4">
-  <a class="underline whitespace-nowrap" href="#overview">{{ site.data.locales[include.locale_code].nav.overview }}</a> ·
-  <a class="underline whitespace-nowrap" href="#online">{{ site.data.locales[include.locale_code].nav.online }}</a> ·
-  <a class="underline whitespace-nowrap" href="#offline">{{ site.data.locales[include.locale_code].nav.offline }}</a> ·
-  <a class="underline whitespace-nowrap" href="#use-cases">{{ site.data.locales[include.locale_code].nav.use_cases }}</a> ·
-  <a class="underline whitespace-nowrap" href="#reviews">{{ site.data.locales[include.locale_code].nav.reviews }}</a> ·
-  <a class="underline whitespace-nowrap" href="#faq">{{ site.data.locales[include.locale_code].nav.faq }}</a>
+<nav aria-label="{{ locale_data.nav.aria_label }}" class="text-center text-3xl mb-10 mt-10 px-4">
+  <a class="underline whitespace-nowrap" href="#overview">{{ locale_data.nav.overview }}</a> ·
+  <a class="underline whitespace-nowrap" href="#online">{{ locale_data.nav.online }}</a> ·
+  <a class="underline whitespace-nowrap" href="#offline">{{ locale_data.nav.offline }}</a> ·
+  <a class="underline whitespace-nowrap" href="#use-cases">{{ locale_data.nav.use_cases }}</a> ·
+  <a class="underline whitespace-nowrap" href="#reviews">{{ locale_data.nav.reviews }}</a> ·
+  <a class="underline whitespace-nowrap" href="#faq">{{ locale_data.nav.faq }}</a>
 </nav>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
   <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
-    {{ site.data.locales[include.locale_code].overview.title }}
+    {{ locale_data.overview.title }}
   </h2>
-  {% for paragraph in site.data.locales[include.locale_code].overview.paragraphs %}
+  {% for paragraph in locale_data.overview.paragraphs %}
     <p class="mb-4">{{ paragraph }}</p>
   {% endfor %}
   <ul class="mb-4 list-disc list-inside space-y-4">
-    {% for bullet in site.data.locales[include.locale_code].overview.bullets %}
+    {% for bullet in locale_data.overview.bullets %}
       <li>{{ bullet }}</li>
     {% endfor %}
   </ul>
   <p class="mb-4">
-    {{ site.data.locales[include.locale_code].overview.versions_intro }}
-    <strong><a href="#online" class="underline">{{ site.data.locales[include.locale_code].overview.online_link_label }}</a></strong> {{ site.data.locales[include.locale_code].overview.online_link_suffix }}
-    <strong><a href="#offline" class="underline">{{ site.data.locales[include.locale_code].overview.offline_link_label }}</a></strong> {{ site.data.locales[include.locale_code].overview.offline_link_suffix }}
+    {{ locale_data.overview.versions_intro }}
+    <strong><a href="#online" class="underline">{{ locale_data.overview.online_link_label }}</a></strong> {{ locale_data.overview.online_link_suffix }}
+    <strong><a href="#offline" class="underline">{{ locale_data.overview.offline_link_label }}</a></strong> {{ locale_data.overview.offline_link_suffix }}
   </p>
 </section>
 
@@ -82,30 +131,30 @@
   <div class="mr-auto place-self-center lg:col-span-7">
     <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
       <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
-        {{ site.data.locales[include.locale_code].online.title }}
+        {{ locale_data.online.title }}
       </a>
     </h2>
-    {% for paragraph in site.data.locales[include.locale_code].online.paragraphs %}
+    {% for paragraph in locale_data.online.paragraphs %}
       <p class="text-xl mb-4">{{ paragraph }}</p>
     {% endfor %}
     <ul class="text-xl mb-4 list-disc list-inside space-y-4">
-      {% for bullet in site.data.locales[include.locale_code].online.bullets %}
+      {% for bullet in locale_data.online.bullets %}
         <li>{{ bullet }}</li>
       {% endfor %}
     </ul>
-    <p class="text-xl mb-4"><strong>{{ site.data.locales[include.locale_code].online.perfect_for_label }}</strong> {{ site.data.locales[include.locale_code].online.perfect_for_text }}</p>
-    <p class="max-w-2xl mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ site.data.locales[include.locale_code].online.pricing }}</p>
+    <p class="text-xl mb-4"><strong>{{ locale_data.online.perfect_for_label }}</strong> {{ locale_data.online.perfect_for_text }}</p>
+    <p class="max-w-2xl mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ online_pricing | strip }}</p>
     <a
       target="_blank"
       href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
       class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
     >
-      {{ site.data.locales[include.locale_code].online.cta }}
+      {{ locale_data.online.cta }}
     </a>
   </div>
   <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex">
     <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb">
-      <img src="{{ '/online.png' | relative_url }}" alt="{{ site.data.locales[include.locale_code].online.image_alt }}" />
+      <img src="{{ '/online.png' | relative_url }}" alt="{{ locale_data.online.image_alt }}" />
     </a>
   </div>
 </section>
@@ -114,37 +163,37 @@
   <div class="mr-auto place-self-center lg:col-span-7">
     <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
       <a target="_blank" href="https://apps.apple.com/app/id6749900880" class="focus:outline-none">
-        {{ site.data.locales[include.locale_code].offline.title }}
+        {{ locale_data.offline.title }}
       </a>
     </h2>
-    {% for paragraph in site.data.locales[include.locale_code].offline.paragraphs %}
+    {% for paragraph in locale_data.offline.paragraphs %}
       <p class="text-xl mb-4">{{ paragraph }}</p>
     {% endfor %}
     <ul class="text-xl mb-4 list-disc list-inside space-y-4">
-      {% for bullet in site.data.locales[include.locale_code].offline.bullets %}
+      {% for bullet in locale_data.offline.bullets %}
         <li>{{ bullet }}</li>
       {% endfor %}
     </ul>
-    <p class="text-xl mb-4"><strong>{{ site.data.locales[include.locale_code].offline.perfect_for_label }}</strong> {{ site.data.locales[include.locale_code].offline.perfect_for_text }}</p>
-    <p class="max-w-2xl mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ site.data.locales[include.locale_code].offline.pricing }}</p>
+    <p class="text-xl mb-4"><strong>{{ locale_data.offline.perfect_for_label }}</strong> {{ locale_data.offline.perfect_for_text }}</p>
+    <p class="max-w-2xl mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ offline_pricing | strip }}</p>
     <a
       target="_blank"
       href="https://apps.apple.com/app/id6749900880"
       class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
     >
-      {{ site.data.locales[include.locale_code].offline.cta }}
+      {{ locale_data.offline.cta }}
     </a>
   </div>
   <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex" style="margin-left: 50px; margin-right: -50px">
     <a target="_blank" href="https://apps.apple.com/app/id6749900880">
-      <img src="{{ '/offline.png' | relative_url }}" alt="{{ site.data.locales[include.locale_code].offline.image_alt }}" />
+      <img src="{{ '/offline.png' | relative_url }}" alt="{{ locale_data.offline.image_alt }}" />
     </a>
   </div>
 </section>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="use-cases">
-  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ site.data.locales[include.locale_code].use_cases.title }}</h2>
-  {% for item in site.data.locales[include.locale_code].use_cases.items %}
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ locale_data.use_cases.title }}</h2>
+  {% for item in locale_data.use_cases.items %}
     <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.title }}</h3>
     <p class="text-xl mb-4">{{ item.body }}</p>
   {% endfor %}
@@ -153,11 +202,11 @@
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="reviews">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
-      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].reviews.title }}</h2>
-      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ site.data.locales[include.locale_code].reviews.subtitle }}</h3>
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ locale_data.reviews.title }}</h2>
+      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ locale_data.reviews.subtitle }}</h3>
     </div>
     <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-      {% for review in site.data.locales[include.locale_code].reviews.items %}
+      {% for review in locale_data.reviews.items %}
         <div class="bg-white p-6 shadow">
           <div class="flex items-center mb-4">
             <div class="ml-4">
@@ -175,8 +224,8 @@
 </section>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="faq">
-  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ site.data.locales[include.locale_code].faq.title }}</h2>
-  {% for item in site.data.locales[include.locale_code].faq.items %}
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ locale_data.faq.title }}</h2>
+  {% for item in locale_data.faq.items %}
     <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.question }}</h3>
     {% for answer in item.answers %}
       <p class="text-xl mb-4">{{ answer }}</p>
@@ -188,10 +237,10 @@
 </section>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="get-started">
-  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].get_started.title }}</h2>
+  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ locale_data.get_started.title }}</h2>
   <p class="text-2xl mb-4">
-    {{ site.data.locales[include.locale_code].get_started.line_1 }}<br />
-    {{ site.data.locales[include.locale_code].get_started.line_2 }}
+    {{ locale_data.get_started.line_1 }}<br />
+    {{ locale_data.get_started.line_2 }}
   </p>
   <div>
     <a
@@ -200,8 +249,8 @@
       class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
     >
       <div>
-        <div>{{ site.data.locales[include.locale_code].hero.online_cta_title }}</div>
-        <div class="text-xl">{{ site.data.locales[include.locale_code].hero.online_cta_subtitle }}</div>
+          <div>{{ locale_data.hero.online_cta_title }}</div>
+          <div class="text-xl">{{ locale_data.hero.online_cta_subtitle }}</div>
       </div>
     </a>
     <a
@@ -210,13 +259,13 @@
       class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
     >
       <div>
-        <div>{{ site.data.locales[include.locale_code].hero.offline_cta_title }}</div>
-        <div class="text-xl">{{ site.data.locales[include.locale_code].hero.offline_cta_subtitle }}</div>
+          <div>{{ locale_data.hero.offline_cta_title }}</div>
+          <div class="text-xl">{{ locale_data.hero.offline_cta_subtitle }}</div>
       </div>
     </a>
   </div>
   <p class="mt-10 text-xl text-gray-500">
-    <span class="text-yellow-300">★</span> {{ site.data.locales[include.locale_code].get_started.rating }}
+    <span class="text-yellow-300">★</span> {{ get_started_rating | strip }}
   </p>
 </section>
 
@@ -225,19 +274,19 @@
     <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
       <div class="block text-sm text-gray-500 sm:text-center">
         <nobr>{{ site.data.locales[include.locale_code].footer.copyright_prefix }}<script>document.write(new Date().getFullYear())</script>
-          <a href="https://extensions.ee/" class="underline">{{ site.data.locales[include.locale_code].footer.company_name }}</a>.
+          <a href="https://extensions.ee/" class="underline">{{ locale_data.footer.company_name }}</a>.
         </nobr>
-        <nobr>{{ site.data.locales[include.locale_code].footer.contact }}</nobr>
-        <nobr>{{ site.data.locales[include.locale_code].footer.payments_label }}
-          <a href="https://paddle.net/" class="underline">{{ site.data.locales[include.locale_code].footer.paddle_label }}</a>,
-          <a href="https://support.apple.com/billing" class="underline">{{ site.data.locales[include.locale_code].footer.apple_label }}</a>.
+        <nobr>{{ locale_data.footer.contact }}</nobr>
+        <nobr>{{ locale_data.footer.payments_label }}
+          <a href="https://paddle.net/" class="underline">{{ locale_data.footer.paddle_label }}</a>,
+          <a href="https://support.apple.com/billing" class="underline">{{ locale_data.footer.apple_label }}</a>.
         </nobr>
       </div>
     </div>
     <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
-      <li><a href="{{ '/terms-and-conditions.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ site.data.locales[include.locale_code].footer.terms_label }}</a></li>
-      <li><a href="{{ '/refund-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ site.data.locales[include.locale_code].footer.refund_label }}</a></li>
-      <li><a href="{{ '/privacy-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ site.data.locales[include.locale_code].footer.privacy_label }}</a></li>
+      <li><a href="{{ '/terms-and-conditions.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ locale_data.footer.terms_label }}</a></li>
+      <li><a href="{{ '/refund-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ locale_data.footer.refund_label }}</a></li>
+      <li><a href="{{ '/privacy-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ locale_data.footer.privacy_label }}</a></li>
     </ul>
   </div>
   <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />

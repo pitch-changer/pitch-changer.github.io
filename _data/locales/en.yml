@@ -58,7 +58,11 @@ online:
     - Perfect for practicing along, karaoke or casual listening.
   perfect_for_label: "Perfect for:"
   perfect_for_text: singers, vocal coaches, teachers, schools, instrumentalists and anyone who practices with online videos.
-  pricing: "After free trial: $3.99 per week, $35.90 per year, or $59.00 one-time payment."
+  pricing_template: "After free trial: WEEKLY_PRICE, YEARLY_PRICE, or LIFETIME_PRICE."
+  offer_templates:
+    weekly: "$PRICE_VALUE per week"
+    yearly: "$PRICE_VALUE per year"
+    lifetime: "$PRICE_VALUE one-time payment"
   cta: Add Pitch Changer to your browser
   image_alt: Install Pitch Changer Extension and add it to your browser in seconds.
 offline:
@@ -74,7 +78,10 @@ offline:
     - Supports common formats like MP3, WAV, FLAC and more.
   perfect_for_label: "Perfect for:"
   perfect_for_text: producers, DJs, teachers and musicians working with local audio files.
-  pricing: "After free trial: $2.99 per week or $29.99 per year."
+  pricing_template: "After free trial: WEEKLY_PRICE or YEARLY_PRICE."
+  offer_templates:
+    weekly: "$PRICE_VALUE per week"
+    yearly: "$PRICE_VALUE per year"
   cta: Add Pitch Changer to your iPhone, iPad or Mac
   image_alt: Download Pitch Changer for iPhone, iPad or Mac and keep your projects in the right key.
 use_cases:
@@ -149,7 +156,10 @@ get_started:
   title: Get started with Pitch Changer
   line_1: Whether you prefer working in the browser or with local files on your iPhone, iPad or Mac,
   line_2: Pitch Changer helps you change song key, shift pitch and make music fit you, not the other way around.
-  rating: 4.4/5 · 192 reviews on Chrome Web Store
+  rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL on Chrome Web Store"
+  review_count_labels:
+    one: review
+    other: reviews
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee
@@ -179,30 +189,14 @@ structured_data:
     inLanguage: en
     url: https://pitch-changer.com/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
-    aggregateRating:
-      "@type": AggregateRating
-      ratingValue: 4.4
-      ratingCount: 192
     publisher:
       "@type": Organization
       name: extensions.ee
       url: https://extensions.ee
-    offers:
-      - "@type": Offer
-        name: Weekly subscription
-        price: "3.99"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
-      - "@type": Offer
-        name: Yearly subscription
-        price: "35.90"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
-      - "@type": Offer
-        name: One-time payment
-        price: "59.00"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
+    offer_names:
+      weekly: Weekly subscription
+      yearly: Yearly subscription
+      lifetime: One-time payment
   offline:
     "@type": SoftwareApplication
     "@id": https://pitch-changer.com/#offline
@@ -218,14 +212,6 @@ structured_data:
       "@type": Organization
       name: extensions.ee
       url: https://extensions.ee
-    offers:
-      - "@type": Offer
-        name: Weekly subscription
-        price: "2.99"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
-      - "@type": Offer
-        name: Yearly subscription
-        price: "29.99"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
+    offer_names:
+      weekly: Weekly subscription
+      yearly: Yearly subscription

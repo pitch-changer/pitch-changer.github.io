@@ -1,0 +1,23 @@
+pitch_changer:
+  online:
+    rating:
+      value: "4.4"
+      count: 192
+    offers:
+      weekly:
+        price: "3.99"
+        priceCurrency: USD
+      yearly:
+        price: "35.90"
+        priceCurrency: USD
+      lifetime:
+        price: "59.00"
+        priceCurrency: USD
+  offline:
+    offers:
+      weekly:
+        price: "2.99"
+        priceCurrency: USD
+      yearly:
+        price: "29.99"
+        priceCurrency: USD

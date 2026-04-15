@@ -58,7 +58,11 @@ online:
     - Отлично подходит для репетиций, караоке и обычного прослушивания.
   perfect_for_label: "Отлично подходит для:"
   perfect_for_text: певцов, вокальных педагогов, преподавателей, школ, инструменталистов и всех, кто занимается под онлайн-видео.
-  pricing: "После бесплатного пробного периода: 3,99 $ в неделю, 35,90 $ в год или разовая покупка за 59,00 $."
+  pricing_template: "После бесплатного пробного периода: WEEKLY_PRICE, YEARLY_PRICE или LIFETIME_PRICE."
+  offer_templates:
+    weekly: "PRICE_VALUE $ в неделю"
+    yearly: "PRICE_VALUE $ в год"
+    lifetime: "разовая покупка за PRICE_VALUE $"
   cta: Добавить в браузер
   image_alt: Установите расширение Pitch Changer и добавьте его в браузер за несколько секунд.
 offline:
@@ -74,7 +78,10 @@ offline:
     - Поддерживает MP3, WAV, FLAC и другие популярные форматы.
   perfect_for_label: "Отлично подходит для:"
   perfect_for_text: продюсеров, диджеев, преподавателей и музыкантов, которые работают с локальными аудиофайлами.
-  pricing: "После бесплатного пробного периода: 2,99 $ в неделю или 29,99 $ в год."
+  pricing_template: "После бесплатного пробного периода: WEEKLY_PRICE или YEARLY_PRICE."
+  offer_templates:
+    weekly: "PRICE_VALUE $ в неделю"
+    yearly: "PRICE_VALUE $ в год"
   cta: Добавить на iPhone, iPad или Mac
   image_alt: Скачайте Pitch Changer для iPhone, iPad или Mac и готовьте треки в нужной тональности.
 use_cases:
@@ -149,7 +156,11 @@ get_started:
   title: Начните с Pitch Changer
   line_1: Работаете ли вы в браузере или с локальными файлами на iPhone, iPad и Mac,
   line_2: Pitch Changer помогает менять тональность песен, сдвигать высоту и подстраивать музыку под вас, а не наоборот.
-  rating: 4,4/5 · 192 отзыва в Chrome Web Store
+  rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL в Chrome Web Store"
+  review_count_labels:
+    one: отзыв
+    few: отзыва
+    many: отзывов
 footer:
   copyright_prefix: "© 2024–"
   company_name: extensions.ee
@@ -179,30 +190,14 @@ structured_data:
     inLanguage: ru
     url: https://pitch-changer.com/ru/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
-    aggregateRating:
-      "@type": AggregateRating
-      ratingValue: 4.4
-      ratingCount: 192
     publisher:
       "@type": Organization
       name: extensions.ee
       url: https://extensions.ee
-    offers:
-      - "@type": Offer
-        name: Недельная подписка
-        price: "3.99"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
-      - "@type": Offer
-        name: Годовая подписка
-        price: "35.90"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
-      - "@type": Offer
-        name: Разовая покупка
-        price: "59.00"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
+    offer_names:
+      weekly: Недельная подписка
+      yearly: Годовая подписка
+      lifetime: Разовая покупка
   offline:
     "@type": SoftwareApplication
     "@id": https://pitch-changer.com/ru/#offline
@@ -218,14 +213,6 @@ structured_data:
       "@type": Organization
       name: extensions.ee
       url: https://extensions.ee
-    offers:
-      - "@type": Offer
-        name: Недельная подписка
-        price: "2.99"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
-      - "@type": Offer
-        name: Годовая подписка
-        price: "29.99"
-        priceCurrency: USD
-        availability: https://schema.org/InStock
+    offer_names:
+      weekly: Недельная подписка
+      yearly: Годовая подписка
