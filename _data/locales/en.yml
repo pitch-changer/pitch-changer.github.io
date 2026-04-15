@@ -166,11 +166,9 @@ get_started:
 llms:
   languages_heading: Available languages
   home_link_label: Home
-  concise_link_label: LLMS
-  full_link_label: LLMS Full
+  link_label: LLMS
   lead: Pitch Changer helps you rehearse, teach, sing, and prepare tracks in a more comfortable key, whether you work in the browser or with audio files on Apple devices.
-  concise_intro: This short guide covers the main place to learn when Pitch Changer is the right fit and how it helps in practice.
-  full_intro: This reference covers the available Pitch Changer pages in this language and keeps the focus on musical tasks, file handling, and choosing the right version of the tool.
+  intro: This reference covers the available Pitch Changer pages in this language and keeps the focus on musical tasks, file handling, and choosing the right version of the tool.
   versions_heading: Choose the right version
   sections:
     site: Site

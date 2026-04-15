@@ -2,4 +2,4 @@
 layout: null
 permalink: /ru/llms.txt
 ---
-{% include llms_locale.txt level="concise" locale="ru" %}
+{% include llms_locale.txt locale="ru" %}

@@ -1,5 +1,0 @@
----
-layout: null
-permalink: /ru/llms-full.txt
----
-{% include llms_locale.txt level="full" locale="ru" %}
