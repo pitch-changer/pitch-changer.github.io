@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="{{ site.data.locales[page.locale].site.lang }}">
+  <head>
+    <title>{{ site.data.locales[page.locale].meta.title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.data.locales[page.locale].meta.description }}" />
+    <meta property="og:title" content="{{ site.data.locales[page.locale].meta.og_title }}" />
+    <meta property="og:description" content="{{ site.data.locales[page.locale].meta.og_description }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ '/online.png' | absolute_url }}" />
+    <link rel="icon" sizes="32x32" type="image/png" href="{{ '/icons/32.png' | relative_url }}" />
+    <link rel="icon" sizes="16x16" type="image/png" href="{{ '/icons/16.png' | relative_url }}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    {% for locale_code in site.locales %}
+      <link rel="alternate" hreflang="{{ site.data.locales[locale_code].site.lang }}" href="{{ site.data.locales[locale_code].site.path | absolute_url }}" />
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}" />
+    <style>
+      .locale-switcher {
+        position: relative;
+        display: inline-flex;
+      }
+
+      .locale-switcher summary {
+        list-style: none;
+      }
+
+      .locale-switcher summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .locale-switcher-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 20;
+        min-width: 13rem;
+        border: 1px solid #d1d5db;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+      }
+
+      .locale-switcher-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        color: #111827;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .locale-switcher-link:hover,
+      .locale-switcher-link:focus-visible {
+        background: #eff6ff;
+        color: #1d4ed8;
+        outline: none;
+      }
+
+      .locale-switcher-link[aria-current="true"] {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .locale-switcher-abbr {
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 640px) {
+        .locale-switcher-menu {
+          right: auto;
+          left: 0;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {{ site.data.locales[page.locale].structured_data.online | jsonify }},
+          {{ site.data.locales[page.locale].structured_data.offline | jsonify }}
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    {% include home_sections.html locale_code=page.locale %}
+    <script>
+      (function() {
+        var localeLinks = document.querySelectorAll("[data-locale-link]");
+        var currentSearch = window.location.search || "";
+        var currentHash = window.location.hash || "";
+
+        localeLinks.forEach(function(link) {
+          var localeCode = link.getAttribute("data-locale-code");
+          var targetPath = link.getAttribute("href");
+
+          if (targetPath) {
+            link.href = targetPath + currentSearch + currentHash;
+          }
+
+          link.addEventListener("click", function() {
+            if (!localeCode) return;
+
+            try {
+              window.localStorage.setItem("preferred_locale", localeCode);
+            } catch (error) {
+            }
+          });
+        });
+
+        var source = (new URLSearchParams(window.location.search)).get("utm_source");
+        if (source) {
+          document.querySelectorAll("a").forEach(function(link) {
+            if (link.href.startsWith("https://chromewebstore.google.com/")) {
+              link.href += "?utm_source=" + encodeURIComponent(source);
+            } else if (link.href.startsWith("https://apps.apple.com/")) {
+              link.href += "?ct=" + encodeURIComponent(source);
+            }
+          });
+        }
+
+        {% if page.locale == site.default_locale %}
+          var rootPaths = ["/", "/index.html"];
+          if (rootPaths.indexOf(window.location.pathname) === -1) {
+            return;
+          }
+
+          var targetLocale = null;
+          try {
+            targetLocale = window.localStorage.getItem("preferred_locale");
+          } catch (error) {
+          }
+
+          if (!targetLocale) {
+            var requestedLanguages = window.navigator.languages || [window.navigator.language || ""];
+            var prefersRussian = requestedLanguages.some(function(language) {
+              return /^ru(?:-|$)/i.test(language || "");
+            });
+
+            if (prefersRussian) {
+              targetLocale = "ru";
+            }
+          }
+
+          if (targetLocale === "ru") {
+            window.location.replace("/ru/" + currentSearch + currentHash);
+          }
+        {% endif %}
+
+        document.addEventListener("click", function(event) {
+          document.querySelectorAll("[data-locale-switcher]").forEach(function(details) {
+            if (!details.contains(event.target)) {
+              details.removeAttribute("open");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

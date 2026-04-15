@@ -1,0 +1,231 @@
+site:
+  lang: en
+  locale_label: EN
+  native_label: English
+  path: /
+meta:
+  title: "Pitch Changer: Easy Pitch Shifter Online and Offline"
+  description: Change key of songs on any website, pitch-shift and transpose music for practice, karaoke or production. Available as a browser extension, iPhone, iPad and Mac app.
+  og_title: "Pitch Changer: Easy Pitch Shifter Online and Offline"
+  og_description: Change key of songs on any website, pitch-shift and transpose music for practice, karaoke or production. Available as a browser extension, iPhone, iPad and Mac app.
+switcher:
+  aria_label: Language switcher
+  button_label: Choose language
+hero:
+  badge_label: New
+  badge_text: Pitch Changer for iPhone and iPad is out! See what's new
+  title: Pitch Changer
+  subtitle: Easily change key of songs
+  description_line_1: Pitch Changer makes it easy to shift pitch, change key and transpose songs
+  description_line_2: for practice, karaoke, teaching or production.
+  description_line_3: Use it online on any website in your browser or offline on your iPhone, iPad or Mac.
+  online_cta_title: Add Pitch Changer Online
+  online_cta_subtitle: to your browser
+  offline_cta_title: Add Pitch Changer Offline
+  offline_cta_subtitle: to your iPhone, iPad or Mac
+nav:
+  aria_label: Page sections
+  overview: What is Pitch Changer?
+  online: For websites
+  offline: For files
+  use_cases: Who is it for?
+  reviews: Reviews
+  faq: FAQ
+overview:
+  title: What is Pitch Changer?
+  paragraphs:
+    - Pitch Changer lets you change the key of songs on any website and pitch-shift and transpose music on your computer without complicated audio software. It is built for real-world use like practicing, teaching, recording, and simply having fun with your favorite tracks.
+    - "You can:"
+  bullets:
+    - Change song key up or down in semitones.
+    - Practice in the key that fits your voice or instrument.
+    - Prepare backing tracks, karaoke versions and teaching materials.
+    - Experiment with arrangements, harmonies and creative pitch shifts.
+  versions_intro: "Pitch Changer comes in two versions:"
+  online_link_label: Pitch Changer Online
+  online_link_suffix: a browser extension for websites, and
+  offline_link_label: Pitch Changer Offline
+  offline_link_suffix: an iPhone, iPad and Mac app for files.
+online:
+  title: Pitch Changer Online
+  paragraphs:
+    - Use Pitch Changer to easily change key of songs. Add this intuitive online pitch shifter and transpose music effortlessly.
+    - With Pitch Changer Online, you add a pitch shifter extension directly into your browser. Adjust the key of songs on platforms like YouTube and many other audio websites in just a few clicks.
+  bullets:
+    - Change song key online directly on any website.
+    - Works as a YouTube pitch changer and on other music platforms too.
+    - Adjust pitch in semitones with intuitive controls.
+    - Perfect for practicing along, karaoke or casual listening.
+  perfect_for_label: "Perfect for:"
+  perfect_for_text: singers, vocal coaches, teachers, schools, instrumentalists and anyone who practices with online videos.
+  pricing: "After free trial: $3.99 per week, $35.90 per year, or $59.00 one-time payment."
+  cta: Add Pitch Changer to your browser
+  image_alt: Install Pitch Changer Extension and add it to your browser in seconds.
+offline:
+  title: Pitch Changer Offline
+  paragraphs:
+    - From practice to production, Pitch Changer helps you transpose, shift pitch, change song key and process audio batches with power and precision.
+    - Take full control of your sound with Pitch Changer for iPhone, iPad and Mac. Import audio files, change pitch without changing speed, and batch-process entire folders to prepare practice tracks, teaching material or professional projects.
+  bullets:
+    - Change pitch of audio files instantly and accurately.
+    - Transpose music up or down with no tempo change.
+    - Batch process multiple songs in one go.
+    - Works offline with no internet connection required.
+    - Supports common formats like MP3, WAV, FLAC and more.
+  perfect_for_label: "Perfect for:"
+  perfect_for_text: producers, DJs, teachers and musicians working with local audio files.
+  pricing: "After free trial: $2.99 per week or $29.99 per year."
+  cta: Add Pitch Changer to your iPhone, iPad or Mac
+  image_alt: Download Pitch Changer for iPhone, iPad or Mac and keep your projects in the right key.
+use_cases:
+  title: Who uses Pitch Changer?
+  items:
+    - title: Vocal coaches & singers
+      body: Quickly adjust the key of any song to match a student's vocal range. Run exercises in different keys, explore alternative tonalities and make challenging songs more comfortable to sing.
+    - title: Instrumentalists
+      body: Guitarists and other instrumentalists can transpose tracks to the key that best suits their instrument or tuning without re-recording or retuning.
+    - title: Producers & DJs
+      body: Test ideas, remixes and transitions by shifting pitch and key in seconds. Prepare backing tracks, stems and sketches for your DAW or live sets.
+    - title: Teachers & learners
+      body: Create custom versions of songs for lessons, music theory demonstrations and focused practice sessions.
+reviews:
+  title: What our users say
+  subtitle: Hear from people who tried and loved Pitch Changer
+  items:
+    - name: Grant Kimbell
+      text: I cannot recommend enough picking a random setting, not too extreme, and shuffling your playlist. It feels like hearing a song you love for the first time again in a whole different vibe. The pitch shift quality is excellent.
+    - name: Vadim Makarov
+      text: I am a vocal coach and often need to adjust song keys for students. The extension works perfectly across different websites, not just YouTube, without bugs or crashes. It is also very simple, and that is a huge advantage.
+    - name: Nikola Negovanovic
+      text: After several months of using it, I can confirm it is the best pitch changer app for Chrome. Definitely worth the price.
+    - name: The Real Spiro Agnew
+      text: Excellent, works like a dream.
+    - name: Ice
+      text: This is exactly what I expect from a browser extension.
+    - name: maryam seddigh
+      text: It is amazing. I have been looking for this for a long time.
+    - name: Hans Harding
+      text: Great tool for me as a bass player when a song needs to be played in a new key.
+    - name: Kieran Brown
+      text: There is this one YouTuber who makes really good videos but I cannot stand his whiny grandma voice. This makes it much easier on the ears.
+    - name: lilly imaginator
+      text: A must-have extension in my opinion. Great for karaoke, learning music, or just playing around with songs and hearing them in a higher or lower pitch.
+faq:
+  title: Frequently Asked Questions
+  items:
+    - question: What's the difference between Pitch Changer Online and Pitch Changer Offline?
+      answers:
+        - Pitch Changer Online is a browser extension that changes the key of songs directly on websites like YouTube and other audio or video platforms.
+        - Pitch Changer Offline is a standalone iPhone, iPad and Mac app that works offline with your own audio files and can batch process multiple tracks at once.
+    - question: Do I need an internet connection to use Pitch Changer?
+      answers:
+        - The Pitch Changer extension runs in your browser and is designed for online content, so you will typically use it while connected to the internet.
+        - The iPhone, iPad and Mac app works fully offline with local audio files, so once it is installed you can use it without an active connection.
+    - question: Which audio formats does Pitch Changer Offline support?
+      answers:
+        - The iPhone, iPad and Mac app works with common audio formats such as MP3, WAV, FLAC and more, so you can process the files you already have without converting them first.
+        - You can also add videos, regions from your DAW and whole folders. Pitch Changer extracts the audio for you.
+    - question: Will changing pitch affect audio quality?
+      answers:
+        - Pitch Changer is designed to preserve audio quality while you adjust the key. Our users regularly say the pitch shift quality is excellent.
+        - As with any digital pitch shifting, very extreme changes may sound less natural, but in most cases the result stays clean and musical.
+    - question: I can't find instrumental versions of songs. Can you help?
+      answers: []
+      answer_html: Check out our <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. It removes vocals from a song online or offline and works beautifully with Pitch Changer.
+    - question: Is there a free trial? How does pricing work?
+      answers:
+        - Both the extension and the iPhone, iPad and Mac app include a free trial period with no card required.
+        - After the trial, Pitch Changer Online offers weekly, yearly and one-time purchase options, and Pitch Changer Offline offers weekly and yearly subscriptions, as listed above.
+        - All payments are handled securely through Paddle for the extension or Apple for the app.
+    - question: How do I cancel my subscription?
+      answers:
+        - Click the Manage Subscription button inside the app or extension and follow the instructions there.
+        - The process is fully automatic, so there is no need to call or write emails.
+    - question: Who is Pitch Changer for?
+      answers:
+        - Pitch Changer is made for singers, musicians, producers, DJs, teachers and anyone who needs to adjust the key of songs.
+        - Whether you are practicing at home, performing live, teaching students or preparing content, it gives you a quick way to get music into the key that works for you.
+get_started:
+  title: Get started with Pitch Changer
+  line_1: Whether you prefer working in the browser or with local files on your iPhone, iPad or Mac,
+  line_2: Pitch Changer helps you change song key, shift pitch and make music fit you, not the other way around.
+  rating: 4.4/5 · 192 reviews on Chrome Web Store
+footer:
+  copyright_prefix: "© 2024–"
+  company_name: extensions.ee
+  contact: "Contact: info@extensions.ee."
+  payments_label: "Payments and refunds:"
+  paddle_label: Paddle
+  apple_label: Apple
+  terms_label: Terms and Conditions
+  refund_label: Refund Policy
+  privacy_label: Privacy Policy
+  paragraphs:
+    - Purchases made through our website are processed by our online reseller Paddle.com, which is the Merchant of Record for these orders. Paddle provides customer service for website orders and handles returns, billing and applicable taxes.
+    - Purchases made through the App Store are processed directly by Apple, which acts as the Merchant of Record for App Store orders. Apple manages billing, receipts, taxes, refunds and all related customer service inquiries for App Store purchases.
+    - If you are unsure where you purchased, please check your order confirmation email or receipt sent by Paddle or Apple.
+  acknowledgements_prefix: Third-party trademarks and components are listed on the
+  acknowledgements_label: Acknowledgements
+  acknowledgements_suffix: page.
+structured_data:
+  online:
+    "@type": SoftwareApplication
+    "@id": https://pitch-changer.com/#online
+    name: Pitch Changer
+    alternateName: Pitch Changer Online
+    applicationCategory: MultimediaApplication
+    operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
+    description: Pitch Changer is a browser extension that lets you change the key of songs on any website directly in your browser. Shift pitch in semitones while listening on sites like YouTube and other audio or video platforms.
+    inLanguage: en
+    url: https://pitch-changer.com/#online
+    installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
+    aggregateRating:
+      "@type": AggregateRating
+      ratingValue: 4.4
+      ratingCount: 192
+    publisher:
+      "@type": Organization
+      name: extensions.ee
+      url: https://extensions.ee
+    offers:
+      - "@type": Offer
+        name: Weekly subscription
+        price: "3.99"
+        priceCurrency: USD
+        availability: https://schema.org/InStock
+      - "@type": Offer
+        name: Yearly subscription
+        price: "35.90"
+        priceCurrency: USD
+        availability: https://schema.org/InStock
+      - "@type": Offer
+        name: One-time payment
+        price: "59.00"
+        priceCurrency: USD
+        availability: https://schema.org/InStock
+  offline:
+    "@type": SoftwareApplication
+    "@id": https://pitch-changer.com/#offline
+    name: Pitch Changer
+    alternateName: Pitch Changer for iPhone, iPad and Mac
+    applicationCategory: MultimediaApplication
+    operatingSystem: macOS 15.0 or iOS 18.0
+    description: Pitch Changer for Mac lets you change pitch, transpose songs and batch-process audio files offline. Import tracks, shift key without changing tempo, and export new versions for practice, teaching or production.
+    inLanguage: en
+    url: https://pitch-changer.com/#offline
+    installUrl: https://apps.apple.com/app/id6749900880
+    publisher:
+      "@type": Organization
+      name: extensions.ee
+      url: https://extensions.ee
+    offers:
+      - "@type": Offer
+        name: Weekly subscription
+        price: "2.99"
+        priceCurrency: USD
+        availability: https://schema.org/InStock
+      - "@type": Offer
+        name: Yearly subscription
+        price: "29.99"
+        priceCurrency: USD
+        availability: https://schema.org/InStock

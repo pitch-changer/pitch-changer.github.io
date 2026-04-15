@@ -1,0 +1,251 @@
+<header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
+  <div class="flex justify-end">
+    {% include locale_switcher.html locale_code=include.locale_code %}
+  </div>
+  <div class="mt-6 text-center">
+    <a
+      target="_blank"
+      href="#offline"
+      class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200"
+      role="alert"
+    >
+      <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">{{ site.data.locales[include.locale_code].hero.badge_label }}</span>
+      <span class="text-sm font-medium">{{ site.data.locales[include.locale_code].hero.badge_text }}</span>
+      <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+      </svg>
+    </a>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].hero.title }}</h1>
+    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ site.data.locales[include.locale_code].hero.subtitle }}</h2>
+    <p class="text-2xl mb-4">
+      {{ site.data.locales[include.locale_code].hero.description_line_1 }}<br />
+      {{ site.data.locales[include.locale_code].hero.description_line_2 }}
+    </p>
+    <p class="text-2xl">{{ site.data.locales[include.locale_code].hero.description_line_3 }}</p>
+    <div>
+      <a
+        target="_blank"
+        href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>{{ site.data.locales[include.locale_code].hero.online_cta_title }}</div>
+          <div class="text-xl">{{ site.data.locales[include.locale_code].hero.online_cta_subtitle }}</div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        href="https://apps.apple.com/app/id6749900880"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>{{ site.data.locales[include.locale_code].hero.offline_cta_title }}</div>
+          <div class="text-xl">{{ site.data.locales[include.locale_code].hero.offline_cta_subtitle }}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="{{ site.data.locales[include.locale_code].nav.aria_label }}" class="text-center text-3xl mb-10 mt-10 px-4">
+  <a class="underline whitespace-nowrap" href="#overview">{{ site.data.locales[include.locale_code].nav.overview }}</a> ·
+  <a class="underline whitespace-nowrap" href="#online">{{ site.data.locales[include.locale_code].nav.online }}</a> ·
+  <a class="underline whitespace-nowrap" href="#offline">{{ site.data.locales[include.locale_code].nav.offline }}</a> ·
+  <a class="underline whitespace-nowrap" href="#use-cases">{{ site.data.locales[include.locale_code].nav.use_cases }}</a> ·
+  <a class="underline whitespace-nowrap" href="#reviews">{{ site.data.locales[include.locale_code].nav.reviews }}</a> ·
+  <a class="underline whitespace-nowrap" href="#faq">{{ site.data.locales[include.locale_code].nav.faq }}</a>
+</nav>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
+  <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+    {{ site.data.locales[include.locale_code].overview.title }}
+  </h2>
+  {% for paragraph in site.data.locales[include.locale_code].overview.paragraphs %}
+    <p class="mb-4">{{ paragraph }}</p>
+  {% endfor %}
+  <ul class="mb-4 list-disc list-inside space-y-4">
+    {% for bullet in site.data.locales[include.locale_code].overview.bullets %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+  <p class="mb-4">
+    {{ site.data.locales[include.locale_code].overview.versions_intro }}
+    <strong><a href="#online" class="underline">{{ site.data.locales[include.locale_code].overview.online_link_label }}</a></strong> {{ site.data.locales[include.locale_code].overview.online_link_suffix }}
+    <strong><a href="#offline" class="underline">{{ site.data.locales[include.locale_code].overview.offline_link_label }}</a></strong> {{ site.data.locales[include.locale_code].overview.offline_link_suffix }}
+  </p>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="online">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+      <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
+        {{ site.data.locales[include.locale_code].online.title }}
+      </a>
+    </h2>
+    {% for paragraph in site.data.locales[include.locale_code].online.paragraphs %}
+      <p class="text-xl mb-4">{{ paragraph }}</p>
+    {% endfor %}
+    <ul class="text-xl mb-4 list-disc list-inside space-y-4">
+      {% for bullet in site.data.locales[include.locale_code].online.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    <p class="text-xl mb-4"><strong>{{ site.data.locales[include.locale_code].online.perfect_for_label }}</strong> {{ site.data.locales[include.locale_code].online.perfect_for_text }}</p>
+    <p class="max-w-2xl mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ site.data.locales[include.locale_code].online.pricing }}</p>
+    <a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      {{ site.data.locales[include.locale_code].online.cta }}
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex">
+    <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb">
+      <img src="{{ '/online.png' | relative_url }}" alt="{{ site.data.locales[include.locale_code].online.image_alt }}" />
+    </a>
+  </div>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="offline">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+      <a target="_blank" href="https://apps.apple.com/app/id6749900880" class="focus:outline-none">
+        {{ site.data.locales[include.locale_code].offline.title }}
+      </a>
+    </h2>
+    {% for paragraph in site.data.locales[include.locale_code].offline.paragraphs %}
+      <p class="text-xl mb-4">{{ paragraph }}</p>
+    {% endfor %}
+    <ul class="text-xl mb-4 list-disc list-inside space-y-4">
+      {% for bullet in site.data.locales[include.locale_code].offline.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    <p class="text-xl mb-4"><strong>{{ site.data.locales[include.locale_code].offline.perfect_for_label }}</strong> {{ site.data.locales[include.locale_code].offline.perfect_for_text }}</p>
+    <p class="max-w-2xl mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ site.data.locales[include.locale_code].offline.pricing }}</p>
+    <a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      {{ site.data.locales[include.locale_code].offline.cta }}
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex" style="margin-left: 50px; margin-right: -50px">
+    <a target="_blank" href="https://apps.apple.com/app/id6749900880">
+      <img src="{{ '/offline.png' | relative_url }}" alt="{{ site.data.locales[include.locale_code].offline.image_alt }}" />
+    </a>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="use-cases">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ site.data.locales[include.locale_code].use_cases.title }}</h2>
+  {% for item in site.data.locales[include.locale_code].use_cases.items %}
+    <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.title }}</h3>
+    <p class="text-xl mb-4">{{ item.body }}</p>
+  {% endfor %}
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="reviews">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].reviews.title }}</h2>
+      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ site.data.locales[include.locale_code].reviews.subtitle }}</h3>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+      {% for review in site.data.locales[include.locale_code].reviews.items %}
+        <div class="bg-white p-6 shadow">
+          <div class="flex items-center mb-4">
+            <div class="ml-4">
+              <h4 class="text-lg font-semibold text-gray-900">
+                {{ review.name }}
+                <span class="text-yellow-400">★★★★★</span>
+              </h4>
+            </div>
+          </div>
+          <p class="text-gray-700">“{{ review.text }}”</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="faq">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ site.data.locales[include.locale_code].faq.title }}</h2>
+  {% for item in site.data.locales[include.locale_code].faq.items %}
+    <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.question }}</h3>
+    {% for answer in item.answers %}
+      <p class="text-xl mb-4">{{ answer }}</p>
+    {% endfor %}
+    {% if item.answer_html %}
+      <p class="text-xl mb-4">{{ item.answer_html }}</p>
+    {% endif %}
+  {% endfor %}
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="get-started">
+  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ site.data.locales[include.locale_code].get_started.title }}</h2>
+  <p class="text-2xl mb-4">
+    {{ site.data.locales[include.locale_code].get_started.line_1 }}<br />
+    {{ site.data.locales[include.locale_code].get_started.line_2 }}
+  </p>
+  <div>
+    <a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+        <div>{{ site.data.locales[include.locale_code].hero.online_cta_title }}</div>
+        <div class="text-xl">{{ site.data.locales[include.locale_code].hero.online_cta_subtitle }}</div>
+      </div>
+    </a>
+    <a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+        <div>{{ site.data.locales[include.locale_code].hero.offline_cta_title }}</div>
+        <div class="text-xl">{{ site.data.locales[include.locale_code].hero.offline_cta_subtitle }}</div>
+      </div>
+    </a>
+  </div>
+  <p class="mt-10 text-xl text-gray-500">
+    <span class="text-yellow-300">★</span> {{ site.data.locales[include.locale_code].get_started.rating }}
+  </p>
+</section>
+
+<footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class="block text-sm text-gray-500 sm:text-center">
+        <nobr>{{ site.data.locales[include.locale_code].footer.copyright_prefix }}<script>document.write(new Date().getFullYear())</script>
+          <a href="https://extensions.ee/" class="underline">{{ site.data.locales[include.locale_code].footer.company_name }}</a>.
+        </nobr>
+        <nobr>{{ site.data.locales[include.locale_code].footer.contact }}</nobr>
+        <nobr>{{ site.data.locales[include.locale_code].footer.payments_label }}
+          <a href="https://paddle.net/" class="underline">{{ site.data.locales[include.locale_code].footer.paddle_label }}</a>,
+          <a href="https://support.apple.com/billing" class="underline">{{ site.data.locales[include.locale_code].footer.apple_label }}</a>.
+        </nobr>
+      </div>
+    </div>
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+      <li><a href="{{ '/terms-and-conditions.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ site.data.locales[include.locale_code].footer.terms_label }}</a></li>
+      <li><a href="{{ '/refund-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ site.data.locales[include.locale_code].footer.refund_label }}</a></li>
+      <li><a href="{{ '/privacy-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ site.data.locales[include.locale_code].footer.privacy_label }}</a></li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 sm:text-left">
+    {% for paragraph in site.data.locales[include.locale_code].footer.paragraphs %}
+      <p class="mb-4">{{ paragraph }}</p>
+    {% endfor %}
+    <p>
+      {{ site.data.locales[include.locale_code].footer.acknowledgements_prefix }}
+      <a href="https://extensions.ee/acknowledgements.html?from=pitch-changer.com" class="underline">{{ site.data.locales[include.locale_code].footer.acknowledgements_label }}</a>
+      {{ site.data.locales[include.locale_code].footer.acknowledgements_suffix }}
+    </p>
+  </div>
+</footer>

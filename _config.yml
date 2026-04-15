@@ -1,0 +1,7 @@
+title: Pitch Changer
+url: https://pitch-changer.com
+baseurl: ""
+default_locale: en
+locales:
+  - en
+  - ru
