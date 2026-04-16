@@ -17,6 +17,17 @@
     <meta property="og:image" content="{{ '/online.png' | absolute_url }}" />
     <link rel="icon" sizes="32x32" type="image/png" href="{{ '/icons/32.png' | relative_url }}" />
     <link rel="icon" sizes="16x16" type="image/png" href="{{ '/icons/16.png' | relative_url }}" />
+{% if jekyll.environment == "production" -%}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQN6C9B1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMQN6C9B1Q');
+    </script>
+{% endif -%}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="canonical" href="{{ page_absolute_url }}" />
 {% for locale_code in site.locales -%}
