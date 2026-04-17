@@ -3,6 +3,10 @@
 {%- assign online_facts = product_facts.online -%}
 {%- assign offline_facts = product_facts.offline -%}
 {%- assign page_absolute_url = page.url | absolute_url -%}
+{%- assign show_prices = false -%}
+{%- if page.locale == 'en' -%}
+  {%- assign show_prices = true -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ locale_data.site.lang }}">
   <head>
@@ -221,7 +225,7 @@
               "ratingValue": {{ online_facts.rating.value }},
               "ratingCount": {{ online_facts.rating.count }}
             },
-            "publisher": {{ locale_data.structured_data.online.publisher | jsonify }},
+            "publisher": {{ locale_data.structured_data.online.publisher | jsonify }}{% if show_prices %},
             "offers": [
               {
                 "@type": "Offer",
@@ -244,7 +248,7 @@
                 "priceCurrency": {{ online_facts.offers.lifetime.priceCurrency | jsonify }},
                 "availability": "https://schema.org/InStock"
               }
-            ]
+            ]{% endif %}
           },
           {
             "@type": "SoftwareApplication",
@@ -257,7 +261,7 @@
             "inLanguage": {{ locale_data.structured_data.offline.inLanguage | jsonify }},
             "url": {{ locale_data.structured_data.offline.url | jsonify }},
             "installUrl": {{ locale_data.structured_data.offline.installUrl | jsonify }},
-            "publisher": {{ locale_data.structured_data.offline.publisher | jsonify }},
+            "publisher": {{ locale_data.structured_data.offline.publisher | jsonify }}{% if show_prices %},
             "offers": [
               {
                 "@type": "Offer",
@@ -273,7 +277,7 @@
                 "priceCurrency": {{ offline_facts.offers.yearly.priceCurrency | jsonify }},
                 "availability": "https://schema.org/InStock"
               }
-            ]
+            ]{% endif %}
           }
         ]
       }
