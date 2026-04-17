@@ -25,6 +25,7 @@ This repo contains the Jekyll source for the product website hosted on GitHub Pa
 - Danish lives at `/da/`.
 - Polish lives at `/pl/`.
 - Portuguese lives at `/pt/`.
+- Traditional Chinese lives at `/zh-TW/`.
 - Locale copy is stored in `_data/locales/`.
 - Shared layout and partials render all locales as static HTML for search engines.
 
