@@ -69,3 +69,10 @@ tempo_tools:
     speed_tool:
       name: Audio snelheid aanpassen
       url: https://www.musiciantools.online/en/audio-speed-changer
+  sv:
+    bpm_extension:
+      name: BPM-ändrare
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Ändra ljudhastighet
+      url: https://www.musiciantools.online/en/audio-speed-changer

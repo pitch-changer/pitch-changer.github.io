@@ -1,0 +1,240 @@
+site:
+  lang: sv
+  locale_label: SV
+  native_label: Svenska
+  path: /sv/
+formatting:
+  decimal_separator: ','
+meta:
+  title: "Ändra tonart: ändra låttonart online och offline"
+  description: Ändra tonart på låtar på vilken webbplats som helst och transponera musik för övning, karaoke eller produktion. Finns som webbläsartillägg och app för iPhone, iPad och Mac.
+  og_title: "Ändra tonart: ändra låttonart online och offline"
+  og_description: Ändra tonart på låtar på vilken webbplats som helst och transponera musik för övning, karaoke eller produktion. Finns som webbläsartillägg och app för iPhone, iPad och Mac.
+switcher:
+  aria_label: Språkväljare
+  button_label: Välj språk
+hero:
+  badge_label: Nyhet
+  badge_text: Pitch Changer för iPhone och iPad är ute. Se vad som är nytt
+  title: Pitch Changer
+  subtitle: Ändra enkelt tonart på låtar
+  description_line_1: Pitch Changer gör det enkelt att flytta pitch, byta tonart och transponera låtar
+  description_line_2: för övning, karaoke, undervisning eller produktion.
+  description_line_3: Använd det online på vilken webbplats som helst i webbläsaren eller offline på iPhone, iPad eller Mac.
+  online_cta_title: Lägg till Ändra tonart
+  online_cta_subtitle: i din webbläsare
+  offline_cta_title: Lägg till Pitch Changer Offline
+  offline_cta_subtitle: på din iPhone, iPad eller Mac
+nav:
+  aria_label: Sidavsnitt
+  overview: Vad är Pitch Changer?
+  online: För webbplatser
+  offline: För filer
+  use_cases: Vem är det för?
+  reviews: Omdömen
+  faq: FAQ
+overview:
+  title: Vad är Pitch Changer?
+  paragraphs:
+    - Med Pitch Changer kan du ändra tonart på låtar på vilken webbplats som helst och transponera musik på datorn utan krånglig ljudprogramvara. Det är byggt för verkliga behov som övning, undervisning, inspelning eller att bara njuta av favoritlåtar i en bekvämare tonart.
+    - "Du kan:"
+  bullets:
+    - Ändra en låts tonart upp eller ner i halvtoner.
+    - Öva i en tonart som passar din röst eller ditt instrument bättre.
+    - Förbereda backing tracks, karaokeversioner och undervisningsmaterial.
+    - Testa arrangemang, harmonier och kreativa pitchförflyttningar.
+  versions_intro: "Pitch Changer finns i två versioner:"
+  online_link_label: Ändra tonart
+  online_link_suffix: ett webbläsartillägg för webbplatser, och
+  offline_link_label: Pitch Changer Offline
+  offline_link_suffix: en app för iPhone, iPad och Mac för filer.
+online:
+  title: Ändra tonart
+  paragraphs:
+    - Använd Ändra tonart för att enkelt byta tonart på låtar medan de redan spelar. Det är ett smidigt sätt att transponera musik utan att lämna webbläsaren.
+    - Pitch Changer Online lägger tonartskontroller direkt i webbläsaren. Ändra tonart på YouTube och många andra ljudwebbplatser med bara några klick.
+  bullets:
+    - Ändra tonart på låtar online direkt på vilken webbplats som helst.
+    - Fungerar som verktyg för att ändra tonart på YouTube och andra musikplattformar.
+    - Justera pitch i halvtoner med tydliga reglage.
+    - Bra för att spela med, sjunga karaoke eller lyssna i en tonart som känns bekvämare.
+  perfect_for_label: "Perfekt för:"
+  perfect_for_text: sångare, sångpedagoger, lärare, skolor, instrumentalister och alla som övar med videor online.
+  pricing_template: "Efter gratisperioden: WEEKLY_PRICE, YEARLY_PRICE eller LIFETIME_PRICE."
+  offer_templates:
+    weekly: "PRICE_VALUE $ per vecka"
+    yearly: "PRICE_VALUE $ per år"
+    lifetime: "engångsbetalning på PRICE_VALUE $"
+  cta: Lägg till Ändra tonart i webbläsaren
+  image_alt: Installera Pitch Changer-tillägget och lägg till det i webbläsaren på några sekunder.
+offline:
+  title: Pitch Changer Offline
+  paragraphs:
+    - Från övning till produktion hjälper Pitch Changer dig att transponera, flytta pitch, ändra tonart på låtar och batchbearbeta ljud med precision.
+    - Med Pitch Changer för iPhone, iPad och Mac kan du importera ljudfiler, ändra pitch utan att ändra hastighet och bearbeta hela mappar för att förbereda övningsspår, undervisningsmaterial eller professionella projekt.
+  bullets:
+    - Ändra pitch på ljudfiler snabbt och exakt.
+    - Transponera musik upp eller ner utan att ändra tempo.
+    - Bearbeta flera låtar i ett svep.
+    - Fungerar offline utan aktiv internetanslutning.
+    - Stöder vanliga format som MP3, WAV, FLAC och fler.
+  perfect_for_label: "Perfekt för:"
+  perfect_for_text: producenter, DJ:er, lärare och musiker som arbetar med lokala ljudfiler.
+  pricing_template: "Efter gratisperioden: WEEKLY_PRICE eller YEARLY_PRICE."
+  offer_templates:
+    weekly: "PRICE_VALUE $ per vecka"
+    yearly: "PRICE_VALUE $ per år"
+  cta: Lägg till Pitch Changer på din iPhone, iPad eller Mac
+  image_alt: Hämta Pitch Changer för iPhone, iPad eller Mac och håll projekten i rätt tonart.
+use_cases:
+  title: Vem använder Pitch Changer?
+  items:
+    - title: Sångpedagoger och sångare
+      body: Justera snabbt tonarten på vilken låt som helst så att den passar elevens röstomfång. Kör övningar i olika tonarter, utforska alternativ och gör svåra låtar mer bekväma att sjunga.
+    - title: Instrumentalister
+      body: Gitarrister och andra instrumentalister kan transponera spår till den tonart som passar deras instrument eller stämning bäst utan att spela in eller stämma om.
+    - title: Producenter och DJ:er
+      body: Testa idéer, remixer och övergångar genom att flytta pitch och tonart på några sekunder. Förbered backing tracks, stems och skisser för DAW eller liveset.
+    - title: Lärare och elever
+      body: Skapa egna versioner av låtar för lektioner, musikteoridemonstrationer och fokuserade övningspass.
+reviews:
+  title: Vad våra användare säger
+  subtitle: Hör från människor som har testat och gillat Pitch Changer
+  items:
+    - name: Grant Kimbell
+      text: Jag kan verkligen rekommendera att välja en slumpmässig inställning, bara inte för extrem, och shuffla spellistan. Det känns som att höra en låt du älskar för första gången igen, fast i en helt annan känsla. Kvaliteten på pitchförändringen är fantastisk.
+    - name: Vadim Makarov
+      text: Jag är sångpedagog och behöver ofta justera tonarter för elever. Tillägget fungerar perfekt på olika webbplatser, inte bara YouTube, utan buggar eller krascher. Det är också väldigt enkelt, och det är en stor fördel.
+    - name: Nikola Negovanovic
+      text: Efter flera månaders användning kan jag säga att det här är den bästa pitch changer-appen för Chrome. Helt klart värd priset.
+    - name: The Real Spiro Agnew
+      text: Utmärkt, fungerar som en dröm.
+    - name: Ice
+      text: Det här är precis vad jag förväntar mig av ett bra webbläsartillägg.
+    - name: maryam seddigh
+      text: Det är fantastiskt. Jag har letat efter det här länge.
+    - name: Hans Harding
+      text: Ett fantastiskt verktyg för mig som bassist när en låt behöver spelas i en ny tonart.
+    - name: Kieran Brown
+      text: Det finns en YouTuber som gör riktigt bra videor men jag står inte ut med hans gnälliga röst. Det här gör det mycket lättare att lyssna.
+    - name: lilly imaginator
+      text: I mina ögon är det här ett måste-tillägg. Perfekt för karaoke, att lära sig musik eller bara leka med hur låtar låter högre eller lägre.
+faq:
+  title: Vanliga frågor
+  items:
+    - question: Vad är skillnaden mellan Pitch Changer Online och Pitch Changer Offline?
+      answers:
+        - Pitch Changer Online är ett webbläsartillägg som ändrar tonart på låtar direkt på webbplatser som YouTube och andra ljud- eller videoplattformar.
+        - Pitch Changer Offline är en fristående app för iPhone, iPad och Mac som fungerar offline med dina egna ljudfiler och kan batchbearbeta flera spår samtidigt.
+    - question: Behöver jag en internetanslutning för att använda Pitch Changer?
+      answers:
+        - Pitch Changer-tillägget körs i webbläsaren och är gjort för innehåll online, så du använder det normalt när du är ansluten till internet.
+        - Appen för iPhone, iPad och Mac fungerar helt offline med lokala ljudfiler, så när den väl är installerad kan du använda den utan aktiv anslutning.
+    - question: Vilka ljudformat stöder Pitch Changer Offline?
+      answers:
+        - Appen för iPhone, iPad och Mac fungerar med vanliga ljudformat som MP3, WAV, FLAC och fler, så du kan bearbeta de filer du redan har utan att konvertera dem först.
+        - Du kan också lägga till videor, regioner från din DAW och hela mappar. Pitch Changer extraherar ljudet åt dig.
+    - question: Påverkar ändrad pitch ljudkvaliteten?
+      answers:
+        - Pitch Changer är byggt för att bevara ljudkvaliteten medan du justerar tonarten. Våra användare säger regelbundet att kvaliteten på pitchförändringen är utmärkt.
+        - Som med all digital pitchbearbetning kan väldigt extrema ändringar låta mindre naturliga, men i de flesta fall förblir resultatet rent och musikaliskt.
+    - question: Jag hittar inga instrumentala versioner av låtar. Kan ni hjälpa?
+      answers: []
+      answer_html: Kolla in vår <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. Den tar bort sång från en låt online eller offline och fungerar väldigt bra ihop med Pitch Changer.
+    - question: Hur kan jag ändra tempot på en låt?
+      answers: []
+      linked_answers:
+        - tool_key: bpm_extension
+          template: Om du vill sakta ner eller snabba upp musik på en webbplats medan den redan spelar, använd TOOL_LINK.
+        - tool_key: speed_tool
+          template: Om du vill ändra tempot på din egen fil men behålla samma pitch, använd TOOL_LINK.
+    - question: Finns det en gratis provperiod? Hur fungerar priset?
+      answers:
+        - Både tillägget och appen för iPhone, iPad och Mac har en gratis provperiod utan kort.
+        - Efter provperioden erbjuder Pitch Changer Online veckovisa, årliga och engångsköp, medan Pitch Changer Offline erbjuder veckovisa och årliga abonnemang, enligt ovan.
+        - Alla betalningar hanteras säkert via Paddle för tillägget eller Apple för appen.
+    - question: Hur säger jag upp min prenumeration?
+      answers:
+        - Klicka på knappen Manage Subscription i appen eller tillägget och följ instruktionerna där.
+        - Processen är helt automatisk, så du behöver inte ringa eller skicka e-post.
+    - question: Vem är Pitch Changer till för?
+      answers:
+        - Pitch Changer är gjort för sångare, musiker, producenter, DJ:er, lärare och alla som behöver justera tonarten på låtar.
+        - Oavsett om du övar hemma, spelar live, undervisar elever eller förbereder material ger det dig ett snabbt sätt att få musiken till den tonart som fungerar för dig.
+get_started:
+  title: Kom igång med Pitch Changer
+  line_1: Oavsett om du föredrar att arbeta i webbläsaren eller med lokala filer på din iPhone, iPad eller Mac,
+  line_2: hjälper Pitch Changer dig att ändra tonart på låtar, flytta pitch och få musiken att passa dig istället för tvärtom.
+  rating_template: "RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL på Chrome Web Store"
+  review_count_rule: one_other
+  review_count_labels:
+    one: omdöme
+    other: omdömen
+llms:
+  languages_heading: Tillgängliga språk
+  home_link_label: Hem
+  link_label: LLMS
+  lead: Pitch Changer hjälper dig att öva, undervisa, sjunga och förbereda spår i en bekvämare tonart, oavsett om du arbetar i webbläsaren eller med ljudfiler på Apple-enheter.
+  intro: Den här referensen samlar Pitch Changer-sidorna som finns på det här språket och håller fokus på musikaliska uppgifter, filhantering och att välja rätt verktygsversion.
+  versions_heading: Välj rätt version
+  sections:
+    site: Webbplats
+  pages:
+    home:
+      title: Pitch Changer
+      summary: Börja här för att se hur Pitch Changer hjälper sångare, lärare, instrumentalister, producenter och DJ:er att ändra tonarter, transponera låtar och välja mellan webbtillägget och offlineappen för filer.
+footer:
+  copyright_prefix: "© 2024–"
+  company_name: extensions.ee
+  contact: "Kontakt: info@extensions.ee."
+  payments_label: "Betalningar och återbetalningar:"
+  paddle_label: Paddle
+  apple_label: Apple
+  terms_label: Användarvillkor
+  refund_label: Återbetalningspolicy
+  privacy_label: Integritetspolicy
+  paragraphs:
+    - Köp som görs på vår webbplats behandlas av vår onlineåterförsäljare Paddle.com, som är Merchant of Record för dessa beställningar. Paddle hanterar kundservice för webbplatsbeställningar, återbetalningar, fakturering och tillämpliga skatter.
+    - Köp som görs via App Store behandlas direkt av Apple, som fungerar som Merchant of Record för App Store-beställningar. Apple hanterar fakturering, kvitton, skatter, återbetalningar och alla relaterade supportärenden.
+    - Om du är osäker på var du köpte, kontrollera orderbekräftelsen eller kvittot från Paddle eller Apple.
+  acknowledgements_prefix: Tredjepartsvarumärken och komponenter listas på sidan
+  acknowledgements_label: Acknowledgements
+  acknowledgements_suffix: .
+structured_data:
+  online:
+    "@type": SoftwareApplication
+    "@id": https://pitch-changer.com/sv/#online
+    name: Ändra tonart
+    alternateName: Pitch Changer Online
+    applicationCategory: MultimediaApplication
+    operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
+    description: Ändra tonart är ett webbläsartillägg som låter dig ändra tonart på låtar på vilken webbplats som helst direkt i webbläsaren. Flytta pitch i halvtoner medan du lyssnar på YouTube och andra ljud- eller videoplattformar.
+    inLanguage: sv
+    url: https://pitch-changer.com/sv/#online
+    installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
+    publisher:
+      "@type": Organization
+      name: extensions.ee
+      url: https://extensions.ee
+    offer_names:
+      weekly: Veckoabonnemang
+      yearly: Årsabonnemang
+      lifetime: Engångsbetalning
+  offline:
+    "@type": SoftwareApplication
+    "@id": https://pitch-changer.com/sv/#offline
+    name: Pitch Changer Offline
+    alternateName: Pitch Changer för iPhone, iPad och Mac
+    applicationCategory: MultimediaApplication
+    operatingSystem: macOS 15.0 or iOS 18.0
+    description: Pitch Changer för iPhone, iPad och Mac hjälper dig att ändra pitch, transponera låtar och batchbearbeta ljudfiler offline. Importera spår, ändra tonart utan att påverka tempot och exportera nya versioner för övning, undervisning eller produktion.
+    inLanguage: sv
+    url: https://pitch-changer.com/sv/#offline
+    installUrl: https://apps.apple.com/app/id6749900880
+    publisher:
+      "@type": Organization
+      name: extensions.ee
+      url: https://extensions.ee
+    offer_names:
+      weekly: Veckoabonnemang
+      yearly: Årsabonnemang
