@@ -22,6 +22,7 @@ This repo contains the Jekyll source for the product website hosted on GitHub Pa
 - Dutch lives at `/nl/`.
 - Swedish lives at `/sv/`.
 - Norwegian Bokmål lives at `/nb/`.
+- Danish lives at `/da/`.
 - Locale copy is stored in `_data/locales/`.
 - Shared layout and partials render all locales as static HTML for search engines.
 
