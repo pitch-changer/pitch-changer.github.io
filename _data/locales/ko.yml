@@ -1,0 +1,240 @@
+site:
+  lang: ko
+  locale_label: KO
+  native_label: 한국어
+  path: /ko/
+formatting:
+  decimal_separator: '.'
+meta:
+  title: "음정 변조기: 온라인과 오프라인에서 곡 키 바꾸기"
+  description: 어떤 웹사이트에서든 곡 키를 바꾸고 연습, 노래방, 프로덕션을 위해 음악을 트랜스포즈하세요. 브라우저 확장 프로그램과 iPhone, iPad, Mac 앱으로 이용할 수 있습니다.
+  og_title: "음정 변조기: 온라인과 오프라인에서 곡 키 바꾸기"
+  og_description: 어떤 웹사이트에서든 곡 키를 바꾸고 연습, 노래방, 프로덕션을 위해 음악을 트랜스포즈하세요. 브라우저 확장 프로그램과 iPhone, iPad, Mac 앱으로 이용할 수 있습니다.
+switcher:
+  aria_label: 언어 전환기
+  button_label: 언어 선택
+hero:
+  badge_label: 새 소식
+  badge_text: iPhone 및 iPad용 Pitch Changer가 출시되었습니다. 새로운 내용을 확인해 보세요
+  title: Pitch Changer
+  subtitle: 곡 키를 손쉽게 바꿔 보세요
+  description_line_1: Pitch Changer는 곡의 피치를 옮기고, 키를 바꾸고, 음악을 트랜스포즈하는 일을
+  description_line_2: 연습, 노래방, 레슨, 프로덕션에 맞게 훨씬 쉽게 만들어 줍니다.
+  description_line_3: 브라우저에서는 어떤 웹사이트에서든 온라인으로, iPhone, iPad, Mac에서는 오프라인으로 사용할 수 있습니다.
+  online_cta_title: 음정 변조기 추가
+  online_cta_subtitle: 브라우저에
+  offline_cta_title: Pitch Changer Offline 추가
+  offline_cta_subtitle: iPhone, iPad 또는 Mac에
+nav:
+  aria_label: 페이지 섹션
+  overview: Pitch Changer란?
+  online: 웹사이트용
+  offline: 파일용
+  use_cases: 어떤 사람에게 맞을까요?
+  reviews: 리뷰
+  faq: FAQ
+overview:
+  title: Pitch Changer란?
+  paragraphs:
+    - Pitch Changer를 사용하면 복잡한 오디오 소프트웨어 없이 어떤 웹사이트에서든 곡의 키를 바꾸고 컴퓨터에서 음악을 트랜스포즈할 수 있습니다. 연습, 레슨, 녹음, 또는 좋아하는 곡을 더 편한 키로 듣고 싶을 때 바로 쓸 수 있도록 만들어졌습니다.
+    - "Pitch Changer로 할 수 있는 일:"
+  bullets:
+    - 곡 키를 반음 단위로 올리거나 내리기.
+    - 목소리나 악기에 더 잘 맞는 키로 연습하기.
+    - 반주 트랙, 노래방 버전, 레슨 자료 준비하기.
+    - 편곡, 화성, 창의적인 피치 변화를 실험하기.
+  versions_intro: "Pitch Changer는 두 가지 버전으로 제공됩니다:"
+  online_link_label: 음정 변조기
+  online_link_suffix: 웹사이트용 브라우저 확장 프로그램이고,
+  offline_link_label: Pitch Changer Offline
+  offline_link_suffix: 파일 작업을 위한 iPhone, iPad, Mac 앱입니다.
+online:
+  title: 음정 변조기
+  paragraphs:
+    - 음정 변조기를 사용하면 재생 중인 곡의 키도 손쉽게 바꿀 수 있습니다. 브라우저를 벗어나지 않고 음악을 트랜스포즈하고 싶을 때 간편합니다.
+    - Pitch Changer Online은 브라우저 안에 바로 키 조절 기능을 추가합니다. YouTube와 여러 오디오 웹사이트에서 몇 번의 클릭만으로 곡의 키를 조절할 수 있습니다.
+  bullets:
+    - 어떤 웹사이트에서든 온라인으로 곡 키를 바꾸기.
+    - YouTube 키 체인저처럼, 다른 음악 플랫폼에서도 사용 가능.
+    - 직관적인 컨트롤로 반음 단위 피치 조절.
+    - 함께 연습하거나, 노래방을 하거나, 더 편한 키로 감상할 때 유용함.
+  perfect_for_label: "이런 분께 잘 맞습니다:"
+  perfect_for_text: 가수, 보컬 코치, 교사, 학교, 연주자, 그리고 온라인 영상으로 연습하는 모든 사람.
+  pricing_template: "무료 체험 후: WEEKLY_PRICE, YEARLY_PRICE 또는 LIFETIME_PRICE."
+  offer_templates:
+    weekly: "주당 PRICE_VALUE $"
+    yearly: "연간 PRICE_VALUE $"
+    lifetime: "한 번에 PRICE_VALUE $ 결제"
+  cta: 음정 변조기를 브라우저에 추가
+  image_alt: Pitch Changer 확장 프로그램을 설치하고 몇 초 만에 브라우저에 추가하세요.
+offline:
+  title: Pitch Changer Offline
+  paragraphs:
+    - 연습부터 프로덕션까지, Pitch Changer는 곡 트랜스포즈, 피치 이동, 키 변경, 오디오 일괄 처리를 정밀하게 도와줍니다.
+    - iPhone, iPad, Mac용 Pitch Changer에서는 오디오 파일을 가져오고, 속도를 바꾸지 않은 채 피치를 조절하고, 폴더 전체를 일괄 처리해 연습용 트랙, 레슨 자료, 프로덕션 프로젝트를 준비할 수 있습니다.
+  bullets:
+    - 오디오 파일의 피치를 빠르고 정확하게 바꾸기.
+    - 템포를 바꾸지 않고 음악을 위아래로 트랜스포즈하기.
+    - 여러 곡을 한 번에 일괄 처리하기.
+    - 인터넷 연결 없이 오프라인으로 사용하기.
+    - MP3, WAV, FLAC 등 일반적인 포맷 지원.
+  perfect_for_label: "이런 분께 잘 맞습니다:"
+  perfect_for_text: 로컬 오디오 파일을 다루는 프로듀서, DJ, 교사, 뮤지션.
+  pricing_template: "무료 체험 후: WEEKLY_PRICE 또는 YEARLY_PRICE."
+  offer_templates:
+    weekly: "주당 PRICE_VALUE $"
+    yearly: "연간 PRICE_VALUE $"
+  cta: Pitch Changer를 iPhone, iPad 또는 Mac에 추가
+  image_alt: Pitch Changer를 iPhone, iPad 또는 Mac에 다운로드해 프로젝트를 알맞은 키로 맞춰 두세요.
+use_cases:
+  title: 누가 Pitch Changer를 사용할까요?
+  items:
+    - title: 보컬 코치와 가수
+      body: 학생의 음역에 맞게 어떤 곡이든 빠르게 키를 조정할 수 있습니다. 여러 키로 연습하고, 다른 조성을 시도하고, 어려운 곡도 더 편하게 부를 수 있게 만드세요.
+    - title: 연주자
+      body: 기타리스트와 다른 연주자들은 다시 녹음하거나 재튜닝하지 않고도 자신의 악기나 튜닝에 더 잘 맞는 키로 트랙을 옮길 수 있습니다.
+    - title: 프로듀서와 DJ
+      body: 피치와 키를 몇 초 만에 움직여 아이디어, 리믹스, 전환을 시험해 보세요. DAW나 라이브 셋용 반주, 스템, 스케치를 준비하는 데도 좋습니다.
+    - title: 교사와 학습자
+      body: 수업, 음악 이론 설명, 집중 연습을 위한 맞춤형 곡 버전을 만들 수 있습니다.
+reviews:
+  title: 사용자 후기
+  subtitle: Pitch Changer를 써 본 사람들이 남긴 이야기입니다
+  items:
+    - name: Grant Kimbell
+      text: 너무 과하지 않은 랜덤 설정 하나를 골라 플레이리스트를 섞어 들어 보라고 정말 추천하고 싶습니다. 좋아하는 곡을 완전히 다른 분위기로 처음 다시 듣는 느낌이 납니다. 피치 이동 품질도 아주 훌륭합니다.
+    - name: Vadim Makarov
+      text: 저는 보컬 코치라 학생들을 위해 곡 키를 자주 조정해야 합니다. 이 확장 프로그램은 YouTube뿐 아니라 여러 웹사이트에서 버그나 충돌 없이 완벽하게 작동합니다. 게다가 아주 단순해서 그 점도 큰 장점입니다.
+    - name: Nikola Negovanovic
+      text: 몇 달 동안 사용해 본 결과, Chrome에서 쓸 수 있는 최고의 피치 체인저 앱이라고 확신합니다. 가격이 아깝지 않습니다.
+    - name: The Real Spiro Agnew
+      text: 훌륭합니다. 꿈처럼 잘 작동해요.
+    - name: Ice
+      text: 좋은 브라우저 확장 프로그램에서 기대하는 바로 그 모습입니다.
+    - name: maryam seddigh
+      text: 정말 놀라워요. 이런 걸 오랫동안 찾고 있었습니다.
+    - name: Hans Harding
+      text: 곡을 다른 키로 연주해야 할 때 베이스 연주자인 저에게 정말 좋은 도구입니다.
+    - name: Kieran Brown
+      text: 정말 좋은 영상을 만드는 유튜버가 있는데 목소리가 너무 거슬렸습니다. 이걸 쓰니 훨씬 듣기 편해졌어요.
+    - name: lilly imaginator
+      text: 제 기준에서는 꼭 있어야 할 확장 프로그램입니다. 노래방, 음악 공부, 또는 곡이 더 높거나 낮게 들리면 어떤 느낌인지 놀아 보기에 아주 좋습니다.
+faq:
+  title: 자주 묻는 질문
+  items:
+    - question: Pitch Changer Online과 Pitch Changer Offline의 차이는 무엇인가요?
+      answers:
+        - Pitch Changer Online은 YouTube 같은 웹사이트와 다른 오디오 또는 비디오 플랫폼에서 곡의 키를 바로 바꿔 주는 브라우저 확장 프로그램입니다.
+        - Pitch Changer Offline은 iPhone, iPad, Mac용 독립 앱으로, 내 오디오 파일을 오프라인에서 다루며 여러 트랙을 한 번에 일괄 처리할 수 있습니다.
+    - question: Pitch Changer를 사용하려면 인터넷 연결이 필요한가요?
+      answers:
+        - Pitch Changer 확장 프로그램은 브라우저 안에서 작동하고 온라인 콘텐츠용으로 설계되었기 때문에 보통 인터넷에 연결된 상태에서 사용하게 됩니다.
+        - iPhone, iPad, Mac 앱은 로컬 오디오 파일로 완전히 오프라인에서 동작하므로 설치 후에는 활성 연결 없이도 사용할 수 있습니다.
+    - question: Pitch Changer Offline은 어떤 오디오 포맷을 지원하나요?
+      answers:
+        - iPhone, iPad, Mac 앱은 MP3, WAV, FLAC 같은 일반적인 오디오 포맷을 지원하므로 이미 가지고 있는 파일을 별도 변환 없이 바로 처리할 수 있습니다.
+        - 비디오, DAW의 구간, 폴더 전체도 추가할 수 있으며 Pitch Changer가 오디오를 알아서 추출해 줍니다.
+    - question: 피치를 바꾸면 음질에 영향이 있나요?
+      answers:
+        - Pitch Changer는 키를 조정하는 동안 음질을 최대한 유지하도록 설계되었습니다. 실제 사용자들도 피치 이동 품질이 아주 좋다고 자주 말합니다.
+        - 다른 디지털 피치 변환과 마찬가지로 아주 극단적인 설정에서는 더 부자연스럽게 들릴 수 있지만, 대부분의 경우 결과는 깨끗하고 음악적으로 유지됩니다.
+    - question: 연주용 버전의 곡을 찾기 어렵습니다. 도와줄 수 있나요?
+      answers: []
+      answer_html: <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>도 함께 써 보세요. 곡에서 보컬을 온라인이나 오프라인으로 제거할 수 있고 Pitch Changer와도 잘 어울립니다.
+    - question: 곡의 템포는 어떻게 바꿀 수 있나요?
+      answers: []
+      linked_answers:
+        - tool_key: bpm_extension
+          template: 이미 재생 중인 웹사이트 음악을 느리게 하거나 빠르게 하고 싶다면 TOOL_LINK를 사용하세요.
+        - tool_key: speed_tool
+          template: 내 파일의 템포를 바꾸면서 피치는 유지하고 싶다면 TOOL_LINK를 사용하세요.
+    - question: 무료 체험이 있나요? 가격은 어떻게 되나요?
+      answers:
+        - 확장 프로그램과 iPhone, iPad, Mac 앱 모두 카드 없이 시작할 수 있는 무료 체험 기간이 있습니다.
+        - 체험 후에는 Pitch Changer Online에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer Offline에서는 주간 및 연간 구독을 제공합니다.
+        - 모든 결제는 확장 프로그램은 Paddle, 앱은 Apple을 통해 안전하게 처리됩니다.
+    - question: 구독은 어떻게 취소하나요?
+      answers:
+        - 앱이나 확장 프로그램 안의 Manage Subscription 버튼을 누르고 안내를 따라가세요.
+        - 절차는 완전히 자동이므로 전화나 이메일을 보낼 필요가 없습니다.
+    - question: Pitch Changer는 어떤 사람을 위한 도구인가요?
+      answers:
+        - Pitch Changer는 가수, 뮤지션, 프로듀서, DJ, 교사, 그리고 곡의 키를 조정해야 하는 모든 사람을 위해 만들어졌습니다.
+        - 집에서 연습할 때든, 라이브를 준비할 때든, 학생을 가르칠 때든, 자료를 만들 때든, 나에게 맞는 키로 음악을 빠르게 옮길 수 있게 도와줍니다.
+get_started:
+  title: Pitch Changer 시작하기
+  line_1: 브라우저에서 작업하든 iPhone, iPad, Mac의 로컬 파일로 작업하든,
+  line_2: Pitch Changer는 곡 키를 바꾸고 피치를 움직여 음악이 나에게 맞도록 돕습니다.
+  rating_template: "Chrome 웹 스토어 평점 RATING_VALUE/5 · REVIEW_COUNT REVIEW_LABEL"
+  review_count_rule: invariant
+  review_count_labels:
+    one: 리뷰
+    other: 리뷰
+llms:
+  languages_heading: 지원 언어
+  home_link_label: 홈
+  link_label: LLMS
+  lead: Pitch Changer는 브라우저에서든 Apple 기기의 오디오 파일로 작업하든, 더 편한 키로 연습하고 가르치고 노래하고 트랙을 준비할 수 있게 도와줍니다.
+  intro: 이 안내문은 이 언어로 제공되는 Pitch Changer 페이지를 모아 보여 주며, 음악 작업, 파일 처리, 그리고 어떤 버전을 써야 하는지에 초점을 맞춥니다.
+  versions_heading: 나에게 맞는 버전 고르기
+  sections:
+    site: 사이트
+  pages:
+    home:
+      title: Pitch Changer
+      summary: 여기서 시작하면 Pitch Changer가 가수, 교사, 연주자, 프로듀서, DJ에게 어떻게 도움이 되는지, 그리고 웹사이트용 확장 프로그램과 파일용 오프라인 앱 중 무엇을 고를지 빠르게 볼 수 있습니다.
+footer:
+  copyright_prefix: "© 2024–"
+  company_name: extensions.ee
+  contact: "문의: info@extensions.ee."
+  payments_label: "결제 및 환불:"
+  paddle_label: Paddle
+  apple_label: Apple
+  terms_label: 이용 약관
+  refund_label: 환불 정책
+  privacy_label: 개인정보 처리방침
+  paragraphs:
+    - 웹사이트에서 이루어진 구매는 온라인 리셀러인 Paddle.com이 처리하며, 해당 주문의 Merchant of Record 역할을 맡습니다. Paddle은 웹사이트 주문의 고객 지원, 환불, 청구 및 관련 세금 처리를 담당합니다.
+    - App Store에서 이루어진 구매는 Apple이 직접 처리하며, App Store 주문의 Merchant of Record 역할을 맡습니다. Apple은 청구, 영수증, 세금, 환불 및 관련 고객 지원 문의를 관리합니다.
+    - 어디에서 구매했는지 확실하지 않다면 Paddle 또는 Apple이 보낸 주문 확인 이메일이나 영수증을 확인해 주세요.
+  acknowledgements_prefix: 제3자 상표와 구성 요소는
+  acknowledgements_label: Acknowledgements
+  acknowledgements_suffix: 페이지에 정리되어 있습니다.
+structured_data:
+  online:
+    "@type": SoftwareApplication
+    "@id": https://pitch-changer.com/ko/#online
+    name: 음정 변조기
+    alternateName: Pitch Changer Online
+    applicationCategory: MultimediaApplication
+    operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
+    description: 음정 변조기는 어떤 웹사이트에서든 브라우저 안에서 곡의 키를 바꿀 수 있게 해 주는 브라우저 확장 프로그램입니다. YouTube와 다른 오디오 또는 비디오 플랫폼에서 들으면서 반음 단위로 피치를 움직여 보세요.
+    inLanguage: ko
+    url: https://pitch-changer.com/ko/#online
+    installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
+    publisher:
+      "@type": Organization
+      name: extensions.ee
+      url: https://extensions.ee
+    offer_names:
+      weekly: 주간 구독
+      yearly: 연간 구독
+      lifetime: 일회성 결제
+  offline:
+    "@type": SoftwareApplication
+    "@id": https://pitch-changer.com/ko/#offline
+    name: Pitch Changer Offline
+    alternateName: iPhone, iPad 및 Mac용 Pitch Changer
+    applicationCategory: MultimediaApplication
+    operatingSystem: macOS 15.0 or iOS 18.0
+    description: iPhone, iPad 및 Mac용 Pitch Changer는 오프라인에서 피치를 바꾸고, 곡을 트랜스포즈하고, 오디오 파일을 일괄 처리할 수 있게 도와줍니다. 트랙을 가져오고, 템포는 그대로 둔 채 키를 바꾸고, 연습, 레슨, 프로덕션용 새 버전을 내보낼 수 있습니다.
+    inLanguage: ko
+    url: https://pitch-changer.com/ko/#offline
+    installUrl: https://apps.apple.com/app/id6749900880
+    publisher:
+      "@type": Organization
+      name: extensions.ee
+      url: https://extensions.ee
+    offer_names:
+      weekly: 주간 구독
+      yearly: 연간 구독

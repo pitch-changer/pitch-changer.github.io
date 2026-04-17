@@ -18,6 +18,7 @@ This repo contains the Jekyll source for the product website hosted on GitHub Pa
 - Japanese lives at `/ja/`.
 - Russian lives at `/ru/`.
 - Ukrainian lives at `/uk/`.
+- Korean lives at `/ko/`.
 - Locale copy is stored in `_data/locales/`.
 - Shared layout and partials render all locales as static HTML for search engines.
 
