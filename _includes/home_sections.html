@@ -38,7 +38,7 @@
       <a
         target="_blank"
         href="#offline"
-        class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
+        class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
         role="alert"
       >
         <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">{{ locale_data.hero.badge_label }}</span>
@@ -51,8 +51,8 @@
         {% include locale_switcher.html locale_code=include.locale_code %}
       </div>
     </div>
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ locale_data.hero.title }}</h1>
-    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ locale_data.hero.subtitle }}</h2>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">{{ locale_data.hero.title }}</h1>
+    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">{{ locale_data.hero.subtitle }}</h2>
     <p class="text-2xl mb-4">
       {{ locale_data.hero.description_line_1 }}<br />
       {{ locale_data.hero.description_line_2 }}
@@ -93,7 +93,7 @@
 </nav>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
-  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
     {{ locale_data.overview.title }}
   </h2>
 {% for paragraph in locale_data.overview.paragraphs %}
@@ -113,7 +113,7 @@
 
 <section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="online">
   <div class="mr-auto place-self-center lg:col-span-7">
-    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
       <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
         {{ locale_data.online.title }}
       </a>
@@ -127,7 +127,7 @@
 {% endfor -%}
     </ul>
     <p class="text-xl mb-4"><strong>{{ locale_data.online.perfect_for_label }}</strong> {{ locale_data.online.perfect_for_text }}</p>
-    <p class="mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ online_pricing | strip }}</p>
+    <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-sm lg:text-sm">{{ online_pricing | strip }}</p>
     <a
       target="_blank"
       href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
@@ -145,7 +145,7 @@
 
 <section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="offline">
   <div class="mr-auto place-self-center lg:col-span-7">
-    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
       <a target="_blank" href="https://apps.apple.com/app/id6749900880" class="focus:outline-none">
         {{ locale_data.offline.title }}
       </a>
@@ -159,7 +159,7 @@
 {% endfor -%}
     </ul>
     <p class="text-xl mb-4"><strong>{{ locale_data.offline.perfect_for_label }}</strong> {{ locale_data.offline.perfect_for_text }}</p>
-    <p class="mb-6 font-light text-gray-500 md:text-sm lg:text-sm">{{ offline_pricing | strip }}</p>
+    <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-sm lg:text-sm">{{ offline_pricing | strip }}</p>
     <a
       target="_blank"
       href="https://apps.apple.com/app/id6749900880"
@@ -176,9 +176,9 @@
 </section>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="use-cases">
-  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ locale_data.use_cases.title }}</h2>
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">{{ locale_data.use_cases.title }}</h2>
 {% for item in locale_data.use_cases.items -%}
-  <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.title }}</h3>
+  <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">{{ item.title }}</h3>
   <p class="text-xl mb-4">{{ item.body }}</p>
 {% endfor -%}
 </section>
@@ -186,21 +186,21 @@
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="reviews">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
-      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ locale_data.reviews.title }}</h2>
-      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl">{{ locale_data.reviews.subtitle }}</h3>
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">{{ locale_data.reviews.title }}</h2>
+      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">{{ locale_data.reviews.subtitle }}</h3>
     </div>
     <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
 {% for review in locale_data.reviews.items -%}
-      <div class="bg-white p-6 shadow">
+      <div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
         <div class="flex items-center mb-4">
           <div class="ml-4">
-            <h4 class="text-lg font-semibold text-gray-900">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
               {{ review.name }}
               <span class="text-yellow-400">★★★★★</span>
             </h4>
           </div>
         </div>
-        <p class="text-gray-700">“{{ review.text }}”</p>
+        <p class="text-gray-700 dark:text-gray-300">“{{ review.text }}”</p>
       </div>
 {% endfor -%}
     </div>
@@ -208,9 +208,9 @@
 </section>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="faq">
-  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">{{ locale_data.faq.title }}</h2>
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">{{ locale_data.faq.title }}</h2>
 {% for item in locale_data.faq.items -%}
-  <h3 class="mb-4 mt-10 text-3xl tracking-tight">{{ item.question }}</h3>
+  <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">{{ item.question }}</h3>
 {% for answer in item.answers -%}
   <p class="text-xl mb-4">{{ answer }}</p>
 {% endfor -%}
@@ -226,7 +226,7 @@
 </section>
 
 <section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="get-started">
-  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">{{ locale_data.get_started.title }}</h2>
+  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">{{ locale_data.get_started.title }}</h2>
   <p class="text-2xl mb-4">
     {{ locale_data.get_started.line_1 }}<br />
     {{ locale_data.get_started.line_2 }}
@@ -253,7 +253,7 @@
       </div>
     </a>
   </div>
-  <p class="mt-10 text-xl text-gray-500">
+  <p class="mt-10 text-xl text-gray-500 dark:text-gray-400">
     <span class="text-yellow-300">★</span> {{ get_started_rating | strip }}
   </p>
 </section>
@@ -261,7 +261,7 @@
 <footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
   <div class="sm:flex sm:items-center sm:justify-between">
     <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-      <div class="block text-sm text-gray-500 sm:text-center">
+      <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
         <nobr>{{ site.data.locales[include.locale_code].footer.copyright_prefix }}<script>document.write(new Date().getFullYear())</script>
           <a href="https://extensions.ee/" class="underline">{{ locale_data.footer.company_name }}</a>.
         </nobr>
@@ -272,14 +272,14 @@
         </nobr>
       </div>
     </div>
-    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
       <li><a href="{{ '/terms-and-conditions.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ locale_data.footer.terms_label }}</a></li>
       <li><a href="{{ '/refund-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ locale_data.footer.refund_label }}</a></li>
       <li><a href="{{ '/privacy-policy.html' | relative_url }}" class="hover:underline me-4 md:me-6">{{ locale_data.footer.privacy_label }}</a></li>
     </ul>
   </div>
-  <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-  <div class="block text-sm text-gray-500 sm:text-left">
+  <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-left">
 {% for paragraph in site.data.locales[include.locale_code].footer.paragraphs -%}
     <p class="mb-4">{{ paragraph }}</p>
 {% endfor -%}
