@@ -90,3 +90,10 @@ tempo_tools:
     speed_tool:
       name: Ændr lydhastighed
       url: https://www.musiciantools.online/en/audio-speed-changer
+  pl:
+    bpm_extension:
+      name: Zmieniacz BPM
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Zmiana prędkości audio
+      url: https://www.musiciantools.online/en/audio-speed-changer
