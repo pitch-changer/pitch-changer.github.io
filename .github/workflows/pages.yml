@@ -32,6 +32,9 @@ jobs:
           ruby-version: "4.0.2"
           bundler-cache: true
 
+      - name: Validate locales
+        run: ruby scripts/validate_locales.rb
+
       - name: Build site
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
