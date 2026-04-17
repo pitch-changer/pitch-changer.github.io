@@ -111,3 +111,10 @@ tempo_tools:
     speed_tool:
       name: 音訊速度調整器
       url: https://www.musiciantools.online/en/audio-speed-changer
+  tr:
+    bpm_extension:
+      name: BPM Değiştirici
+      url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
+    speed_tool:
+      name: Ses Hızı Değiştirici
+      url: https://www.musiciantools.online/en/audio-speed-changer
