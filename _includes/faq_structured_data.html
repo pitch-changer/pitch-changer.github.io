@@ -20,10 +20,12 @@
 {%- if item.linked_answers -%}
 {%- for linked_answer in item.linked_answers -%}
 {%- assign linked_tool = tempo_tools[linked_answer.tool_key] -%}
+{%- if linked_tool and linked_tool.name and linked_tool.url -%}
 {%- assign clean_linked_answer = linked_answer.template | replace: 'TOOL_LINK', linked_tool.name | strip -%}
 {%- if clean_linked_answer != '' -%}
 {%- capture answer_text -%}{{ answer_text }}{{ answer_separator }}{{ clean_linked_answer }}{%- endcapture -%}
 {%- assign answer_separator = ' ' -%}
+{%- endif -%}
 {%- endif -%}
 {%- endfor -%}
 {%- endif -%}

@@ -64,7 +64,9 @@
 {% elsif item.linked_answers and item.linked_answers != empty -%}
 {% for linked_answer in item.linked_answers -%}
 {% assign linked_tool = tempo_tools[linked_answer.tool_key] -%}
+{% if linked_tool and linked_tool.name and linked_tool.url -%}
 - {{ linked_answer.template | replace: 'TOOL_LINK', linked_tool.name }}
+{% endif -%}
 {% endfor -%}
 {% elsif item.answer_html -%}
 {{ item.answer_html | strip_html | strip }}

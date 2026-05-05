@@ -228,8 +228,10 @@
 {% endfor -%}
 {% for linked_answer in item.linked_answers -%}
   {%- assign linked_tool = tempo_tools[linked_answer.tool_key] -%}
+  {%- if linked_tool and linked_tool.name and linked_tool.url -%}
   {%- capture linked_tool_html -%}<a href="{{ linked_tool.url }}" class="underline">{{ linked_tool.name }}</a>{%- endcapture -%}
   <p class="text-xl mb-4">{{ linked_answer.template | replace: 'TOOL_LINK', linked_tool_html }}</p>
+  {%- endif -%}
 {% endfor -%}
 {% if item.answer_html -%}
   <p class="text-xl mb-4">{{ item.answer_html }}</p>

@@ -3,118 +3,67 @@ tempo_tools:
     bpm_extension:
       name: BPM Changer
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Audio Speed Changer
-      url: https://www.musiciantools.online/en/audio-speed-changer
   it:
     bpm_extension:
       name: Cambiatore BPM
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Cambiatore BPM
-      url: https://www.musiciantools.online/it/cambiatore-bpm
   es:
     bpm_extension:
       name: Cambiador de BPM
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Cambiador de BPM
-      url: https://www.musiciantools.online/es/cambiador-de-bpm
   de:
     bpm_extension:
       name: BPM Changer
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Tempo ändern
-      url: https://www.musiciantools.online/de/tempo-ändern
   fr:
     bpm_extension:
       name: Changer le BPM
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Changer le BPM
-      url: https://www.musiciantools.online/fr/changer-le-bpm
   ja:
     bpm_extension:
       name: BPM Changer
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: BPM Changer
-      url: https://www.musiciantools.online/ja/テンポ変更
   ru:
     bpm_extension:
       name: Изменить темп песни
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Изменить темп песни
-      url: https://www.musiciantools.online/ru/изменить-темп-песни
   uk:
     bpm_extension:
       name: Змінити темп пісні онлайн
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Змінити темп пісні
-      url: https://www.musiciantools.online/uk/змінити-темп-пісні
   ko:
     bpm_extension:
       name: BPM 체인저
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: 오디오 속도 변경기
-      url: https://www.musiciantools.online/en/audio-speed-changer
   nl:
     bpm_extension:
       name: BPM wijzigen
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Audio snelheid aanpassen
-      url: https://www.musiciantools.online/en/audio-speed-changer
   sv:
     bpm_extension:
       name: BPM-ändrare
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Ändra ljudhastighet
-      url: https://www.musiciantools.online/en/audio-speed-changer
   nb:
     bpm_extension:
       name: Endre BPM
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Endre lydhastighet
-      url: https://www.musiciantools.online/en/audio-speed-changer
   da:
     bpm_extension:
       name: BPM-ændrer
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Ændr lydhastighed
-      url: https://www.musiciantools.online/en/audio-speed-changer
   pl:
     bpm_extension:
       name: Zmieniacz BPM
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Zmiana prędkości audio
-      url: https://www.musiciantools.online/en/audio-speed-changer
   pt:
     bpm_extension:
       name: Mudador de BPM
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Alterar velocidade do áudio
-      url: https://www.musiciantools.online/en/audio-speed-changer
   zh-TW:
     bpm_extension:
       name: BPM 變換器
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: 音訊速度調整器
-      url: https://www.musiciantools.online/en/audio-speed-changer
   tr:
     bpm_extension:
       name: BPM Değiştirici
       url: https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj
-    speed_tool:
-      name: Ses Hızı Değiştirici
-      url: https://www.musiciantools.online/en/audio-speed-changer
