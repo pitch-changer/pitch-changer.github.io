@@ -1,29 +1,700 @@
----
-layout: null
-permalink: /sitemap.xml
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{% for registry_page in site.data.page_registry.pages -%}
-{% if registry_page.sitemap -%}
-{% for locale_code in site.locales -%}
-{% assign page_path = registry_page.paths[locale_code] -%}
-{% if page_path %}
+
   <url>
-    <loc>{{ page_path | absolute_url }}</loc>
-{% for alternate_code in site.locales -%}
-{% assign alternate_path = registry_page.paths[alternate_code] -%}
-{% if alternate_path %}
-    <xhtml:link rel="alternate" hreflang="{{ site.data.locales[alternate_code].site.lang }}" href="{{ alternate_path | absolute_url }}" />
-{% endif -%}
-{% endfor -%}
-{% assign default_path = registry_page.paths[site.default_locale] -%}
-{% if default_path %}
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ default_path | absolute_url }}" />
-{% endif %}
+    <loc>https://pitch-changer.com/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
   </url>
-{% endif -%}
-{% endfor -%}
-{% endif -%}
-{% endfor -%}
+
+  <url>
+    <loc>https://pitch-changer.com/it/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/es/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/de/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/fr/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/ja/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/ru/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/uk/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/ko/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/nl/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/sv/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/nb/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/da/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/pl/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/pt/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/zh-TW/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
+
+  <url>
+    <loc>https://pitch-changer.com/tr/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+
+    <xhtml:link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+
+    <xhtml:link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+
+    <xhtml:link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+
+    <xhtml:link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+
+    <xhtml:link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+
+    <xhtml:link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+
+    <xhtml:link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+
+    <xhtml:link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+
+  </url>
 </urlset>

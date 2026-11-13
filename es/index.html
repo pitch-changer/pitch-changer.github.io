@@ -1,7 +1,995 @@
----
-layout: default
-locale: es
-faq_schema_key: faq
-locale_root: true
-permalink: /es/
----
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Cambiar Tono Cancion: cambia tonalidad y transpón canciones online y offline</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cambia la tonalidad de canciones en cualquier sitio, transpón música para práctica, karaoke o producción. Disponible como extensión de navegador y app para iPhone, iPad y Mac." />
+    <meta property="og:title" content="Cambiar Tono Cancion: cambia tonalidad y transpón canciones online y offline" />
+    <meta property="og:description" content="Cambia la tonalidad de canciones en cualquier sitio, transpón música para práctica, karaoke o producción. Disponible como extensión de navegador y app para iPhone, iPad y Mac." />
+    <meta property="og:url" content="https://pitch-changer.com/es/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pitch-changer.com/extension.png" />
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var hasManualDark = root.classList.contains("dark");
+
+        if (typeof window.matchMedia !== "function") {
+          return;
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyTheme(isDark) {
+          if (hasManualDark) {
+            root.classList.add("dark");
+            return;
+          }
+
+          root.classList.toggle("dark", isDark);
+        }
+
+        applyTheme(mediaQuery.matches);
+
+        function handleThemeChange(event) {
+          applyTheme(event.matches);
+        }
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleThemeChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleThemeChange);
+        }
+      })();
+    </script>
+    <link rel="icon" sizes="32x32" type="image/png" href="/icons/32.png" />
+    <link rel="icon" sizes="16x16" type="image/png" href="/icons/16.png" />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQN6C9B1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMQN6C9B1Q');
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://pitch-changer.com/es/" />
+<link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+<link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+<link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+<link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+<link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+<link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+<link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+<link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+<link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+<link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+<link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+<link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+<link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+<link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+<link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+<link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+<link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+<link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+    <style>
+      .locale-switcher {
+        position: relative;
+        display: inline-flex;
+      }
+
+      .hero-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .hero-topbar-spacer {
+        display: none;
+      }
+
+      .hero-topbar-update {
+        max-width: 100%;
+      }
+
+      .hero-topbar-switcher {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .locale-switcher summary {
+        list-style: none;
+      }
+
+      .locale-switcher summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .locale-switcher-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 20;
+        min-width: 13rem;
+        border: 1px solid #d1d5db;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+      }
+
+      .locale-switcher-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        color: #111827;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .locale-switcher-link:hover,
+      .locale-switcher-link:focus-visible {
+        background: #eff6ff;
+        color: #1d4ed8;
+        outline: none;
+      }
+
+      .locale-switcher-link[aria-current="true"] {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .locale-switcher-abbr {
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      html.dark .locale-switcher-menu {
+        border-color: #374151;
+        background: #111827;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      html.dark .locale-switcher-link {
+        color: #f3f4f6;
+      }
+
+      html.dark .locale-switcher-link:hover,
+      html.dark .locale-switcher-link:focus-visible {
+        background: #1f2937;
+        color: #93c5fd;
+      }
+
+      html.dark .locale-switcher-link[aria-current="true"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      html.dark .locale-switcher-abbr {
+        color: #9ca3af;
+      }
+
+      @media (max-width: 640px) {
+        .locale-switcher-menu {
+          right: auto;
+          left: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero-topbar {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        }
+
+        .hero-topbar-spacer {
+          display: block;
+        }
+
+        .hero-topbar-update {
+          justify-self: center;
+        }
+
+        .hero-topbar-switcher {
+          justify-self: end;
+          width: auto;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pitch-changer.com/es/#extension",
+            "name": "Cambiar Tono Cancion",
+            "alternateName": "Pitch Changer Extension",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Chromium-based browser on Windows, macOS, Linux and ChromeOS",
+            "description": "Cambiar Tono Cancion es una extensión de navegador que te permite cambiar la tonalidad de canciones en cualquier sitio directamente desde el navegador. Mueve la afinación por semitonos mientras escuchas en YouTube y otras plataformas de audio o video.",
+            "inLanguage": "es",
+            "url": "https://pitch-changer.com/es/#extension",
+            "installUrl": "https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.4,
+              "ratingCount": 210
+            },
+            "publisher": {"@type":"Organization","name":"extensions.ee","url":"https://extensions.ee"}
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pitch-changer.com/es/#app",
+            "name": "Pitch Changer App",
+            "alternateName": "Pitch Changer para iPhone, iPad y Mac",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS 15.0 or iOS 18.0",
+            "description": "Pitch Changer para iPhone, iPad y Mac te ayuda a cambiar afinación, transponer canciones y procesar archivos de audio por lotes offline. Importa pistas, cambia tonalidad sin mover el tempo y exporta nuevas versiones para práctica, clases o producción.",
+            "inLanguage": "es",
+            "url": "https://pitch-changer.com/es/#app",
+            "installUrl": "https://apps.apple.com/app/id6749900880",
+            "publisher": {"@type":"Organization","name":"extensions.ee","url":"https://extensions.ee"}
+          }
+        ]
+      }
+    </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://pitch-changer.com/es/#faq",
+      "url": "https://pitch-changer.com/es/",
+      "inLanguage": "es",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre Pitch Changer Extension y Pitch Changer App?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer Extension es una extensión de navegador que cambia la tonalidad de canciones directamente en sitios como YouTube y otras plataformas de audio o video. Pitch Changer App es una app independiente para iPhone, iPad y Mac que trabaja offline con tus propios archivos de audio y puede procesar varias pistas a la vez."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Necesito internet para usar Pitch Changer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La extensión Pitch Changer funciona dentro del navegador y está pensada para contenido online, así que normalmente la usarás mientras estés conectado a internet. La app para iPhone, iPad y Mac funciona completamente offline con archivos de audio locales, así que después de instalarla no necesitas conexión activa."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Qué formatos de audio soporta Pitch Changer App?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La app para iPhone, iPad y Mac trabaja con formatos comunes como MP3, WAV, FLAC y más, así que puedes procesar los archivos que ya tienes sin convertirlos antes. También puedes agregar videos, regiones desde tu DAW y carpetas completas. Pitch Changer extrae el audio por ti."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Cambiar la afinación afecta la calidad del audio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer está diseñado para conservar la calidad del audio mientras ajustas la tonalidad. Nuestros usuarios comentan con frecuencia que la calidad del pitch shift es excelente. Como con cualquier procesamiento digital, cambios muy extremos pueden sonar menos naturales, pero en la mayoría de los casos el resultado sigue siendo limpio y musical."
+        }
+      },{
+        "@type": "Question",
+        "name": "No encuentro versiones instrumentales de canciones. ¿Pueden ayudarme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prueba nuestro Vocal Remover. Quita la voz de una canción online u offline y combina muy bien con Pitch Changer."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Cómo puedo cambiar el tempo de una canción?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Si quieres ralentizar o acelerar música en un sitio mientras ya está sonando, usa Cambiador de BPM."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Hay prueba gratuita? ¿Cómo funciona el precio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tanto la extensión como la app para iPhone, iPad y Mac incluyen un periodo de prueba gratis sin tarjeta. Después de la prueba, Pitch Changer Extension ofrece planes semanales, anuales y compra única, mientras que Pitch Changer App ofrece suscripciones semanales y anuales, como se indica arriba. Todos los pagos se gestionan de forma segura mediante Paddle para la extensión o Apple para la app."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Cómo cancelo mi suscripción?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Haz clic en el botón Manage Subscription dentro de la app o la extensión y sigue las instrucciones. El proceso es totalmente automático, así que no hace falta llamar ni mandar correos."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Para quién está hecho Pitch Changer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer está hecho para cantantes, músicos, productores, DJ, docentes y cualquiera que necesite ajustar la tonalidad de canciones. Ya sea que practiques en casa, toques en vivo, enseñes a estudiantes o prepares material, te da una forma rápida de llevar la música a la tonalidad que te funciona mejor."
+        }
+      }]
+    }
+  </script>
+
+
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+<header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
+  <div class="mt-6 text-center">
+    <div class="hero-topbar mb-7 w-full" data-ui-review="hero-topbar">
+      <div aria-hidden="true" class="hero-topbar-spacer"></div>
+      <a
+        target="_blank"
+        href="#app"
+        class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+        role="alert"
+      >
+        <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">Nuevo</span>
+        <span class="text-left text-sm font-medium">Pitch Changer para iPhone y iPad ya salió. Mira qué hay de nuevo</span>
+        <svg class="ml-2 h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <div class="hero-topbar-switcher">
+        <nav aria-label="Selector de idioma" class="flex items-center justify-end">
+  <details class="locale-switcher group relative" data-locale-switcher>
+    <summary class="flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition hover:border-blue-700 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300">
+      <span class="sr-only">Elegir idioma</span>
+      <span>Español</span>
+      <span class="locale-switcher-abbr">ES</span>
+      <svg aria-hidden="true" viewBox="0 0 20 20" class="h-4 w-4 text-gray-500 transition group-open:rotate-180 group-open:text-blue-700 dark:text-gray-400 dark:group-open:text-blue-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+      </svg>
+    </summary>
+
+    <div class="locale-switcher-menu">
+      <ul class="grid gap-1">
+<li>
+          <a
+            href="/"
+            class="locale-switcher-link"
+            lang="en"
+            hreflang="en"
+            data-locale-link
+            data-locale-code="en"
+          >
+            <span class="whitespace-nowrap">English</span>
+            <span class="locale-switcher-abbr">EN</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/it/"
+            class="locale-switcher-link"
+            lang="it"
+            hreflang="it"
+            data-locale-link
+            data-locale-code="it"
+          >
+            <span class="whitespace-nowrap">Italiano</span>
+            <span class="locale-switcher-abbr">IT</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/es/"
+            class="locale-switcher-link"
+            lang="es"
+            hreflang="es" aria-current="page"
+            data-locale-link
+            data-locale-code="es"
+          >
+            <span class="whitespace-nowrap">Español</span>
+            <span class="locale-switcher-abbr">ES</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/de/"
+            class="locale-switcher-link"
+            lang="de"
+            hreflang="de"
+            data-locale-link
+            data-locale-code="de"
+          >
+            <span class="whitespace-nowrap">Deutsch</span>
+            <span class="locale-switcher-abbr">DE</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/fr/"
+            class="locale-switcher-link"
+            lang="fr"
+            hreflang="fr"
+            data-locale-link
+            data-locale-code="fr"
+          >
+            <span class="whitespace-nowrap">Français</span>
+            <span class="locale-switcher-abbr">FR</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ja/"
+            class="locale-switcher-link"
+            lang="ja"
+            hreflang="ja"
+            data-locale-link
+            data-locale-code="ja"
+          >
+            <span class="whitespace-nowrap">日本語</span>
+            <span class="locale-switcher-abbr">JA</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ru/"
+            class="locale-switcher-link"
+            lang="ru"
+            hreflang="ru"
+            data-locale-link
+            data-locale-code="ru"
+          >
+            <span class="whitespace-nowrap">Русский</span>
+            <span class="locale-switcher-abbr">RU</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/uk/"
+            class="locale-switcher-link"
+            lang="uk"
+            hreflang="uk"
+            data-locale-link
+            data-locale-code="uk"
+          >
+            <span class="whitespace-nowrap">Українська</span>
+            <span class="locale-switcher-abbr">UK</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ko/"
+            class="locale-switcher-link"
+            lang="ko"
+            hreflang="ko"
+            data-locale-link
+            data-locale-code="ko"
+          >
+            <span class="whitespace-nowrap">한국어</span>
+            <span class="locale-switcher-abbr">KO</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/nl/"
+            class="locale-switcher-link"
+            lang="nl"
+            hreflang="nl"
+            data-locale-link
+            data-locale-code="nl"
+          >
+            <span class="whitespace-nowrap">Nederlands</span>
+            <span class="locale-switcher-abbr">NL</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/sv/"
+            class="locale-switcher-link"
+            lang="sv"
+            hreflang="sv"
+            data-locale-link
+            data-locale-code="sv"
+          >
+            <span class="whitespace-nowrap">Svenska</span>
+            <span class="locale-switcher-abbr">SV</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/nb/"
+            class="locale-switcher-link"
+            lang="nb"
+            hreflang="nb"
+            data-locale-link
+            data-locale-code="nb"
+          >
+            <span class="whitespace-nowrap">Norsk bokmål</span>
+            <span class="locale-switcher-abbr">NB</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/da/"
+            class="locale-switcher-link"
+            lang="da"
+            hreflang="da"
+            data-locale-link
+            data-locale-code="da"
+          >
+            <span class="whitespace-nowrap">Dansk</span>
+            <span class="locale-switcher-abbr">DA</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/pl/"
+            class="locale-switcher-link"
+            lang="pl"
+            hreflang="pl"
+            data-locale-link
+            data-locale-code="pl"
+          >
+            <span class="whitespace-nowrap">Polski</span>
+            <span class="locale-switcher-abbr">PL</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/pt/"
+            class="locale-switcher-link"
+            lang="pt"
+            hreflang="pt"
+            data-locale-link
+            data-locale-code="pt"
+          >
+            <span class="whitespace-nowrap">Português</span>
+            <span class="locale-switcher-abbr">PT</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/zh-TW/"
+            class="locale-switcher-link"
+            lang="zh-TW"
+            hreflang="zh-TW"
+            data-locale-link
+            data-locale-code="zh-TW"
+          >
+            <span class="whitespace-nowrap">繁體中文</span>
+            <span class="locale-switcher-abbr">繁中</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/tr/"
+            class="locale-switcher-link"
+            lang="tr"
+            hreflang="tr"
+            data-locale-link
+            data-locale-code="tr"
+          >
+            <span class="whitespace-nowrap">Türkçe</span>
+            <span class="locale-switcher-abbr">TR</span>
+          </a>
+        </li>
+</ul>
+    </div>
+  </details>
+</nav>
+
+      </div>
+    </div>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Pitch Changer</h1>
+    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">Cambia fácilmente la tonalidad de tus canciones</h2>
+    <p class="text-2xl mb-4">
+      Pitch Changer te ayuda a mover la afinación, cambiar la tonalidad y transponer canciones<br />
+      para practicar, hacer karaoke, enseñar o producir.
+    </p>
+    <p class="text-2xl">Úsalo online en cualquier sitio desde el navegador u offline en tu iPhone, iPad o Mac.</p>
+    <div>
+      <a
+        target="_blank"
+        href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>Agregar Cambiar Tono Cancion</div>
+          <div class="text-xl">a tu navegador</div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        href="https://apps.apple.com/app/id6749900880"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>Agregar Pitch Changer App</div>
+          <div class="text-xl">a tu iPhone, iPad o Mac</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Secciones de la página" class="text-center text-3xl mb-10 mt-10 px-4">
+  <a class="underline whitespace-nowrap" href="#overview">¿Qué es Pitch Changer?</a> ·
+  <a class="underline whitespace-nowrap" href="#extension">Para sitios web</a> ·
+  <a class="underline whitespace-nowrap" href="#app">Para archivos</a> ·
+  <a class="underline whitespace-nowrap" href="#use-cases">¿Para quién es?</a> ·
+  <a class="underline whitespace-nowrap" href="#reviews">Reseñas</a> ·
+  <a class="underline whitespace-nowrap" href="#faq">FAQ</a>
+</nav>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+    ¿Qué es Pitch Changer?
+  </h2>
+
+  <p class="mb-4">Pitch Changer te permite cambiar la tonalidad de canciones en cualquier sitio y transponer música en tu computadora sin software de audio complicado. Está hecho para situaciones reales como practicar, enseñar, grabar o simplemente disfrutar tus canciones favoritas en una tonalidad más cómoda.</p>
+
+  <p class="mb-4">Con Pitch Changer puedes:</p>
+<ul class="mb-4 list-disc list-inside space-y-4">
+<li>Cambiar la tonalidad de una canción hacia arriba o hacia abajo por semitonos.</li>
+<li>Practicar en la tonalidad que mejor le queda a tu voz o a tu instrumento.</li>
+<li>Preparar pistas de acompañamiento, versiones karaoke y material didáctico.</li>
+<li>Probar arreglos, armonías y cambios creativos de afinación.</li>
+</ul>
+  <p class="mb-4">
+    Pitch Changer está disponible en dos versiones:
+    <strong><a href="#extension" class="underline">Cambiar Tono Cancion</a></strong> como extensión para sitios web, y
+    <strong><a href="#app" class="underline">Pitch Changer App</a></strong> como app para iPhone, iPad y Mac para trabajar con archivos.
+  </p>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="extension">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+      <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
+        Cambiar Tono Cancion
+      </a>
+    </h2>
+<p class="text-xl mb-4">Usa Cambiar Tono Cancion para cambiar fácilmente la tonalidad de canciones mientras ya están sonando. Es una forma práctica de transponer música sin salir del navegador.</p>
+<p class="text-xl mb-4">Pitch Changer Extension agrega un control de tonalidad directo en tu navegador. Cambia la tonalidad en YouTube y en muchos otros sitios de audio con solo unos clics.</p>
+<ul class="text-xl mb-4 list-disc list-inside space-y-4">
+<li>Cambia la tonalidad de una canción online directamente en cualquier sitio.</li>
+<li>Funciona como herramienta para cambiar tonalidad en YouTube y en otras plataformas musicales.</li>
+<li>Ajusta la afinación por semitonos con controles claros.</li>
+<li>Va muy bien para practicar con una pista, hacer karaoke o escuchar en una tonalidad más cómoda.</li>
+</ul>
+    <p class="text-xl mb-4"><strong>Ideal para:</strong> cantantes, coaches vocales, docentes, escuelas, instrumentistas y cualquiera que practique con videos online.</p>
+<a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      Agregar Cambiar Tono Cancion a tu navegador
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex">
+    <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb">
+      <img src="/extension.png" alt="Instala la extensión Pitch Changer y agrégala al navegador en segundos." />
+    </a>
+  </div>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="app">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+      <a target="_blank" href="https://apps.apple.com/app/id6749900880" class="focus:outline-none">
+        Pitch Changer App
+      </a>
+    </h2>
+<p class="text-xl mb-4">Desde la práctica hasta la producción, Pitch Changer te ayuda a transponer, mover la afinación, cambiar la tonalidad de canciones y procesar lotes de audio con precisión.</p>
+<p class="text-xl mb-4">Con Pitch Changer para iPhone, iPad y Mac puedes importar archivos de audio, cambiar afinación sin mover la velocidad y procesar carpetas completas para preparar pistas de práctica, material didáctico o proyectos profesionales.</p>
+<ul class="text-xl mb-4 list-disc list-inside space-y-4">
+<li>Cambia la afinación de archivos de audio de forma rápida y precisa.</li>
+<li>Transpone música hacia arriba o hacia abajo sin cambiar el tempo.</li>
+<li>Procesa varias canciones en una sola pasada.</li>
+<li>Funciona offline sin conexión activa a internet.</li>
+<li>Soporta formatos comunes como MP3, WAV, FLAC y más.</li>
+</ul>
+    <p class="text-xl mb-4"><strong>Ideal para:</strong> productores, DJ, docentes y músicos que trabajan con archivos de audio locales.</p>
+<a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      Agregar Pitch Changer a tu iPhone, iPad o Mac
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex" style="margin-left: 50px; margin-right: -50px">
+    <a target="_blank" href="https://apps.apple.com/app/id6749900880">
+      <img src="/app.png" alt="Descarga Pitch Changer para iPhone, iPad o Mac y prepara tus pistas en la tonalidad correcta." />
+    </a>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="use-cases">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">¿Quién usa Pitch Changer?</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Coaches vocales y cantantes</h3>
+  <p class="text-xl mb-4">Ajusta rápidamente la tonalidad de cualquier canción al rango vocal de un estudiante. Haz ejercicios en distintas tonalidades, prueba opciones nuevas y vuelve más cantables las canciones difíciles.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Instrumentistas</h3>
+  <p class="text-xl mb-4">Guitarristas y otros instrumentistas pueden transponer pistas a la tonalidad que mejor le quede al instrumento o a la afinación sin volver a grabar ni reacomodar el instrumento.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Productores y DJ</h3>
+  <p class="text-xl mb-4">Prueba ideas, remixes y transiciones moviendo afinación y tonalidad en segundos. Prepara bases, stems y bocetos para tu DAW o para el escenario.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Docentes y estudiantes</h3>
+  <p class="text-xl mb-4">Crea versiones personalizadas de canciones para clases, demostraciones de teoría musical y sesiones de práctica más enfocadas.</p>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="reviews">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Lo que dicen nuestros usuarios</h2>
+      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">Esto cuentan quienes probaron Pitch Changer</h3>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Grant Kimbell
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“De verdad recomiendo elegir un ajuste al azar, sin irte al extremo, y poner la playlist. Se siente como escuchar una canción que amas por primera vez, pero con una vibra totalmente distinta. La calidad del cambio de afinación es excelente.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Vadim Makarov
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Soy coach vocal y seguido necesito ajustar la tonalidad de canciones para mis estudiantes. La extensión funciona perfecto en distintos sitios, no solo en YouTube, sin errores ni cierres inesperados. Además es muy simple, y eso es una gran ventaja.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Nikola Negovanovic
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Después de varios meses usándola, puedo decir que es la mejor app para cambiar tonalidad en Chrome. Sí vale la pena.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              The Real Spiro Agnew
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Excelente, funciona de maravilla.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Ice
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Es exactamente lo que espero de una buena extensión de navegador.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              maryam seddigh
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Es increíble. Llevaba mucho tiempo buscando algo así.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Hans Harding
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Gran herramienta para mí como bajista cuando una canción hay que tocarla en otra tonalidad.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Kieran Brown
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Hay un youtuber que hace videos muy buenos pero no soporto su vocecita chillona. Con esto se vuelve mucho más fácil escucharlo.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              lilly imaginator
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“Para mí es una extensión imprescindible. Es genial para karaoke, para aprender música o simplemente para jugar con cómo suena una canción más alta o más baja.”</p>
+      </div>
+</div>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="faq">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Preguntas frecuentes</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Cuál es la diferencia entre Pitch Changer Extension y Pitch Changer App?</h3>
+<p class="text-xl mb-4">Pitch Changer Extension es una extensión de navegador que cambia la tonalidad de canciones directamente en sitios como YouTube y otras plataformas de audio o video.</p>
+<p class="text-xl mb-4">Pitch Changer App es una app independiente para iPhone, iPad y Mac que trabaja offline con tus propios archivos de audio y puede procesar varias pistas a la vez.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Necesito internet para usar Pitch Changer?</h3>
+<p class="text-xl mb-4">La extensión Pitch Changer funciona dentro del navegador y está pensada para contenido online, así que normalmente la usarás mientras estés conectado a internet.</p>
+<p class="text-xl mb-4">La app para iPhone, iPad y Mac funciona completamente offline con archivos de audio locales, así que después de instalarla no necesitas conexión activa.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Qué formatos de audio soporta Pitch Changer App?</h3>
+<p class="text-xl mb-4">La app para iPhone, iPad y Mac trabaja con formatos comunes como MP3, WAV, FLAC y más, así que puedes procesar los archivos que ya tienes sin convertirlos antes.</p>
+<p class="text-xl mb-4">También puedes agregar videos, regiones desde tu DAW y carpetas completas. Pitch Changer extrae el audio por ti.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Cambiar la afinación afecta la calidad del audio?</h3>
+<p class="text-xl mb-4">Pitch Changer está diseñado para conservar la calidad del audio mientras ajustas la tonalidad. Nuestros usuarios comentan con frecuencia que la calidad del pitch shift es excelente.</p>
+<p class="text-xl mb-4">Como con cualquier procesamiento digital, cambios muy extremos pueden sonar menos naturales, pero en la mayoría de los casos el resultado sigue siendo limpio y musical.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">No encuentro versiones instrumentales de canciones. ¿Pueden ayudarme?</h3>
+<p class="text-xl mb-4">Prueba nuestro <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>. Quita la voz de una canción online u offline y combina muy bien con Pitch Changer.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Cómo puedo cambiar el tempo de una canción?</h3>
+<p class="text-xl mb-4">Si quieres ralentizar o acelerar música en un sitio mientras ya está sonando, usa <a href="https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj" class="underline">Cambiador de BPM</a>.</p><h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Hay prueba gratuita? ¿Cómo funciona el precio?</h3>
+<p class="text-xl mb-4">Tanto la extensión como la app para iPhone, iPad y Mac incluyen un periodo de prueba gratis sin tarjeta.</p>
+<p class="text-xl mb-4">Después de la prueba, Pitch Changer Extension ofrece planes semanales, anuales y compra única, mientras que Pitch Changer App ofrece suscripciones semanales y anuales, como se indica arriba.</p>
+<p class="text-xl mb-4">Todos los pagos se gestionan de forma segura mediante Paddle para la extensión o Apple para la app.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Cómo cancelo mi suscripción?</h3>
+<p class="text-xl mb-4">Haz clic en el botón Manage Subscription dentro de la app o la extensión y sigue las instrucciones.</p>
+<p class="text-xl mb-4">El proceso es totalmente automático, así que no hace falta llamar ni mandar correos.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">¿Para quién está hecho Pitch Changer?</h3>
+<p class="text-xl mb-4">Pitch Changer está hecho para cantantes, músicos, productores, DJ, docentes y cualquiera que necesite ajustar la tonalidad de canciones.</p>
+<p class="text-xl mb-4">Ya sea que practiques en casa, toques en vivo, enseñes a estudiantes o prepares material, te da una forma rápida de llevar la música a la tonalidad que te funciona mejor.</p>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="get-started">
+  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Empieza con Pitch Changer</h2>
+  <p class="text-2xl mb-4">
+    Ya sea que prefieras trabajar en el navegador o con archivos locales en tu iPhone, iPad o Mac,<br />
+    Pitch Changer te ayuda a cambiar la tonalidad de canciones, mover la afinación y hacer que la música se adapte a ti, no al revés.
+  </p>
+  <div>
+    <a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+          <div>Agregar Cambiar Tono Cancion</div>
+          <div class="text-xl">a tu navegador</div>
+      </div>
+    </a>
+    <a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+          <div>Agregar Pitch Changer App</div>
+          <div class="text-xl">a tu iPhone, iPad o Mac</div>
+      </div>
+    </a>
+  </div>
+  <p class="mt-10 text-xl text-gray-500 dark:text-gray-400">
+    <span class="text-yellow-300">★</span> 4.4/5 · 210 reseñas en Chrome Web Store
+  </p>
+</section>
+
+<footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        <nobr>© 2024–<script>document.write(new Date().getFullYear())</script>
+          <a href="https://extensions.ee/" class="underline">extensions.ee</a>.
+        </nobr>
+        <nobr>Contacto: info@extensions.ee.</nobr>
+        <nobr>Pagos y reembolsos:
+          <a href="https://paddle.net/" class="underline">Paddle</a>,
+          <a href="https://support.apple.com/billing" class="underline">Apple</a>.
+        </nobr>
+      </div>
+    </div>
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
+      <li><a href="/terms-and-conditions.html" class="hover:underline me-4 md:me-6">Términos y condiciones</a></li>
+      <li><a href="/refund-policy.html" class="hover:underline me-4 md:me-6">Política de reembolso</a></li>
+      <li><a href="/privacy-policy.html" class="hover:underline me-4 md:me-6">Política de privacidad</a></li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-left">
+<p class="mb-4">Las compras hechas en nuestro sitio son procesadas por nuestro distribuidor online Paddle.com, que actúa como Merchant of Record para esos pedidos. Paddle brinda atención al cliente para pedidos del sitio y gestiona devoluciones, cobros e impuestos aplicables.</p>
+<p class="mb-4">Las compras hechas en App Store son procesadas directamente por Apple, que actúa como Merchant of Record para pedidos del App Store. Apple gestiona cobros, recibos, impuestos, reembolsos y todas las consultas relacionadas.</p>
+<p class="mb-4">Si no estás seguro de dónde compraste, revisa el correo de confirmación del pedido o el recibo enviado por Paddle o Apple.</p>
+<p>
+      Las marcas y componentes de terceros están listados en la página
+      <a href="https://extensions.ee/acknowledgements.html?from=pitch-changer.com" class="underline">Acknowledgements</a>
+      .
+    </p>
+  </div>
+</footer>
+
+    <script>
+      (function() {
+        var localeLinks = document.querySelectorAll("[data-locale-link]");
+        var currentSearch = window.location.search || "";
+        var currentHash = window.location.hash || "";
+        var legacyFragments = {
+          "#online": "#extension",
+          "#offline": "#app"
+        };
+
+        function updateSectionLinks() {
+          currentHash = window.location.hash || "";
+          var sectionHash = legacyFragments[currentHash];
+
+          if (sectionHash) {
+            currentHash = sectionHash;
+            window.history.replaceState(window.history.state, "", window.location.pathname + currentSearch + currentHash);
+            var section = document.getElementById(currentHash.slice(1));
+            if (section) {
+              section.scrollIntoView();
+            }
+          }
+
+          localeLinks.forEach(function(link) {
+            var targetPath = link.getAttribute("href").split(/[?#]/)[0];
+            link.href = targetPath + currentSearch + currentHash;
+          });
+        }
+
+        updateSectionLinks();
+        window.addEventListener("hashchange", updateSectionLinks);
+
+        localeLinks.forEach(function(link) {
+          var localeCode = link.getAttribute("data-locale-code");
+
+          link.addEventListener("click", function() {
+            if (!localeCode) return;
+
+            try {
+              window.localStorage.setItem("preferred_locale", localeCode);
+            } catch (error) {
+            }
+          });
+        });
+
+        var source = (new URLSearchParams(window.location.search)).get("utm_source");
+        if (source) {
+          document.querySelectorAll("a").forEach(function(link) {
+            if (link.href.startsWith("https://chromewebstore.google.com/")) {
+              link.href += "?utm_source=" + encodeURIComponent(source);
+            } else if (link.href.startsWith("https://apps.apple.com/")) {
+              link.href += "?ct=" + encodeURIComponent(source);
+            }
+          });
+        }
+
+        
+
+        document.addEventListener("click", function(event) {
+          document.querySelectorAll("[data-locale-switcher]").forEach(function(details) {
+            if (!details.contains(event.target)) {
+              details.removeAttribute("open");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

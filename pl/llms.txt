@@ -1,5 +1,95 @@
----
-layout: null
-permalink: /pl/llms.txt
----
-{% include llms_locale.txt locale="pl" %}
+# Pitch Changer
+
+> Pitch Changer pomaga ćwiczyć, uczyć, śpiewać i przygotowywać ścieżki w wygodniejszej tonacji, niezależnie od tego, czy pracujesz w przeglądarce, czy z plikami audio na urządzeniach Apple.
+
+To zestawienie zbiera strony Pitch Changer dostępne w tym języku i skupia się na zadaniach muzycznych, pracy z plikami oraz wyborze właściwej wersji narzędzia.
+
+## Strona
+
+- [Pitch Changer](https://pitch-changer.com/pl/): Zacznij tutaj, aby zobaczyć, jak Pitch Changer pomaga wokalistom, nauczycielom, instrumentalistom, producentom i DJ-om zmieniać tonacje, transponować utwory oraz wybierać między rozszerzeniem do stron i aplikacją offline do plików.
+
+
+## Wybierz odpowiednią wersję
+
+### Zmieniacz tonacji
+
+Używaj Zmieniacza tonacji, aby łatwo zmieniać tonację utworów już podczas odtwarzania. To wygodny sposób na transponowanie muzyki bez wychodzenia z przeglądarki.
+
+Idealne dla: wokalistów, nauczycieli śpiewu, nauczycieli, szkół, instrumentalistów i wszystkich, którzy ćwiczą z filmami online.
+
+### Pitch Changer App
+
+Od ćwiczeń po produkcję, Pitch Changer pomaga transponować, przesuwać wysokość, zmieniać tonację utworów i wsadowo przetwarzać audio z dużą precyzją.
+
+Idealne dla: producentów, DJ-ów, nauczycieli i muzyków pracujących z lokalnymi plikami audio.
+
+## Kto używa Pitch Changer?
+
+- **Nauczyciele śpiewu i wokaliści**: Szybko dopasuj tonację dowolnego utworu do skali głosu ucznia. Ćwicz w różnych tonacjach, sprawdzaj inne rozwiązania i sprawiaj, że trudne utwory śpiewa się wygodniej.
+- **Instrumentaliści**: Gitarzyści i inni instrumentaliści mogą transponować ścieżki do tonacji najlepiej pasującej do instrumentu lub stroju bez ponownego nagrywania czy strojenia.
+- **Producenci i DJ-e**: Testuj pomysły, remiksy i przejścia, przesuwając wysokość i tonację w kilka sekund. Przygotowuj podkłady, stemsy i szkice do DAW albo setów na żywo.
+- **Nauczyciele i uczniowie**: Twórz własne wersje utworów do lekcji, pokazów z teorii muzyki i bardziej skupionych sesji ćwiczeniowych.
+## Najczęściej zadawane pytania
+
+### Jaka jest różnica między Pitch Changer Extension a Pitch Changer App?
+
+- Pitch Changer Extension to rozszerzenie przeglądarki, które zmienia tonację utworów bezpośrednio na stronach takich jak YouTube i innych platformach audio lub wideo.
+- Pitch Changer App to samodzielna aplikacja na iPhone'a, iPada i Maca, działająca offline z własnymi plikami audio i potrafiąca wsadowo przetwarzać wiele ścieżek naraz.
+
+
+
+### Czy potrzebuję internetu, żeby korzystać z Pitch Changer?
+
+- Rozszerzenie Pitch Changer działa w przeglądarce i jest przeznaczone do treści online, więc zwykle używasz go, gdy masz połączenie z internetem.
+- Aplikacja na iPhone'a, iPada i Maca działa całkowicie offline z lokalnymi plikami audio, więc po instalacji możesz używać jej bez aktywnego połączenia.
+
+
+
+### Jakie formaty audio obsługuje Pitch Changer App?
+
+- Aplikacja na iPhone'a, iPada i Maca działa z popularnymi formatami audio, takimi jak MP3, WAV, FLAC i inne, więc możesz od razu przetwarzać pliki, które już masz, bez wcześniejszej konwersji.
+- Możesz też dodawać wideo, regiony z DAW i całe foldery. Pitch Changer sam wyodrębni z nich audio.
+
+
+
+### Czy zmiana wysokości wpływa na jakość dźwięku?
+
+- Pitch Changer został zaprojektowany tak, aby zachowywać jakość dźwięku podczas zmiany tonacji. Użytkownicy regularnie piszą, że jakość zmiany wysokości jest świetna.
+- Jak przy każdej cyfrowej zmianie wysokości, bardzo skrajne ustawienia mogą brzmieć mniej naturalnie, ale w większości przypadków rezultat pozostaje czysty i muzyczny.
+
+
+
+### Nie mogę znaleźć instrumentalnych wersji utworów. Możecie pomóc?
+
+Sprawdź nasz Vocal Remover. Usuwa wokal z utworu online albo offline i świetnie współpracuje z Pitch Changer.
+
+
+
+### Jak mogę zmienić tempo utworu?
+
+- Jeśli chcesz spowolnić albo przyspieszyć muzykę na stronie, kiedy już gra, użyj Zmieniacz BPM.
+
+
+
+### Czy jest darmowy okres próbny? Jak działają ceny?
+
+- Zarówno rozszerzenie, jak i aplikacja na iPhone'a, iPada i Maca mają darmowy okres próbny bez karty.
+- Po okresie próbnym Pitch Changer Extension oferuje opcje tygodniowe, roczne i zakup jednorazowy, a Pitch Changer App subskrypcje tygodniowe i roczne, jak podano wyżej.
+- Wszystkie płatności są bezpiecznie obsługiwane przez Paddle w przypadku rozszerzenia albo Apple w przypadku aplikacji.
+
+
+
+### Jak anulować subskrypcję?
+
+- Kliknij przycisk Manage Subscription w aplikacji albo rozszerzeniu i postępuj zgodnie z instrukcjami.
+- Proces jest w pełni automatyczny, więc nie trzeba dzwonić ani pisać maili.
+
+
+
+### Dla kogo jest Pitch Changer?
+
+- Pitch Changer jest stworzony dla wokalistów, muzyków, producentów, DJ-ów, nauczycieli i wszystkich, którzy muszą dopasowywać tonację utworów.
+- Niezależnie od tego, czy ćwiczysz w domu, grasz na żywo, uczysz uczniów czy przygotowujesz materiały, daje szybki sposób na przeniesienie muzyki do tonacji odpowiedniej dla ciebie.
+
+
+

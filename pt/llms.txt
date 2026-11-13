@@ -1,5 +1,95 @@
----
-layout: null
-permalink: /pt/llms.txt
----
-{% include llms_locale.txt locale="pt" %}
+# Pitch Changer
+
+> O Pitch Changer ajuda você a estudar, ensinar, cantar e preparar faixas em uma tonalidade mais confortável, seja no navegador ou com arquivos de áudio em dispositivos Apple.
+
+Esta referência reúne as páginas do Pitch Changer disponíveis neste idioma e mantém o foco em tarefas musicais, trabalho com arquivos e escolha da versão certa da ferramenta.
+
+## Site
+
+- [Pitch Changer](https://pitch-changer.com/pt/): Comece aqui para ver como o Pitch Changer ajuda cantores, professores, instrumentistas, produtores e DJs a mudar tonalidades, transpor músicas e escolher entre a extensão para sites e o app offline para arquivos.
+
+
+## Escolha a versão certa
+
+### Mudador de Pitch
+
+Use o Mudador de Pitch para mudar a tonalidade das músicas com facilidade enquanto elas já estão tocando. É um jeito prático de transpor música sem sair do navegador.
+
+Perfeito para: cantores, professores de canto, docentes, escolas, instrumentistas e qualquer pessoa que pratique com vídeos online.
+
+### Pitch Changer App
+
+Do estudo à produção, o Pitch Changer ajuda você a transpor, mudar o pitch, alterar a tonalidade das músicas e processar áudio em lote com precisão.
+
+Perfeito para: produtores, DJs, professores e músicos que trabalham com arquivos de áudio locais.
+
+## Quem usa o Pitch Changer?
+
+- **Professores de canto e cantores**: Ajuste rapidamente a tonalidade de qualquer música para combinar com a extensão vocal de um aluno. Faça exercícios em tonalidades diferentes, teste alternativas e deixe músicas difíceis mais confortáveis de cantar.
+- **Instrumentistas**: Guitarristas e outros instrumentistas podem transpor faixas para a tonalidade que melhor combina com o instrumento ou com a afinação, sem regravar nem retunar.
+- **Produtores e DJs**: Teste ideias, remixes e transições mudando pitch e tonalidade em segundos. Prepare backing tracks, stems e rascunhos para a sua DAW ou para sets ao vivo.
+- **Professores e alunos**: Crie versões personalizadas de músicas para aulas, demonstrações de teoria musical e sessões de prática mais focadas.
+## Perguntas frequentes
+
+### Qual é a diferença entre Pitch Changer Extension e Pitch Changer App?
+
+- O Pitch Changer Extension é uma extensão de navegador que muda a tonalidade das músicas diretamente em sites como YouTube e outras plataformas de áudio ou vídeo.
+- O Pitch Changer App é um app independente para iPhone, iPad e Mac que funciona offline com seus próprios arquivos de áudio e consegue processar várias faixas em lote.
+
+
+
+### Preciso de internet para usar o Pitch Changer?
+
+- A extensão Pitch Changer roda no navegador e foi feita para conteúdo online, então normalmente você vai usá-la enquanto estiver conectado à internet.
+- O app para iPhone, iPad e Mac funciona totalmente offline com arquivos de áudio locais, então depois de instalado você pode usá-lo sem conexão ativa.
+
+
+
+### Quais formatos de áudio o Pitch Changer App suporta?
+
+- O app para iPhone, iPad e Mac funciona com formatos de áudio comuns como MP3, WAV, FLAC e outros, então você pode processar os arquivos que já tem sem converter antes.
+- Você também pode adicionar vídeos, regiões da sua DAW e pastas inteiras. O Pitch Changer extrai o áudio para você.
+
+
+
+### Mudar o pitch afeta a qualidade do áudio?
+
+- O Pitch Changer foi projetado para preservar a qualidade do áudio enquanto você ajusta a tonalidade. Nossos usuários dizem com frequência que a qualidade da mudança de pitch é excelente.
+- Como em qualquer processamento digital de pitch, mudanças muito extremas podem soar menos naturais, mas na maioria dos casos o resultado continua limpo e musical.
+
+
+
+### Não encontro versões instrumentais das músicas. Vocês podem ajudar?
+
+Confira o nosso Vocal Remover. Ele remove o vocal de uma música online ou offline e funciona muito bem com o Pitch Changer.
+
+
+
+### Como posso mudar o tempo de uma música?
+
+- Se você quer desacelerar ou acelerar a música em um site enquanto ela já está tocando, use Mudador de BPM.
+
+
+
+### Existe teste grátis? Como funciona o preço?
+
+- Tanto a extensão quanto o app para iPhone, iPad e Mac incluem um período de teste grátis sem cartão.
+- Depois do teste, o Pitch Changer Extension oferece opções semanais, anuais e compra única, enquanto o Pitch Changer App oferece assinaturas semanais e anuais, como listado acima.
+- Todos os pagamentos são processados com segurança via Paddle para a extensão ou Apple para o app.
+
+
+
+### Como cancelo minha assinatura?
+
+- Clique no botão Manage Subscription dentro do app ou da extensão e siga as instruções.
+- O processo é totalmente automático, então não há necessidade de telefonar ou mandar e-mails.
+
+
+
+### Para quem o Pitch Changer foi feito?
+
+- O Pitch Changer foi feito para cantores, músicos, produtores, DJs, professores e qualquer pessoa que precise ajustar a tonalidade das músicas.
+- Seja para estudar em casa, tocar ao vivo, ensinar alunos ou preparar material, ele dá um jeito rápido de levar a música para a tonalidade que funciona para você.
+
+
+

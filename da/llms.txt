@@ -1,5 +1,95 @@
----
-layout: null
-permalink: /da/llms.txt
----
-{% include llms_locale.txt locale="da" %}
+# Pitch Changer
+
+> Pitch Changer hjælper dig med at øve, undervise, synge og forberede spor i en mere behagelig toneart, uanset om du arbejder i browseren eller med lydfiler på Apple-enheder.
+
+Denne reference samler de Pitch Changer-sider der findes på dette sprog og holder fokus på musikalske opgaver, filhåndtering og valg af den rigtige værktøjsversion.
+
+## Hjemmeside
+
+- [Pitch Changer](https://pitch-changer.com/da/): Start her for at se hvordan Pitch Changer hjælper sangere, lærere, instrumentalister, producere og DJ's med at ændre tonearter, transponere sange og vælge mellem udvidelsen til hjemmesider og offlineappen til filer.
+
+
+## Vælg den rigtige version
+
+### Toneart Skift
+
+Brug Toneart Skift til nemt at ændre toneart på sange mens de allerede spiller. Det er en enkel måde at transponere musik på uden at forlade browseren.
+
+Perfekt til: sangere, vokalcoaches, lærere, skoler, instrumentalister og alle der øver med onlinevideoer.
+
+### Pitch Changer App
+
+Fra øvning til produktion hjælper Pitch Changer dig med at transponere, flytte pitch, ændre toneart på sange og batchbehandle lyd præcist.
+
+Perfekt til: producere, DJ's, lærere og musikere der arbejder med lokale lydfiler.
+
+## Hvem bruger Pitch Changer?
+
+- **Vokalcoaches og sangere**: Justér hurtigt tonearten på enhver sang så den passer til en elevs stemmeleje. Kør øvelser i forskellige tonearter, prøv alternativer og gør svære sange mere behagelige at synge.
+- **Instrumentalister**: Guitarister og andre instrumentalister kan transponere spor til den toneart der passer bedst til instrumentet eller stemningen uden at optage igen eller stemme om.
+- **Producere og DJ's**: Test idéer, remixes og overgange ved at flytte pitch og toneart på få sekunder. Forbered backing tracks, stems og skitser til din DAW eller dit livesæt.
+- **Lærere og elever**: Lav skræddersyede versioner af sange til undervisning, musikteoridemonstrationer og fokuserede øveforløb.
+## Ofte stillede spørgsmål
+
+### Hvad er forskellen på Pitch Changer Extension og Pitch Changer App?
+
+- Pitch Changer Extension er en browserudvidelse der ændrer tonearten på sange direkte på hjemmesider som YouTube og andre lyd- eller videoplatforme.
+- Pitch Changer App er en selvstændig iPhone-, iPad- og Mac-app der virker offline med dine egne lydfiler og kan batchbehandle flere spor på én gang.
+
+
+
+### Skal jeg have internetforbindelse for at bruge Pitch Changer?
+
+- Pitch Changer-udvidelsen kører i din browser og er lavet til indhold på nettet, så du vil typisk bruge den mens du er forbundet til internettet.
+- iPhone-, iPad- og Mac-appen virker helt offline med lokale lydfiler, så når den først er installeret kan du bruge den uden aktiv forbindelse.
+
+
+
+### Hvilke lydformater understøtter Pitch Changer App?
+
+- iPhone-, iPad- og Mac-appen virker med almindelige lydformater som MP3, WAV, FLAC og flere, så du kan behandle de filer du allerede har uden at konvertere dem først.
+- Du kan også tilføje videoer, regioner fra din DAW og hele mapper. Pitch Changer udtrækker lyden for dig.
+
+
+
+### Påvirker det lydkvaliteten at ændre pitch?
+
+- Pitch Changer er designet til at bevare lydkvaliteten mens du justerer tonearten. Brugerne siger jævnligt at kvaliteten af pitchskiftet er fremragende.
+- Som ved al digital pitchbehandling kan meget ekstreme ændringer lyde mindre naturlige, men i de fleste tilfælde forbliver resultatet rent og musikalsk.
+
+
+
+### Jeg kan ikke finde instrumentale versioner af sange. Kan I hjælpe?
+
+Prøv vores Vocal Remover. Den fjerner vokal fra en sang online eller offline og fungerer virkelig godt sammen med Pitch Changer.
+
+
+
+### Hvordan kan jeg ændre tempoet på en sang?
+
+- Hvis du vil sætte musik på en hjemmeside ned eller op i tempo mens den allerede spiller, så brug BPM-ændrer.
+
+
+
+### Er der en gratis prøveperiode? Hvordan fungerer priserne?
+
+- Både udvidelsen og iPhone-, iPad- og Mac-appen har en gratis prøveperiode uden kort.
+- Efter prøveperioden tilbyder Pitch Changer Extension ugentlige, årlige og engangskøb, mens Pitch Changer App tilbyder ugentlige og årlige abonnementer som vist ovenfor.
+- Alle betalinger håndteres sikkert via Paddle for udvidelsen eller Apple for appen.
+
+
+
+### Hvordan opsiger jeg mit abonnement?
+
+- Klik på knappen Manage Subscription i appen eller udvidelsen og følg vejledningen der.
+- Processen er helt automatisk, så du behøver ikke ringe eller skrive e-mails.
+
+
+
+### Hvem er Pitch Changer lavet til?
+
+- Pitch Changer er lavet til sangere, musikere, producere, DJ's, lærere og alle der har brug for at justere tonearten på sange.
+- Uanset om du øver derhjemme, spiller live, underviser elever eller forbereder materiale, giver den dig en hurtig måde at få musikken over i den toneart der passer til dig.
+
+
+

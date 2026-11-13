@@ -1,5 +1,95 @@
----
-layout: null
-permalink: /tr/llms.txt
----
-{% include llms_locale.txt locale="tr" %}
+# Pitch Changer
+
+> Pitch Changer, ister tarayıcıda ister Apple aygıtlarındaki ses dosyalarıyla çalışıyor olun, daha rahat bir tonda pratik yapmanıza, öğretmenlik yapmanıza, şarkı söylemenize ve parçalar hazırlamanıza yardımcı olur.
+
+Bu referans, bu dilde mevcut Pitch Changer sayfalarını bir araya getirir ve odağı müzikal görevler, dosya kullanımı ve doğru araç sürümünü seçme üzerinde tutar.
+
+## Site
+
+- [Pitch Changer](https://pitch-changer.com/tr/): Pitch Changer'ın şarkıcılara, öğretmenlere, enstrümancılara, prodüktörlere ve DJ'lere ton değiştirme, şarkı transpoze etme ve siteler için uzantı ile dosyalar için offline uygulama arasında seçim yapma konularında nasıl yardımcı olduğunu görmek için buradan başlayın.
+
+
+## Doğru sürümü seçin
+
+### Tonu Değiştirici
+
+Tonu Değiştirici'yi kullanarak çalarken bile şarkı tonunu kolayca değiştirebilirsiniz. Tarayıcıdan ayrılmadan müziği transpoze etmenin pratik bir yoludur.
+
+Şunlar için ideal: şarkıcılar, vokal koçları, öğretmenler, okullar, enstrümancılar ve online videolarla çalışan herkes.
+
+### Pitch Changer App
+
+Çalışmadan prodüksiyona kadar Pitch Changer, şarkıları transpoze etmenize, pitch kaydırmanıza, ton değiştirmenize ve sesi toplu olarak hassas biçimde işlemenize yardımcı olur.
+
+Şunlar için ideal: yerel ses dosyalarıyla çalışan prodüktörler, DJ'ler, öğretmenler ve müzisyenler.
+
+## Pitch Changer'ı kimler kullanıyor?
+
+- **Vokal koçları ve şarkıcılar**: Herhangi bir şarkının tonunu öğrencinin ses aralığına hızla uyarlayın. Farklı tonlarda alıştırmalar yapın, alternatifler deneyin ve zor şarkıları söylemesi daha rahat hale getirin.
+- **Enstrümancılar**: Gitaristler ve diğer enstrümancılar, tekrar kayıt almadan veya yeniden akort yapmadan parçaları enstrümanlarına ya da akort düzenlerine daha uygun tona taşıyabilir.
+- **Prodüktörler ve DJ'ler**: Pitch ve tonu saniyeler içinde değiştirerek fikirleri, remixleri ve geçişleri test edin. DAW veya canlı setler için backing track, stem ve taslaklar hazırlayın.
+- **Öğretmenler ve öğrenciler**: Dersler, müzik teorisi gösterimleri ve odaklı çalışma oturumları için şarkıların özel sürümlerini hazırlayın.
+## Sık sorulan sorular
+
+### Pitch Changer Extension ile Pitch Changer App arasındaki fark nedir?
+
+- Pitch Changer Extension, YouTube gibi sitelerde ve diğer ses ya da video platformlarında şarkı tonunu doğrudan değiştiren bir tarayıcı uzantısıdır.
+- Pitch Changer App, kendi ses dosyalarınızla offline çalışan ve aynı anda birden fazla parçayı toplu işleyebilen bağımsız bir iPhone, iPad ve Mac uygulamasıdır.
+
+
+
+### Pitch Changer kullanmak için internet bağlantısı gerekir mi?
+
+- Pitch Changer uzantısı tarayıcınızda çalışır ve online içerik için tasarlanmıştır, bu yüzden genelde internete bağlıyken kullanırsınız.
+- iPhone, iPad ve Mac uygulaması yerel ses dosyalarıyla tamamen offline çalışır, bu nedenle kurulduktan sonra aktif bağlantı gerekmez.
+
+
+
+### Pitch Changer App hangi ses formatlarını destekler?
+
+- iPhone, iPad ve Mac uygulaması MP3, WAV, FLAC gibi yaygın ses formatlarıyla çalışır; böylece elinizdeki dosyaları dönüştürmeden işleyebilirsiniz.
+- Videoları, DAW bölümlerini ve tüm klasörleri de ekleyebilirsiniz. Pitch Changer sesi sizin için çıkarır.
+
+
+
+### Pitch değiştirmek ses kalitesini etkiler mi?
+
+- Pitch Changer, tonu ayarlarken ses kalitesini korumak için tasarlanmıştır. Kullanıcılarımız da pitch değişim kalitesinin çok iyi olduğunu sık sık söylüyor.
+- Her dijital pitch işlemede olduğu gibi çok uç ayarlar daha az doğal duyulabilir, ancak çoğu durumda sonuç temiz ve müzikal kalır.
+
+
+
+### Şarkıların enstrümantal sürümlerini bulamıyorum. Yardımcı olabilir misiniz?
+
+Vocal Remover'ımıza göz atın. Şarkıdan vokali online veya offline kaldırır ve Pitch Changer ile çok iyi çalışır.
+
+
+
+### Bir şarkının temposunu nasıl değiştirebilirim?
+
+- Bir sitede zaten çalan müziği yavaşlatmak ya da hızlandırmak istiyorsanız BPM Değiştirici kullanın.
+
+
+
+### Ücretsiz deneme var mı? Fiyatlandırma nasıl çalışıyor?
+
+- Hem uzantı hem de iPhone, iPad ve Mac uygulaması kart gerektirmeyen ücretsiz deneme süresi içerir.
+- Denemeden sonra Pitch Changer Extension haftalık, yıllık ve tek seferlik satın alma seçenekleri sunar; Pitch Changer App ise haftalık ve yıllık abonelikler sunar.
+- Tüm ödemeler uzantı için Paddle, uygulama için Apple üzerinden güvenli şekilde işlenir.
+
+
+
+### Aboneliğimi nasıl iptal ederim?
+
+- Uygulama veya uzantı içindeki Manage Subscription düğmesine tıklayın ve oradaki adımları izleyin.
+- Süreç tamamen otomatiktir, bu yüzden aramanız ya da e-posta göndermeniz gerekmez.
+
+
+
+### Pitch Changer kimler için yapıldı?
+
+- Pitch Changer; şarkıcılar, müzisyenler, prodüktörler, DJ'ler, öğretmenler ve şarkı tonunu ayarlaması gereken herkes için yapılmıştır.
+- İster evde çalışın, ister canlı performans hazırlayın, ister öğrencilere ders verin ya da içerik hazırlayın; müziği size uyan tona hızlıca taşımanıza yardımcı olur.
+
+
+

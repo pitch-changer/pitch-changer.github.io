@@ -1,7 +1,995 @@
----
-layout: default
-locale: ko
-faq_schema_key: faq
-locale_root: true
-permalink: /ko/
----
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>음정 변조기: 온라인과 오프라인에서 곡 키 바꾸기</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="어떤 웹사이트에서든 곡 키를 바꾸고 연습, 노래방, 프로덕션을 위해 음악을 트랜스포즈하세요. 브라우저 확장 프로그램과 iPhone, iPad, Mac 앱으로 이용할 수 있습니다." />
+    <meta property="og:title" content="음정 변조기: 온라인과 오프라인에서 곡 키 바꾸기" />
+    <meta property="og:description" content="어떤 웹사이트에서든 곡 키를 바꾸고 연습, 노래방, 프로덕션을 위해 음악을 트랜스포즈하세요. 브라우저 확장 프로그램과 iPhone, iPad, Mac 앱으로 이용할 수 있습니다." />
+    <meta property="og:url" content="https://pitch-changer.com/ko/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pitch-changer.com/extension.png" />
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var hasManualDark = root.classList.contains("dark");
+
+        if (typeof window.matchMedia !== "function") {
+          return;
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyTheme(isDark) {
+          if (hasManualDark) {
+            root.classList.add("dark");
+            return;
+          }
+
+          root.classList.toggle("dark", isDark);
+        }
+
+        applyTheme(mediaQuery.matches);
+
+        function handleThemeChange(event) {
+          applyTheme(event.matches);
+        }
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleThemeChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleThemeChange);
+        }
+      })();
+    </script>
+    <link rel="icon" sizes="32x32" type="image/png" href="/icons/32.png" />
+    <link rel="icon" sizes="16x16" type="image/png" href="/icons/16.png" />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQN6C9B1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMQN6C9B1Q');
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://pitch-changer.com/ko/" />
+<link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+<link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+<link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+<link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+<link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+<link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+<link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+<link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+<link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+<link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+<link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+<link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+<link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+<link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+<link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+<link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+<link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+<link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+    <style>
+      .locale-switcher {
+        position: relative;
+        display: inline-flex;
+      }
+
+      .hero-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .hero-topbar-spacer {
+        display: none;
+      }
+
+      .hero-topbar-update {
+        max-width: 100%;
+      }
+
+      .hero-topbar-switcher {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .locale-switcher summary {
+        list-style: none;
+      }
+
+      .locale-switcher summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .locale-switcher-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 20;
+        min-width: 13rem;
+        border: 1px solid #d1d5db;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+      }
+
+      .locale-switcher-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        color: #111827;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .locale-switcher-link:hover,
+      .locale-switcher-link:focus-visible {
+        background: #eff6ff;
+        color: #1d4ed8;
+        outline: none;
+      }
+
+      .locale-switcher-link[aria-current="true"] {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .locale-switcher-abbr {
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      html.dark .locale-switcher-menu {
+        border-color: #374151;
+        background: #111827;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      html.dark .locale-switcher-link {
+        color: #f3f4f6;
+      }
+
+      html.dark .locale-switcher-link:hover,
+      html.dark .locale-switcher-link:focus-visible {
+        background: #1f2937;
+        color: #93c5fd;
+      }
+
+      html.dark .locale-switcher-link[aria-current="true"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      html.dark .locale-switcher-abbr {
+        color: #9ca3af;
+      }
+
+      @media (max-width: 640px) {
+        .locale-switcher-menu {
+          right: auto;
+          left: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero-topbar {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        }
+
+        .hero-topbar-spacer {
+          display: block;
+        }
+
+        .hero-topbar-update {
+          justify-self: center;
+        }
+
+        .hero-topbar-switcher {
+          justify-self: end;
+          width: auto;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pitch-changer.com/ko/#extension",
+            "name": "음정 변조기",
+            "alternateName": "Pitch Changer Extension",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Chromium-based browser on Windows, macOS, Linux and ChromeOS",
+            "description": "음정 변조기는 어떤 웹사이트에서든 브라우저 안에서 곡의 키를 바꿀 수 있게 해 주는 브라우저 확장 프로그램입니다. YouTube와 다른 오디오 또는 비디오 플랫폼에서 들으면서 반음 단위로 피치를 움직여 보세요.",
+            "inLanguage": "ko",
+            "url": "https://pitch-changer.com/ko/#extension",
+            "installUrl": "https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.4,
+              "ratingCount": 210
+            },
+            "publisher": {"@type":"Organization","name":"extensions.ee","url":"https://extensions.ee"}
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pitch-changer.com/ko/#app",
+            "name": "Pitch Changer App",
+            "alternateName": "iPhone, iPad 및 Mac용 Pitch Changer",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS 15.0 or iOS 18.0",
+            "description": "iPhone, iPad 및 Mac용 Pitch Changer는 오프라인에서 피치를 바꾸고, 곡을 트랜스포즈하고, 오디오 파일을 일괄 처리할 수 있게 도와줍니다. 트랙을 가져오고, 템포는 그대로 둔 채 키를 바꾸고, 연습, 레슨, 프로덕션용 새 버전을 내보낼 수 있습니다.",
+            "inLanguage": "ko",
+            "url": "https://pitch-changer.com/ko/#app",
+            "installUrl": "https://apps.apple.com/app/id6749900880",
+            "publisher": {"@type":"Organization","name":"extensions.ee","url":"https://extensions.ee"}
+          }
+        ]
+      }
+    </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://pitch-changer.com/ko/#faq",
+      "url": "https://pitch-changer.com/ko/",
+      "inLanguage": "ko",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Pitch Changer Extension과 Pitch Changer App의 차이는 무엇인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer Extension은 YouTube 같은 웹사이트와 다른 오디오 또는 비디오 플랫폼에서 곡의 키를 바로 바꿔 주는 브라우저 확장 프로그램입니다. Pitch Changer App은 iPhone, iPad, Mac용 독립 앱으로, 내 오디오 파일을 오프라인에서 다루며 여러 트랙을 한 번에 일괄 처리할 수 있습니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "Pitch Changer를 사용하려면 인터넷 연결이 필요한가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer 확장 프로그램은 브라우저 안에서 작동하고 온라인 콘텐츠용으로 설계되었기 때문에 보통 인터넷에 연결된 상태에서 사용하게 됩니다. iPhone, iPad, Mac 앱은 로컬 오디오 파일로 완전히 오프라인에서 동작하므로 설치 후에는 활성 연결 없이도 사용할 수 있습니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "Pitch Changer App은 어떤 오디오 포맷을 지원하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "iPhone, iPad, Mac 앱은 MP3, WAV, FLAC 같은 일반적인 오디오 포맷을 지원하므로 이미 가지고 있는 파일을 별도 변환 없이 바로 처리할 수 있습니다. 비디오, DAW의 구간, 폴더 전체도 추가할 수 있으며 Pitch Changer가 오디오를 알아서 추출해 줍니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "피치를 바꾸면 음질에 영향이 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer는 키를 조정하는 동안 음질을 최대한 유지하도록 설계되었습니다. 실제 사용자들도 피치 이동 품질이 아주 좋다고 자주 말합니다. 다른 디지털 피치 변환과 마찬가지로 아주 극단적인 설정에서는 더 부자연스럽게 들릴 수 있지만, 대부분의 경우 결과는 깨끗하고 음악적으로 유지됩니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "연주용 버전의 곡을 찾기 어렵습니다. 도와줄 수 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vocal Remover도 함께 써 보세요. 곡에서 보컬을 온라인이나 오프라인으로 제거할 수 있고 Pitch Changer와도 잘 어울립니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "곡의 템포는 어떻게 바꿀 수 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "이미 재생 중인 웹사이트 음악을 느리게 하거나 빠르게 하고 싶다면 BPM 체인저를 사용하세요."
+        }
+      },{
+        "@type": "Question",
+        "name": "무료 체험이 있나요? 가격은 어떻게 되나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "확장 프로그램과 iPhone, iPad, Mac 앱 모두 카드 없이 시작할 수 있는 무료 체험 기간이 있습니다. 체험 후에는 Pitch Changer Extension에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer App에서는 주간 및 연간 구독을 제공합니다. 모든 결제는 확장 프로그램은 Paddle, 앱은 Apple을 통해 안전하게 처리됩니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "구독은 어떻게 취소하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "앱이나 확장 프로그램 안의 Manage Subscription 버튼을 누르고 안내를 따라가세요. 절차는 완전히 자동이므로 전화나 이메일을 보낼 필요가 없습니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "Pitch Changer는 어떤 사람을 위한 도구인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer는 가수, 뮤지션, 프로듀서, DJ, 교사, 그리고 곡의 키를 조정해야 하는 모든 사람을 위해 만들어졌습니다. 집에서 연습할 때든, 라이브를 준비할 때든, 학생을 가르칠 때든, 자료를 만들 때든, 나에게 맞는 키로 음악을 빠르게 옮길 수 있게 도와줍니다."
+        }
+      }]
+    }
+  </script>
+
+
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+<header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
+  <div class="mt-6 text-center">
+    <div class="hero-topbar mb-7 w-full" data-ui-review="hero-topbar">
+      <div aria-hidden="true" class="hero-topbar-spacer"></div>
+      <a
+        target="_blank"
+        href="#app"
+        class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+        role="alert"
+      >
+        <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">새 소식</span>
+        <span class="text-left text-sm font-medium">iPhone 및 iPad용 Pitch Changer가 출시되었습니다. 새로운 내용을 확인해 보세요</span>
+        <svg class="ml-2 h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <div class="hero-topbar-switcher">
+        <nav aria-label="언어 전환기" class="flex items-center justify-end">
+  <details class="locale-switcher group relative" data-locale-switcher>
+    <summary class="flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition hover:border-blue-700 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300">
+      <span class="sr-only">언어 선택</span>
+      <span>한국어</span>
+      <span class="locale-switcher-abbr">KO</span>
+      <svg aria-hidden="true" viewBox="0 0 20 20" class="h-4 w-4 text-gray-500 transition group-open:rotate-180 group-open:text-blue-700 dark:text-gray-400 dark:group-open:text-blue-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+      </svg>
+    </summary>
+
+    <div class="locale-switcher-menu">
+      <ul class="grid gap-1">
+<li>
+          <a
+            href="/"
+            class="locale-switcher-link"
+            lang="en"
+            hreflang="en"
+            data-locale-link
+            data-locale-code="en"
+          >
+            <span class="whitespace-nowrap">English</span>
+            <span class="locale-switcher-abbr">EN</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/it/"
+            class="locale-switcher-link"
+            lang="it"
+            hreflang="it"
+            data-locale-link
+            data-locale-code="it"
+          >
+            <span class="whitespace-nowrap">Italiano</span>
+            <span class="locale-switcher-abbr">IT</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/es/"
+            class="locale-switcher-link"
+            lang="es"
+            hreflang="es"
+            data-locale-link
+            data-locale-code="es"
+          >
+            <span class="whitespace-nowrap">Español</span>
+            <span class="locale-switcher-abbr">ES</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/de/"
+            class="locale-switcher-link"
+            lang="de"
+            hreflang="de"
+            data-locale-link
+            data-locale-code="de"
+          >
+            <span class="whitespace-nowrap">Deutsch</span>
+            <span class="locale-switcher-abbr">DE</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/fr/"
+            class="locale-switcher-link"
+            lang="fr"
+            hreflang="fr"
+            data-locale-link
+            data-locale-code="fr"
+          >
+            <span class="whitespace-nowrap">Français</span>
+            <span class="locale-switcher-abbr">FR</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ja/"
+            class="locale-switcher-link"
+            lang="ja"
+            hreflang="ja"
+            data-locale-link
+            data-locale-code="ja"
+          >
+            <span class="whitespace-nowrap">日本語</span>
+            <span class="locale-switcher-abbr">JA</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ru/"
+            class="locale-switcher-link"
+            lang="ru"
+            hreflang="ru"
+            data-locale-link
+            data-locale-code="ru"
+          >
+            <span class="whitespace-nowrap">Русский</span>
+            <span class="locale-switcher-abbr">RU</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/uk/"
+            class="locale-switcher-link"
+            lang="uk"
+            hreflang="uk"
+            data-locale-link
+            data-locale-code="uk"
+          >
+            <span class="whitespace-nowrap">Українська</span>
+            <span class="locale-switcher-abbr">UK</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ko/"
+            class="locale-switcher-link"
+            lang="ko"
+            hreflang="ko" aria-current="page"
+            data-locale-link
+            data-locale-code="ko"
+          >
+            <span class="whitespace-nowrap">한국어</span>
+            <span class="locale-switcher-abbr">KO</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/nl/"
+            class="locale-switcher-link"
+            lang="nl"
+            hreflang="nl"
+            data-locale-link
+            data-locale-code="nl"
+          >
+            <span class="whitespace-nowrap">Nederlands</span>
+            <span class="locale-switcher-abbr">NL</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/sv/"
+            class="locale-switcher-link"
+            lang="sv"
+            hreflang="sv"
+            data-locale-link
+            data-locale-code="sv"
+          >
+            <span class="whitespace-nowrap">Svenska</span>
+            <span class="locale-switcher-abbr">SV</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/nb/"
+            class="locale-switcher-link"
+            lang="nb"
+            hreflang="nb"
+            data-locale-link
+            data-locale-code="nb"
+          >
+            <span class="whitespace-nowrap">Norsk bokmål</span>
+            <span class="locale-switcher-abbr">NB</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/da/"
+            class="locale-switcher-link"
+            lang="da"
+            hreflang="da"
+            data-locale-link
+            data-locale-code="da"
+          >
+            <span class="whitespace-nowrap">Dansk</span>
+            <span class="locale-switcher-abbr">DA</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/pl/"
+            class="locale-switcher-link"
+            lang="pl"
+            hreflang="pl"
+            data-locale-link
+            data-locale-code="pl"
+          >
+            <span class="whitespace-nowrap">Polski</span>
+            <span class="locale-switcher-abbr">PL</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/pt/"
+            class="locale-switcher-link"
+            lang="pt"
+            hreflang="pt"
+            data-locale-link
+            data-locale-code="pt"
+          >
+            <span class="whitespace-nowrap">Português</span>
+            <span class="locale-switcher-abbr">PT</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/zh-TW/"
+            class="locale-switcher-link"
+            lang="zh-TW"
+            hreflang="zh-TW"
+            data-locale-link
+            data-locale-code="zh-TW"
+          >
+            <span class="whitespace-nowrap">繁體中文</span>
+            <span class="locale-switcher-abbr">繁中</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/tr/"
+            class="locale-switcher-link"
+            lang="tr"
+            hreflang="tr"
+            data-locale-link
+            data-locale-code="tr"
+          >
+            <span class="whitespace-nowrap">Türkçe</span>
+            <span class="locale-switcher-abbr">TR</span>
+          </a>
+        </li>
+</ul>
+    </div>
+  </details>
+</nav>
+
+      </div>
+    </div>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Pitch Changer</h1>
+    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">곡 키를 손쉽게 바꿔 보세요</h2>
+    <p class="text-2xl mb-4">
+      Pitch Changer는 곡의 피치를 옮기고, 키를 바꾸고, 음악을 트랜스포즈하는 일을<br />
+      연습, 노래방, 레슨, 프로덕션에 맞게 훨씬 쉽게 만들어 줍니다.
+    </p>
+    <p class="text-2xl">브라우저에서는 어떤 웹사이트에서든 온라인으로, iPhone, iPad, Mac에서는 오프라인으로 사용할 수 있습니다.</p>
+    <div>
+      <a
+        target="_blank"
+        href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>음정 변조기 추가</div>
+          <div class="text-xl">브라우저에</div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        href="https://apps.apple.com/app/id6749900880"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>Pitch Changer App 추가</div>
+          <div class="text-xl">iPhone, iPad 또는 Mac에</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="페이지 섹션" class="text-center text-3xl mb-10 mt-10 px-4">
+  <a class="underline whitespace-nowrap" href="#overview">Pitch Changer란?</a> ·
+  <a class="underline whitespace-nowrap" href="#extension">웹사이트용</a> ·
+  <a class="underline whitespace-nowrap" href="#app">파일용</a> ·
+  <a class="underline whitespace-nowrap" href="#use-cases">어떤 사람에게 맞을까요?</a> ·
+  <a class="underline whitespace-nowrap" href="#reviews">리뷰</a> ·
+  <a class="underline whitespace-nowrap" href="#faq">FAQ</a>
+</nav>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+    Pitch Changer란?
+  </h2>
+
+  <p class="mb-4">Pitch Changer를 사용하면 복잡한 오디오 소프트웨어 없이 어떤 웹사이트에서든 곡의 키를 바꾸고 컴퓨터에서 음악을 트랜스포즈할 수 있습니다. 연습, 레슨, 녹음, 또는 좋아하는 곡을 더 편한 키로 듣고 싶을 때 바로 쓸 수 있도록 만들어졌습니다.</p>
+
+  <p class="mb-4">Pitch Changer로 할 수 있는 일:</p>
+<ul class="mb-4 list-disc list-inside space-y-4">
+<li>곡 키를 반음 단위로 올리거나 내리기.</li>
+<li>목소리나 악기에 더 잘 맞는 키로 연습하기.</li>
+<li>반주 트랙, 노래방 버전, 레슨 자료 준비하기.</li>
+<li>편곡, 화성, 창의적인 피치 변화를 실험하기.</li>
+</ul>
+  <p class="mb-4">
+    Pitch Changer는 두 가지 버전으로 제공됩니다:
+    <strong><a href="#extension" class="underline">음정 변조기</a></strong> 웹사이트용 브라우저 확장 프로그램이고,
+    <strong><a href="#app" class="underline">Pitch Changer App</a></strong> 파일 작업을 위한 iPhone, iPad, Mac 앱입니다.
+  </p>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="extension">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+      <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
+        음정 변조기
+      </a>
+    </h2>
+<p class="text-xl mb-4">음정 변조기를 사용하면 재생 중인 곡의 키도 손쉽게 바꿀 수 있습니다. 브라우저를 벗어나지 않고 음악을 트랜스포즈하고 싶을 때 간편합니다.</p>
+<p class="text-xl mb-4">Pitch Changer Extension은 브라우저 안에 바로 키 조절 기능을 추가합니다. YouTube와 여러 오디오 웹사이트에서 몇 번의 클릭만으로 곡의 키를 조절할 수 있습니다.</p>
+<ul class="text-xl mb-4 list-disc list-inside space-y-4">
+<li>어떤 웹사이트에서든 온라인으로 곡 키를 바꾸기.</li>
+<li>YouTube 키 체인저처럼, 다른 음악 플랫폼에서도 사용 가능.</li>
+<li>직관적인 컨트롤로 반음 단위 피치 조절.</li>
+<li>함께 연습하거나, 노래방을 하거나, 더 편한 키로 감상할 때 유용함.</li>
+</ul>
+    <p class="text-xl mb-4"><strong>이런 분께 잘 맞습니다:</strong> 가수, 보컬 코치, 교사, 학교, 연주자, 그리고 온라인 영상으로 연습하는 모든 사람.</p>
+<a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      음정 변조기를 브라우저에 추가
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex">
+    <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb">
+      <img src="/extension.png" alt="Pitch Changer 확장 프로그램을 설치하고 몇 초 만에 브라우저에 추가하세요." />
+    </a>
+  </div>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="app">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+      <a target="_blank" href="https://apps.apple.com/app/id6749900880" class="focus:outline-none">
+        Pitch Changer App
+      </a>
+    </h2>
+<p class="text-xl mb-4">연습부터 프로덕션까지, Pitch Changer는 곡 트랜스포즈, 피치 이동, 키 변경, 오디오 일괄 처리를 정밀하게 도와줍니다.</p>
+<p class="text-xl mb-4">iPhone, iPad, Mac용 Pitch Changer에서는 오디오 파일을 가져오고, 속도를 바꾸지 않은 채 피치를 조절하고, 폴더 전체를 일괄 처리해 연습용 트랙, 레슨 자료, 프로덕션 프로젝트를 준비할 수 있습니다.</p>
+<ul class="text-xl mb-4 list-disc list-inside space-y-4">
+<li>오디오 파일의 피치를 빠르고 정확하게 바꾸기.</li>
+<li>템포를 바꾸지 않고 음악을 위아래로 트랜스포즈하기.</li>
+<li>여러 곡을 한 번에 일괄 처리하기.</li>
+<li>인터넷 연결 없이 오프라인으로 사용하기.</li>
+<li>MP3, WAV, FLAC 등 일반적인 포맷 지원.</li>
+</ul>
+    <p class="text-xl mb-4"><strong>이런 분께 잘 맞습니다:</strong> 로컬 오디오 파일을 다루는 프로듀서, DJ, 교사, 뮤지션.</p>
+<a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      Pitch Changer를 iPhone, iPad 또는 Mac에 추가
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex" style="margin-left: 50px; margin-right: -50px">
+    <a target="_blank" href="https://apps.apple.com/app/id6749900880">
+      <img src="/app.png" alt="Pitch Changer를 iPhone, iPad 또는 Mac에 다운로드해 프로젝트를 알맞은 키로 맞춰 두세요." />
+    </a>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="use-cases">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">누가 Pitch Changer를 사용할까요?</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">보컬 코치와 가수</h3>
+  <p class="text-xl mb-4">학생의 음역에 맞게 어떤 곡이든 빠르게 키를 조정할 수 있습니다. 여러 키로 연습하고, 다른 조성을 시도하고, 어려운 곡도 더 편하게 부를 수 있게 만드세요.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">연주자</h3>
+  <p class="text-xl mb-4">기타리스트와 다른 연주자들은 다시 녹음하거나 재튜닝하지 않고도 자신의 악기나 튜닝에 더 잘 맞는 키로 트랙을 옮길 수 있습니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">프로듀서와 DJ</h3>
+  <p class="text-xl mb-4">피치와 키를 몇 초 만에 움직여 아이디어, 리믹스, 전환을 시험해 보세요. DAW나 라이브 셋용 반주, 스템, 스케치를 준비하는 데도 좋습니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">교사와 학습자</h3>
+  <p class="text-xl mb-4">수업, 음악 이론 설명, 집중 연습을 위한 맞춤형 곡 버전을 만들 수 있습니다.</p>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="reviews">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">사용자 후기</h2>
+      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">Pitch Changer를 써 본 사람들이 남긴 이야기입니다</h3>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Grant Kimbell
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“너무 과하지 않은 랜덤 설정 하나를 골라 플레이리스트를 섞어 들어 보라고 정말 추천하고 싶습니다. 좋아하는 곡을 완전히 다른 분위기로 처음 다시 듣는 느낌이 납니다. 피치 이동 품질도 아주 훌륭합니다.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Vadim Makarov
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“저는 보컬 코치라 학생들을 위해 곡 키를 자주 조정해야 합니다. 이 확장 프로그램은 YouTube뿐 아니라 여러 웹사이트에서 버그나 충돌 없이 완벽하게 작동합니다. 게다가 아주 단순해서 그 점도 큰 장점입니다.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Nikola Negovanovic
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“몇 달 동안 사용해 본 결과, Chrome에서 쓸 수 있는 최고의 피치 체인저 앱이라고 확신합니다. 가격이 아깝지 않습니다.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              The Real Spiro Agnew
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“훌륭합니다. 꿈처럼 잘 작동해요.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Ice
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“좋은 브라우저 확장 프로그램에서 기대하는 바로 그 모습입니다.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              maryam seddigh
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“정말 놀라워요. 이런 걸 오랫동안 찾고 있었습니다.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Hans Harding
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“곡을 다른 키로 연주해야 할 때 베이스 연주자인 저에게 정말 좋은 도구입니다.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Kieran Brown
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“정말 좋은 영상을 만드는 유튜버가 있는데 목소리가 너무 거슬렸습니다. 이걸 쓰니 훨씬 듣기 편해졌어요.”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              lilly imaginator
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“제 기준에서는 꼭 있어야 할 확장 프로그램입니다. 노래방, 음악 공부, 또는 곡이 더 높거나 낮게 들리면 어떤 느낌인지 놀아 보기에 아주 좋습니다.”</p>
+      </div>
+</div>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="faq">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">자주 묻는 질문</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer Extension과 Pitch Changer App의 차이는 무엇인가요?</h3>
+<p class="text-xl mb-4">Pitch Changer Extension은 YouTube 같은 웹사이트와 다른 오디오 또는 비디오 플랫폼에서 곡의 키를 바로 바꿔 주는 브라우저 확장 프로그램입니다.</p>
+<p class="text-xl mb-4">Pitch Changer App은 iPhone, iPad, Mac용 독립 앱으로, 내 오디오 파일을 오프라인에서 다루며 여러 트랙을 한 번에 일괄 처리할 수 있습니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer를 사용하려면 인터넷 연결이 필요한가요?</h3>
+<p class="text-xl mb-4">Pitch Changer 확장 프로그램은 브라우저 안에서 작동하고 온라인 콘텐츠용으로 설계되었기 때문에 보통 인터넷에 연결된 상태에서 사용하게 됩니다.</p>
+<p class="text-xl mb-4">iPhone, iPad, Mac 앱은 로컬 오디오 파일로 완전히 오프라인에서 동작하므로 설치 후에는 활성 연결 없이도 사용할 수 있습니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer App은 어떤 오디오 포맷을 지원하나요?</h3>
+<p class="text-xl mb-4">iPhone, iPad, Mac 앱은 MP3, WAV, FLAC 같은 일반적인 오디오 포맷을 지원하므로 이미 가지고 있는 파일을 별도 변환 없이 바로 처리할 수 있습니다.</p>
+<p class="text-xl mb-4">비디오, DAW의 구간, 폴더 전체도 추가할 수 있으며 Pitch Changer가 오디오를 알아서 추출해 줍니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">피치를 바꾸면 음질에 영향이 있나요?</h3>
+<p class="text-xl mb-4">Pitch Changer는 키를 조정하는 동안 음질을 최대한 유지하도록 설계되었습니다. 실제 사용자들도 피치 이동 품질이 아주 좋다고 자주 말합니다.</p>
+<p class="text-xl mb-4">다른 디지털 피치 변환과 마찬가지로 아주 극단적인 설정에서는 더 부자연스럽게 들릴 수 있지만, 대부분의 경우 결과는 깨끗하고 음악적으로 유지됩니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">연주용 버전의 곡을 찾기 어렵습니다. 도와줄 수 있나요?</h3>
+<p class="text-xl mb-4"><a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>도 함께 써 보세요. 곡에서 보컬을 온라인이나 오프라인으로 제거할 수 있고 Pitch Changer와도 잘 어울립니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">곡의 템포는 어떻게 바꿀 수 있나요?</h3>
+<p class="text-xl mb-4">이미 재생 중인 웹사이트 음악을 느리게 하거나 빠르게 하고 싶다면 <a href="https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj" class="underline">BPM 체인저</a>를 사용하세요.</p><h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">무료 체험이 있나요? 가격은 어떻게 되나요?</h3>
+<p class="text-xl mb-4">확장 프로그램과 iPhone, iPad, Mac 앱 모두 카드 없이 시작할 수 있는 무료 체험 기간이 있습니다.</p>
+<p class="text-xl mb-4">체험 후에는 Pitch Changer Extension에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer App에서는 주간 및 연간 구독을 제공합니다.</p>
+<p class="text-xl mb-4">모든 결제는 확장 프로그램은 Paddle, 앱은 Apple을 통해 안전하게 처리됩니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">구독은 어떻게 취소하나요?</h3>
+<p class="text-xl mb-4">앱이나 확장 프로그램 안의 Manage Subscription 버튼을 누르고 안내를 따라가세요.</p>
+<p class="text-xl mb-4">절차는 완전히 자동이므로 전화나 이메일을 보낼 필요가 없습니다.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer는 어떤 사람을 위한 도구인가요?</h3>
+<p class="text-xl mb-4">Pitch Changer는 가수, 뮤지션, 프로듀서, DJ, 교사, 그리고 곡의 키를 조정해야 하는 모든 사람을 위해 만들어졌습니다.</p>
+<p class="text-xl mb-4">집에서 연습할 때든, 라이브를 준비할 때든, 학생을 가르칠 때든, 자료를 만들 때든, 나에게 맞는 키로 음악을 빠르게 옮길 수 있게 도와줍니다.</p>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="get-started">
+  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Pitch Changer 시작하기</h2>
+  <p class="text-2xl mb-4">
+    브라우저에서 작업하든 iPhone, iPad, Mac의 로컬 파일로 작업하든,<br />
+    Pitch Changer는 곡 키를 바꾸고 피치를 움직여 음악이 나에게 맞도록 돕습니다.
+  </p>
+  <div>
+    <a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+          <div>음정 변조기 추가</div>
+          <div class="text-xl">브라우저에</div>
+      </div>
+    </a>
+    <a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+          <div>Pitch Changer App 추가</div>
+          <div class="text-xl">iPhone, iPad 또는 Mac에</div>
+      </div>
+    </a>
+  </div>
+  <p class="mt-10 text-xl text-gray-500 dark:text-gray-400">
+    <span class="text-yellow-300">★</span> Chrome 웹 스토어 평점 4.4/5 · 210 리뷰
+  </p>
+</section>
+
+<footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        <nobr>© 2024–<script>document.write(new Date().getFullYear())</script>
+          <a href="https://extensions.ee/" class="underline">extensions.ee</a>.
+        </nobr>
+        <nobr>문의: info@extensions.ee.</nobr>
+        <nobr>결제 및 환불:
+          <a href="https://paddle.net/" class="underline">Paddle</a>,
+          <a href="https://support.apple.com/billing" class="underline">Apple</a>.
+        </nobr>
+      </div>
+    </div>
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
+      <li><a href="/terms-and-conditions.html" class="hover:underline me-4 md:me-6">이용 약관</a></li>
+      <li><a href="/refund-policy.html" class="hover:underline me-4 md:me-6">환불 정책</a></li>
+      <li><a href="/privacy-policy.html" class="hover:underline me-4 md:me-6">개인정보 처리방침</a></li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-left">
+<p class="mb-4">웹사이트에서 이루어진 구매는 온라인 리셀러인 Paddle.com이 처리하며, 해당 주문의 Merchant of Record 역할을 맡습니다. Paddle은 웹사이트 주문의 고객 지원, 환불, 청구 및 관련 세금 처리를 담당합니다.</p>
+<p class="mb-4">App Store에서 이루어진 구매는 Apple이 직접 처리하며, App Store 주문의 Merchant of Record 역할을 맡습니다. Apple은 청구, 영수증, 세금, 환불 및 관련 고객 지원 문의를 관리합니다.</p>
+<p class="mb-4">어디에서 구매했는지 확실하지 않다면 Paddle 또는 Apple이 보낸 주문 확인 이메일이나 영수증을 확인해 주세요.</p>
+<p>
+      제3자 상표와 구성 요소는
+      <a href="https://extensions.ee/acknowledgements.html?from=pitch-changer.com" class="underline">Acknowledgements</a>
+      페이지에 정리되어 있습니다.
+    </p>
+  </div>
+</footer>
+
+    <script>
+      (function() {
+        var localeLinks = document.querySelectorAll("[data-locale-link]");
+        var currentSearch = window.location.search || "";
+        var currentHash = window.location.hash || "";
+        var legacyFragments = {
+          "#online": "#extension",
+          "#offline": "#app"
+        };
+
+        function updateSectionLinks() {
+          currentHash = window.location.hash || "";
+          var sectionHash = legacyFragments[currentHash];
+
+          if (sectionHash) {
+            currentHash = sectionHash;
+            window.history.replaceState(window.history.state, "", window.location.pathname + currentSearch + currentHash);
+            var section = document.getElementById(currentHash.slice(1));
+            if (section) {
+              section.scrollIntoView();
+            }
+          }
+
+          localeLinks.forEach(function(link) {
+            var targetPath = link.getAttribute("href").split(/[?#]/)[0];
+            link.href = targetPath + currentSearch + currentHash;
+          });
+        }
+
+        updateSectionLinks();
+        window.addEventListener("hashchange", updateSectionLinks);
+
+        localeLinks.forEach(function(link) {
+          var localeCode = link.getAttribute("data-locale-code");
+
+          link.addEventListener("click", function() {
+            if (!localeCode) return;
+
+            try {
+              window.localStorage.setItem("preferred_locale", localeCode);
+            } catch (error) {
+            }
+          });
+        });
+
+        var source = (new URLSearchParams(window.location.search)).get("utm_source");
+        if (source) {
+          document.querySelectorAll("a").forEach(function(link) {
+            if (link.href.startsWith("https://chromewebstore.google.com/")) {
+              link.href += "?utm_source=" + encodeURIComponent(source);
+            } else if (link.href.startsWith("https://apps.apple.com/")) {
+              link.href += "?ct=" + encodeURIComponent(source);
+            }
+          });
+        }
+
+        
+
+        document.addEventListener("click", function(event) {
+          document.querySelectorAll("[data-locale-switcher]").forEach(function(details) {
+            if (!details.contains(event.target)) {
+              details.removeAttribute("open");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

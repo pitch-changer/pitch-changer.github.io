@@ -1,5 +1,116 @@
----
-layout: null
-permalink: /llms.txt
----
-{% include llms_locale.txt locale=site.default_locale show_languages=true root_links=true %}
+# Pitch Changer
+
+> Pitch Changer helps you rehearse, teach, sing, and prepare tracks in a more comfortable key, whether you work in the browser or with audio files on Apple devices.
+
+This reference covers the available Pitch Changer pages in this language and keeps the focus on musical tasks, file handling, and choosing the right version of the tool.
+
+## Site
+
+- [Pitch Changer](https://pitch-changer.com/): Start here to see how Pitch Changer helps singers, teachers, instrumentalists, producers, and DJs change key, transpose songs, and choose between the browser extension for websites and the offline app for files.
+
+
+## Choose the right version
+
+### Pitch Changer Extension
+
+Use Pitch Changer to easily change key of songs. Add this intuitive online pitch shifter and transpose music effortlessly.
+
+Perfect for: singers, vocal coaches, teachers, schools, instrumentalists and anyone who practices with online videos.
+
+### Pitch Changer App
+
+From practice to production, Pitch Changer helps you transpose, shift pitch, change song key and process audio batches with power and precision.
+
+Perfect for: producers, DJs, teachers and musicians working with local audio files.
+
+## Who uses Pitch Changer?
+
+- **Vocal coaches & singers**: Quickly adjust the key of any song to match a student's vocal range. Run exercises in different keys, explore alternative tonalities and make challenging songs more comfortable to sing.
+- **Instrumentalists**: Guitarists and other instrumentalists can transpose tracks to the key that best suits their instrument or tuning without re-recording or retuning.
+- **Producers & DJs**: Test ideas, remixes and transitions by shifting pitch and key in seconds. Prepare backing tracks, stems and sketches for your DAW or live sets.
+- **Teachers & learners**: Create custom versions of songs for lessons, music theory demonstrations and focused practice sessions.
+## Frequently Asked Questions
+
+### What's the difference between Pitch Changer Extension and Pitch Changer App?
+
+- Pitch Changer Extension is a browser extension that changes the key of songs directly on websites like YouTube and other audio or video platforms.
+- Pitch Changer App is a standalone iPhone, iPad and Mac app that works offline with your own audio files and can batch process multiple tracks at once.
+
+
+
+### Do I need an internet connection to use Pitch Changer?
+
+- The Pitch Changer extension runs in your browser and is designed for online content, so you will typically use it while connected to the internet.
+- The iPhone, iPad and Mac app works fully offline with local audio files, so once it is installed you can use it without an active connection.
+
+
+
+### Which audio formats does Pitch Changer App support?
+
+- The iPhone, iPad and Mac app works with common audio formats such as MP3, WAV, FLAC and more, so you can process the files you already have without converting them first.
+- You can also add videos, regions from your DAW and whole folders. Pitch Changer extracts the audio for you.
+
+
+
+### Will changing pitch affect audio quality?
+
+- Pitch Changer is designed to preserve audio quality while you adjust the key. Our users regularly say the pitch shift quality is excellent.
+- As with any digital pitch shifting, very extreme changes may sound less natural, but in most cases the result stays clean and musical.
+
+
+
+### I can't find instrumental versions of songs. Can you help?
+
+Check out our Vocal Remover. It removes vocals from a song online or offline and works beautifully with Pitch Changer.
+
+
+
+### How can I change the tempo of a song?
+
+- If you want to slow down or speed up music on a website while it is already playing, use BPM Changer.
+
+
+
+### Is there a free trial? How does pricing work?
+
+- Both the extension and the iPhone, iPad and Mac app include a free trial period with no card required.
+- After the trial, Pitch Changer Extension offers weekly, yearly and one-time purchase options, and Pitch Changer App offers weekly and yearly subscriptions, as listed above.
+- All payments are handled securely through Paddle for the extension or Apple for the app.
+
+
+
+### How do I cancel my subscription?
+
+- Click the Manage Subscription button inside the app or extension and follow the instructions there.
+- The process is fully automatic, so there is no need to call or write emails.
+
+
+
+### Who is Pitch Changer for?
+
+- Pitch Changer is made for singers, musicians, producers, DJs, teachers and anyone who needs to adjust the key of songs.
+- Whether you are practicing at home, performing live, teaching students or preparing content, it gives you a quick way to get music into the key that works for you.
+
+
+
+## Available languages
+
+- English (en): [Home](https://pitch-changer.com/) | [LLMS](https://pitch-changer.com/llms.txt)
+- Italiano (it): [Home](https://pitch-changer.com/it/) | [LLMS](https://pitch-changer.com/it/llms.txt)
+- Español (es): [Home](https://pitch-changer.com/es/) | [LLMS](https://pitch-changer.com/es/llms.txt)
+- Deutsch (de): [Home](https://pitch-changer.com/de/) | [LLMS](https://pitch-changer.com/de/llms.txt)
+- Français (fr): [Home](https://pitch-changer.com/fr/) | [LLMS](https://pitch-changer.com/fr/llms.txt)
+- 日本語 (ja): [Home](https://pitch-changer.com/ja/) | [LLMS](https://pitch-changer.com/ja/llms.txt)
+- Русский (ru): [Home](https://pitch-changer.com/ru/) | [LLMS](https://pitch-changer.com/ru/llms.txt)
+- Українська (uk): [Home](https://pitch-changer.com/uk/) | [LLMS](https://pitch-changer.com/uk/llms.txt)
+- 한국어 (ko): [Home](https://pitch-changer.com/ko/) | [LLMS](https://pitch-changer.com/ko/llms.txt)
+- Nederlands (nl): [Home](https://pitch-changer.com/nl/) | [LLMS](https://pitch-changer.com/nl/llms.txt)
+- Svenska (sv): [Home](https://pitch-changer.com/sv/) | [LLMS](https://pitch-changer.com/sv/llms.txt)
+- Norsk bokmål (nb): [Home](https://pitch-changer.com/nb/) | [LLMS](https://pitch-changer.com/nb/llms.txt)
+- Dansk (da): [Home](https://pitch-changer.com/da/) | [LLMS](https://pitch-changer.com/da/llms.txt)
+- Polski (pl): [Home](https://pitch-changer.com/pl/) | [LLMS](https://pitch-changer.com/pl/llms.txt)
+- Português (pt): [Home](https://pitch-changer.com/pt/) | [LLMS](https://pitch-changer.com/pt/llms.txt)
+- 繁體中文 (zh-TW): [Home](https://pitch-changer.com/zh-TW/) | [LLMS](https://pitch-changer.com/zh-TW/llms.txt)
+- Türkçe (tr): [Home](https://pitch-changer.com/tr/) | [LLMS](https://pitch-changer.com/tr/llms.txt)
+
+

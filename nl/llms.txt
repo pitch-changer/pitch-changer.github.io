@@ -1,5 +1,95 @@
----
-layout: null
-permalink: /nl/llms.txt
----
-{% include llms_locale.txt locale="nl" %}
+# Pitch Changer
+
+> Pitch Changer helpt je om te oefenen, les te geven, te zingen en tracks voor te bereiden in een comfortabelere toonsoort, of je nu in de browser werkt of met audiobestanden op Apple-apparaten.
+
+Deze referentie bundelt de beschikbare Pitch Changer-pagina's in deze taal en houdt de focus op muzikale taken, bestandsbeheer en het kiezen van de juiste versie van het hulpmiddel.
+
+## Site
+
+- [Pitch Changer](https://pitch-changer.com/nl/): Begin hier om te zien hoe Pitch Changer zangers, docenten, instrumentalisten, producers en dj's helpt bij het veranderen van toonsoorten, het transponeren van nummers en het kiezen tussen de website-extensie en de offline-app voor bestanden.
+
+
+## Kies de juiste versie
+
+### Toonhoogte veranderen
+
+Gebruik Toonhoogte veranderen om tijdens het luisteren makkelijk de toonsoort van nummers aan te passen. Zo transponeer je muziek direct in de browser zonder je workflow te onderbreken.
+
+Perfect voor: zangers, zangcoaches, docenten, scholen, instrumentalisten en iedereen die oefent met online video's.
+
+### Pitch Changer App
+
+Van oefenen tot productie: Pitch Changer helpt je om nummers te transponeren, toonhoogte te verschuiven, de toonsoort te veranderen en audiobatches precies te verwerken.
+
+Perfect voor: producers, dj's, docenten en muzikanten die met lokale audiobestanden werken.
+
+## Wie gebruikt Pitch Changer?
+
+- **Zangcoaches en zangers**: Pas de toonsoort van elk nummer snel aan de stemomvang van een leerling aan. Oefen in verschillende toonsoorten, probeer alternatieven uit en maak lastige nummers comfortabeler om te zingen.
+- **Instrumentalisten**: Gitaristen en andere instrumentalisten kunnen tracks transponeren naar de toonsoort die het beste past bij hun instrument of stemming, zonder opnieuw op te nemen of opnieuw te stemmen.
+- **Producers en dj's**: Test ideeën, remixes en overgangen door pitch en toonsoort in seconden te verschuiven. Bereid backingtracks, stems en schetsen voor je DAW of liveset voor.
+- **Docenten en leerlingen**: Maak aangepaste versies van nummers voor lessen, muziektheorie-demo's en gerichte oefensessies.
+## Veelgestelde vragen
+
+### Wat is het verschil tussen Pitch Changer Extension en Pitch Changer App?
+
+- Pitch Changer Extension is een browserextensie die de toonsoort van nummers direct verandert op websites zoals YouTube en andere audio- of videoplatforms.
+- Pitch Changer App is een zelfstandige iPhone-, iPad- en Mac-app die offline werkt met je eigen audiobestanden en meerdere tracks tegelijk kan batchverwerken.
+
+
+
+### Heb ik een internetverbinding nodig om Pitch Changer te gebruiken?
+
+- De Pitch Changer-extensie draait in je browser en is bedoeld voor online content, dus meestal gebruik je die terwijl je verbonden bent met internet.
+- De iPhone-, iPad- en Mac-app werkt volledig offline met lokale audiobestanden, dus na installatie kun je hem zonder actieve verbinding gebruiken.
+
+
+
+### Welke audioformaten ondersteunt Pitch Changer App?
+
+- De iPhone-, iPad- en Mac-app werkt met gangbare audioformaten zoals MP3, WAV, FLAC en meer, zodat je bestanden die je al hebt direct kunt verwerken zonder eerst te converteren.
+- Je kunt ook video's, regio's uit je DAW en complete mappen toevoegen. Pitch Changer haalt de audio er voor je uit.
+
+
+
+### Heeft het veranderen van pitch invloed op de audiokwaliteit?
+
+- Pitch Changer is ontworpen om de audiokwaliteit te behouden terwijl je de toonsoort aanpast. Gebruikers zeggen regelmatig dat de kwaliteit van de pitchverschuiving uitstekend is.
+- Zoals bij elke digitale pitchbewerking kunnen heel extreme instellingen minder natuurlijk klinken, maar in de meeste gevallen blijft het resultaat schoon en muzikaal.
+
+
+
+### Ik kan geen instrumentale versies van nummers vinden. Kunnen jullie helpen?
+
+Probeer onze Vocal Remover. Daarmee verwijder je zang online of offline uit een nummer en hij werkt prachtig samen met Pitch Changer.
+
+
+
+### Hoe kan ik het tempo van een nummer veranderen?
+
+- Als je muziek op een website wilt vertragen of versnellen terwijl die al speelt, gebruik dan BPM wijzigen.
+
+
+
+### Is er een gratis proefperiode? Hoe werkt de prijs?
+
+- Zowel de extensie als de iPhone-, iPad- en Mac-app hebben een gratis proefperiode waarvoor geen kaart nodig is.
+- Na de proefperiode biedt Pitch Changer Extension wekelijkse, jaarlijkse en eenmalige aankoopopties, en Pitch Changer App wekelijkse en jaarlijkse abonnementen, zoals hierboven vermeld.
+- Alle betalingen worden veilig verwerkt via Paddle voor de extensie of Apple voor de app.
+
+
+
+### Hoe zeg ik mijn abonnement op?
+
+- Klik op de knop Manage Subscription in de app of extensie en volg daar de instructies.
+- Het proces verloopt volledig automatisch, dus je hoeft niet te bellen of e-mails te schrijven.
+
+
+
+### Voor wie is Pitch Changer bedoeld?
+
+- Pitch Changer is gemaakt voor zangers, muzikanten, producers, dj's, docenten en iedereen die de toonsoort van nummers moet aanpassen.
+- Of je nu thuis oefent, live speelt, lesgeeft of materiaal voorbereidt, het helpt je snel om muziek in de toonsoort te krijgen die voor jou werkt.
+
+
+

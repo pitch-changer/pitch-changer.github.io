@@ -1,7 +1,995 @@
----
-layout: default
-locale: zh-TW
-faq_schema_key: faq
-locale_root: true
-permalink: /zh-TW/
----
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>音高變換器：線上與離線調整歌曲調性</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="在任何網站上調整歌曲調性，為練習、卡拉 OK 或製作轉調音樂。可作為瀏覽器擴充功能使用，也有 iPhone、iPad 和 Mac App。" />
+    <meta property="og:title" content="音高變換器：線上與離線調整歌曲調性" />
+    <meta property="og:description" content="在任何網站上調整歌曲調性，為練習、卡拉 OK 或製作轉調音樂。可作為瀏覽器擴充功能使用，也有 iPhone、iPad 和 Mac App。" />
+    <meta property="og:url" content="https://pitch-changer.com/zh-TW/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pitch-changer.com/extension.png" />
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var hasManualDark = root.classList.contains("dark");
+
+        if (typeof window.matchMedia !== "function") {
+          return;
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyTheme(isDark) {
+          if (hasManualDark) {
+            root.classList.add("dark");
+            return;
+          }
+
+          root.classList.toggle("dark", isDark);
+        }
+
+        applyTheme(mediaQuery.matches);
+
+        function handleThemeChange(event) {
+          applyTheme(event.matches);
+        }
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleThemeChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleThemeChange);
+        }
+      })();
+    </script>
+    <link rel="icon" sizes="32x32" type="image/png" href="/icons/32.png" />
+    <link rel="icon" sizes="16x16" type="image/png" href="/icons/16.png" />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQN6C9B1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMQN6C9B1Q');
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://pitch-changer.com/zh-TW/" />
+<link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
+<link rel="alternate" hreflang="it" href="https://pitch-changer.com/it/" />
+<link rel="alternate" hreflang="es" href="https://pitch-changer.com/es/" />
+<link rel="alternate" hreflang="de" href="https://pitch-changer.com/de/" />
+<link rel="alternate" hreflang="fr" href="https://pitch-changer.com/fr/" />
+<link rel="alternate" hreflang="ja" href="https://pitch-changer.com/ja/" />
+<link rel="alternate" hreflang="ru" href="https://pitch-changer.com/ru/" />
+<link rel="alternate" hreflang="uk" href="https://pitch-changer.com/uk/" />
+<link rel="alternate" hreflang="ko" href="https://pitch-changer.com/ko/" />
+<link rel="alternate" hreflang="nl" href="https://pitch-changer.com/nl/" />
+<link rel="alternate" hreflang="sv" href="https://pitch-changer.com/sv/" />
+<link rel="alternate" hreflang="nb" href="https://pitch-changer.com/nb/" />
+<link rel="alternate" hreflang="da" href="https://pitch-changer.com/da/" />
+<link rel="alternate" hreflang="pl" href="https://pitch-changer.com/pl/" />
+<link rel="alternate" hreflang="pt" href="https://pitch-changer.com/pt/" />
+<link rel="alternate" hreflang="zh-TW" href="https://pitch-changer.com/zh-TW/" />
+<link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
+<link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
+    <style>
+      .locale-switcher {
+        position: relative;
+        display: inline-flex;
+      }
+
+      .hero-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .hero-topbar-spacer {
+        display: none;
+      }
+
+      .hero-topbar-update {
+        max-width: 100%;
+      }
+
+      .hero-topbar-switcher {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .locale-switcher summary {
+        list-style: none;
+      }
+
+      .locale-switcher summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .locale-switcher-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 20;
+        min-width: 13rem;
+        border: 1px solid #d1d5db;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+      }
+
+      .locale-switcher-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        color: #111827;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .locale-switcher-link:hover,
+      .locale-switcher-link:focus-visible {
+        background: #eff6ff;
+        color: #1d4ed8;
+        outline: none;
+      }
+
+      .locale-switcher-link[aria-current="true"] {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .locale-switcher-abbr {
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      html.dark .locale-switcher-menu {
+        border-color: #374151;
+        background: #111827;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      html.dark .locale-switcher-link {
+        color: #f3f4f6;
+      }
+
+      html.dark .locale-switcher-link:hover,
+      html.dark .locale-switcher-link:focus-visible {
+        background: #1f2937;
+        color: #93c5fd;
+      }
+
+      html.dark .locale-switcher-link[aria-current="true"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      html.dark .locale-switcher-abbr {
+        color: #9ca3af;
+      }
+
+      @media (max-width: 640px) {
+        .locale-switcher-menu {
+          right: auto;
+          left: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero-topbar {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        }
+
+        .hero-topbar-spacer {
+          display: block;
+        }
+
+        .hero-topbar-update {
+          justify-self: center;
+        }
+
+        .hero-topbar-switcher {
+          justify-self: end;
+          width: auto;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pitch-changer.com/zh-TW/#extension",
+            "name": "音高變換器",
+            "alternateName": "Pitch Changer Extension",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Chromium-based browser on Windows, macOS, Linux and ChromeOS",
+            "description": "音高變換器是瀏覽器擴充功能，可讓你直接在瀏覽器裡於任何網站上調整歌曲調性。你可以在 YouTube 和其他音訊或影片平台上一邊聽一邊以半音為單位移動音高。",
+            "inLanguage": "zh-TW",
+            "url": "https://pitch-changer.com/zh-TW/#extension",
+            "installUrl": "https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.4,
+              "ratingCount": 210
+            },
+            "publisher": {"@type":"Organization","name":"extensions.ee","url":"https://extensions.ee"}
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pitch-changer.com/zh-TW/#app",
+            "name": "Pitch Changer App",
+            "alternateName": "適用於 iPhone、iPad 與 Mac 的 Pitch Changer",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS 15.0 or iOS 18.0",
+            "description": "適用於 iPhone、iPad 與 Mac 的 Pitch Changer 能幫你離線調整音高、替歌曲轉調，以及批次處理音訊檔。匯入音軌後，可以在不影響節奏的情況下改變調性，並匯出新的版本用於練習、教學或製作。",
+            "inLanguage": "zh-TW",
+            "url": "https://pitch-changer.com/zh-TW/#app",
+            "installUrl": "https://apps.apple.com/app/id6749900880",
+            "publisher": {"@type":"Organization","name":"extensions.ee","url":"https://extensions.ee"}
+          }
+        ]
+      }
+    </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://pitch-changer.com/zh-TW/#faq",
+      "url": "https://pitch-changer.com/zh-TW/",
+      "inLanguage": "zh-TW",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Pitch Changer Extension 和 Pitch Changer App 有什麼差別？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer Extension 是瀏覽器擴充功能，可直接在 YouTube 等網站以及其他音訊或影片平台上改變歌曲調性。 Pitch Changer App 是 iPhone、iPad 和 Mac 的獨立 App，可離線搭配自己的音訊檔使用，也能一次批次處理多個音軌。"
+        }
+      },{
+        "@type": "Question",
+        "name": "使用 Pitch Changer 需要網路連線嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer 擴充功能是在瀏覽器中運作，主要對應線上內容，因此通常會在連網時使用。 iPhone、iPad 和 Mac App 可完全離線搭配本機音訊檔使用，所以安裝後不需要持續連線。"
+        }
+      },{
+        "@type": "Question",
+        "name": "Pitch Changer App 支援哪些音訊格式？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "iPhone、iPad 和 Mac App 支援 MP3、WAV、FLAC 等常見音訊格式，所以你可以直接處理現有檔案，不必先轉檔。 你也可以加入影片、DAW 區段以及整個資料夾。Pitch Changer 會替你擷取音訊。"
+        }
+      },{
+        "@type": "Question",
+        "name": "改變音高會影響音質嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer 的設計目標是在調整調性時盡量維持音質。使用者也常提到它的音高變化品質非常出色。 和所有數位音高處理一樣，若調整得非常極端，聲音可能會比較不自然，但大多數情況下結果仍然乾淨且有音樂性。"
+        }
+      },{
+        "@type": "Question",
+        "name": "我找不到歌曲的純伴奏版本，可以幫忙嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "試試我們的 Vocal Remover。它可以在線上或離線移除歌曲中的人聲，和 Pitch Changer 一起使用效果很好。"
+        }
+      },{
+        "@type": "Question",
+        "name": "我要怎麼改變歌曲速度？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "如果你想在網站上讓正在播放的音樂變慢或變快，請使用 BPM 變換器。"
+        }
+      },{
+        "@type": "Question",
+        "name": "有免費試用嗎？價格怎麼算？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "擴充功能和 iPhone、iPad、Mac App 都有免綁卡的免費試用期。 試用之後，Pitch Changer Extension 提供每週、每年和一次買斷的方案，Pitch Changer App 則提供每週與每年的訂閱方案，如上所示。 所有付款都會透過 Paddle（擴充功能）或 Apple（App）安全處理。"
+        }
+      },{
+        "@type": "Question",
+        "name": "我要怎麼取消訂閱？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "在 App 或擴充功能裡點選 Manage Subscription 按鈕，然後依照步驟操作。 整個流程都是自動化的，所以不需要打電話或寄信。"
+        }
+      },{
+        "@type": "Question",
+        "name": "Pitch Changer 適合誰？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer 是為歌手、音樂人、製作人、DJ、教師，以及所有需要調整歌曲調性的人打造的。 不管你是在家練習、現場演出、教學生，還是在準備素材，它都能讓你快速把音樂帶到更適合你的調性。"
+        }
+      }]
+    }
+  </script>
+
+
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+<header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
+  <div class="mt-6 text-center">
+    <div class="hero-topbar mb-7 w-full" data-ui-review="hero-topbar">
+      <div aria-hidden="true" class="hero-topbar-spacer"></div>
+      <a
+        target="_blank"
+        href="#app"
+        class="hero-topbar-update inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+        role="alert"
+      >
+        <span class="mr-3 shrink-0 rounded-full bg-blue-600 px-4 py-1.5 text-xs text-white">新消息</span>
+        <span class="text-left text-sm font-medium">iPhone 與 iPad 版 Pitch Changer 已推出，看看有哪些新內容</span>
+        <svg class="ml-2 h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <div class="hero-topbar-switcher">
+        <nav aria-label="語言切換器" class="flex items-center justify-end">
+  <details class="locale-switcher group relative" data-locale-switcher>
+    <summary class="flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition hover:border-blue-700 hover:text-blue-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300">
+      <span class="sr-only">選擇語言</span>
+      <span>繁體中文</span>
+      <span class="locale-switcher-abbr">繁中</span>
+      <svg aria-hidden="true" viewBox="0 0 20 20" class="h-4 w-4 text-gray-500 transition group-open:rotate-180 group-open:text-blue-700 dark:text-gray-400 dark:group-open:text-blue-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+      </svg>
+    </summary>
+
+    <div class="locale-switcher-menu">
+      <ul class="grid gap-1">
+<li>
+          <a
+            href="/"
+            class="locale-switcher-link"
+            lang="en"
+            hreflang="en"
+            data-locale-link
+            data-locale-code="en"
+          >
+            <span class="whitespace-nowrap">English</span>
+            <span class="locale-switcher-abbr">EN</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/it/"
+            class="locale-switcher-link"
+            lang="it"
+            hreflang="it"
+            data-locale-link
+            data-locale-code="it"
+          >
+            <span class="whitespace-nowrap">Italiano</span>
+            <span class="locale-switcher-abbr">IT</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/es/"
+            class="locale-switcher-link"
+            lang="es"
+            hreflang="es"
+            data-locale-link
+            data-locale-code="es"
+          >
+            <span class="whitespace-nowrap">Español</span>
+            <span class="locale-switcher-abbr">ES</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/de/"
+            class="locale-switcher-link"
+            lang="de"
+            hreflang="de"
+            data-locale-link
+            data-locale-code="de"
+          >
+            <span class="whitespace-nowrap">Deutsch</span>
+            <span class="locale-switcher-abbr">DE</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/fr/"
+            class="locale-switcher-link"
+            lang="fr"
+            hreflang="fr"
+            data-locale-link
+            data-locale-code="fr"
+          >
+            <span class="whitespace-nowrap">Français</span>
+            <span class="locale-switcher-abbr">FR</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ja/"
+            class="locale-switcher-link"
+            lang="ja"
+            hreflang="ja"
+            data-locale-link
+            data-locale-code="ja"
+          >
+            <span class="whitespace-nowrap">日本語</span>
+            <span class="locale-switcher-abbr">JA</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ru/"
+            class="locale-switcher-link"
+            lang="ru"
+            hreflang="ru"
+            data-locale-link
+            data-locale-code="ru"
+          >
+            <span class="whitespace-nowrap">Русский</span>
+            <span class="locale-switcher-abbr">RU</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/uk/"
+            class="locale-switcher-link"
+            lang="uk"
+            hreflang="uk"
+            data-locale-link
+            data-locale-code="uk"
+          >
+            <span class="whitespace-nowrap">Українська</span>
+            <span class="locale-switcher-abbr">UK</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/ko/"
+            class="locale-switcher-link"
+            lang="ko"
+            hreflang="ko"
+            data-locale-link
+            data-locale-code="ko"
+          >
+            <span class="whitespace-nowrap">한국어</span>
+            <span class="locale-switcher-abbr">KO</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/nl/"
+            class="locale-switcher-link"
+            lang="nl"
+            hreflang="nl"
+            data-locale-link
+            data-locale-code="nl"
+          >
+            <span class="whitespace-nowrap">Nederlands</span>
+            <span class="locale-switcher-abbr">NL</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/sv/"
+            class="locale-switcher-link"
+            lang="sv"
+            hreflang="sv"
+            data-locale-link
+            data-locale-code="sv"
+          >
+            <span class="whitespace-nowrap">Svenska</span>
+            <span class="locale-switcher-abbr">SV</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/nb/"
+            class="locale-switcher-link"
+            lang="nb"
+            hreflang="nb"
+            data-locale-link
+            data-locale-code="nb"
+          >
+            <span class="whitespace-nowrap">Norsk bokmål</span>
+            <span class="locale-switcher-abbr">NB</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/da/"
+            class="locale-switcher-link"
+            lang="da"
+            hreflang="da"
+            data-locale-link
+            data-locale-code="da"
+          >
+            <span class="whitespace-nowrap">Dansk</span>
+            <span class="locale-switcher-abbr">DA</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/pl/"
+            class="locale-switcher-link"
+            lang="pl"
+            hreflang="pl"
+            data-locale-link
+            data-locale-code="pl"
+          >
+            <span class="whitespace-nowrap">Polski</span>
+            <span class="locale-switcher-abbr">PL</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/pt/"
+            class="locale-switcher-link"
+            lang="pt"
+            hreflang="pt"
+            data-locale-link
+            data-locale-code="pt"
+          >
+            <span class="whitespace-nowrap">Português</span>
+            <span class="locale-switcher-abbr">PT</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/zh-TW/"
+            class="locale-switcher-link"
+            lang="zh-TW"
+            hreflang="zh-TW" aria-current="page"
+            data-locale-link
+            data-locale-code="zh-TW"
+          >
+            <span class="whitespace-nowrap">繁體中文</span>
+            <span class="locale-switcher-abbr">繁中</span>
+          </a>
+        </li>
+<li>
+          <a
+            href="/tr/"
+            class="locale-switcher-link"
+            lang="tr"
+            hreflang="tr"
+            data-locale-link
+            data-locale-code="tr"
+          >
+            <span class="whitespace-nowrap">Türkçe</span>
+            <span class="locale-switcher-abbr">TR</span>
+          </a>
+        </li>
+</ul>
+    </div>
+  </details>
+</nav>
+
+      </div>
+    </div>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Pitch Changer</h1>
+    <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">輕鬆調整歌曲調性</h2>
+    <p class="text-2xl mb-4">
+      Pitch Changer 讓你更輕鬆地移動音高、改變調性並為歌曲轉調<br />
+      無論是練習、卡拉 OK、教學或製作都很方便。
+    </p>
+    <p class="text-2xl">你可以在瀏覽器裡於任何網站上線上使用，也能在 iPhone、iPad 或 Mac 上離線使用。</p>
+    <div>
+      <a
+        target="_blank"
+        href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>加入音高變換器</div>
+          <div class="text-xl">到瀏覽器</div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        href="https://apps.apple.com/app/id6749900880"
+        class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      >
+        <div>
+          <div>加入 Pitch Changer App</div>
+          <div class="text-xl">到 iPhone、iPad 或 Mac</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="頁面區塊" class="text-center text-3xl mb-10 mt-10 px-4">
+  <a class="underline whitespace-nowrap" href="#overview">Pitch Changer 是什麼？</a> ·
+  <a class="underline whitespace-nowrap" href="#extension">網站用</a> ·
+  <a class="underline whitespace-nowrap" href="#app">檔案用</a> ·
+  <a class="underline whitespace-nowrap" href="#use-cases">適合誰使用？</a> ·
+  <a class="underline whitespace-nowrap" href="#reviews">評價</a> ·
+  <a class="underline whitespace-nowrap" href="#faq">FAQ</a>
+</nav>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+    Pitch Changer 是什麼？
+  </h2>
+
+  <p class="mb-4">Pitch Changer 可讓你在任何網站上調整歌曲調性，也能在電腦上為音樂轉調，不需要複雜的音訊軟體。它是為真實場景打造的工具，像是練習、教學、錄音，或只是想用更舒服的調性聽喜歡的歌曲。</p>
+
+  <p class="mb-4">你可以：</p>
+<ul class="mb-4 list-disc list-inside space-y-4">
+<li>以半音為單位升高或降低歌曲調性。</li>
+<li>用更適合自己聲音或樂器的調性練習。</li>
+<li>準備伴奏、卡拉 OK 版本和教學材料。</li>
+<li>嘗試編曲、和聲和各種創意音高變化。</li>
+</ul>
+  <p class="mb-4">
+    Pitch Changer 有兩個版本：
+    <strong><a href="#extension" class="underline">音高變換器</a></strong> 是網站用的瀏覽器擴充功能，而
+    <strong><a href="#app" class="underline">Pitch Changer App</a></strong> 是 iPhone、iPad 和 Mac 的檔案處理 App。
+  </p>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="extension">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+      <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
+        音高變換器
+      </a>
+    </h2>
+<p class="text-xl mb-4">使用音高變換器，你可以在歌曲播放時就輕鬆改變調性。這是在不離開瀏覽器的情況下快速為音樂轉調的好方法。</p>
+<p class="text-xl mb-4">Pitch Changer Extension 會把調性控制直接加進瀏覽器。你可以在 YouTube 和許多其他音訊網站上用幾下點擊就改變歌曲調性。</p>
+<ul class="text-xl mb-4 list-disc list-inside space-y-4">
+<li>直接在任何網站上線上調整歌曲調性。</li>
+<li>可作為 YouTube 與其他音樂平台的調性調整工具。</li>
+<li>用清楚的控制項以半音為單位調整音高。</li>
+<li>很適合跟著唱、卡拉 OK 或用更舒服的調性聆聽。</li>
+</ul>
+    <p class="text-xl mb-4"><strong>很適合：</strong> 歌手、聲樂老師、教師、學校、樂手，以及所有會跟著線上影片練習的人。</p>
+<a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      將音高變換器加入瀏覽器
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex">
+    <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb">
+      <img src="/extension.png" alt="安裝 Pitch Changer 擴充功能，幾秒內就能加入瀏覽器。" />
+    </a>
+  </div>
+</section>
+
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="app">
+  <div class="mr-auto place-self-center lg:col-span-7">
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
+      <a target="_blank" href="https://apps.apple.com/app/id6749900880" class="focus:outline-none">
+        Pitch Changer App
+      </a>
+    </h2>
+<p class="text-xl mb-4">從練習到製作，Pitch Changer 都能精準協助你轉調、移動音高、改變歌曲調性，以及批次處理音訊。</p>
+<p class="text-xl mb-4">透過 iPhone、iPad 和 Mac 版 Pitch Changer，你可以匯入音訊檔、在不改變速度的情況下調整音高，並批次處理整個資料夾，準備練習音軌、教學素材或專業專案。</p>
+<ul class="text-xl mb-4 list-disc list-inside space-y-4">
+<li>快速且準確地改變音訊檔的音高。</li>
+<li>在不改變節奏的情況下將音樂升降調。</li>
+<li>一次處理多首歌曲。</li>
+<li>無需網路也能離線使用。</li>
+<li>支援 MP3、WAV、FLAC 等常見格式。</li>
+</ul>
+    <p class="text-xl mb-4"><strong>很適合：</strong> 使用本機音訊檔的製作人、DJ、教師和音樂人。</p>
+<a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      將 Pitch Changer 加入 iPhone、iPad 或 Mac
+    </a>
+  </div>
+  <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex" style="margin-left: 50px; margin-right: -50px">
+    <a target="_blank" href="https://apps.apple.com/app/id6749900880">
+      <img src="/app.png" alt="下載 iPhone、iPad 或 Mac 版 Pitch Changer，讓你的專案保持在正確調性。" />
+    </a>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="use-cases">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">誰會使用 Pitch Changer？</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">聲樂老師與歌手</h3>
+  <p class="text-xl mb-4">快速把任何歌曲調到符合學生音域的調性。你可以用不同調性練習、測試其他可能性，也能讓困難歌曲唱起來更輕鬆。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">樂手</h3>
+  <p class="text-xl mb-4">吉他手和其他樂手可以把音軌轉到更適合自己樂器或調弦的調性，不需要重新錄音或重新調音。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">製作人與 DJ</h3>
+  <p class="text-xl mb-4">在幾秒內移動音高與調性，快速測試靈感、混音和銜接。也很適合為 DAW 或現場演出準備伴奏、 stems 和草稿。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">教師與學習者</h3>
+  <p class="text-xl mb-4">為課堂、樂理示範和更聚焦的練習時段，建立客製化的歌曲版本。</p>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="reviews">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">使用者怎麼說</h2>
+      <h3 class="mb-4 text-2xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">聽聽喜歡 Pitch Changer 的人怎麼說</h3>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Grant Kimbell
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“我真的很推薦選一個隨機設定，不要太極端，然後把播放清單打亂。感覺就像第一次重新聽到你最愛的歌，只是整個氛圍都不一樣。音高變化的品質非常好。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Vadim Makarov
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“我是聲樂老師，常常需要替學生調整歌曲調性。這個擴充功能在不同網站上都運作得很好，不只是 YouTube，而且沒有 bug 或當機。它也非常簡單，這點是很大的優勢。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Nikola Negovanovic
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“用了好幾個月之後，我可以確認這是 Chrome 上最好用的 pitch changer app。絕對值得這個價格。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              The Real Spiro Agnew
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“非常棒，運作得像作夢一樣順。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Ice
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“這正是我對一個好瀏覽器擴充功能的期待。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              maryam seddigh
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“真的很厲害。我找這種工具找很久了。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Hans Harding
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“對我這個貝斯手來說，當一首歌必須換到新調性時，這工具真的很好用。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Kieran Brown
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“有個 YouTuber 的影片真的做得很好，但我實在受不了他那種尖細的聲音。有了這個之後就順耳多了。”</p>
+      </div>
+<div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
+        <div class="flex items-center mb-4">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+              lilly imaginator
+              <span class="text-yellow-400">★★★★★</span>
+            </h4>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300">“以我來說這是必備擴充功能。很適合卡拉 OK、學音樂，或只是玩玩看歌曲升高或降低之後會變成什麼感覺。”</p>
+      </div>
+</div>
+  </div>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="faq">
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">常見問題</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer Extension 和 Pitch Changer App 有什麼差別？</h3>
+<p class="text-xl mb-4">Pitch Changer Extension 是瀏覽器擴充功能，可直接在 YouTube 等網站以及其他音訊或影片平台上改變歌曲調性。</p>
+<p class="text-xl mb-4">Pitch Changer App 是 iPhone、iPad 和 Mac 的獨立 App，可離線搭配自己的音訊檔使用，也能一次批次處理多個音軌。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">使用 Pitch Changer 需要網路連線嗎？</h3>
+<p class="text-xl mb-4">Pitch Changer 擴充功能是在瀏覽器中運作，主要對應線上內容，因此通常會在連網時使用。</p>
+<p class="text-xl mb-4">iPhone、iPad 和 Mac App 可完全離線搭配本機音訊檔使用，所以安裝後不需要持續連線。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer App 支援哪些音訊格式？</h3>
+<p class="text-xl mb-4">iPhone、iPad 和 Mac App 支援 MP3、WAV、FLAC 等常見音訊格式，所以你可以直接處理現有檔案，不必先轉檔。</p>
+<p class="text-xl mb-4">你也可以加入影片、DAW 區段以及整個資料夾。Pitch Changer 會替你擷取音訊。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">改變音高會影響音質嗎？</h3>
+<p class="text-xl mb-4">Pitch Changer 的設計目標是在調整調性時盡量維持音質。使用者也常提到它的音高變化品質非常出色。</p>
+<p class="text-xl mb-4">和所有數位音高處理一樣，若調整得非常極端，聲音可能會比較不自然，但大多數情況下結果仍然乾淨且有音樂性。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">我找不到歌曲的純伴奏版本，可以幫忙嗎？</h3>
+<p class="text-xl mb-4">試試我們的 <a href="https://removevocalsfromasong.com/?utm_source=pitch-changer.com" class="underline">Vocal Remover</a>。它可以在線上或離線移除歌曲中的人聲，和 Pitch Changer 一起使用效果很好。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">我要怎麼改變歌曲速度？</h3>
+<p class="text-xl mb-4">如果你想在網站上讓正在播放的音樂變慢或變快，請使用 <a href="https://chromewebstore.google.com/detail/bpm-changer/klddneocmcmoacnnemmelgeilnedcpjj" class="underline">BPM 變換器</a>。</p><h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">有免費試用嗎？價格怎麼算？</h3>
+<p class="text-xl mb-4">擴充功能和 iPhone、iPad、Mac App 都有免綁卡的免費試用期。</p>
+<p class="text-xl mb-4">試用之後，Pitch Changer Extension 提供每週、每年和一次買斷的方案，Pitch Changer App 則提供每週與每年的訂閱方案，如上所示。</p>
+<p class="text-xl mb-4">所有付款都會透過 Paddle（擴充功能）或 Apple（App）安全處理。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">我要怎麼取消訂閱？</h3>
+<p class="text-xl mb-4">在 App 或擴充功能裡點選 Manage Subscription 按鈕，然後依照步驟操作。</p>
+<p class="text-xl mb-4">整個流程都是自動化的，所以不需要打電話或寄信。</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Pitch Changer 適合誰？</h3>
+<p class="text-xl mb-4">Pitch Changer 是為歌手、音樂人、製作人、DJ、教師，以及所有需要調整歌曲調性的人打造的。</p>
+<p class="text-xl mb-4">不管你是在家練習、現場演出、教學生，還是在準備素材，它都能讓你快速把音樂帶到更適合你的調性。</p>
+</section>
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12" id="get-started">
+  <h2 class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">開始使用 Pitch Changer</h2>
+  <p class="text-2xl mb-4">
+    不論你喜歡在瀏覽器裡工作，還是在 iPhone、iPad 或 Mac 上使用本機檔案，<br />
+    Pitch Changer 都能幫你改變歌曲調性、移動音高，讓音樂更貼近你的需要，而不是要你去遷就它。
+  </p>
+  <div>
+    <a
+      target="_blank"
+      href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+          <div>加入音高變換器</div>
+          <div class="text-xl">到瀏覽器</div>
+      </div>
+    </a>
+    <a
+      target="_blank"
+      href="https://apps.apple.com/app/id6749900880"
+      class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    >
+      <div>
+          <div>加入 Pitch Changer App</div>
+          <div class="text-xl">到 iPhone、iPad 或 Mac</div>
+      </div>
+    </a>
+  </div>
+  <p class="mt-10 text-xl text-gray-500 dark:text-gray-400">
+    <span class="text-yellow-300">★</span> Chrome 線上應用程式商店評分 4.4/5 · 210 則評論
+  </p>
+</section>
+
+<footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        <nobr>© 2024–<script>document.write(new Date().getFullYear())</script>
+          <a href="https://extensions.ee/" class="underline">extensions.ee</a>.
+        </nobr>
+        <nobr>聯絡方式：info@extensions.ee。</nobr>
+        <nobr>付款與退款：
+          <a href="https://paddle.net/" class="underline">Paddle</a>,
+          <a href="https://support.apple.com/billing" class="underline">Apple</a>.
+        </nobr>
+      </div>
+    </div>
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
+      <li><a href="/terms-and-conditions.html" class="hover:underline me-4 md:me-6">條款與條件</a></li>
+      <li><a href="/refund-policy.html" class="hover:underline me-4 md:me-6">退款政策</a></li>
+      <li><a href="/privacy-policy.html" class="hover:underline me-4 md:me-6">隱私權政策</a></li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-left">
+<p class="mb-4">在我們網站上完成的購買會由線上轉售商 Paddle.com 處理，並由其擔任這些訂單的 Merchant of Record。Paddle 會負責網站訂單的客服、退款、帳務與相關稅務處理。</p>
+<p class="mb-4">App Store 的購買則由 Apple 直接處理，並由其擔任 App Store 訂單的 Merchant of Record。Apple 會管理付款、收據、稅金、退款以及所有相關客服問題。</p>
+<p class="mb-4">如果你不確定自己是在哪裡購買，請查看 Paddle 或 Apple 寄出的訂單確認信或收據。</p>
+<p>
+      第三方商標與元件列在
+      <a href="https://extensions.ee/acknowledgements.html?from=pitch-changer.com" class="underline">Acknowledgements</a>
+      頁面。
+    </p>
+  </div>
+</footer>
+
+    <script>
+      (function() {
+        var localeLinks = document.querySelectorAll("[data-locale-link]");
+        var currentSearch = window.location.search || "";
+        var currentHash = window.location.hash || "";
+        var legacyFragments = {
+          "#online": "#extension",
+          "#offline": "#app"
+        };
+
+        function updateSectionLinks() {
+          currentHash = window.location.hash || "";
+          var sectionHash = legacyFragments[currentHash];
+
+          if (sectionHash) {
+            currentHash = sectionHash;
+            window.history.replaceState(window.history.state, "", window.location.pathname + currentSearch + currentHash);
+            var section = document.getElementById(currentHash.slice(1));
+            if (section) {
+              section.scrollIntoView();
+            }
+          }
+
+          localeLinks.forEach(function(link) {
+            var targetPath = link.getAttribute("href").split(/[?#]/)[0];
+            link.href = targetPath + currentSearch + currentHash;
+          });
+        }
+
+        updateSectionLinks();
+        window.addEventListener("hashchange", updateSectionLinks);
+
+        localeLinks.forEach(function(link) {
+          var localeCode = link.getAttribute("data-locale-code");
+
+          link.addEventListener("click", function() {
+            if (!localeCode) return;
+
+            try {
+              window.localStorage.setItem("preferred_locale", localeCode);
+            } catch (error) {
+            }
+          });
+        });
+
+        var source = (new URLSearchParams(window.location.search)).get("utm_source");
+        if (source) {
+          document.querySelectorAll("a").forEach(function(link) {
+            if (link.href.startsWith("https://chromewebstore.google.com/")) {
+              link.href += "?utm_source=" + encodeURIComponent(source);
+            } else if (link.href.startsWith("https://apps.apple.com/")) {
+              link.href += "?ct=" + encodeURIComponent(source);
+            }
+          });
+        }
+
+        
+
+        document.addEventListener("click", function(event) {
+          document.querySelectorAll("[data-locale-switcher]").forEach(function(details) {
+            if (!details.contains(event.target)) {
+              details.removeAttribute("open");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
