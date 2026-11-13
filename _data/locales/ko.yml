@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer는 곡의 피치를 옮기고, 키를 바꾸고, 음악을 트랜스포즈하는 일을
   description_line_2: 연습, 노래방, 레슨, 프로덕션에 맞게 훨씬 쉽게 만들어 줍니다.
   description_line_3: 브라우저에서는 어떤 웹사이트에서든 온라인으로, iPhone, iPad, Mac에서는 오프라인으로 사용할 수 있습니다.
-  online_cta_title: 음정 변조기 추가
-  online_cta_subtitle: 브라우저에
+  extension_cta_title: 음정 변조기 추가
+  extension_cta_subtitle: 브라우저에
   offline_cta_title: Pitch Changer Offline 추가
   offline_cta_subtitle: iPhone, iPad 또는 Mac에
 nav:
   aria_label: 페이지 섹션
   overview: Pitch Changer란?
-  online: 웹사이트용
+  extension: 웹사이트용
   offline: 파일용
   use_cases: 어떤 사람에게 맞을까요?
   reviews: 리뷰
@@ -44,15 +44,15 @@ overview:
     - 반주 트랙, 노래방 버전, 레슨 자료 준비하기.
     - 편곡, 화성, 창의적인 피치 변화를 실험하기.
   versions_intro: "Pitch Changer는 두 가지 버전으로 제공됩니다:"
-  online_link_label: 음정 변조기
-  online_link_suffix: 웹사이트용 브라우저 확장 프로그램이고,
+  extension_link_label: 음정 변조기
+  extension_link_suffix: 웹사이트용 브라우저 확장 프로그램이고,
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: 파일 작업을 위한 iPhone, iPad, Mac 앱입니다.
-online:
+extension:
   title: 음정 변조기
   paragraphs:
     - 음정 변조기를 사용하면 재생 중인 곡의 키도 손쉽게 바꿀 수 있습니다. 브라우저를 벗어나지 않고 음악을 트랜스포즈하고 싶을 때 간편합니다.
-    - Pitch Changer Online은 브라우저 안에 바로 키 조절 기능을 추가합니다. YouTube와 여러 오디오 웹사이트에서 몇 번의 클릭만으로 곡의 키를 조절할 수 있습니다.
+    - Pitch Changer Extension은 브라우저 안에 바로 키 조절 기능을 추가합니다. YouTube와 여러 오디오 웹사이트에서 몇 번의 클릭만으로 곡의 키를 조절할 수 있습니다.
   bullets:
     - 어떤 웹사이트에서든 온라인으로 곡 키를 바꾸기.
     - YouTube 키 체인저처럼, 다른 음악 플랫폼에서도 사용 가능.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: 자주 묻는 질문
   items:
-    - question: Pitch Changer Online과 Pitch Changer Offline의 차이는 무엇인가요?
+    - question: Pitch Changer Extension과 Pitch Changer Offline의 차이는 무엇인가요?
       answers:
-        - Pitch Changer Online은 YouTube 같은 웹사이트와 다른 오디오 또는 비디오 플랫폼에서 곡의 키를 바로 바꿔 주는 브라우저 확장 프로그램입니다.
+        - Pitch Changer Extension은 YouTube 같은 웹사이트와 다른 오디오 또는 비디오 플랫폼에서 곡의 키를 바로 바꿔 주는 브라우저 확장 프로그램입니다.
         - Pitch Changer Offline은 iPhone, iPad, Mac용 독립 앱으로, 내 오디오 파일을 오프라인에서 다루며 여러 트랙을 한 번에 일괄 처리할 수 있습니다.
     - question: Pitch Changer를 사용하려면 인터넷 연결이 필요한가요?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: 무료 체험이 있나요? 가격은 어떻게 되나요?
       answers:
         - 확장 프로그램과 iPhone, iPad, Mac 앱 모두 카드 없이 시작할 수 있는 무료 체험 기간이 있습니다.
-        - 체험 후에는 Pitch Changer Online에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer Offline에서는 주간 및 연간 구독을 제공합니다.
+        - 체험 후에는 Pitch Changer Extension에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer Offline에서는 주간 및 연간 구독을 제공합니다.
         - 모든 결제는 확장 프로그램은 Paddle, 앱은 Apple을 통해 안전하게 처리됩니다.
     - question: 구독은 어떻게 취소하나요?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: 페이지에 정리되어 있습니다.
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/ko/#online
     name: 음정 변조기
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: 음정 변조기는 어떤 웹사이트에서든 브라우저 안에서 곡의 키를 바꿀 수 있게 해 주는 브라우저 확장 프로그램입니다. YouTube와 다른 오디오 또는 비디오 플랫폼에서 들으면서 반음 단위로 피치를 움직여 보세요.
     inLanguage: ko
-    url: https://pitch-changer.com/ko/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

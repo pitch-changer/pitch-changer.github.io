@@ -1,8 +1,9 @@
 {%- assign locale_data = site.data.locales[page.locale] -%}
 {%- assign product_facts = site.data.product_facts.pitch_changer -%}
-{%- assign online_facts = product_facts.online -%}
+{%- assign extension_facts = product_facts.extension -%}
 {%- assign offline_facts = product_facts.offline -%}
 {%- assign page_absolute_url = page.url | absolute_url -%}
+{%- assign extension_url = page_absolute_url | append: "#" | append: extension_facts.section_id -%}
 {%- assign show_prices = false -%}
 {%- if page.locale == 'en' -%}
   {%- assign show_prices = true -%}
@@ -18,7 +19,7 @@
     <meta property="og:description" content="{{ locale_data.meta.og_description }}" />
     <meta property="og:url" content="{{ page_absolute_url }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="{{ '/online.png' | absolute_url }}" />
+    <meta property="og:image" content="{{ '/extension.png' | absolute_url }}" />
     <script>
       (function() {
         var root = document.documentElement;
@@ -211,41 +212,41 @@
         "@graph": [
           {
             "@type": "SoftwareApplication",
-            "@id": {{ locale_data.structured_data.online["@id"] | jsonify }},
-            "name": {{ locale_data.structured_data.online.name | jsonify }},
-            "alternateName": {{ locale_data.structured_data.online.alternateName | jsonify }},
-            "applicationCategory": {{ locale_data.structured_data.online.applicationCategory | jsonify }},
-            "operatingSystem": {{ locale_data.structured_data.online.operatingSystem | jsonify }},
-            "description": {{ locale_data.structured_data.online.description | jsonify }},
-            "inLanguage": {{ locale_data.structured_data.online.inLanguage | jsonify }},
-            "url": {{ locale_data.structured_data.online.url | jsonify }},
-            "installUrl": {{ locale_data.structured_data.online.installUrl | jsonify }},
+            "@id": {{ extension_url | jsonify }},
+            "name": {{ locale_data.structured_data.extension.name | jsonify }},
+            "alternateName": {{ locale_data.structured_data.extension.alternateName | jsonify }},
+            "applicationCategory": {{ locale_data.structured_data.extension.applicationCategory | jsonify }},
+            "operatingSystem": {{ locale_data.structured_data.extension.operatingSystem | jsonify }},
+            "description": {{ locale_data.structured_data.extension.description | jsonify }},
+            "inLanguage": {{ locale_data.structured_data.extension.inLanguage | jsonify }},
+            "url": {{ extension_url | jsonify }},
+            "installUrl": {{ locale_data.structured_data.extension.installUrl | jsonify }},
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": {{ online_facts.rating.value }},
-              "ratingCount": {{ online_facts.rating.count }}
+              "ratingValue": {{ extension_facts.rating.value }},
+              "ratingCount": {{ extension_facts.rating.count }}
             },
-            "publisher": {{ locale_data.structured_data.online.publisher | jsonify }}{% if show_prices %},
+            "publisher": {{ locale_data.structured_data.extension.publisher | jsonify }}{% if show_prices %},
             "offers": [
               {
                 "@type": "Offer",
-                "name": {{ locale_data.structured_data.online.offer_names.weekly | jsonify }},
-                "price": {{ online_facts.offers.weekly.price | jsonify }},
-                "priceCurrency": {{ online_facts.offers.weekly.priceCurrency | jsonify }},
+                "name": {{ locale_data.structured_data.extension.offer_names.weekly | jsonify }},
+                "price": {{ extension_facts.offers.weekly.price | jsonify }},
+                "priceCurrency": {{ extension_facts.offers.weekly.priceCurrency | jsonify }},
                 "availability": "https://schema.org/InStock"
               },
               {
                 "@type": "Offer",
-                "name": {{ locale_data.structured_data.online.offer_names.yearly | jsonify }},
-                "price": {{ online_facts.offers.yearly.price | jsonify }},
-                "priceCurrency": {{ online_facts.offers.yearly.priceCurrency | jsonify }},
+                "name": {{ locale_data.structured_data.extension.offer_names.yearly | jsonify }},
+                "price": {{ extension_facts.offers.yearly.price | jsonify }},
+                "priceCurrency": {{ extension_facts.offers.yearly.priceCurrency | jsonify }},
                 "availability": "https://schema.org/InStock"
               },
               {
                 "@type": "Offer",
-                "name": {{ locale_data.structured_data.online.offer_names.lifetime | jsonify }},
-                "price": {{ online_facts.offers.lifetime.price | jsonify }},
-                "priceCurrency": {{ online_facts.offers.lifetime.priceCurrency | jsonify }},
+                "name": {{ locale_data.structured_data.extension.offer_names.lifetime | jsonify }},
+                "price": {{ extension_facts.offers.lifetime.price | jsonify }},
+                "priceCurrency": {{ extension_facts.offers.lifetime.priceCurrency | jsonify }},
                 "availability": "https://schema.org/InStock"
               }
             ]{% endif %}
@@ -297,14 +298,34 @@
         var localeLinks = document.querySelectorAll("[data-locale-link]");
         var currentSearch = window.location.search || "";
         var currentHash = window.location.hash || "";
+        var legacyFragments = {
+          "#online": {{ extension_facts.section_id | prepend: "#" | jsonify }}
+        };
+
+        function updateSectionLinks() {
+          currentHash = window.location.hash || "";
+          var sectionHash = legacyFragments[currentHash];
+
+          if (sectionHash) {
+            currentHash = sectionHash;
+            window.history.replaceState(window.history.state, "", window.location.pathname + currentSearch + currentHash);
+            var section = document.getElementById(currentHash.slice(1));
+            if (section) {
+              section.scrollIntoView();
+            }
+          }
+
+          localeLinks.forEach(function(link) {
+            var targetPath = link.getAttribute("href").split(/[?#]/)[0];
+            link.href = targetPath + currentSearch + currentHash;
+          });
+        }
+
+        updateSectionLinks();
+        window.addEventListener("hashchange", updateSectionLinks);
 
         localeLinks.forEach(function(link) {
           var localeCode = link.getAttribute("data-locale-code");
-          var targetPath = link.getAttribute("href");
-
-          if (targetPath) {
-            link.href = targetPath + currentSearch + currentHash;
-          }
 
           link.addEventListener("click", function() {
             if (!localeCode) return;

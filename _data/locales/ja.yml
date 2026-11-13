@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer は曲のピッチ移動、キー変更、移調を
   description_line_2: 練習、カラオケ、指導、制作のために手早く行えます。
   description_line_3: ブラウザではどのサイトでも、iPhone、iPad、Mac ではオフラインでも使えます。
-  online_cta_title: ピッチシフターを追加
-  online_cta_subtitle: ブラウザへ
+  extension_cta_title: ピッチシフターを追加
+  extension_cta_subtitle: ブラウザへ
   offline_cta_title: Pitch Changer Offline を追加
   offline_cta_subtitle: iPhone、iPad、Mac へ
 nav:
   aria_label: ページ内セクション
   overview: Pitch Changer とは？
-  online: サイト向け
+  extension: サイト向け
   offline: ファイル向け
   use_cases: どんな人向け？
   reviews: レビュー
@@ -44,15 +44,15 @@ overview:
     - バッキングトラック、カラオケ版、教材用素材を用意する。
     - アレンジ、ハーモニー、創作的なピッチ移動を試す。
   versions_intro: "Pitch Changer には 2 つのバージョンがあります:"
-  online_link_label: ピッチシフター
-  online_link_suffix: はサイト向けのブラウザ拡張機能、そして
+  extension_link_label: ピッチシフター
+  extension_link_suffix: はサイト向けのブラウザ拡張機能、そして
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: はファイル向けの iPhone、iPad、Mac アプリです。
-online:
+extension:
   title: ピッチシフター
   paragraphs:
     - ピッチシフターを使えば、再生中の曲でもすぐにキーを変えられます。ブラウザを離れずに音楽を移調したいときに便利です。
-    - Pitch Changer Online はブラウザの中にキー変更コントロールを追加します。YouTube やそのほか多くの音声サイトで、数クリックでキーを調整できます。
+    - Pitch Changer Extension はブラウザの中にキー変更コントロールを追加します。YouTube やそのほか多くの音声サイトで、数クリックでキーを調整できます。
   bullets:
     - どのサイトでもオンラインで曲のキーを変えられる。
     - YouTube のキー変更ツールとしても、ほかの音楽サイトでも使える。
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: よくある質問
   items:
-    - question: Pitch Changer Online と Pitch Changer Offline の違いは何ですか？
+    - question: Pitch Changer Extension と Pitch Changer Offline の違いは何ですか？
       answers:
-        - Pitch Changer Online は、YouTube などのサイトやほかの音声・動画プラットフォーム上で曲のキーを直接変えられるブラウザ拡張機能です。
+        - Pitch Changer Extension は、YouTube などのサイトやほかの音声・動画プラットフォーム上で曲のキーを直接変えられるブラウザ拡張機能です。
         - Pitch Changer Offline は、iPhone、iPad、Mac 向けの単体アプリで、自分の音声ファイルをオフラインで扱い、複数トラックをまとめて処理できます。
     - question: Pitch Changer を使うのにインターネット接続は必要ですか？
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: 無料体験はありますか？ 料金はどうなりますか？
       answers:
         - 拡張機能にも iPhone、iPad、Mac アプリにも、カード不要の無料体験期間があります。
-        - 体験後は、Pitch Changer Online では週額、年額、買い切りの選択肢があり、Pitch Changer Offline では週額と年額のサブスクリプションがあります。
+        - 体験後は、Pitch Changer Extension では週額、年額、買い切りの選択肢があり、Pitch Changer Offline では週額と年額のサブスクリプションがあります。
         - 支払いは拡張機能では Paddle、アプリでは Apple を通じて安全に処理されます。
     - question: サブスクリプションはどうやって解約しますか？
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: ページに掲載されています。
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/ja/#online
     name: ピッチシフター
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: ピッチシフターは、どのサイトでもブラウザの中で曲のキーを変えられるブラウザ拡張機能です。YouTube やほかの音声・動画プラットフォームで聴きながら、半音単位でピッチを動かせます。
     inLanguage: ja
-    url: https://pitch-changer.com/ja/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

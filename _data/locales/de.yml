@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer hilft dir, Tonhöhe zu verschieben, die Tonart zu ändern und Songs zu transponieren
   description_line_2: für Üben, Karaoke, Unterricht oder Produktion.
   description_line_3: Nutze es online auf jeder Website im Browser oder offline auf iPhone, iPad oder Mac.
-  online_cta_title: Tonhöhenänderung hinzufügen
-  online_cta_subtitle: zum Browser
+  extension_cta_title: Tonhöhenänderung hinzufügen
+  extension_cta_subtitle: zum Browser
   offline_cta_title: Pitch Changer Offline hinzufügen
   offline_cta_subtitle: zu iPhone, iPad oder Mac
 nav:
   aria_label: Seitenabschnitte
   overview: Was ist Pitch Changer?
-  online: Für Websites
+  extension: Für Websites
   offline: Für Dateien
   use_cases: Für wen ist es?
   reviews: Bewertungen
@@ -44,15 +44,15 @@ overview:
     - Backing-Tracks, Karaoke-Versionen und Unterrichtsmaterial vorbereiten.
     - Arrangements, Harmonien und kreative Tonhöhenideen ausprobieren.
   versions_intro: "Pitch Changer gibt es in zwei Versionen:"
-  online_link_label: Tonhöhenänderung
-  online_link_suffix: als Erweiterung für Websites, und
+  extension_link_label: Tonhöhenänderung
+  extension_link_suffix: als Erweiterung für Websites, und
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: als App für iPhone, iPad und Mac für die Arbeit mit Dateien.
-online:
+extension:
   title: Tonhöhenänderung
   paragraphs:
     - Nutze Tonhöhenänderung, um Songs während des Hörens schnell in eine andere Tonart zu bringen. So kannst du Musik direkt im Browser transponieren, ohne deinen Ablauf zu unterbrechen.
-    - Pitch Changer Online legt die Tonhöhensteuerung direkt in deinen Browser. Ändere die Tonart auf YouTube und auf vielen anderen Audio-Websites mit wenigen Klicks.
+    - Pitch Changer Extension legt die Tonhöhensteuerung direkt in deinen Browser. Ändere die Tonart auf YouTube und auf vielen anderen Audio-Websites mit wenigen Klicks.
   bullets:
     - Ändere die Tonart eines Songs online direkt auf jeder Website.
     - Funktioniert als Werkzeug zum Umstimmen auf YouTube und auf anderen Musikplattformen.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Häufig gestellte Fragen
   items:
-    - question: Was ist der Unterschied zwischen Pitch Changer Online und Pitch Changer Offline?
+    - question: Was ist der Unterschied zwischen Pitch Changer Extension und Pitch Changer Offline?
       answers:
-        - Pitch Changer Online ist eine Browser-Erweiterung, die die Tonart von Songs direkt auf Websites wie YouTube und anderen Audio- oder Video-Plattformen ändert.
+        - Pitch Changer Extension ist eine Browser-Erweiterung, die die Tonart von Songs direkt auf Websites wie YouTube und anderen Audio- oder Video-Plattformen ändert.
         - Pitch Changer Offline ist eine eigenständige App für iPhone, iPad und Mac, die offline mit deinen Audiodateien arbeitet und mehrere Tracks gleichzeitig verarbeiten kann.
     - question: Brauche ich eine Internetverbindung für Pitch Changer?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Gibt es eine kostenlose Testphase? Wie funktioniert der Preis?
       answers:
         - Sowohl die Erweiterung als auch die App für iPhone, iPad und Mac enthalten eine kostenlose Testphase ohne Karte.
-        - Nach der Testphase bietet Pitch Changer Online wöchentliche, jährliche und einmalige Kaufoptionen, während Pitch Changer Offline wöchentliche und jährliche Abos anbietet, wie oben aufgeführt.
+        - Nach der Testphase bietet Pitch Changer Extension wöchentliche, jährliche und einmalige Kaufoptionen, während Pitch Changer Offline wöchentliche und jährliche Abos anbietet, wie oben aufgeführt.
         - Alle Zahlungen werden für die Erweiterung sicher über Paddle oder für die App über Apple abgewickelt.
     - question: Wie kündige ich mein Abo?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: aufgeführt.
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/de/#online
     name: Tonhöhenänderung
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Tonhöhenänderung ist eine Browser-Erweiterung, mit der du Songs auf jeder Website direkt im Browser in eine andere Tonart bringen kannst. Verschiebe die Tonhöhe in Halbtonschritten, während du auf YouTube und anderen Audio- oder Video-Plattformen hörst.
     inLanguage: de
-    url: https://pitch-changer.com/de/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

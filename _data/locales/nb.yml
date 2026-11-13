@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer gjør det enkelt å flytte pitch, endre toneart og transponere sanger
   description_line_2: til øving, karaoke, undervisning eller produksjon.
   description_line_3: Bruk det på nett på hvilken som helst nettside i nettleseren eller offline på iPhone, iPad eller Mac.
-  online_cta_title: Legg til Transponera musik
-  online_cta_subtitle: i nettleseren
+  extension_cta_title: Legg til Transponera musik
+  extension_cta_subtitle: i nettleseren
   offline_cta_title: Legg til Pitch Changer Offline
   offline_cta_subtitle: på iPhone, iPad eller Mac
 nav:
   aria_label: Sideinnhold
   overview: Hva er Pitch Changer?
-  online: For nettsider
+  extension: For nettsider
   offline: For filer
   use_cases: Hvem passer det for?
   reviews: Anmeldelser
@@ -44,15 +44,15 @@ overview:
     - Forberede backing tracks, karaokeversjoner og undervisningsmateriell.
     - Utforske arrangementer, harmonier og kreative pitchskift.
   versions_intro: "Pitch Changer finnes i to versjoner:"
-  online_link_label: Transponera musik
-  online_link_suffix: en nettleserutvidelse for nettsider, og
+  extension_link_label: Transponera musik
+  extension_link_suffix: en nettleserutvidelse for nettsider, og
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: en iPhone-, iPad- og Mac-app for filer.
-online:
+extension:
   title: Transponera musik
   paragraphs:
     - Bruk Transponera musik for å endre toneart på sanger mens de allerede spiller. Det er en enkel måte å transponere musikk på uten å forlate nettleseren.
-    - Pitch Changer Online legger toneartskontroller rett inn i nettleseren. Endre toneart på YouTube og mange andre lydnettsider med bare noen få klikk.
+    - Pitch Changer Extension legger toneartskontroller rett inn i nettleseren. Endre toneart på YouTube og mange andre lydnettsider med bare noen få klikk.
   bullets:
     - Endre tonearten på en sang på nett direkte på hvilken som helst nettside.
     - Fungerer som verktøy for toneartsendring på YouTube og andre musikkplattformer.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Ofte stilte spørsmål
   items:
-    - question: Hva er forskjellen mellom Pitch Changer Online og Pitch Changer Offline?
+    - question: Hva er forskjellen mellom Pitch Changer Extension og Pitch Changer Offline?
       answers:
-        - Pitch Changer Online er en nettleserutvidelse som endrer tonearten på sanger direkte på nettsider som YouTube og andre lyd- eller videoplattformer.
+        - Pitch Changer Extension er en nettleserutvidelse som endrer tonearten på sanger direkte på nettsider som YouTube og andre lyd- eller videoplattformer.
         - Pitch Changer Offline er en frittstående app for iPhone, iPad og Mac som fungerer offline med egne lydfiler og kan batchbehandle flere spor samtidig.
     - question: Trenger jeg internettforbindelse for å bruke Pitch Changer?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Finnes det en gratis prøveperiode? Hvordan fungerer prisene?
       answers:
         - Både utvidelsen og appen for iPhone, iPad og Mac har en gratis prøveperiode uten kort.
-        - Etter prøveperioden tilbyr Pitch Changer Online ukentlige, årlige og engangskjøp, mens Pitch Changer Offline tilbyr ukentlige og årlige abonnementer, som vist over.
+        - Etter prøveperioden tilbyr Pitch Changer Extension ukentlige, årlige og engangskjøp, mens Pitch Changer Offline tilbyr ukentlige og årlige abonnementer, som vist over.
         - Alle betalinger håndteres trygt via Paddle for utvidelsen eller Apple for appen.
     - question: Hvordan sier jeg opp abonnementet mitt?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: siden.
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/nb/#online
     name: Transponera musik
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Transponera musik er en nettleserutvidelse som lar deg endre tonearten på sanger på hvilken som helst nettside direkte i nettleseren. Flytt pitch i halvtoner mens du lytter på YouTube og andre lyd- eller videoplattformer.
     inLanguage: nb
-    url: https://pitch-changer.com/nb/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

@@ -33,11 +33,11 @@
 
 ## {{ locale_data.llms.versions_heading }}
 
-### {{ locale_data.online.title }}
+### {{ locale_data.extension.title }}
 
-{{ locale_data.online.paragraphs[0] }}
+{{ locale_data.extension.paragraphs[0] }}
 
-{{ locale_data.online.perfect_for_label }} {{ locale_data.online.perfect_for_text }}
+{{ locale_data.extension.perfect_for_label }} {{ locale_data.extension.perfect_for_text }}
 
 ### {{ locale_data.offline.title }}
 

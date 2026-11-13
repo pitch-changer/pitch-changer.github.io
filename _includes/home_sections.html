@@ -1,9 +1,9 @@
 {%- assign locale_data = site.data.locales[include.locale_code] -%}
 {%- assign product_facts = site.data.product_facts.pitch_changer -%}
-{%- assign online_facts = product_facts.online -%}
+{%- assign extension_facts = product_facts.extension -%}
 {%- assign offline_facts = product_facts.offline -%}
-{%- assign rating_count = online_facts.rating.count | plus: 0 -%}
-{%- assign rating_value_display = online_facts.rating.value -%}
+{%- assign rating_count = extension_facts.rating.count | plus: 0 -%}
+{%- assign rating_value_display = extension_facts.rating.value -%}
 {%- assign decimal_separator = locale_data.formatting.decimal_separator | default: '.' -%}
 {%- assign tempo_tools = site.data.cross_tool_links.tempo_tools[include.locale_code] -%}
 {%- assign show_prices = false -%}
@@ -11,27 +11,27 @@
   {%- assign show_prices = true -%}
 {%- endif -%}
 {%- if show_prices -%}
-  {%- assign online_weekly_price = online_facts.offers.weekly.price -%}
-  {%- assign online_yearly_price = online_facts.offers.yearly.price -%}
-  {%- assign online_lifetime_price = online_facts.offers.lifetime.price -%}
+  {%- assign extension_weekly_price = extension_facts.offers.weekly.price -%}
+  {%- assign extension_yearly_price = extension_facts.offers.yearly.price -%}
+  {%- assign extension_lifetime_price = extension_facts.offers.lifetime.price -%}
   {%- assign offline_weekly_price = offline_facts.offers.weekly.price -%}
   {%- assign offline_yearly_price = offline_facts.offers.yearly.price -%}
 {%- endif -%}
 {%- if show_prices and decimal_separator != '.' -%}
   {%- assign rating_value_display = rating_value_display | replace: '.', decimal_separator -%}
-  {%- assign online_weekly_price = online_weekly_price | replace: '.', decimal_separator -%}
-  {%- assign online_yearly_price = online_yearly_price | replace: '.', decimal_separator -%}
-  {%- assign online_lifetime_price = online_lifetime_price | replace: '.', decimal_separator -%}
+  {%- assign extension_weekly_price = extension_weekly_price | replace: '.', decimal_separator -%}
+  {%- assign extension_yearly_price = extension_yearly_price | replace: '.', decimal_separator -%}
+  {%- assign extension_lifetime_price = extension_lifetime_price | replace: '.', decimal_separator -%}
   {%- assign offline_weekly_price = offline_weekly_price | replace: '.', decimal_separator -%}
   {%- assign offline_yearly_price = offline_yearly_price | replace: '.', decimal_separator -%}
 {%- endif -%}
 {%- if show_prices -%}
-  {%- capture online_weekly_offer -%}{{ locale_data.online.offer_templates.weekly | replace: 'PRICE_VALUE', online_weekly_price }}{%- endcapture -%}
-  {%- capture online_yearly_offer -%}{{ locale_data.online.offer_templates.yearly | replace: 'PRICE_VALUE', online_yearly_price }}{%- endcapture -%}
-  {%- capture online_lifetime_offer -%}{{ locale_data.online.offer_templates.lifetime | replace: 'PRICE_VALUE', online_lifetime_price }}{%- endcapture -%}
+  {%- capture extension_weekly_offer -%}{{ locale_data.extension.offer_templates.weekly | replace: 'PRICE_VALUE', extension_weekly_price }}{%- endcapture -%}
+  {%- capture extension_yearly_offer -%}{{ locale_data.extension.offer_templates.yearly | replace: 'PRICE_VALUE', extension_yearly_price }}{%- endcapture -%}
+  {%- capture extension_lifetime_offer -%}{{ locale_data.extension.offer_templates.lifetime | replace: 'PRICE_VALUE', extension_lifetime_price }}{%- endcapture -%}
   {%- capture offline_weekly_offer -%}{{ locale_data.offline.offer_templates.weekly | replace: 'PRICE_VALUE', offline_weekly_price }}{%- endcapture -%}
   {%- capture offline_yearly_offer -%}{{ locale_data.offline.offer_templates.yearly | replace: 'PRICE_VALUE', offline_yearly_price }}{%- endcapture -%}
-  {%- capture online_pricing -%}{{ locale_data.online.pricing_template | replace: 'WEEKLY_PRICE', online_weekly_offer | replace: 'YEARLY_PRICE', online_yearly_offer | replace: 'LIFETIME_PRICE', online_lifetime_offer }}{%- endcapture -%}
+  {%- capture extension_pricing -%}{{ locale_data.extension.pricing_template | replace: 'WEEKLY_PRICE', extension_weekly_offer | replace: 'YEARLY_PRICE', extension_yearly_offer | replace: 'LIFETIME_PRICE', extension_lifetime_offer }}{%- endcapture -%}
   {%- capture offline_pricing -%}{{ locale_data.offline.pricing_template | replace: 'WEEKLY_PRICE', offline_weekly_offer | replace: 'YEARLY_PRICE', offline_yearly_offer }}{%- endcapture -%}
 {%- endif -%}
 {%- assign rating_count_display = rating_count | append: "" -%}
@@ -73,8 +73,8 @@
         class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
       >
         <div>
-          <div>{{ locale_data.hero.online_cta_title }}</div>
-          <div class="text-xl">{{ locale_data.hero.online_cta_subtitle }}</div>
+          <div>{{ locale_data.hero.extension_cta_title }}</div>
+          <div class="text-xl">{{ locale_data.hero.extension_cta_subtitle }}</div>
         </div>
       </a>
       <a
@@ -93,7 +93,7 @@
 
 <nav aria-label="{{ locale_data.nav.aria_label }}" class="text-center text-3xl mb-10 mt-10 px-4">
   <a class="underline whitespace-nowrap" href="#overview">{{ locale_data.nav.overview }}</a> ·
-  <a class="underline whitespace-nowrap" href="#online">{{ locale_data.nav.online }}</a> ·
+  <a class="underline whitespace-nowrap" href="#{{ extension_facts.section_id }}">{{ locale_data.nav.extension }}</a> ·
   <a class="underline whitespace-nowrap" href="#offline">{{ locale_data.nav.offline }}</a> ·
   <a class="underline whitespace-nowrap" href="#use-cases">{{ locale_data.nav.use_cases }}</a> ·
   <a class="underline whitespace-nowrap" href="#reviews">{{ locale_data.nav.reviews }}</a> ·
@@ -114,41 +114,41 @@
   </ul>
   <p class="mb-4">
     {{ locale_data.overview.versions_intro }}
-    <strong><a href="#online" class="underline">{{ locale_data.overview.online_link_label }}</a></strong> {{ locale_data.overview.online_link_suffix }}
+    <strong><a href="#{{ extension_facts.section_id }}" class="underline">{{ locale_data.overview.extension_link_label }}</a></strong> {{ locale_data.overview.extension_link_suffix }}
     <strong><a href="#offline" class="underline">{{ locale_data.overview.offline_link_label }}</a></strong> {{ locale_data.overview.offline_link_suffix }}
   </p>
 </section>
 
-<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="online">
+<section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="{{ extension_facts.section_id }}">
   <div class="mr-auto place-self-center lg:col-span-7">
     <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
       <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="focus:outline-none">
-        {{ locale_data.online.title }}
+        {{ locale_data.extension.title }}
       </a>
     </h2>
-{% for paragraph in locale_data.online.paragraphs -%}
+{% for paragraph in locale_data.extension.paragraphs -%}
     <p class="text-xl mb-4">{{ paragraph }}</p>
 {% endfor -%}
     <ul class="text-xl mb-4 list-disc list-inside space-y-4">
-{% for bullet in locale_data.online.bullets -%}
+{% for bullet in locale_data.extension.bullets -%}
       <li>{{ bullet }}</li>
 {% endfor -%}
     </ul>
-    <p class="text-xl mb-4"><strong>{{ locale_data.online.perfect_for_label }}</strong> {{ locale_data.online.perfect_for_text }}</p>
+    <p class="text-xl mb-4"><strong>{{ locale_data.extension.perfect_for_label }}</strong> {{ locale_data.extension.perfect_for_text }}</p>
 {% if show_prices -%}
-    <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-sm lg:text-sm">{{ online_pricing | strip }}</p>
+    <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-sm lg:text-sm">{{ extension_pricing | strip }}</p>
 {% endif -%}
     <a
       target="_blank"
       href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
       class="inline-flex items-center justify-center px-8 py-8 mr-3 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
     >
-      {{ locale_data.online.cta }}
+      {{ locale_data.extension.cta }}
     </a>
   </div>
   <div class="hidden ml-auto lg:mt-0 lg:col-span-5 lg:flex">
     <a target="_blank" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb">
-      <img src="{{ '/online.png' | relative_url }}" alt="{{ locale_data.online.image_alt }}" />
+      <img src="{{ '/extension.png' | relative_url }}" alt="{{ locale_data.extension.image_alt }}" />
     </a>
   </div>
 </section>
@@ -252,8 +252,8 @@
       class="mt-10 mr-2 ml-2 inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
     >
       <div>
-          <div>{{ locale_data.hero.online_cta_title }}</div>
-          <div class="text-xl">{{ locale_data.hero.online_cta_subtitle }}</div>
+          <div>{{ locale_data.hero.extension_cta_title }}</div>
+          <div class="text-xl">{{ locale_data.hero.extension_cta_subtitle }}</div>
       </div>
     </a>
     <a

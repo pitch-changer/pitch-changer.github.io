@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer gør det let at flytte pitch, ændre toneart og transponere sange
   description_line_2: til øvning, karaoke, undervisning eller produktion.
   description_line_3: Brug det online på enhver hjemmeside i browseren eller offline på iPhone, iPad eller Mac.
-  online_cta_title: Tilføj Toneart Skift
-  online_cta_subtitle: til din browser
+  extension_cta_title: Tilføj Toneart Skift
+  extension_cta_subtitle: til din browser
   offline_cta_title: Tilføj Pitch Changer Offline
   offline_cta_subtitle: til din iPhone, iPad eller Mac
 nav:
   aria_label: Sideafsnit
   overview: Hvad er Pitch Changer?
-  online: Til hjemmesider
+  extension: Til hjemmesider
   offline: Til filer
   use_cases: Hvem er det til?
   reviews: Anmeldelser
@@ -44,15 +44,15 @@ overview:
     - Forberede backing tracks, karaokeversioner og undervisningsmateriale.
     - Eksperimentere med arrangementer, harmonier og kreative pitchskift.
   versions_intro: "Pitch Changer findes i to versioner:"
-  online_link_label: Toneart Skift
-  online_link_suffix: en browserudvidelse til hjemmesider, og
+  extension_link_label: Toneart Skift
+  extension_link_suffix: en browserudvidelse til hjemmesider, og
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: en iPhone-, iPad- og Mac-app til filer.
-online:
+extension:
   title: Toneart Skift
   paragraphs:
     - Brug Toneart Skift til nemt at ændre toneart på sange mens de allerede spiller. Det er en enkel måde at transponere musik på uden at forlade browseren.
-    - Pitch Changer Online lægger toneartskontroller direkte ind i browseren. Skift toneart på YouTube og mange andre lydhjemmesider med blot få klik.
+    - Pitch Changer Extension lægger toneartskontroller direkte ind i browseren. Skift toneart på YouTube og mange andre lydhjemmesider med blot få klik.
   bullets:
     - Skift toneart på sange online direkte på enhver hjemmeside.
     - Fungerer som værktøj til at ændre toneart på YouTube og andre musikplatforme.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Ofte stillede spørgsmål
   items:
-    - question: Hvad er forskellen på Pitch Changer Online og Pitch Changer Offline?
+    - question: Hvad er forskellen på Pitch Changer Extension og Pitch Changer Offline?
       answers:
-        - Pitch Changer Online er en browserudvidelse der ændrer tonearten på sange direkte på hjemmesider som YouTube og andre lyd- eller videoplatforme.
+        - Pitch Changer Extension er en browserudvidelse der ændrer tonearten på sange direkte på hjemmesider som YouTube og andre lyd- eller videoplatforme.
         - Pitch Changer Offline er en selvstændig iPhone-, iPad- og Mac-app der virker offline med dine egne lydfiler og kan batchbehandle flere spor på én gang.
     - question: Skal jeg have internetforbindelse for at bruge Pitch Changer?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Er der en gratis prøveperiode? Hvordan fungerer priserne?
       answers:
         - Både udvidelsen og iPhone-, iPad- og Mac-appen har en gratis prøveperiode uden kort.
-        - Efter prøveperioden tilbyder Pitch Changer Online ugentlige, årlige og engangskøb, mens Pitch Changer Offline tilbyder ugentlige og årlige abonnementer som vist ovenfor.
+        - Efter prøveperioden tilbyder Pitch Changer Extension ugentlige, årlige og engangskøb, mens Pitch Changer Offline tilbyder ugentlige og årlige abonnementer som vist ovenfor.
         - Alle betalinger håndteres sikkert via Paddle for udvidelsen eller Apple for appen.
     - question: Hvordan opsiger jeg mit abonnement?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: .
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/da/#online
     name: Toneart Skift
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Toneart Skift er en browserudvidelse der lader dig ændre tonearten på sange på enhver hjemmeside direkte i browseren. Flyt pitch i halvtoner mens du lytter på YouTube og andre lyd- eller videoplatforme.
     inLanguage: da
-    url: https://pitch-changer.com/da/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

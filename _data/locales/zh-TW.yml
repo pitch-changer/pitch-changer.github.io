@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer 讓你更輕鬆地移動音高、改變調性並為歌曲轉調
   description_line_2: 無論是練習、卡拉 OK、教學或製作都很方便。
   description_line_3: 你可以在瀏覽器裡於任何網站上線上使用，也能在 iPhone、iPad 或 Mac 上離線使用。
-  online_cta_title: 加入音高變換器
-  online_cta_subtitle: 到瀏覽器
+  extension_cta_title: 加入音高變換器
+  extension_cta_subtitle: 到瀏覽器
   offline_cta_title: 加入 Pitch Changer Offline
   offline_cta_subtitle: 到 iPhone、iPad 或 Mac
 nav:
   aria_label: 頁面區塊
   overview: Pitch Changer 是什麼？
-  online: 網站用
+  extension: 網站用
   offline: 檔案用
   use_cases: 適合誰使用？
   reviews: 評價
@@ -44,15 +44,15 @@ overview:
     - 準備伴奏、卡拉 OK 版本和教學材料。
     - 嘗試編曲、和聲和各種創意音高變化。
   versions_intro: "Pitch Changer 有兩個版本："
-  online_link_label: 音高變換器
-  online_link_suffix: 是網站用的瀏覽器擴充功能，而
+  extension_link_label: 音高變換器
+  extension_link_suffix: 是網站用的瀏覽器擴充功能，而
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: 是 iPhone、iPad 和 Mac 的檔案處理 App。
-online:
+extension:
   title: 音高變換器
   paragraphs:
     - 使用音高變換器，你可以在歌曲播放時就輕鬆改變調性。這是在不離開瀏覽器的情況下快速為音樂轉調的好方法。
-    - Pitch Changer Online 會把調性控制直接加進瀏覽器。你可以在 YouTube 和許多其他音訊網站上用幾下點擊就改變歌曲調性。
+    - Pitch Changer Extension 會把調性控制直接加進瀏覽器。你可以在 YouTube 和許多其他音訊網站上用幾下點擊就改變歌曲調性。
   bullets:
     - 直接在任何網站上線上調整歌曲調性。
     - 可作為 YouTube 與其他音樂平台的調性調整工具。
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: 常見問題
   items:
-    - question: Pitch Changer Online 和 Pitch Changer Offline 有什麼差別？
+    - question: Pitch Changer Extension 和 Pitch Changer Offline 有什麼差別？
       answers:
-        - Pitch Changer Online 是瀏覽器擴充功能，可直接在 YouTube 等網站以及其他音訊或影片平台上改變歌曲調性。
+        - Pitch Changer Extension 是瀏覽器擴充功能，可直接在 YouTube 等網站以及其他音訊或影片平台上改變歌曲調性。
         - Pitch Changer Offline 是 iPhone、iPad 和 Mac 的獨立 App，可離線搭配自己的音訊檔使用，也能一次批次處理多個音軌。
     - question: 使用 Pitch Changer 需要網路連線嗎？
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: 有免費試用嗎？價格怎麼算？
       answers:
         - 擴充功能和 iPhone、iPad、Mac App 都有免綁卡的免費試用期。
-        - 試用之後，Pitch Changer Online 提供每週、每年和一次買斷的方案，Pitch Changer Offline 則提供每週與每年的訂閱方案，如上所示。
+        - 試用之後，Pitch Changer Extension 提供每週、每年和一次買斷的方案，Pitch Changer Offline 則提供每週與每年的訂閱方案，如上所示。
         - 所有付款都會透過 Paddle（擴充功能）或 Apple（App）安全處理。
     - question: 我要怎麼取消訂閱？
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: 頁面。
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/zh-TW/#online
     name: 音高變換器
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: 音高變換器是瀏覽器擴充功能，可讓你直接在瀏覽器裡於任何網站上調整歌曲調性。你可以在 YouTube 和其他音訊或影片平台上一邊聽一邊以半音為單位移動音高。
     inLanguage: zh-TW
-    url: https://pitch-changer.com/zh-TW/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

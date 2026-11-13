@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer допомагає швидко зміщувати висоту, змінювати тональність і транспонувати пісні
   description_line_2: для занять, караоке, викладання чи продакшену.
   description_line_3: Користуйтеся ним онлайн на будь-якому сайті в браузері або офлайн на iPhone, iPad чи Mac.
-  online_cta_title: Додати Змінити тональність пісні онлайн
-  online_cta_subtitle: у браузер
+  extension_cta_title: Додати Змінити тональність пісні онлайн
+  extension_cta_subtitle: у браузер
   offline_cta_title: Додати Pitch Changer Offline
   offline_cta_subtitle: на iPhone, iPad або Mac
 nav:
   aria_label: Розділи сторінки
   overview: Що таке Pitch Changer?
-  online: Для сайтів
+  extension: Для сайтів
   offline: Для файлів
   use_cases: Для кого він?
   reviews: Відгуки
@@ -44,15 +44,15 @@ overview:
     - Готувати мінусовки, караоке-версії та навчальні матеріали.
     - Шукати нові аранжування, гармонії та творчі варіанти зміни висоти.
   versions_intro: "Pitch Changer доступний у двох версіях:"
-  online_link_label: Змінити тональність пісні онлайн
-  online_link_suffix: як розширення для сайтів, і
+  extension_link_label: Змінити тональність пісні онлайн
+  extension_link_suffix: як розширення для сайтів, і
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: як застосунок для iPhone, iPad і Mac для роботи з файлами.
-online:
+extension:
   title: Змінити тональність пісні онлайн
   paragraphs:
     - Скористайтеся Змінити тональність пісні онлайн, щоб легко змінювати тональність треків просто під час прослуховування. Це зручний спосіб транспонувати музику, не виходячи з браузера.
-    - Pitch Changer Online додає керування тональністю прямо в браузер. Змінюйте тональність на YouTube та інших аудіосайтах усього за кілька кліків.
+    - Pitch Changer Extension додає керування тональністю прямо в браузер. Змінюйте тональність на YouTube та інших аудіосайтах усього за кілька кліків.
   bullets:
     - Змінюйте тональність пісні онлайн прямо на будь-якому сайті.
     - Працює як інструмент для зміни тональності на YouTube та інших музичних платформах.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Часті запитання
   items:
-    - question: У чому різниця між Pitch Changer Online та Pitch Changer Offline?
+    - question: У чому різниця між Pitch Changer Extension та Pitch Changer Offline?
       answers:
-        - Pitch Changer Online — це браузерне розширення, яке змінює тональність пісень прямо на сайтах на кшталт YouTube та інших аудіо- й відеоплатформ.
+        - Pitch Changer Extension — це браузерне розширення, яке змінює тональність пісень прямо на сайтах на кшталт YouTube та інших аудіо- й відеоплатформ.
         - Pitch Changer Offline — окремий застосунок для iPhone, iPad і Mac. Він працює офлайн із вашими аудіофайлами та може пакетно обробляти кілька треків одразу.
     - question: Чи потрібен інтернет для роботи Pitch Changer?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Чи є безкоштовний пробний період? Як працює оплата?
       answers:
         - І розширення, і застосунок для iPhone, iPad і Mac мають безкоштовний пробний період без картки.
-        - Після пробного періоду Pitch Changer Online пропонує тижневі, річні та разову покупку, а Pitch Changer Offline — тижневі та річні підписки, як указано вище.
+        - Після пробного періоду Pitch Changer Extension пропонує тижневі, річні та разову покупку, а Pitch Changer Offline — тижневі та річні підписки, як указано вище.
         - Усі платежі безпечно обробляються через Paddle для розширення або через Apple для застосунку.
     - question: Як скасувати підписку?
       answers:
@@ -202,16 +202,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: .
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/uk/#online
     name: Змінити тональність пісні онлайн
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Змінити тональність пісні онлайн — це браузерне розширення, яке допомагає змінювати тональність пісень на будь-якому сайті прямо в браузері. Зсувайте висоту по півтонах під час прослуховування на YouTube та інших аудіо- й відеоплатформах.
     inLanguage: uk
-    url: https://pitch-changer.com/uk/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

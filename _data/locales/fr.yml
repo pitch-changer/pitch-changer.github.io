@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer vous aide à déplacer la hauteur, changer la tonalité et transposer des morceaux
   description_line_2: pour le travail, le karaoké, l'enseignement ou la production.
   description_line_3: Utilisez-le en ligne sur n'importe quel site dans votre navigateur ou hors ligne sur iPhone, iPad ou Mac.
-  online_cta_title: Ajouter Changement de Tonalité
-  online_cta_subtitle: au navigateur
+  extension_cta_title: Ajouter Changement de Tonalité
+  extension_cta_subtitle: au navigateur
   offline_cta_title: Ajouter Pitch Changer Offline
   offline_cta_subtitle: sur iPhone, iPad ou Mac
 nav:
   aria_label: Sections de la page
   overview: Qu'est-ce que Pitch Changer ?
-  online: Pour les sites
+  extension: Pour les sites
   offline: Pour les fichiers
   use_cases: Pour qui ?
   reviews: Avis
@@ -44,15 +44,15 @@ overview:
     - Préparer des playbacks, des versions karaoké et du matériel pédagogique.
     - Tester des arrangements, des harmonies et des idées créatives de déplacement de hauteur.
   versions_intro: "Pitch Changer existe en deux versions :"
-  online_link_label: Changement de Tonalité
-  online_link_suffix: comme extension pour les sites, et
+  extension_link_label: Changement de Tonalité
+  extension_link_suffix: comme extension pour les sites, et
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: comme application iPhone, iPad et Mac pour travailler sur des fichiers.
-online:
+extension:
   title: Changement de Tonalité
   paragraphs:
     - Utilisez Changement de Tonalité pour changer facilement la tonalité d'un morceau pendant qu'il joue déjà. C'est une manière simple de transposer la musique sans quitter votre navigateur.
-    - Pitch Changer Online ajoute le contrôle de tonalité directement dans le navigateur. Changez la tonalité sur YouTube et sur de nombreux autres sites audio en quelques clics.
+    - Pitch Changer Extension ajoute le contrôle de tonalité directement dans le navigateur. Changez la tonalité sur YouTube et sur de nombreux autres sites audio en quelques clics.
   bullets:
     - Changez la tonalité d'un morceau en ligne directement sur n'importe quel site.
     - Fonctionne comme outil pour changer la tonalité sur YouTube et sur d'autres plateformes musicales.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Questions fréquentes
   items:
-    - question: Quelle est la différence entre Pitch Changer Online et Pitch Changer Offline ?
+    - question: Quelle est la différence entre Pitch Changer Extension et Pitch Changer Offline ?
       answers:
-        - Pitch Changer Online est une extension de navigateur qui change la tonalité des morceaux directement sur des sites comme YouTube et d'autres plateformes audio ou vidéo.
+        - Pitch Changer Extension est une extension de navigateur qui change la tonalité des morceaux directement sur des sites comme YouTube et d'autres plateformes audio ou vidéo.
         - Pitch Changer Offline est une application autonome pour iPhone, iPad et Mac qui fonctionne hors ligne avec vos fichiers audio et peut traiter plusieurs pistes à la fois.
     - question: Ai-je besoin d'une connexion internet pour utiliser Pitch Changer ?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Y a-t-il un essai gratuit ? Comment fonctionne le prix ?
       answers:
         - L'extension comme l'application pour iPhone, iPad et Mac incluent une période d'essai gratuite sans carte bancaire.
-        - Après l'essai, Pitch Changer Online propose des formules hebdomadaires, annuelles et un achat unique, tandis que Pitch Changer Offline propose des abonnements hebdomadaires et annuels, comme indiqué plus haut.
+        - Après l'essai, Pitch Changer Extension propose des formules hebdomadaires, annuelles et un achat unique, tandis que Pitch Changer Offline propose des abonnements hebdomadaires et annuels, comme indiqué plus haut.
         - Tous les paiements sont traités de manière sécurisée via Paddle pour l'extension ou Apple pour l'application.
     - question: Comment résilier mon abonnement ?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: .
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/fr/#online
     name: Changement de Tonalité
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Changement de Tonalité est une extension de navigateur qui vous permet de changer la tonalité des morceaux sur n'importe quel site directement dans le navigateur. Déplacez la hauteur par demi-tons pendant l'écoute sur YouTube et d'autres plateformes audio ou vidéo.
     inLanguage: fr
-    url: https://pitch-changer.com/fr/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

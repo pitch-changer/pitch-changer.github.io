@@ -1,5 +1,6 @@
 pitch_changer:
-  online:
+  extension:
+    section_id: extension
     rating:
       value: "4.4"
       count: 210

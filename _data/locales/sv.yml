@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer gör det enkelt att flytta pitch, byta tonart och transponera låtar
   description_line_2: för övning, karaoke, undervisning eller produktion.
   description_line_3: Använd det online på vilken webbplats som helst i webbläsaren eller offline på iPhone, iPad eller Mac.
-  online_cta_title: Lägg till Ändra tonart
-  online_cta_subtitle: i din webbläsare
+  extension_cta_title: Lägg till Ändra tonart
+  extension_cta_subtitle: i din webbläsare
   offline_cta_title: Lägg till Pitch Changer Offline
   offline_cta_subtitle: på din iPhone, iPad eller Mac
 nav:
   aria_label: Sidavsnitt
   overview: Vad är Pitch Changer?
-  online: För webbplatser
+  extension: För webbplatser
   offline: För filer
   use_cases: Vem är det för?
   reviews: Omdömen
@@ -44,15 +44,15 @@ overview:
     - Förbereda backing tracks, karaokeversioner och undervisningsmaterial.
     - Testa arrangemang, harmonier och kreativa pitchförflyttningar.
   versions_intro: "Pitch Changer finns i två versioner:"
-  online_link_label: Ändra tonart
-  online_link_suffix: ett webbläsartillägg för webbplatser, och
+  extension_link_label: Ändra tonart
+  extension_link_suffix: ett webbläsartillägg för webbplatser, och
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: en app för iPhone, iPad och Mac för filer.
-online:
+extension:
   title: Ändra tonart
   paragraphs:
     - Använd Ändra tonart för att enkelt byta tonart på låtar medan de redan spelar. Det är ett smidigt sätt att transponera musik utan att lämna webbläsaren.
-    - Pitch Changer Online lägger tonartskontroller direkt i webbläsaren. Ändra tonart på YouTube och många andra ljudwebbplatser med bara några klick.
+    - Pitch Changer Extension lägger tonartskontroller direkt i webbläsaren. Ändra tonart på YouTube och många andra ljudwebbplatser med bara några klick.
   bullets:
     - Ändra tonart på låtar online direkt på vilken webbplats som helst.
     - Fungerar som verktyg för att ändra tonart på YouTube och andra musikplattformar.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Vanliga frågor
   items:
-    - question: Vad är skillnaden mellan Pitch Changer Online och Pitch Changer Offline?
+    - question: Vad är skillnaden mellan Pitch Changer Extension och Pitch Changer Offline?
       answers:
-        - Pitch Changer Online är ett webbläsartillägg som ändrar tonart på låtar direkt på webbplatser som YouTube och andra ljud- eller videoplattformar.
+        - Pitch Changer Extension är ett webbläsartillägg som ändrar tonart på låtar direkt på webbplatser som YouTube och andra ljud- eller videoplattformar.
         - Pitch Changer Offline är en fristående app för iPhone, iPad och Mac som fungerar offline med dina egna ljudfiler och kan batchbearbeta flera spår samtidigt.
     - question: Behöver jag en internetanslutning för att använda Pitch Changer?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Finns det en gratis provperiod? Hur fungerar priset?
       answers:
         - Både tillägget och appen för iPhone, iPad och Mac har en gratis provperiod utan kort.
-        - Efter provperioden erbjuder Pitch Changer Online veckovisa, årliga och engångsköp, medan Pitch Changer Offline erbjuder veckovisa och årliga abonnemang, enligt ovan.
+        - Efter provperioden erbjuder Pitch Changer Extension veckovisa, årliga och engångsköp, medan Pitch Changer Offline erbjuder veckovisa och årliga abonnemang, enligt ovan.
         - Alla betalningar hanteras säkert via Paddle för tillägget eller Apple för appen.
     - question: Hur säger jag upp min prenumeration?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: .
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/sv/#online
     name: Ändra tonart
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Ändra tonart är ett webbläsartillägg som låter dig ändra tonart på låtar på vilken webbplats som helst direkt i webbläsaren. Flytta pitch i halvtoner medan du lyssnar på YouTube och andra ljud- eller videoplattformar.
     inLanguage: sv
-    url: https://pitch-changer.com/sv/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

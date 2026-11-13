@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer maakt het makkelijk om toonhoogte te verschuiven, de toonsoort te veranderen en nummers te transponeren
   description_line_2: voor oefenen, karaoke, lesgeven of productie.
   description_line_3: Gebruik het online op elke website in je browser of offline op je iPhone, iPad of Mac.
-  online_cta_title: Toonhoogte veranderen toevoegen
-  online_cta_subtitle: aan je browser
+  extension_cta_title: Toonhoogte veranderen toevoegen
+  extension_cta_subtitle: aan je browser
   offline_cta_title: Pitch Changer Offline toevoegen
   offline_cta_subtitle: aan je iPhone, iPad of Mac
 nav:
   aria_label: Paginadelen
   overview: Wat is Pitch Changer?
-  online: Voor websites
+  extension: Voor websites
   offline: Voor bestanden
   use_cases: Voor wie is het?
   reviews: Reviews
@@ -44,15 +44,15 @@ overview:
     - Backingtracks, karaokeversies en lesmateriaal voorbereiden.
     - Experimenteren met arrangementen, harmonieën en creatieve pitchverschuivingen.
   versions_intro: "Pitch Changer is beschikbaar in twee versies:"
-  online_link_label: Toonhoogte veranderen
-  online_link_suffix: een browserextensie voor websites, en
+  extension_link_label: Toonhoogte veranderen
+  extension_link_suffix: een browserextensie voor websites, en
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: een iPhone-, iPad- en Mac-app voor bestanden.
-online:
+extension:
   title: Toonhoogte veranderen
   paragraphs:
     - Gebruik Toonhoogte veranderen om tijdens het luisteren makkelijk de toonsoort van nummers aan te passen. Zo transponeer je muziek direct in de browser zonder je workflow te onderbreken.
-    - Pitch Changer Online voegt toonhoogtebediening direct toe aan je browser. Pas de toonsoort van nummers op YouTube en veel andere audiosites aan met slechts een paar klikken.
+    - Pitch Changer Extension voegt toonhoogtebediening direct toe aan je browser. Pas de toonsoort van nummers op YouTube en veel andere audiosites aan met slechts een paar klikken.
   bullets:
     - Verander de toonsoort van een nummer online direct op elke website.
     - Werkt als hulpmiddel om toonhoogte te veranderen op YouTube en andere muziekplatforms.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Veelgestelde vragen
   items:
-    - question: Wat is het verschil tussen Pitch Changer Online en Pitch Changer Offline?
+    - question: Wat is het verschil tussen Pitch Changer Extension en Pitch Changer Offline?
       answers:
-        - Pitch Changer Online is een browserextensie die de toonsoort van nummers direct verandert op websites zoals YouTube en andere audio- of videoplatforms.
+        - Pitch Changer Extension is een browserextensie die de toonsoort van nummers direct verandert op websites zoals YouTube en andere audio- of videoplatforms.
         - Pitch Changer Offline is een zelfstandige iPhone-, iPad- en Mac-app die offline werkt met je eigen audiobestanden en meerdere tracks tegelijk kan batchverwerken.
     - question: Heb ik een internetverbinding nodig om Pitch Changer te gebruiken?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Is er een gratis proefperiode? Hoe werkt de prijs?
       answers:
         - Zowel de extensie als de iPhone-, iPad- en Mac-app hebben een gratis proefperiode waarvoor geen kaart nodig is.
-        - Na de proefperiode biedt Pitch Changer Online wekelijkse, jaarlijkse en eenmalige aankoopopties, en Pitch Changer Offline wekelijkse en jaarlijkse abonnementen, zoals hierboven vermeld.
+        - Na de proefperiode biedt Pitch Changer Extension wekelijkse, jaarlijkse en eenmalige aankoopopties, en Pitch Changer Offline wekelijkse en jaarlijkse abonnementen, zoals hierboven vermeld.
         - Alle betalingen worden veilig verwerkt via Paddle voor de extensie of Apple voor de app.
     - question: Hoe zeg ik mijn abonnement op?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: pagina.
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/nl/#online
     name: Toonhoogte veranderen
-    alternateName: Pitch Changer Online
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Toonhoogte veranderen is een browserextensie waarmee je direct in je browser op elke website de toonsoort van nummers kunt veranderen. Verplaats de pitch per halve toon terwijl je luistert op YouTube en andere audio- of videoplatforms.
     inLanguage: nl
-    url: https://pitch-changer.com/nl/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization

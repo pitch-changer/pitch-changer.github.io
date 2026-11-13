@@ -21,14 +21,14 @@ hero:
   description_line_1: Pitch Changer makes it easy to shift pitch, change key and transpose songs
   description_line_2: for practice, karaoke, teaching or production.
   description_line_3: Use it online on any website in your browser or offline on your iPhone, iPad or Mac.
-  online_cta_title: Add Pitch Changer Online
-  online_cta_subtitle: to your browser
+  extension_cta_title: Add Pitch Changer Extension
+  extension_cta_subtitle: to your browser
   offline_cta_title: Add Pitch Changer Offline
   offline_cta_subtitle: to your iPhone, iPad or Mac
 nav:
   aria_label: Page sections
   overview: What is Pitch Changer?
-  online: For websites
+  extension: For websites
   offline: For files
   use_cases: Who is it for?
   reviews: Reviews
@@ -44,15 +44,15 @@ overview:
     - Prepare backing tracks, karaoke versions and teaching materials.
     - Experiment with arrangements, harmonies and creative pitch shifts.
   versions_intro: "Pitch Changer comes in two versions:"
-  online_link_label: Pitch Changer Online
-  online_link_suffix: a browser extension for websites, and
+  extension_link_label: Pitch Changer Extension
+  extension_link_suffix: a browser extension for websites, and
   offline_link_label: Pitch Changer Offline
   offline_link_suffix: an iPhone, iPad and Mac app for files.
-online:
-  title: Pitch Changer Online
+extension:
+  title: Pitch Changer Extension
   paragraphs:
     - Use Pitch Changer to easily change key of songs. Add this intuitive online pitch shifter and transpose music effortlessly.
-    - With Pitch Changer Online, you add a pitch shifter extension directly into your browser. Adjust the key of songs on platforms like YouTube and many other audio websites in just a few clicks.
+    - With Pitch Changer Extension, you add a pitch shifter extension directly into your browser. Adjust the key of songs on platforms like YouTube and many other audio websites in just a few clicks.
   bullets:
     - Change song key online directly on any website.
     - Works as a YouTube pitch changer and on other music platforms too.
@@ -122,9 +122,9 @@ reviews:
 faq:
   title: Frequently Asked Questions
   items:
-    - question: What's the difference between Pitch Changer Online and Pitch Changer Offline?
+    - question: What's the difference between Pitch Changer Extension and Pitch Changer Offline?
       answers:
-        - Pitch Changer Online is a browser extension that changes the key of songs directly on websites like YouTube and other audio or video platforms.
+        - Pitch Changer Extension is a browser extension that changes the key of songs directly on websites like YouTube and other audio or video platforms.
         - Pitch Changer Offline is a standalone iPhone, iPad and Mac app that works offline with your own audio files and can batch process multiple tracks at once.
     - question: Do I need an internet connection to use Pitch Changer?
       answers:
@@ -151,7 +151,7 @@ faq:
     - question: Is there a free trial? How does pricing work?
       answers:
         - Both the extension and the iPhone, iPad and Mac app include a free trial period with no card required.
-        - After the trial, Pitch Changer Online offers weekly, yearly and one-time purchase options, and Pitch Changer Offline offers weekly and yearly subscriptions, as listed above.
+        - After the trial, Pitch Changer Extension offers weekly, yearly and one-time purchase options, and Pitch Changer Offline offers weekly and yearly subscriptions, as listed above.
         - All payments are handled securely through Paddle for the extension or Apple for the app.
     - question: How do I cancel my subscription?
       answers:
@@ -201,16 +201,14 @@ footer:
   acknowledgements_label: Acknowledgements
   acknowledgements_suffix: page.
 structured_data:
-  online:
+  extension:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/#online
-    name: Pitch Changer
-    alternateName: Pitch Changer Online
+    name: Pitch Changer Extension
+    alternateName: Pitch Changer Extension
     applicationCategory: MultimediaApplication
     operatingSystem: Chromium-based browser on Windows, macOS, Linux and ChromeOS
     description: Pitch Changer is a browser extension that lets you change the key of songs on any website directly in your browser. Shift pitch in semitones while listening on sites like YouTube and other audio or video platforms.
     inLanguage: en
-    url: https://pitch-changer.com/#online
     installUrl: https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb
     publisher:
       "@type": Organization
