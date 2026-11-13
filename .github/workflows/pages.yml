@@ -29,7 +29,8 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "4.0.2"
+          # New runner images only provide the latest patch release of each series.
+          ruby-version: "4.0"
           bundler-cache: true
 
       - name: Validate locales

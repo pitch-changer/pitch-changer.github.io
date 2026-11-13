@@ -32,4 +32,4 @@ This repo contains the Jekyll source for the product website hosted on GitHub Pa
 
 ## Deployment
 - GitHub Pages is deployed through the workflow in [.github/workflows/pages.yml](/Users/navi/projects/extensions/pitch-changer.github.io/.github/workflows/pages.yml).
-- The workflow builds the site with Jekyll `4.4.1` on Ruby `4.0.2` and uploads the generated `_site` artifact to Pages.
+- The workflow builds the site with Jekyll `4.4.1` on the latest Ruby `4.0.x` patch release and uploads the generated `_site` artifact to Pages. CI follows the latest patch so Ruby remains available when `ubuntu-latest` moves to a newer runner image; local development uses the pinned version in `.ruby-version`.
