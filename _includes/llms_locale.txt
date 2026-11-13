@@ -39,11 +39,11 @@
 
 {{ locale_data.extension.perfect_for_label }} {{ locale_data.extension.perfect_for_text }}
 
-### {{ locale_data.offline.title }}
+### {{ locale_data.app.title }}
 
-{{ locale_data.offline.paragraphs[0] }}
+{{ locale_data.app.paragraphs[0] }}
 
-{{ locale_data.offline.perfect_for_label }} {{ locale_data.offline.perfect_for_text }}
+{{ locale_data.app.perfect_for_label }} {{ locale_data.app.perfect_for_text }}
 
 ## {{ locale_data.use_cases.title }}
 

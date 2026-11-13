@@ -14,7 +14,8 @@ pitch_changer:
       lifetime:
         price: "59.00"
         priceCurrency: USD
-  offline:
+  app:
+    section_id: app
     offers:
       weekly:
         price: "2.99"

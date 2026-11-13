@@ -23,13 +23,13 @@ hero:
   description_line_3: 你可以在瀏覽器裡於任何網站上線上使用，也能在 iPhone、iPad 或 Mac 上離線使用。
   extension_cta_title: 加入音高變換器
   extension_cta_subtitle: 到瀏覽器
-  offline_cta_title: 加入 Pitch Changer Offline
-  offline_cta_subtitle: 到 iPhone、iPad 或 Mac
+  app_cta_title: 加入 Pitch Changer App
+  app_cta_subtitle: 到 iPhone、iPad 或 Mac
 nav:
   aria_label: 頁面區塊
   overview: Pitch Changer 是什麼？
   extension: 網站用
-  offline: 檔案用
+  app: 檔案用
   use_cases: 適合誰使用？
   reviews: 評價
   faq: FAQ
@@ -46,8 +46,8 @@ overview:
   versions_intro: "Pitch Changer 有兩個版本："
   extension_link_label: 音高變換器
   extension_link_suffix: 是網站用的瀏覽器擴充功能，而
-  offline_link_label: Pitch Changer Offline
-  offline_link_suffix: 是 iPhone、iPad 和 Mac 的檔案處理 App。
+  app_link_label: Pitch Changer App
+  app_link_suffix: 是 iPhone、iPad 和 Mac 的檔案處理 App。
 extension:
   title: 音高變換器
   paragraphs:
@@ -67,8 +67,8 @@ extension:
     lifetime: "一次付費 PRICE_VALUE $"
   cta: 將音高變換器加入瀏覽器
   image_alt: 安裝 Pitch Changer 擴充功能，幾秒內就能加入瀏覽器。
-offline:
-  title: Pitch Changer Offline
+app:
+  title: Pitch Changer App
   paragraphs:
     - 從練習到製作，Pitch Changer 都能精準協助你轉調、移動音高、改變歌曲調性，以及批次處理音訊。
     - 透過 iPhone、iPad 和 Mac 版 Pitch Changer，你可以匯入音訊檔、在不改變速度的情況下調整音高，並批次處理整個資料夾，準備練習音軌、教學素材或專業專案。
@@ -122,15 +122,15 @@ reviews:
 faq:
   title: 常見問題
   items:
-    - question: Pitch Changer Extension 和 Pitch Changer Offline 有什麼差別？
+    - question: Pitch Changer Extension 和 Pitch Changer App 有什麼差別？
       answers:
         - Pitch Changer Extension 是瀏覽器擴充功能，可直接在 YouTube 等網站以及其他音訊或影片平台上改變歌曲調性。
-        - Pitch Changer Offline 是 iPhone、iPad 和 Mac 的獨立 App，可離線搭配自己的音訊檔使用，也能一次批次處理多個音軌。
+        - Pitch Changer App 是 iPhone、iPad 和 Mac 的獨立 App，可離線搭配自己的音訊檔使用，也能一次批次處理多個音軌。
     - question: 使用 Pitch Changer 需要網路連線嗎？
       answers:
         - Pitch Changer 擴充功能是在瀏覽器中運作，主要對應線上內容，因此通常會在連網時使用。
         - iPhone、iPad 和 Mac App 可完全離線搭配本機音訊檔使用，所以安裝後不需要持續連線。
-    - question: Pitch Changer Offline 支援哪些音訊格式？
+    - question: Pitch Changer App 支援哪些音訊格式？
       answers:
         - iPhone、iPad 和 Mac App 支援 MP3、WAV、FLAC 等常見音訊格式，所以你可以直接處理現有檔案，不必先轉檔。
         - 你也可以加入影片、DAW 區段以及整個資料夾。Pitch Changer 會替你擷取音訊。
@@ -151,7 +151,7 @@ faq:
     - question: 有免費試用嗎？價格怎麼算？
       answers:
         - 擴充功能和 iPhone、iPad、Mac App 都有免綁卡的免費試用期。
-        - 試用之後，Pitch Changer Extension 提供每週、每年和一次買斷的方案，Pitch Changer Offline 則提供每週與每年的訂閱方案，如上所示。
+        - 試用之後，Pitch Changer Extension 提供每週、每年和一次買斷的方案，Pitch Changer App 則提供每週與每年的訂閱方案，如上所示。
         - 所有付款都會透過 Paddle（擴充功能）或 Apple（App）安全處理。
     - question: 我要怎麼取消訂閱？
       answers:
@@ -218,16 +218,14 @@ structured_data:
       weekly: 週方案
       yearly: 年方案
       lifetime: 一次付費
-  offline:
+  app:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/zh-TW/#offline
-    name: Pitch Changer Offline
+    name: Pitch Changer App
     alternateName: 適用於 iPhone、iPad 與 Mac 的 Pitch Changer
     applicationCategory: MultimediaApplication
     operatingSystem: macOS 15.0 or iOS 18.0
     description: 適用於 iPhone、iPad 與 Mac 的 Pitch Changer 能幫你離線調整音高、替歌曲轉調，以及批次處理音訊檔。匯入音軌後，可以在不影響節奏的情況下改變調性，並匯出新的版本用於練習、教學或製作。
     inLanguage: zh-TW
-    url: https://pitch-changer.com/zh-TW/#offline
     installUrl: https://apps.apple.com/app/id6749900880
     publisher:
       "@type": Organization

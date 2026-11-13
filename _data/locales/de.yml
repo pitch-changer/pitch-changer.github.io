@@ -23,13 +23,13 @@ hero:
   description_line_3: Nutze es online auf jeder Website im Browser oder offline auf iPhone, iPad oder Mac.
   extension_cta_title: Tonhöhenänderung hinzufügen
   extension_cta_subtitle: zum Browser
-  offline_cta_title: Pitch Changer Offline hinzufügen
-  offline_cta_subtitle: zu iPhone, iPad oder Mac
+  app_cta_title: Pitch Changer App hinzufügen
+  app_cta_subtitle: zu iPhone, iPad oder Mac
 nav:
   aria_label: Seitenabschnitte
   overview: Was ist Pitch Changer?
   extension: Für Websites
-  offline: Für Dateien
+  app: Für Dateien
   use_cases: Für wen ist es?
   reviews: Bewertungen
   faq: FAQ
@@ -46,8 +46,8 @@ overview:
   versions_intro: "Pitch Changer gibt es in zwei Versionen:"
   extension_link_label: Tonhöhenänderung
   extension_link_suffix: als Erweiterung für Websites, und
-  offline_link_label: Pitch Changer Offline
-  offline_link_suffix: als App für iPhone, iPad und Mac für die Arbeit mit Dateien.
+  app_link_label: Pitch Changer App
+  app_link_suffix: als App für iPhone, iPad und Mac für die Arbeit mit Dateien.
 extension:
   title: Tonhöhenänderung
   paragraphs:
@@ -67,8 +67,8 @@ extension:
     lifetime: "einmalige Zahlung von PRICE_VALUE $"
   cta: Tonhöhenänderung zum Browser hinzufügen
   image_alt: Installiere die Pitch-Changer-Erweiterung und füge sie in wenigen Sekunden deinem Browser hinzu.
-offline:
-  title: Pitch Changer Offline
+app:
+  title: Pitch Changer App
   paragraphs:
     - Vom Üben bis zur Produktion hilft dir Pitch Changer dabei, Songs zu transponieren, Tonhöhen zu verschieben, die Tonart zu ändern und ganze Audio-Stapel präzise zu bearbeiten.
     - Mit Pitch Changer für iPhone, iPad und Mac importierst du Audiodateien, änderst die Tonhöhe ohne Tempowechsel und bearbeitest ganze Ordner, um Übetracks, Unterrichtsmaterial oder Produktionsdateien vorzubereiten.
@@ -122,15 +122,15 @@ reviews:
 faq:
   title: Häufig gestellte Fragen
   items:
-    - question: Was ist der Unterschied zwischen Pitch Changer Extension und Pitch Changer Offline?
+    - question: Was ist der Unterschied zwischen Pitch Changer Extension und Pitch Changer App?
       answers:
         - Pitch Changer Extension ist eine Browser-Erweiterung, die die Tonart von Songs direkt auf Websites wie YouTube und anderen Audio- oder Video-Plattformen ändert.
-        - Pitch Changer Offline ist eine eigenständige App für iPhone, iPad und Mac, die offline mit deinen Audiodateien arbeitet und mehrere Tracks gleichzeitig verarbeiten kann.
+        - Pitch Changer App ist eine eigenständige App für iPhone, iPad und Mac, die offline mit deinen Audiodateien arbeitet und mehrere Tracks gleichzeitig verarbeiten kann.
     - question: Brauche ich eine Internetverbindung für Pitch Changer?
       answers:
         - Die Pitch-Changer-Erweiterung läuft im Browser und ist für Online-Inhalte gedacht, deshalb nutzt du sie normalerweise mit Internetverbindung.
         - Die App für iPhone, iPad und Mac arbeitet vollständig offline mit lokalen Audiodateien, daher kannst du sie nach der Installation auch ohne aktive Verbindung nutzen.
-    - question: Welche Audioformate unterstützt Pitch Changer Offline?
+    - question: Welche Audioformate unterstützt Pitch Changer App?
       answers:
         - Die App für iPhone, iPad und Mac unterstützt gängige Formate wie MP3, WAV, FLAC und mehr, sodass du mit den Dateien arbeiten kannst, die du bereits hast, ohne sie vorher umzuwandeln.
         - Du kannst auch Videos, Regionen aus deiner DAW und ganze Ordner hinzufügen. Pitch Changer extrahiert das Audio für dich.
@@ -151,7 +151,7 @@ faq:
     - question: Gibt es eine kostenlose Testphase? Wie funktioniert der Preis?
       answers:
         - Sowohl die Erweiterung als auch die App für iPhone, iPad und Mac enthalten eine kostenlose Testphase ohne Karte.
-        - Nach der Testphase bietet Pitch Changer Extension wöchentliche, jährliche und einmalige Kaufoptionen, während Pitch Changer Offline wöchentliche und jährliche Abos anbietet, wie oben aufgeführt.
+        - Nach der Testphase bietet Pitch Changer Extension wöchentliche, jährliche und einmalige Kaufoptionen, während Pitch Changer App wöchentliche und jährliche Abos anbietet, wie oben aufgeführt.
         - Alle Zahlungen werden für die Erweiterung sicher über Paddle oder für die App über Apple abgewickelt.
     - question: Wie kündige ich mein Abo?
       answers:
@@ -218,16 +218,14 @@ structured_data:
       weekly: Wöchentliches Abo
       yearly: Jährliches Abo
       lifetime: Einmalige Zahlung
-  offline:
+  app:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/de/#offline
-    name: Pitch Changer Offline
+    name: Pitch Changer App
     alternateName: Pitch Changer für iPhone, iPad und Mac
     applicationCategory: MultimediaApplication
     operatingSystem: macOS 15.0 or iOS 18.0
     description: Pitch Changer für iPhone, iPad und Mac hilft dir dabei, Tonhöhen zu ändern, Songs zu transponieren und Audiodateien offline stapelweise zu bearbeiten. Importiere Tracks, ändere die Tonart ohne Tempowechsel und exportiere neue Versionen fürs Üben, den Unterricht oder die Produktion.
     inLanguage: de
-    url: https://pitch-changer.com/de/#offline
     installUrl: https://apps.apple.com/app/id6749900880
     publisher:
       "@type": Organization

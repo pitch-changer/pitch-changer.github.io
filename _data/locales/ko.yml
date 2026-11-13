@@ -23,13 +23,13 @@ hero:
   description_line_3: 브라우저에서는 어떤 웹사이트에서든 온라인으로, iPhone, iPad, Mac에서는 오프라인으로 사용할 수 있습니다.
   extension_cta_title: 음정 변조기 추가
   extension_cta_subtitle: 브라우저에
-  offline_cta_title: Pitch Changer Offline 추가
-  offline_cta_subtitle: iPhone, iPad 또는 Mac에
+  app_cta_title: Pitch Changer App 추가
+  app_cta_subtitle: iPhone, iPad 또는 Mac에
 nav:
   aria_label: 페이지 섹션
   overview: Pitch Changer란?
   extension: 웹사이트용
-  offline: 파일용
+  app: 파일용
   use_cases: 어떤 사람에게 맞을까요?
   reviews: 리뷰
   faq: FAQ
@@ -46,8 +46,8 @@ overview:
   versions_intro: "Pitch Changer는 두 가지 버전으로 제공됩니다:"
   extension_link_label: 음정 변조기
   extension_link_suffix: 웹사이트용 브라우저 확장 프로그램이고,
-  offline_link_label: Pitch Changer Offline
-  offline_link_suffix: 파일 작업을 위한 iPhone, iPad, Mac 앱입니다.
+  app_link_label: Pitch Changer App
+  app_link_suffix: 파일 작업을 위한 iPhone, iPad, Mac 앱입니다.
 extension:
   title: 음정 변조기
   paragraphs:
@@ -67,8 +67,8 @@ extension:
     lifetime: "한 번에 PRICE_VALUE $ 결제"
   cta: 음정 변조기를 브라우저에 추가
   image_alt: Pitch Changer 확장 프로그램을 설치하고 몇 초 만에 브라우저에 추가하세요.
-offline:
-  title: Pitch Changer Offline
+app:
+  title: Pitch Changer App
   paragraphs:
     - 연습부터 프로덕션까지, Pitch Changer는 곡 트랜스포즈, 피치 이동, 키 변경, 오디오 일괄 처리를 정밀하게 도와줍니다.
     - iPhone, iPad, Mac용 Pitch Changer에서는 오디오 파일을 가져오고, 속도를 바꾸지 않은 채 피치를 조절하고, 폴더 전체를 일괄 처리해 연습용 트랙, 레슨 자료, 프로덕션 프로젝트를 준비할 수 있습니다.
@@ -122,15 +122,15 @@ reviews:
 faq:
   title: 자주 묻는 질문
   items:
-    - question: Pitch Changer Extension과 Pitch Changer Offline의 차이는 무엇인가요?
+    - question: Pitch Changer Extension과 Pitch Changer App의 차이는 무엇인가요?
       answers:
         - Pitch Changer Extension은 YouTube 같은 웹사이트와 다른 오디오 또는 비디오 플랫폼에서 곡의 키를 바로 바꿔 주는 브라우저 확장 프로그램입니다.
-        - Pitch Changer Offline은 iPhone, iPad, Mac용 독립 앱으로, 내 오디오 파일을 오프라인에서 다루며 여러 트랙을 한 번에 일괄 처리할 수 있습니다.
+        - Pitch Changer App은 iPhone, iPad, Mac용 독립 앱으로, 내 오디오 파일을 오프라인에서 다루며 여러 트랙을 한 번에 일괄 처리할 수 있습니다.
     - question: Pitch Changer를 사용하려면 인터넷 연결이 필요한가요?
       answers:
         - Pitch Changer 확장 프로그램은 브라우저 안에서 작동하고 온라인 콘텐츠용으로 설계되었기 때문에 보통 인터넷에 연결된 상태에서 사용하게 됩니다.
         - iPhone, iPad, Mac 앱은 로컬 오디오 파일로 완전히 오프라인에서 동작하므로 설치 후에는 활성 연결 없이도 사용할 수 있습니다.
-    - question: Pitch Changer Offline은 어떤 오디오 포맷을 지원하나요?
+    - question: Pitch Changer App은 어떤 오디오 포맷을 지원하나요?
       answers:
         - iPhone, iPad, Mac 앱은 MP3, WAV, FLAC 같은 일반적인 오디오 포맷을 지원하므로 이미 가지고 있는 파일을 별도 변환 없이 바로 처리할 수 있습니다.
         - 비디오, DAW의 구간, 폴더 전체도 추가할 수 있으며 Pitch Changer가 오디오를 알아서 추출해 줍니다.
@@ -151,7 +151,7 @@ faq:
     - question: 무료 체험이 있나요? 가격은 어떻게 되나요?
       answers:
         - 확장 프로그램과 iPhone, iPad, Mac 앱 모두 카드 없이 시작할 수 있는 무료 체험 기간이 있습니다.
-        - 체험 후에는 Pitch Changer Extension에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer Offline에서는 주간 및 연간 구독을 제공합니다.
+        - 체험 후에는 Pitch Changer Extension에서 주간, 연간, 일회성 구매 옵션을 제공하고, Pitch Changer App에서는 주간 및 연간 구독을 제공합니다.
         - 모든 결제는 확장 프로그램은 Paddle, 앱은 Apple을 통해 안전하게 처리됩니다.
     - question: 구독은 어떻게 취소하나요?
       answers:
@@ -218,16 +218,14 @@ structured_data:
       weekly: 주간 구독
       yearly: 연간 구독
       lifetime: 일회성 결제
-  offline:
+  app:
     "@type": SoftwareApplication
-    "@id": https://pitch-changer.com/ko/#offline
-    name: Pitch Changer Offline
+    name: Pitch Changer App
     alternateName: iPhone, iPad 및 Mac용 Pitch Changer
     applicationCategory: MultimediaApplication
     operatingSystem: macOS 15.0 or iOS 18.0
     description: iPhone, iPad 및 Mac용 Pitch Changer는 오프라인에서 피치를 바꾸고, 곡을 트랜스포즈하고, 오디오 파일을 일괄 처리할 수 있게 도와줍니다. 트랙을 가져오고, 템포는 그대로 둔 채 키를 바꾸고, 연습, 레슨, 프로덕션용 새 버전을 내보낼 수 있습니다.
     inLanguage: ko
-    url: https://pitch-changer.com/ko/#offline
     installUrl: https://apps.apple.com/app/id6749900880
     publisher:
       "@type": Organization
