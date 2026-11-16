@@ -932,23 +932,9 @@
         var localeLinks = document.querySelectorAll("[data-locale-link]");
         var currentSearch = window.location.search || "";
         var currentHash = window.location.hash || "";
-        var legacyFragments = {
-          "#online": "#extension",
-          "#offline": "#app"
-        };
 
         function updateSectionLinks() {
           currentHash = window.location.hash || "";
-          var sectionHash = legacyFragments[currentHash];
-
-          if (sectionHash) {
-            currentHash = sectionHash;
-            window.history.replaceState(window.history.state, "", window.location.pathname + currentSearch + currentHash);
-            var section = document.getElementById(currentHash.slice(1));
-            if (section) {
-              section.scrollIntoView();
-            }
-          }
 
           localeLinks.forEach(function(link) {
             var targetPath = link.getAttribute("href").split(/[?#]/)[0];
