@@ -56,8 +56,8 @@
     </script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/assets/widget/css-c75a9de123b6683b.css" />
-    <script type="module" src="/assets/widget/ui-8b9b657b4d963d7d.js"></script>
+    <link rel="stylesheet" href="/assets/widget/css-399183afb7696fc7.css" />
+    <script type="module" src="/assets/widget/ui-b3ba5b65d3c45785.js"></script>
 
     <link rel="canonical" href="https://pitch-changer.com/" />
 <link rel="alternate" hreflang="en" href="https://pitch-changer.com/" />
@@ -627,9 +627,9 @@
     </div>
     <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Pitch Changer</h1>
     
-      <section class="pitch-widget" data-pitch-widget data-ui-review="pitch-widget" aria-labelledby="pitch-widget-title">
+      <section class="pitch-widget" data-pitch-widget="pitch-widget" data-ui-review="pitch-widget" aria-labelledby="pitch-widget-title">
   <div data-role="empty-state">
-    <h2 id="pitch-widget-title" class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Change pitch of a song</h2>
+    <h2 id="pitch-widget-title" class="pw-heading text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Change pitch of a song</h2>
     <div class="pw-picker">
       <label class="text-3xl">Choose audio file<input data-role="file" type="file" accept="audio/*,.wav,.mp3,.flac,.m4a,.ogg,.aac,.aiff,.aif" aria-label="Choose audio file" /></label>
       <span class="text-3xl">or drop one here</span>
@@ -696,16 +696,19 @@
   </div>
 </header>
 
-<nav aria-label="Page sections" class="text-center text-3xl mb-10 mt-10 px-4">
+<nav aria-label="Page sections" class="text-center text-3xl mb-10 mt-10 px-4" data-ui-review="page-nav">
   <a class="underline whitespace-nowrap" href="#overview">What is Pitch Changer?</a> ·
-  <a class="underline whitespace-nowrap" href="#extension">For websites</a> ·
-  <a class="underline whitespace-nowrap" href="#app">For files</a> ·
+
+  <a class="underline whitespace-nowrap" href="#online">Online</a> ·
+
+  <a class="underline whitespace-nowrap" href="#extension">Extension</a> ·
+  <a class="underline whitespace-nowrap" href="#app">App</a> ·
   <a class="underline whitespace-nowrap" href="#use-cases">Who is it for?</a> ·
   <a class="underline whitespace-nowrap" href="#reviews">Reviews</a> ·
   <a class="underline whitespace-nowrap" href="#faq">FAQ</a>
 </nav>
 
-<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview">
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="overview" data-ui-review="overview">
   <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">
     What is Pitch Changer?
   </h2>
@@ -720,11 +723,64 @@
 <li>Experiment with arrangements, harmonies and creative pitch shifts.</li>
 </ul>
   <p class="mb-4">
-    Pitch Changer comes in two versions:
-    <strong><a href="#extension" class="underline">Pitch Changer Extension</a></strong> a browser extension for websites, and
-    <strong><a href="#app" class="underline">Pitch Changer App</a></strong> an iPhone, iPad and Mac app for files.
+    Pitch Changer comes in three versions:
+    <strong><a href="#extension" class="underline">Pitch Changer Extension</a></strong> for songs on websites,
+    <strong><a href="#app" class="underline">Pitch Changer App</a></strong> for audio files on iPhone, iPad and Mac, and
+
+    <strong><a href="#online" class="underline">Pitch Changer Online</a></strong> for changing the key of an audio file and exporting the result right on this page.
+
   </p>
 </section>
+
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-16" id="online" aria-labelledby="online-title" data-ui-review="online-section">
+  <h2 id="online-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Pitch Changer Online</h2>
+  <p class="mb-4">Choose an audio file and raise or lower the key without changing the tempo. Adjust it while the song plays to find a comfortable key for singing or playing along. You can also export the shifted audio.</p>
+  <section class="pitch-widget" data-pitch-widget="pitch-widget-online" data-ui-review="pitch-widget-online" aria-labelledby="pitch-widget-online-title">
+  <div data-role="empty-state">
+    <h3 id="pitch-widget-online-title" class="pw-heading text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Change pitch of a song</h3>
+    <div class="pw-picker">
+      <label class="text-3xl">Choose audio file<input data-role="file" type="file" accept="audio/*,.wav,.mp3,.flac,.m4a,.ogg,.aac,.aiff,.aif" aria-label="Choose audio file" /></label>
+      <span class="text-3xl">or drop one here</span>
+    </div>
+    <p class="pw-intro text-xl text-gray-500 dark:text-gray-400">Find a comfortable key for singing or playing along. Export the result if needed.</p>
+  </div>
+  <div class="pw-file" data-role="file-details" hidden>
+    <span class="pw-filename" data-role="filename"></span><time data-role="duration"></time>
+    <button type="button" class="text-xl" data-role="clear">Clear</button>
+  </div>
+  <div data-role="controls" hidden>
+    <div class="pw-transport">
+      <button type="button" class="pw-primary pw-play text-xl" data-role="play" disabled aria-label="Play" aria-pressed="false">▶</button>
+      <div class="pw-seek">
+        <input type="range" data-role="seek" aria-label="Playback position" min="0" max="1" step="0.01" value="0" disabled />
+        <div class="pw-times" aria-hidden="true"><span data-role="elapsed">0:00</span><span data-role="total">0:00</span></div>
+      </div>
+    </div>
+    <div class="pw-pitch-label"><label for="pitch-widget-online-pitch">Pitch in semitones</label><output data-role="pitch-value" for="pitch-widget-online-pitch">0</output></div>
+    <div class="pw-pitch-controls">
+      <button type="button" class="text-xl" data-role="minus" aria-label="Lower pitch by one semitone" disabled>−</button>
+      <div>
+        <input id="pitch-widget-online-pitch" type="range" data-role="pitch" min="-12" max="12" step="1" value="0" disabled />
+        <div class="pw-pitch-scale" aria-hidden="true"><span>−12</span><span>0</span><span>+12</span></div>
+      </div>
+      <button type="button" class="text-xl" data-role="plus" aria-label="Raise pitch by one semitone" disabled>+</button>
+    </div>
+    <div class="pw-actions" data-role="actions" hidden>
+      <button type="button" class="text-xl" data-role="reset" disabled>Reset pitch</button>
+      <button type="button" data-role="download" class="pw-primary text-xl" disabled>Download result</button>
+    </div>
+    <p id="pitch-widget-online-export-limit" class="pw-export-limit text-xl text-gray-500 dark:text-gray-400" data-role="export-limit" hidden>Export is limited to 10 minutes. You can still play and change the pitch of this track.</p>
+    <div class="pw-export" data-role="export" hidden><progress data-role="progress" max="100" value="0" aria-label="Download result"></progress><button type="button" class="text-xl" data-role="cancel">Cancel export</button></div>
+  </div>
+  <span class="pw-status" aria-live="off" data-role="status"></span>
+  <p class="pw-error text-xl text-red-700 dark:text-red-300" aria-live="off" data-role="error"></p>
+  <noscript><p class="pw-noscript text-xl text-red-700 dark:text-red-300">Enable JavaScript to change the key of an audio file.</p></noscript>
+  <script type="application/json" data-config>{"strings":{"title":"Change pitch of a song","intro":"Find a comfortable key for singing or playing along. Export the result if needed.","choose":"Choose audio file","drop":"or drop one here","no_file":"No file selected","clear":"Clear","play":"Play","stop":"Stop","seek":"Playback position","pitch":"Pitch in semitones","pitch_value":"VALUE semitones","lower":"Lower pitch by one semitone","higher":"Raise pitch by one semitone","reset":"Reset pitch","download":"Download result","cancel":"Cancel export","loading":"Processing...","ready":"Ready. Press Play and adjust the key as you listen.","preparing":"Preparing audio at PITCH semitones...","exporting":"Preparing result at PITCH semitones: PROGRESS%","exported":"Result ready at PITCH semitones.","canceled":"Export canceled.","noscript":"Enable JavaScript to change the key of an audio file.","errors":{"empty":"This file is empty. Choose an audio file.","duration":"Export is limited to 10 minutes. You can still play and change the pitch of this track.","channels":"Choose a mono or stereo audio file.","one_file":"Choose one audio file at a time.","decode":"This audio file could not be opened. Try another supported audio file.","processor":"The pitch processor could not start. Try pressing Play again or reload and choose your file.","capability":"This tool needs a browser with audio processing support. Try a recent version of Chrome.","export":"The result could not be prepared. Try Download result again."}},"limits":{"max_seconds":600,"max_sample_rate":48000},"assets":{"worklet":"/assets/widget/worklet-b4906c4e08355f03.js","worker":"/assets/widget/worker-7dcfce1dada93db4.js"}}</script>
+</section>
+<p class="mt-6">If you don't have the audio file, use <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Pitch Changer Extension</a> to change the key of songs on YouTube and other websites.</p>
+</section>
+
 
 <section class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" id="extension">
   <div class="mr-auto place-self-center lg:col-span-7">
