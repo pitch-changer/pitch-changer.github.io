@@ -697,4 +697,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
 
   </url>
+
+  <url>
+    <loc>https://pitch-changer.com/video-pitch-changer/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/video-pitch-changer/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/video-pitch-changer/" />
+
+  </url>
 </urlset>
