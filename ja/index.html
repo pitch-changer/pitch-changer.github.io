@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>ピッチシフター: 曲のキーをオンラインでもオフラインでも変える</title>
+    <title>ピッチシフター: pitch-changer.com</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="どのサイトでも曲のキーを変え、練習、カラオケ、制作のために音楽を移調できます。ブラウザ拡張機能と iPhone、iPad、Mac 向けアプリとして使えます。" />
@@ -76,6 +76,96 @@
 <link rel="alternate" hreflang="tr" href="https://pitch-changer.com/tr/" />
 <link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/" />
 <style>
+      .site-topbar-shell {
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .site-topbar {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 2rem;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 1.25rem 3rem;
+      }
+
+      .site-brand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        white-space: nowrap;
+      }
+
+      .site-navigation {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .site-navigation a {
+        padding: 0.625rem 1rem;
+        border-radius: 0.5rem;
+        color: #4b5563;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .site-navigation a:hover,
+      .site-navigation a[aria-current="page"] {
+        background: #eff6ff;
+        color: #1d4ed8;
+      }
+
+      .site-brand:focus-visible,
+      .site-navigation a:focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+      }
+
+      .site-topbar .locale-switcher-menu {
+        right: 0;
+        left: auto;
+        max-height: min(70vh, 30rem);
+        overflow-y: auto;
+      }
+
+      html.dark .site-topbar-shell {
+        border-color: #374151;
+      }
+
+      html.dark .site-navigation a {
+        color: #d1d5db;
+      }
+
+      html.dark .site-navigation a:hover,
+      html.dark .site-navigation a[aria-current="page"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      @media (max-width: 767px) {
+        .site-topbar {
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .site-navigation {
+          grid-column: 1 / -1;
+          grid-row: 2;
+        }
+
+        .site-navigation a {
+          flex: 1;
+          text-align: center;
+        }
+
+        .site-topbar-locale {
+          grid-column: 2;
+          grid-row: 1;
+        }
+      }
+
       .locale-switcher {
         position: relative;
         display: inline-flex;
@@ -328,8 +418,10 @@
   </head>
   <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 
+
 <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12">
   <div class="mt-6 text-center">
+
     <div class="hero-topbar mb-7 w-full" data-ui-review="hero-topbar">
       <div aria-hidden="true" class="hero-topbar-spacer"></div>
       <a
@@ -586,6 +678,7 @@
 
       </div>
     </div>
+
     <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Pitch Changer</h1>
     
     <h2 class="mb-6 text-3xl tracking-tight leading-none text-gray-900 dark:text-gray-100 md:text-3xl lg:text-4xl">曲のキーを手軽に変えられます</h2>
