@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change Pitch on YouTube - Pitch Changer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Change the key of a song on YouTube with Pitch Changer Extension. Try the pitch slider on a sample video and hear the key change while the beat stays steady." />
+    <meta property="og:title" content="Change Pitch on YouTube - Pitch Changer" />
+    <meta property="og:description" content="Change the key of a song on YouTube with Pitch Changer Extension. Try the pitch slider on a sample video and hear the key change while the beat stays steady." />
+    <meta property="og:url" content="https://pitch-changer.com/youtube-pitch-changer/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pitch-changer.com/extension.png" />
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var hasManualDark = root.classList.contains("dark");
+
+        if (typeof window.matchMedia !== "function") {
+          return;
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyTheme(isDark) {
+          if (hasManualDark) {
+            root.classList.add("dark");
+            return;
+          }
+
+          root.classList.toggle("dark", isDark);
+        }
+
+        applyTheme(mediaQuery.matches);
+
+        function handleThemeChange(event) {
+          applyTheme(event.matches);
+        }
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleThemeChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleThemeChange);
+        }
+      })();
+    </script>
+    <link rel="icon" sizes="32x32" type="image/png" href="/icons/32.png" />
+    <link rel="icon" sizes="16x16" type="image/png" href="/icons/16.png" />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQN6C9B1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMQN6C9B1Q');
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+
+
+    <script type="module" src="/assets/widget/youtube-demo-39695b061b76c879.js"></script>
+    <style>      .youtube-demo-intro { max-width: 46rem; }
+
+      .youtube-demo {
+        --demo-border: #d1d5db;
+        --demo-panel: #fff;
+        --demo-accent: #1d4ed8;
+        max-width: 61rem;
+        margin: 0 auto;
+        padding: clamp(0.75rem, 3vw, 1.5rem);
+        border: 1px solid var(--demo-border);
+        border-radius: 1rem;
+        background: #f9fafb;
+      }
+
+      html.dark .youtube-demo {
+        --demo-border: #4b5563;
+        --demo-panel: #111827;
+        --demo-accent: #93c5fd;
+        background: #1f2937;
+      }
+
+      .youtube-demo-grid {
+        display: grid;
+        align-items: start;
+        justify-items: center;
+        gap: 1.25rem;
+        margin-top: 1rem;
+      }
+
+      .youtube-demo-player {
+        width: 100%;
+        max-width: 40rem;
+        min-width: 0;
+      }
+
+      .youtube-demo-player video {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 0.75rem;
+        background: #0f172a;
+      }
+
+      .youtube-demo-panel {
+        grid-row: 1;
+        width: 100%;
+        max-width: 40rem;
+        padding: 1rem;
+        border: 1px solid var(--demo-border);
+        border-radius: 0.75rem;
+        background: var(--demo-panel);
+        text-align: left;
+      }
+
+      .youtube-demo-pitch {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.25rem 0.75rem;
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+
+      .youtube-demo-pitch output { color: var(--demo-accent); }
+
+      .youtube-demo-panel input[type="range"] {
+        display: block;
+        width: 100%;
+        min-height: 2.75rem;
+        margin: 0.25rem 0 0.5rem;
+        accent-color: var(--demo-accent);
+      }
+
+      .youtube-demo-button {
+        min-height: 2.75rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--demo-border);
+        border-radius: 0.5rem;
+        background: var(--demo-panel);
+        font-weight: 600;
+      }
+
+      .youtube-demo-button:hover { border-color: var(--demo-accent); }
+
+      .youtube-demo-play { margin-top: 0.75rem; }
+
+      .youtube-demo-message:not(:empty) { margin: 0.75rem auto 0; }
+
+      .youtube-demo-action { margin-top: 1.5rem; }
+
+      .youtube-demo-action a {
+        padding: 1rem 1.5rem;
+        font-size: clamp(1.125rem, 4vw, 1.625rem);
+        line-height: 1.3;
+      }
+
+      .youtube-demo-action p { margin-top: 0.75rem; }
+
+      .youtube-demo :focus-visible,
+      .youtube-demo-action :focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+      }
+
+      .youtube-demo [hidden], .youtube-demo-action [hidden] { display: none; }
+
+      @media (min-width: 48rem) {
+        .youtube-demo[data-mode="demo"] .youtube-demo-grid {
+          grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.44fr);
+        }
+
+        .youtube-demo-panel { grid-column: 2; }
+      }
+</style>
+
+
+    <link rel="canonical" href="https://pitch-changer.com/youtube-pitch-changer/" />
+<link rel="alternate" hreflang="en" href="https://pitch-changer.com/youtube-pitch-changer/" />
+<link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/youtube-pitch-changer/" />
+<style>
+      .site-topbar-shell {
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .site-topbar {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 2rem;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 1.25rem 3rem;
+      }
+
+      .site-brand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        white-space: nowrap;
+      }
+
+      .site-navigation {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .site-navigation a {
+        padding: 0.625rem 1rem;
+        border-radius: 0.5rem;
+        color: #4b5563;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .site-navigation a:hover,
+      .site-navigation a[aria-current="page"] {
+        background: #eff6ff;
+        color: #1d4ed8;
+      }
+
+      .site-brand:focus-visible,
+      .site-navigation a:focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+      }
+
+      .site-topbar .locale-switcher-menu {
+        right: 0;
+        left: auto;
+      }
+
+      html.dark .site-topbar-shell {
+        border-color: #374151;
+      }
+
+      html.dark .site-navigation a {
+        color: #d1d5db;
+      }
+
+      html.dark .site-navigation a:hover,
+      html.dark .site-navigation a[aria-current="page"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      @media (max-width: 767px) {
+        .site-topbar {
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .site-navigation {
+          grid-column: 1 / -1;
+          grid-row: 2;
+          flex-wrap: wrap;
+        }
+
+        .site-navigation a {
+          flex: 1;
+          padding-inline: 0.375rem;
+          font-size: 0.875rem;
+          text-align: center;
+        }
+
+        .site-topbar-locale {
+          grid-column: 2;
+          grid-row: 1;
+        }
+      }
+
+      .locale-switcher {
+        position: relative;
+        display: inline-flex;
+      }
+
+      .hero-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .hero-topbar-spacer {
+        display: none;
+      }
+
+      .hero-topbar-update {
+        max-width: 100%;
+      }
+
+      .hero-topbar-switcher {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .locale-switcher summary {
+        list-style: none;
+      }
+
+      .locale-switcher summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .locale-switcher-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 20;
+        min-width: 13rem;
+        border: 1px solid #d1d5db;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+      }
+
+      .locale-switcher-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        color: #111827;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .locale-switcher-link:hover,
+      .locale-switcher-link:focus-visible {
+        background: #eff6ff;
+        color: #1d4ed8;
+        outline: none;
+      }
+
+      .locale-switcher-link[aria-current="true"] {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .locale-switcher-abbr {
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      html.dark .locale-switcher-menu {
+        border-color: #374151;
+        background: #111827;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      html.dark .locale-switcher-link {
+        color: #f3f4f6;
+      }
+
+      html.dark .locale-switcher-link:hover,
+      html.dark .locale-switcher-link:focus-visible {
+        background: #1f2937;
+        color: #93c5fd;
+      }
+
+      html.dark .locale-switcher-link[aria-current="true"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      html.dark .locale-switcher-abbr {
+        color: #9ca3af;
+      }
+
+      @media (max-width: 640px) {
+        .locale-switcher-menu {
+          right: auto;
+          left: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero-topbar {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        }
+
+        .hero-topbar-spacer {
+          display: block;
+        }
+
+        .hero-topbar-update {
+          justify-self: center;
+        }
+
+        .hero-topbar-switcher {
+          justify-self: end;
+          width: auto;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://pitch-changer.com/youtube-pitch-changer/#webpage",
+        "url": "https://pitch-changer.com/youtube-pitch-changer/",
+        "name": "YouTube pitch changer",
+        "description": "Change the key of a song on YouTube with Pitch Changer Extension. Try the pitch slider on a sample video and hear the key change while the beat stays steady.",
+        "inLanguage": "en"
+      }
+    </script>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://pitch-changer.com/youtube-pitch-changer/#faq",
+      "url": "https://pitch-changer.com/youtube-pitch-changer/",
+      "inLanguage": "en",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can I use my own YouTube link in the demo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The demo plays a sample clip. To change the pitch of another video, open it on YouTube and use Pitch Changer Extension while it plays."
+        }
+      },{
+        "@type": "Question",
+        "name": "Can I change just the singer’s pitch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pitch Changer shifts the whole mix. The voice and instruments move by the same interval."
+        }
+      },{
+        "@type": "Question",
+        "name": "Does the pitch change affect the upload?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You hear the change during playback. The original upload stays as it is."
+        }
+      },{
+        "@type": "Question",
+        "name": "What if I already have a video file?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open it in Video pitch changer to watch it in a different key and save the shifted audio."
+        }
+      }]
+    }
+  </script>
+
+
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+<div class="site-topbar-shell" data-ui-review="site-topbar">
+  <div class="site-topbar">
+    <a class="site-brand" href="/">Pitch Changer</a>
+    <nav class="site-navigation" aria-label="Main navigation">
+<a href="/">For songs</a>
+<a href="/video-pitch-changer/">For videos</a>
+<a href="/youtube-pitch-changer/" aria-current="page">For YouTube</a>
+</nav>
+
+  </div>
+</div>
+
+
+
+<main>
+  <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12" data-ui-review="task-hero">
+    <div class="mt-6 text-center">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">YouTube pitch changer</h1>
+
+      <p class="youtube-demo-intro mb-6 mx-auto text-xl">Put a YouTube song in a key that fits your voice or instrument. Try the sample below, then use Pitch Changer Extension with your video on YouTube.</p>
+<section class="youtube-demo" data-ui-review="youtube-demo" data-youtube-demo aria-labelledby="youtube-demo-title"
+  data-worklet="/assets/widget/worklet-b4906c4e08355f03.js"
+  data-semitone="VALUE semitone" data-semitones="VALUE semitones"
+  data-loading="Getting the sample ready…" data-processor-error="The pitch control couldn’t start. You can still play the original sample."
+  data-video-error="The sample couldn’t load. Reload the page to try again.">
+  <h2 id="youtube-demo-title" class="text-2xl font-semibold">Pitch demo</h2>
+  <div class="youtube-demo-grid">
+    <div class="youtube-demo-player">
+      <video data-demo-video controls loop playsinline preload="none" width="640" height="360"
+        aria-label="Original backing track in D major" poster="/assets/youtube-demo/poster.webp"
+        src="/assets/youtube-demo/sample.mp4"></video>
+      <button type="button" class="youtube-demo-button youtube-demo-play" data-demo-play hidden
+        data-play="Play sample" data-pause="Pause sample">Play sample</button>
+    </div>
+    <div class="youtube-demo-panel" data-demo-panel hidden>
+      <p>Play the sample and set the pitch to −2 semitones. You’ll hear it go from D major to C major at the same tempo. Select <strong>Reset pitch</strong> to compare with the original.</p>
+      <div class="youtube-demo-pitch">
+        <label for="youtube-demo-pitch">Pitch in semitones</label>
+        <output for="youtube-demo-pitch" aria-hidden="true" data-demo-value>0 semitones</output>
+      </div>
+      <input type="range" id="youtube-demo-pitch" min="-12" max="12" step="1" value="0"
+        aria-valuetext="0 semitones" data-demo-pitch />
+      <button type="button" class="youtube-demo-button youtube-demo-reset" data-demo-reset>Reset pitch</button>
+    </div>
+  </div>
+  <p class="youtube-demo-message" data-demo-extension-help hidden>Play the sample, then open Pitch Changer from Chrome’s toolbar to adjust the pitch.</p>
+  <p class="youtube-demo-message" role="status" data-demo-status></p>
+  <noscript><p class="youtube-demo-message">Enable JavaScript to try the pitch slider.</p></noscript>
+</section>
+<div class="youtube-demo-action" data-ui-review="youtube-demo-action">
+  <a href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" class="inline-flex items-center justify-center text-center font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    data-demo-install>Add Pitch Changer to Chrome</a>
+  <a href="https://www.youtube.com/" class="inline-flex items-center justify-center text-center font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+    data-demo-youtube hidden>Open YouTube</a>
+  <p data-demo-install-help>Already added it? Reload this tab to try the sample with the extension.</p>
+</div>
+
+
+    </div>
+  </header>
+
+  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="instructions-title">
+    <h2 id="instructions-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">How to change pitch on YouTube</h2>
+
+    <ol class="mb-4 list-decimal list-inside space-y-4">
+<li>Add Pitch Changer from the Chrome Web Store.</li>
+<li>Open the YouTube video you want to practice with and press <strong>Play</strong>.</li>
+<li>Open Pitch Changer from Chrome’s toolbar or Extensions menu. Move <strong>Pitch Change (semitones)</strong> left to lower the key or right to raise it. Select <strong>Reset</strong> to hear the original key.</li>
+</ol>
+  </section>
+
+  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="example-title">
+    <h2 id="example-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Find a key that fits</h2>
+    <p>If the highest note in a chorus is A and you’d rather sing it as G, lower the pitch by two semitones. Then sing through the chorus again at the same tempo.</p>
+  </section>
+
+  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Frequently asked questions</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I use my own YouTube link in the demo?</h3>
+<p class="mb-4">The demo plays a sample clip. To change the pitch of another video, open it on YouTube and use Pitch Changer Extension while it plays.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I change just the singer’s pitch?</h3>
+<p class="mb-4">Pitch Changer shifts the whole mix. The voice and instruments move by the same interval.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Does the pitch change affect the upload?</h3>
+<p class="mb-4">You hear the change during playback. The original upload stays as it is.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">What if I already have a video file?</h3>
+<p class="mb-4">Open it in <a class="underline" href="/video-pitch-changer/">Video pitch changer</a> to watch it in a different key and save the shifted audio.</p>
+</section>
+</main>
+
+
+<footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        <nobr>© 2024–<script>document.write(new Date().getFullYear())</script>
+          <a href="https://extensions.ee/" class="underline">extensions.ee</a>.
+        </nobr>
+        <nobr>Contact: info@extensions.ee.</nobr>
+        <nobr>Payments and refunds:
+          <a href="https://paddle.net/" class="underline">Paddle</a>,
+          <a href="https://support.apple.com/billing" class="underline">Apple</a>.
+        </nobr>
+      </div>
+    </div>
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
+      <li><a href="/terms-and-conditions.html" class="hover:underline me-4 md:me-6">Terms and Conditions</a></li>
+      <li><a href="/refund-policy.html" class="hover:underline me-4 md:me-6">Refund Policy</a></li>
+      <li><a href="/privacy-policy.html" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-left">
+<p class="mb-4">Purchases made through our website are processed by our online reseller Paddle.com, which is the Merchant of Record for these orders. Paddle provides customer service for website orders and handles returns, billing and applicable taxes.</p>
+<p class="mb-4">Purchases made through the App Store are processed directly by Apple, which acts as the Merchant of Record for App Store orders. Apple manages billing, receipts, taxes, refunds and all related customer service inquiries for App Store purchases.</p>
+<p class="mb-4">If you are unsure where you purchased, please check your order confirmation email or receipt sent by Paddle or Apple.</p>
+<p>
+      Third-party trademarks and components are listed on the
+      <a href="https://extensions.ee/acknowledgements.html?from=pitch-changer.com" class="underline">Acknowledgements</a>
+      page.
+    </p>
+  </div>
+</footer>
+
+    <script>
+      (function() {
+        var localeLinks = document.querySelectorAll("[data-locale-link]");
+        var currentSearch = window.location.search || "";
+        var currentHash = window.location.hash || "";
+
+        function updateSectionLinks() {
+          currentHash = window.location.hash || "";
+
+          localeLinks.forEach(function(link) {
+            var targetPath = link.getAttribute("href").split(/[?#]/)[0];
+            link.href = targetPath + currentSearch + currentHash;
+          });
+        }
+
+        updateSectionLinks();
+        window.addEventListener("hashchange", updateSectionLinks);
+
+        localeLinks.forEach(function(link) {
+          var localeCode = link.getAttribute("data-locale-code");
+
+          link.addEventListener("click", function() {
+            if (!localeCode) return;
+
+            try {
+              window.localStorage.setItem("preferred_locale", localeCode);
+            } catch (error) {
+            }
+          });
+        });
+
+        var source = (new URLSearchParams(window.location.search)).get("utm_source");
+        if (source) {
+          document.querySelectorAll("a").forEach(function(link) {
+            if (link.href.startsWith("https://chromewebstore.google.com/")) {
+              link.href += "?utm_source=" + encodeURIComponent(source);
+            } else if (link.href.startsWith("https://apps.apple.com/")) {
+              link.href += "?ct=" + encodeURIComponent(source);
+            }
+          });
+        }
+
+        
+
+        document.addEventListener("click", function(event) {
+          document.querySelectorAll("[data-locale-switcher]").forEach(function(details) {
+            if (!details.contains(event.target)) {
+              details.removeAttribute("open");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

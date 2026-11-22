@@ -61,6 +61,7 @@
     <script type="module" src="/assets/widget/ui-e9ddcc82add4449d.js"></script>
 
 
+
     <link rel="canonical" href="https://pitch-changer.com/video-pitch-changer/" />
 <link rel="alternate" hreflang="en" href="https://pitch-changer.com/video-pitch-changer/" />
 <link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/video-pitch-changer/" />
@@ -140,10 +141,13 @@
         .site-navigation {
           grid-column: 1 / -1;
           grid-row: 2;
+          flex-wrap: wrap;
         }
 
         .site-navigation a {
           flex: 1;
+          padding-inline: 0.375rem;
+          font-size: 0.875rem;
           text-align: center;
         }
 
@@ -356,6 +360,7 @@
     <nav class="site-navigation" aria-label="Main navigation">
 <a href="/">For songs</a>
 <a href="/video-pitch-changer/" aria-current="page">For videos</a>
+<a href="/youtube-pitch-changer/">For YouTube</a>
 </nav>
 
   </div>
@@ -367,6 +372,7 @@
   <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12" data-ui-review="task-hero">
     <div class="mt-6 text-center">
       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Video pitch changer</h1>
+
       <section class="pitch-widget" data-pitch-widget="pitch-widget-video" data-ui-review="pitch-widget-video" aria-labelledby="pitch-widget-video-title">
   <div data-role="empty-state">
     <h2 id="pitch-widget-video-title" class="pw-heading text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Change video pitch</h2>
@@ -411,12 +417,15 @@
   <script type="application/json" data-config>{"strings":{"title":"Change pitch of a song","intro":"Find a comfortable key for singing or playing along. Export the result if needed.","choose":"Choose audio file","drop":"or drop one here","no_file":"No file selected","clear":"Clear","play":"Play","stop":"Stop","seek":"Playback position","pitch":"Pitch in semitones","pitch_value":"VALUE semitones","lower":"Lower pitch by one semitone","higher":"Raise pitch by one semitone","reset":"Reset pitch","download":"Download result","download_audio":"Download audio","video_preview":"Video preview","cancel":"Cancel export","loading":"Processing...","ready":"Ready. Press Play and adjust the key as you listen.","preparing":"Preparing audio at PITCH semitones...","exporting":"Preparing result at PITCH semitones: PROGRESS%","exported":"Result ready at PITCH semitones.","canceled":"Export canceled.","noscript":"Enable JavaScript to change the key of an audio or video file.","errors":{"empty":"This file is empty. Choose an audio or video file.","duration":"Export is limited to 10 minutes. You can still play and change the pitch of this track.","channels":"Choose a file with mono or stereo audio.","one_file":"Choose one audio or video file at a time.","decode":"This file could not be opened. Try another supported audio or video file.","processor":"The pitch processor could not start. Try pressing Play again or reload and choose your file.","capability":"This tool needs a browser with audio processing support. Try a recent version of Chrome.","export":"The result could not be prepared. Try downloading it again."}},"limits":{"max_seconds":600,"max_sample_rate":48000},"assets":{"worklet":"/assets/widget/worklet-b4906c4e08355f03.js","worker":"/assets/widget/worker-7dcfce1dada93db4.js"}}</script>
 </section>
 <p class="mt-6 text-xl" data-ui-review="extension-note">Don't have a video file? <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Get Pitch Changer Extension</a> and adjust the pitch on YouTube and other websites.</p>
+
     </div>
   </header>
 
   <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="instructions-title">
     <h2 id="instructions-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">How to change a video's pitch</h2>
+
     <p class="mb-4">A video pitch changer raises or lowers the sound in a video while keeping the tempo steady. Use it to put a song in a key that fits your voice or instrument.</p>
+
     <ol class="mb-4 list-decimal list-inside space-y-4">
 <li>Select "Choose video file" or drop a video onto the tool.</li>
 <li>Press Play and adjust Pitch in semitones as you listen. Negative values lower the sound; positive values raise it. You can shift from −12 to +12 semitones.</li>
