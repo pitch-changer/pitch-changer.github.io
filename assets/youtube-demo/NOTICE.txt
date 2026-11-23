@@ -1,4 +1,9 @@
-The original composition, recording, and animation in sample.mp4 and poster.webp
-are dedicated to the public domain under Creative Commons CC0 1.0 Universal.
+Music: “Melodic EDM Loops” (melodicedm.wav) by Fupi, published under
+Creative Commons CC0 1.0 Universal. Trimmed to four bars with short fades
+at the loop boundary and adjusted for playback loudness.
 
+Source: https://opengameart.org/content/melodic-edm-loops
+Original WAV: https://opengameart.org/sites/default/files/melodicedm.wav
+
+The visualizer and poster are dedicated to the public domain under CC0 1.0.
 https://creativecommons.org/publicdomain/zero/1.0/
