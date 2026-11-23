@@ -298,12 +298,6 @@
         min-height: 12rem;
       }
 
-      .youtube-demo-installed a {
-        padding: 0.875rem 1rem;
-        font-size: 1.25rem;
-        line-height: 1.3;
-      }
-
       .youtube-demo :focus-visible {
         outline: 3px solid #3b82f6;
         outline-offset: 3px;
@@ -885,8 +879,8 @@
     <p class="youtube-demo-message" role="status" data-demo-status></p>
     <noscript><p class="youtube-demo-message">Enable JavaScript to try the pitch slider.</p></noscript>
   </div>
-  <div class="youtube-demo-installed" data-demo-installed hidden>
-    <a href="https://www.youtube.com/" class="inline-flex items-center justify-center text-center font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+  <div data-demo-installed hidden>
+    <a href="https://www.youtube.com/" class="inline-flex items-center justify-center px-8 py-8 text-3xl font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
       data-demo-youtube>Open YouTube</a>
   </div>
 </section>
@@ -910,10 +904,10 @@
         aria-label="Add Pitch Changer from the Chrome Web Store">
         <span class="youtube-guide-store-button">
           Add to Chrome
-          <img src="/assets/youtube-walkthrough/cursor.png" width="80" height="80" alt="" loading="lazy" />
+          <img src="/assets/youtube-walkthrough/cursor.svg" width="80" height="80" alt="" loading="lazy" />
         </span>
       </a>
-      <p class="youtube-guide-caption">In the Chrome Web Store, select <strong>Add to Chrome</strong>, then <strong>Add extension</strong>.</p>
+      <p class="youtube-guide-caption">In the <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Chrome Web Store</a>, select <strong>Add to Chrome</strong>, then <strong>Add extension</strong>.</p>
     </li>
     <li>
       <h3 class="youtube-guide-step-title"><span class="youtube-guide-number" aria-hidden="true">2.</span>Open YouTube</h3>
@@ -936,7 +930,7 @@
           </div>
         </div>
       </div>
-      <p class="youtube-guide-caption">Open Pitch Changer from Chrome’s toolbar or Extensions menu. If prompted, select <strong>Refresh the Tab</strong>, play the video again, and reopen Pitch Changer. Move the slider left to lower the key or right to raise it.</p>
+      <p class="youtube-guide-caption">Open Pitch Changer from the browser toolbar or Extensions menu. Move the slider left to lower the key or right to raise it.</p>
     </li>
   </ol>
 </section>
