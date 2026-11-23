@@ -58,7 +58,7 @@
 
 
 
-    <script type="module" src="/assets/widget/youtube-demo-95d3b298b762e3cc.js"></script>
+    <script type="module" src="/assets/widget/youtube-demo-f200c3b8ecd78f1a.js"></script>
     <style>      .youtube-demo {
         --demo-border: #d1d5db;
         --demo-panel: #fff;
@@ -129,6 +129,12 @@
         margin-bottom: var(--demo-extension-gap);
         border: 1px solid var(--demo-border);
         border-radius: 50%;
+        background: var(--demo-panel);
+        cursor: pointer;
+      }
+
+      .youtube-demo-extension-icon:hover,
+      .youtube-demo-extension-icon[aria-expanded="true"] {
         background: var(--demo-extension-highlight);
       }
 
@@ -638,10 +644,11 @@
     </div>
     <div class="youtube-demo-sidebar">
       <div class="youtube-demo-panel" data-demo-panel hidden>
-        <span class="youtube-demo-extension-icon" aria-hidden="true">
+        <button type="button" class="youtube-demo-extension-icon" data-demo-popup-toggle
+          aria-label="Pitch Changer popup" aria-expanded="true" aria-controls="youtube-demo-popup">
           <img src="/icons/32.png" width="20" height="20" alt="" />
-        </span>
-        <div class="youtube-demo-popup">
+        </button>
+        <div class="youtube-demo-popup" id="youtube-demo-popup">
           <label for="youtube-demo-pitch">Pitch Change (semitones)</label>
           <input type="range" id="youtube-demo-pitch" min="-12" max="12" step="1" value="0"
             aria-valuetext="0 semitones" data-demo-pitch />
