@@ -58,7 +58,7 @@
 
 
 
-    <script type="module" src="/assets/widget/youtube-demo-20907ac4dd0a0737.js"></script>
+    <script type="module" src="/assets/widget/youtube-demo-6a3478706083d6e6.js"></script>
     <style>      .youtube-demo {
         --demo-border: #d1d5db;
         --demo-panel: #fff;
@@ -298,6 +298,35 @@
         min-height: 12rem;
       }
 
+      .youtube-installed-check { display: none; }
+
+      .youtube-demo[data-mode="extension"] #youtube-demo-title,
+      [data-youtube-install-step][data-installed] .youtube-guide-step-title { color: #15803d; }
+
+      html.dark .youtube-demo[data-mode="extension"] #youtube-demo-title,
+      html.dark [data-youtube-install-step][data-installed] .youtube-guide-step-title { color: #4ade80; }
+
+      .youtube-demo[data-mode="extension"] .youtube-installed-check,
+      [data-youtube-install-step][data-installed] .youtube-installed-check {
+        display: inline-grid;
+        flex: none;
+        place-items: center;
+        vertical-align: 0.2em;
+        width: 1.167em;
+        height: 1.167em;
+        border: 0.084em solid currentColor;
+        border-radius: 50%;
+      }
+
+      .youtube-installed-check::before {
+        content: "";
+        width: 0.5em;
+        height: 0.292em;
+        border-bottom: 0.084em solid currentColor;
+        border-left: 0.084em solid currentColor;
+        transform: translateY(-0.042em) rotate(-45deg);
+      }
+
       .youtube-demo :focus-visible {
         outline: 3px solid #3b82f6;
         outline-offset: 3px;
@@ -344,31 +373,9 @@
         line-height: 2rem;
       }
 
-      .youtube-guide-check,
       .youtube-guide-installed-status,
       [data-youtube-install-step][data-installed] .youtube-guide-number {
         display: none;
-      }
-
-      [data-youtube-install-step][data-installed] .youtube-guide-step-title { color: #15803d; }
-      html.dark [data-youtube-install-step][data-installed] .youtube-guide-step-title { color: #4ade80; }
-
-      [data-youtube-install-step][data-installed] .youtube-guide-check {
-        display: grid;
-        place-items: center;
-        width: 1.75rem;
-        height: 1.75rem;
-        border: 2px solid currentColor;
-        border-radius: 50%;
-      }
-
-      .youtube-guide-check::before {
-        content: "";
-        width: 0.75rem;
-        height: 0.4375rem;
-        border-bottom: 2px solid currentColor;
-        border-left: 2px solid currentColor;
-        transform: translateY(-0.0625rem) rotate(-45deg);
       }
 
       [data-youtube-install-step][data-installed] .youtube-guide-installed-status { display: block; }
@@ -826,7 +833,10 @@
   data-semitone="VALUE semitone" data-semitones="VALUE semitones"
   data-loading="Getting the sample ready…" data-processor-error="The pitch control couldn’t start. You can still play the original sample."
   data-video-error="The sample couldn’t load. Reload the page to try again." data-installed-title="Extension is installed">
-  <h2 id="youtube-demo-title" class="text-3xl font-bold">Try the demo</h2>
+  <h2 id="youtube-demo-title" class="text-3xl font-bold">
+    <span class="youtube-installed-check" aria-hidden="true"></span>
+    <span data-demo-title>Try the demo</span>
+  </h2>
   <div data-demo-content>
     <p class="youtube-demo-intro text-xl">
       <span class="youtube-demo-tip">Play the sample and move the slider.</span>
@@ -896,7 +906,7 @@
     <li data-youtube-install-step>
       <h3 class="youtube-guide-step-title">
         <span class="youtube-guide-number" aria-hidden="true">1.</span>
-        <span class="youtube-guide-check" aria-hidden="true"></span>
+        <span class="youtube-installed-check" aria-hidden="true"></span>
         Add the extension
         <span class="sr-only youtube-guide-installed-status">(Extension is installed)</span>
       </h3>
