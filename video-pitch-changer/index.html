@@ -58,7 +58,7 @@
 
 
     <link rel="stylesheet" href="/assets/widget/css-1493df019a3e2b6b.css" />
-    <script type="module" src="/assets/widget/ui-e9ddcc82add4449d.js"></script>
+    <script type="module" src="/assets/widget/ui-03b47f8b31f85989.js"></script>
 
 
 
@@ -330,7 +330,7 @@
         "name": "Can I use a video longer than 10 minutes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can play longer videos and change their pitch. You can export audio from videos up to 10 minutes long."
+          "text": "You can play longer videos and change their pitch. In desktop Chrome or Edge, you can save up to an hour of audio from an MP4 with AAC sound. The export limit for other files and browsers is 10 minutes."
         }
       },{
         "@type": "Question",
@@ -408,13 +408,13 @@
       <button type="button" class="text-xl" data-role="reset" disabled>Reset pitch</button>
       <button type="button" data-role="download" class="pw-primary text-xl" disabled>Download result</button>
     </div>
-    <p id="pitch-widget-video-export-limit" class="pw-export-limit text-xl text-gray-500 dark:text-gray-400" data-role="export-limit" hidden>Export is limited to 10 minutes. You can still play and change the pitch of this track.</p>
+    <p id="pitch-widget-video-export-limit" class="pw-export-limit text-xl text-gray-500 dark:text-gray-400" data-role="export-limit" hidden>Export is limited to 10 minutes for this file. You can still play and change its pitch.</p>
     <div class="pw-export" data-role="export" hidden><progress data-role="progress" max="100" value="0" aria-label="Download result"></progress><button type="button" class="text-xl" data-role="cancel">Cancel export</button></div>
   </div>
   <span class="pw-status" role="status" aria-live="polite" data-role="status"></span>
   <p class="pw-error text-xl text-red-700 dark:text-red-300" role="alert" data-role="error"></p>
   <noscript><p class="pw-noscript text-xl text-red-700 dark:text-red-300">Enable JavaScript to change the key of an audio or video file.</p></noscript>
-  <script type="application/json" data-config>{"strings":{"title":"Change pitch of a song","intro":"Find a comfortable key for singing or playing along. Export the result if needed.","choose":"Choose audio file","drop":"or drop one here","no_file":"No file selected","clear":"Clear","play":"Play","stop":"Stop","seek":"Playback position","pitch":"Pitch in semitones","pitch_value":"VALUE semitones","lower":"Lower pitch by one semitone","higher":"Raise pitch by one semitone","reset":"Reset pitch","download":"Download result","download_audio":"Download audio","video_preview":"Video preview","cancel":"Cancel export","loading":"Processing...","ready":"Ready. Press Play and adjust the key as you listen.","preparing":"Preparing audio at PITCH semitones...","exporting":"Preparing result at PITCH semitones: PROGRESS%","exported":"Result ready at PITCH semitones.","canceled":"Export canceled.","noscript":"Enable JavaScript to change the key of an audio or video file.","errors":{"empty":"This file is empty. Choose an audio or video file.","duration":"Export is limited to 10 minutes. You can still play and change the pitch of this track.","channels":"Choose a file with mono or stereo audio.","one_file":"Choose one audio or video file at a time.","decode":"This file could not be opened. Try another supported audio or video file.","processor":"The pitch processor could not start. Try pressing Play again or reload and choose your file.","capability":"This tool needs a browser with audio processing support. Try a recent version of Chrome.","export":"The result could not be prepared. Try downloading it again."}},"limits":{"max_seconds":600,"max_sample_rate":48000},"assets":{"worklet":"/assets/widget/worklet-b4906c4e08355f03.js","worker":"/assets/widget/worker-7dcfce1dada93db4.js"}}</script>
+  <script type="application/json" data-config>{"strings":{"title":"Change pitch of a song","intro":"Find a comfortable key for singing or playing along. Export the result if needed.","choose":"Choose audio file","drop":"or drop one here","no_file":"No file selected","clear":"Clear","play":"Play","stop":"Stop","seek":"Playback position","pitch":"Pitch in semitones","pitch_value":"VALUE semitones","lower":"Lower pitch by one semitone","higher":"Raise pitch by one semitone","reset":"Reset pitch","download":"Download result","download_audio":"Download audio","video_preview":"Video preview","cancel":"Cancel export","loading":"Processing...","ready":"Ready. Press Play and adjust the key as you listen.","preparing":"Preparing audio at PITCH semitones...","exporting":"Preparing result at PITCH semitones: PROGRESS%","exported":"Result ready at PITCH semitones.","canceled":"Export canceled.","noscript":"Enable JavaScript to change the key of an audio or video file.","errors":{"empty":"This file is empty. Choose an audio or video file.","duration":"Export is limited to 10 minutes for this file. You can still play and change its pitch.","stream_duration":"Export is limited to MINUTES minutes. You can still play and change the pitch of this track.","channels":"Choose a file with mono or stereo audio.","one_file":"Choose one audio or video file at a time.","decode":"This file could not be opened. Try another supported audio or video file.","processor":"The pitch processor could not start. Try pressing Play again or reload and choose your file.","capability":"This tool needs a browser with audio processing support. Try a recent version of Chrome.","export":"The result could not be prepared. Try downloading it again."}},"limits":{"max_seconds":600,"max_stream_seconds":3600,"max_sample_rate":48000},"assets":{"worklet":"/assets/widget/worklet-b4906c4e08355f03.js","worker":"/assets/widget/worker-7dcfce1dada93db4.js","stream":"/assets/widget/stream-e12887501a0e3b78.js"}}</script>
 </section>
 <p class="mt-6 text-xl" data-ui-review="extension-note">Don't have a video file? <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Get Pitch Changer Extension</a> and adjust the pitch on YouTube and other websites.</p>
 
@@ -443,7 +443,7 @@
       </div>
 <div class="bg-white p-6 shadow dark:bg-gray-800 dark:shadow-gray-950/30">
         <dt class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Video longer than 10 minutes</dt>
-        <dd class="text-base text-gray-700 dark:text-gray-300">Keep watching in the new key. To take a passage to rehearsal, trim a copy of the video to 10 minutes or less, then open it here and apply the same shift.</dd>
+        <dd class="text-base text-gray-700 dark:text-gray-300">Try <strong>Download audio</strong> in desktop Chrome or Edge with an MP4 video that has AAC audio. If the download is unavailable, trim a copy to 10 minutes or less and apply the same pitch shift.</dd>
       </div>
 </dl>
   </section>
@@ -460,7 +460,7 @@
 <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Which video files can I use?</h3>
 <p class="mb-4">Try an MP4 or WebM file. Compatibility depends on how the video's picture and sound are encoded and what your browser supports.</p>
 <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I use a video longer than 10 minutes?</h3>
-<p class="mb-4">You can play longer videos and change their pitch. You can export audio from videos up to 10 minutes long.</p>
+<p class="mb-4">You can play longer videos and change their pitch. In desktop Chrome or Edge, you can save up to an hour of audio from an MP4 with AAC sound. The export limit for other files and browsers is 10 minutes.</p>
 <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Does my video get uploaded?</h3>
 <p class="mb-4">All processing happens locally in your browser. Your video file never leaves your device.</p>
 <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I paste a YouTube link?</h3>
