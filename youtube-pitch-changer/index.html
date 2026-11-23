@@ -58,7 +58,7 @@
 
 
 
-    <script type="module" src="/assets/widget/youtube-demo-4ee76964296e1a76.js"></script>
+    <script type="module" src="/assets/widget/youtube-demo-20907ac4dd0a0737.js"></script>
     <style>      .youtube-demo {
         --demo-border: #d1d5db;
         --demo-panel: #fff;
@@ -234,24 +234,24 @@
         cursor: pointer;
       }
 
-      .youtube-demo-play::before,
-      .youtube-demo-play::after {
+      .youtube-play-symbol::before,
+      .youtube-play-symbol::after {
         content: "";
         grid-area: 1 / 1;
       }
 
-      .youtube-demo-play::before {
-        width: 4.5rem;
-        height: 3rem;
-        border-radius: 0.75rem;
+      .youtube-play-symbol::before {
+        width: var(--play-width, 4.5rem);
+        height: var(--play-height, 3rem);
+        border-radius: var(--play-radius, 0.75rem);
         background: #d5002c;
       }
 
-      .youtube-demo-play:hover::before { background: #b60025; }
+      .youtube-play-symbol:hover::before { background: #b60025; }
 
-      .youtube-demo-play::after {
-        width: 1.125rem;
-        height: 1.25rem;
+      .youtube-play-symbol::after {
+        width: var(--play-glyph-width, 1.125rem);
+        height: var(--play-glyph-height, 1.25rem);
         margin-left: 0.1875rem;
         background: currentColor;
         clip-path: polygon(0 0, 100% 50%, 0 100%);
@@ -290,7 +290,15 @@
 
       .youtube-demo-action a { width: 100%; }
 
-      .youtube-demo-action [data-demo-youtube] {
+      .youtube-demo[data-mode="extension"] {
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        gap: 1rem;
+        min-height: 12rem;
+      }
+
+      .youtube-demo-installed a {
         padding: 0.875rem 1rem;
         font-size: 1.25rem;
         line-height: 1.3;
@@ -315,6 +323,209 @@
         .youtube-demo[data-mode="demo"] .youtube-demo-player {
           margin-top: calc(var(--demo-extension-size) + var(--demo-extension-gap));
         }
+      }
+</style>
+
+
+    <style>      .youtube-guide { max-width: 36rem; }
+
+      .youtube-guide-steps {
+        display: grid;
+        gap: 2rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      @media (min-width: 64rem) {
+        .youtube-guide { max-width: 80rem; }
+        .youtube-guide-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+
+      .youtube-guide-step-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+      }
+
+      .youtube-guide-check,
+      .youtube-guide-installed-status,
+      [data-youtube-install-step][data-installed] .youtube-guide-number {
+        display: none;
+      }
+
+      [data-youtube-install-step][data-installed] .youtube-guide-step-title { color: #15803d; }
+      html.dark [data-youtube-install-step][data-installed] .youtube-guide-step-title { color: #4ade80; }
+
+      [data-youtube-install-step][data-installed] .youtube-guide-check {
+        display: grid;
+        place-items: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        border: 2px solid currentColor;
+        border-radius: 50%;
+      }
+
+      .youtube-guide-check::before {
+        content: "";
+        width: 0.75rem;
+        height: 0.4375rem;
+        border-bottom: 2px solid currentColor;
+        border-left: 2px solid currentColor;
+        transform: translateY(-0.0625rem) rotate(-45deg);
+      }
+
+      [data-youtube-install-step][data-installed] .youtube-guide-installed-status { display: block; }
+
+      .youtube-guide-art {
+        display: grid;
+        place-items: center;
+        aspect-ratio: 3 / 2;
+        min-height: 12rem;
+        margin-top: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        background: #f9fafb;
+      }
+
+      html.dark .youtube-guide-art {
+        border-color: #4b5563;
+        background: #1f2937;
+      }
+
+      a.youtube-guide-art:focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+      }
+
+      .youtube-guide-store-button {
+        position: relative;
+        transform: translate(-0.5rem, -0.75rem);
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        background: #0b57d0;
+        color: #fff;
+        font: 500 1rem/1.5 Roboto, Arial, sans-serif;
+      }
+
+      .youtube-guide-store:hover .youtube-guide-store-button { background: #0842a0; }
+
+      .youtube-guide-store-button img {
+        position: absolute;
+        top: 65%;
+        left: calc(100% - 3rem);
+        width: 5rem;
+        max-width: none;
+        height: auto;
+      }
+
+      html.dark .youtube-guide-store-button img { filter: invert(1); }
+
+      .youtube-guide-play {
+        --play-width: 7.5rem;
+        --play-height: 5rem;
+        --play-radius: 1.25rem;
+        --play-glyph-width: 1.875rem;
+        --play-glyph-height: 2.125rem;
+        color: #fff;
+      }
+
+      .youtube-guide-browser { padding: 0.75rem; }
+
+      .youtube-guide-window {
+        width: min(100%, 22rem);
+        overflow: hidden;
+        border: 1px solid #cdd4df;
+        border-radius: 0.625rem;
+        color: #111827;
+        background: #fff;
+      }
+
+      .youtube-guide-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.25rem 0.375rem;
+        border-bottom: 1px solid #dbe0e7;
+      }
+
+      .youtube-guide-address {
+        flex: 1;
+        height: 1.75rem;
+        border-radius: 999px;
+        background: #eaf0f8;
+      }
+
+      .youtube-guide-extension {
+        display: grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #adb5c0;
+        border-radius: 50%;
+        background: #e3e4e6;
+      }
+
+      .youtube-guide-popup {
+        --pitch-position: 58.333%;
+        margin: 0 0.375rem 0.875rem 0.625rem;
+        padding: 0.625rem 0.75rem;
+        border: 1px solid #e0e3e9;
+        background: #f6f7f8;
+        box-shadow: 0 2px 5px rgb(0 0 0 / 18%);
+        font-size: 0.875rem;
+      }
+
+      .youtube-guide-track {
+        position: relative;
+        height: 0.5rem;
+        margin-top: 0.625rem;
+        border-radius: 999px;
+        background: #cdd2d9;
+      }
+
+      .youtube-guide-track::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: var(--pitch-position);
+        width: 1.125rem;
+        height: 1.125rem;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #155eef;
+      }
+
+      .youtube-guide-readout {
+        position: relative;
+        height: 1.25rem;
+        margin-top: 0.375rem;
+      }
+
+      .youtube-guide-readout span {
+        position: absolute;
+        left: var(--pitch-position);
+        transform: translateX(-50%);
+      }
+
+      .youtube-guide-reset {
+        display: block;
+        width: fit-content;
+        margin-top: 0.25rem;
+        margin-inline: auto;
+        padding: 0.125rem 0.5rem;
+        border: 1px solid currentColor;
+        border-radius: 0.375rem;
+        color: #174ee7;
+        font-weight: 500;
+      }
+
+      .youtube-guide-caption {
+        margin-top: 0.75rem;
+        font-size: 1.125rem;
+        line-height: 1.5;
       }
 </style>
 
@@ -620,40 +831,40 @@
   data-worklet="/assets/widget/worklet-f58ba59386314ce2.js"
   data-semitone="VALUE semitone" data-semitones="VALUE semitones"
   data-loading="Getting the sample ready…" data-processor-error="The pitch control couldn’t start. You can still play the original sample."
-  data-video-error="The sample couldn’t load. Reload the page to try again.">
+  data-video-error="The sample couldn’t load. Reload the page to try again." data-installed-title="Extension is installed">
   <h2 id="youtube-demo-title" class="text-2xl font-semibold">Try the demo</h2>
-  <p class="youtube-demo-intro">
-    <span class="youtube-demo-tip">Play the sample and move the slider.</span>
-    <span data-demo-install-copy>Install Pitch Changer to shift pitch on YouTube.</span>
-    <span data-demo-extension-help hidden>Play the sample and open Pitch Changer from your browser toolbar to adjust the pitch.</span>
-  </p>
-  <div class="youtube-demo-grid">
-    <div class="youtube-demo-player">
-      <video data-demo-video controls loop playsinline preload="none" width="640" height="360"
-        aria-label="Electronic music loop with an animated visualizer" poster="/assets/youtube-demo/poster.webp"
-        src="/assets/youtube-demo/sample.mp4"></video>
-      <button type="button" class="youtube-demo-play" data-demo-play hidden
-        aria-label="Play sample" data-play="Play sample" data-pause="Pause sample"></button>
-    </div>
-    <div class="youtube-demo-sidebar">
-      <div class="youtube-demo-panel" data-demo-panel hidden>
-        <button type="button" class="youtube-demo-extension-icon" data-demo-popup-toggle
-          aria-label="Pitch Changer popup" aria-expanded="true" aria-controls="youtube-demo-popup">
-          <img src="/icons/32.png" width="20" height="20" alt="" />
-        </button>
-        <div class="youtube-demo-popup" id="youtube-demo-popup">
-          <label for="youtube-demo-pitch">Pitch Change (semitones)</label>
-          <input type="range" id="youtube-demo-pitch" min="-12" max="12" step="1" value="0"
-            aria-valuetext="0 semitones" data-demo-pitch />
-          <div class="youtube-demo-readout">
-            <output for="youtube-demo-pitch" aria-hidden="true" data-demo-value>0</output>
-          </div>
-          <button type="button" class="youtube-demo-reset" data-demo-reset>Reset</button>
-        </div>
+  <div data-demo-content>
+    <p class="youtube-demo-intro">
+      <span class="youtube-demo-tip">Play the sample and move the slider.</span>
+      Click the big button to install the extension and shift pitch on YouTube.
+    </p>
+    <div class="youtube-demo-grid">
+      <div class="youtube-demo-player">
+        <video data-demo-video controls loop playsinline preload="none" width="640" height="360"
+          aria-label="Electronic music loop with an animated visualizer" poster="/assets/youtube-demo/poster.webp"
+          src="/assets/youtube-demo/sample.mp4"></video>
+        <button type="button" class="youtube-demo-play youtube-play-symbol" data-demo-play hidden
+          aria-label="Play sample" data-play="Play sample" data-pause="Pause sample"></button>
       </div>
-      <div class="youtube-demo-action" data-ui-review="youtube-demo-action">
-        <div data-demo-install>
-          <a
+      <div class="youtube-demo-sidebar">
+        <div class="youtube-demo-panel" data-demo-panel hidden>
+          <button type="button" class="youtube-demo-extension-icon" data-demo-popup-toggle
+            aria-label="Pitch Changer popup" aria-expanded="true" aria-controls="youtube-demo-popup">
+            <img src="/icons/32.png" width="20" height="20" alt="" />
+          </button>
+          <div class="youtube-demo-popup" id="youtube-demo-popup">
+            <label for="youtube-demo-pitch">Pitch Change (semitones)</label>
+            <input type="range" id="youtube-demo-pitch" min="-12" max="12" step="1" value="0"
+              aria-valuetext="0 semitones" data-demo-pitch />
+            <div class="youtube-demo-readout">
+              <output for="youtube-demo-pitch" aria-hidden="true" data-demo-value>0</output>
+            </div>
+            <button type="button" class="youtube-demo-reset" data-demo-reset>Reset</button>
+          </div>
+        </div>
+        <div class="youtube-demo-action" data-ui-review="youtube-demo-action">
+          <div data-demo-install>
+            <a
   href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb"
   target="_blank"
   rel="noopener"
@@ -667,63 +878,70 @@
 
 </a>
 
+          </div>
         </div>
-        <a href="https://www.youtube.com/" class="inline-flex items-center justify-center text-center font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
-          data-demo-youtube hidden>Open YouTube</a>
       </div>
     </div>
+    <p class="youtube-demo-message" role="status" data-demo-status></p>
+    <noscript><p class="youtube-demo-message">Enable JavaScript to try the pitch slider.</p></noscript>
   </div>
-  <p class="youtube-demo-message" role="status" data-demo-status></p>
-  <noscript><p class="youtube-demo-message">Enable JavaScript to try the pitch slider.</p></noscript>
+  <div class="youtube-demo-installed" data-demo-installed hidden>
+    <a href="https://www.youtube.com/" class="inline-flex items-center justify-center text-center font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+      data-demo-youtube>Open YouTube</a>
+  </div>
 </section>
 
 
     </div>
   </header>
 
-  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="sample-guide-title">
-    <h2 id="sample-guide-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">From the sample to your own song</h2>
-    <ol class="grid gap-8 lg:grid-cols-3 list-decimal list-inside">
-<li>
-        <h3 class="inline text-2xl font-semibold text-gray-900 dark:text-white">Hear the shift</h3>
-        <figure class="mt-3">
-          <img class="block w-full rounded-lg border border-gray-200 dark:border-gray-700"
-            src="/assets/youtube-walkthrough/sample-slider.webp" alt="The sample playing with its slider at minus two semitones and Reset below it."
-            width="704" height="470" loading="lazy" decoding="async" />
-          <figcaption class="mt-3 text-lg">Play the <a class="underline" href="#youtube-demo-title">sample</a> and try −2 semitones. Listen for the melody to drop at the same tempo, then select <strong>Reset</strong> to compare.</figcaption>
-        </figure>
-      </li>
-<li>
-        <h3 class="inline text-2xl font-semibold text-gray-900 dark:text-white">Open Pitch Changer</h3>
-        <figure class="mt-3">
-          <img class="block w-full rounded-lg border border-gray-200 dark:border-gray-700"
-            src="/assets/youtube-walkthrough/extensions-menu.webp" alt="Chrome’s puzzle-piece button with Pitch Changer listed in the Extensions menu."
-            width="704" height="470" loading="lazy" decoding="async" />
-          <figcaption class="mt-3 text-lg">Add <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Pitch Changer Extension</a> in Chrome. Play your song on YouTube and select <strong>Pitch Changer</strong> from Chrome’s <strong>Extensions</strong> menu.</figcaption>
-        </figure>
-      </li>
-<li>
-        <h3 class="inline text-2xl font-semibold text-gray-900 dark:text-white">Set the pitch on your song</h3>
-        <figure class="mt-3">
-          <img class="block w-full rounded-lg border border-gray-200 dark:border-gray-700"
-            src="/assets/youtube-walkthrough/extension-slider.webp" alt="The extension’s Pitch Change control set to minus two semitones."
-            width="704" height="470" loading="lazy" decoding="async" />
-          <figcaption class="mt-3 text-lg">Use <strong>Pitch Change (semitones)</strong> to try the same shift in that tab. Sing or play along and adjust until the key fits.</figcaption>
-        </figure>
-      </li>
-</ol>
-  </section>
 
-  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="instructions-title">
-    <h2 id="instructions-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">How to change pitch on YouTube</h2>
+  <section class="youtube-guide py-8 px-4 mx-auto text-left lg:py-12" aria-labelledby="youtube-guide-title" data-ui-review="youtube-guide">
+  <h2 id="youtube-guide-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">How to change pitch on YouTube</h2>
+  <ol class="youtube-guide-steps" role="list">
+    <li data-youtube-install-step>
+      <h3 class="youtube-guide-step-title">
+        <span class="youtube-guide-number" aria-hidden="true">1.</span>
+        <span class="youtube-guide-check" aria-hidden="true"></span>
+        Add the extension
+        <span class="sr-only youtube-guide-installed-status">(Extension is installed)</span>
+      </h3>
+      <a class="youtube-guide-art youtube-guide-store" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener"
+        aria-label="Add Pitch Changer from the Chrome Web Store">
+        <span class="youtube-guide-store-button">
+          Add to Chrome
+          <img src="/assets/youtube-walkthrough/cursor.png" width="80" height="80" alt="" loading="lazy" />
+        </span>
+      </a>
+      <p class="youtube-guide-caption">In the Chrome Web Store, select <strong>Add to Chrome</strong>, then <strong>Add extension</strong>.</p>
+    </li>
+    <li>
+      <h3 class="youtube-guide-step-title"><span class="youtube-guide-number" aria-hidden="true">2.</span>Open YouTube</h3>
+      <a class="youtube-guide-art youtube-guide-play youtube-play-symbol" href="https://www.youtube.com/" aria-label="Open YouTube"></a>
+      <p class="youtube-guide-caption">Open the YouTube video you want to practice with and press <strong>Play</strong>.</p>
+    </li>
+    <li>
+      <h3 class="youtube-guide-step-title"><span class="youtube-guide-number" aria-hidden="true">3.</span>Change the pitch</h3>
+      <div class="youtube-guide-art youtube-guide-browser" role="img" aria-label="The Pitch Changer popup below its toolbar icon, with the slider set to plus two semitones.">
+        <div class="youtube-guide-window" aria-hidden="true">
+          <div class="youtube-guide-toolbar">
+            <span class="youtube-guide-address"></span>
+            <span class="youtube-guide-extension"><img src="/icons/32.png" width="24" height="24" alt="" loading="lazy" /></span>
+          </div>
+          <div class="youtube-guide-popup">
+            <div>Pitch Change (semitones):</div>
+            <div class="youtube-guide-track"></div>
+            <div class="youtube-guide-readout"><span>+2</span></div>
+            <span class="youtube-guide-reset">Reset</span>
+          </div>
+        </div>
+      </div>
+      <p class="youtube-guide-caption">Open Pitch Changer from Chrome’s toolbar or Extensions menu. If prompted, select <strong>Refresh the Tab</strong>, play the video again, and reopen Pitch Changer. Move the slider left to lower the key or right to raise it.</p>
+    </li>
+  </ol>
+</section>
 
-    <ol class="mb-4 list-decimal list-inside space-y-4">
-<li>Add <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Pitch Changer Extension</a> from the Chrome Web Store.</li>
-<li>Open the YouTube video you want to practice with and press <strong>Play</strong>.</li>
-<li>Open Pitch Changer from Chrome’s toolbar or Extensions menu. If prompted, select <strong>Refresh the Tab</strong>, play the video again, and reopen Pitch Changer.</li>
-<li>Move <strong>Pitch Change (semitones)</strong> left to lower the key or right to raise it. Select <strong>Reset</strong> to hear the original key.</li>
-</ol>
-  </section>
+
 
   <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="example-title">
     <h2 id="example-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Find a key that fits</h2>
