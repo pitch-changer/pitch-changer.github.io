@@ -913,11 +913,11 @@
       <a class="youtube-guide-art youtube-guide-store" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener"
         aria-label="Add Pitch Changer from the Chrome Web Store">
         <span class="youtube-guide-store-button">
-          Add to Chrome
+          <span data-youtube-chrome-label="Add to Chrome">Get</span>
           <img src="/assets/youtube-walkthrough/cursor.svg" width="80" height="80" alt="" loading="lazy" />
         </span>
       </a>
-      <p class="youtube-guide-caption">In the <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Chrome Web Store</a>, select <strong>Add to Chrome</strong>, then <strong>Add extension</strong>.</p>
+      <p class="youtube-guide-caption">In the <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Chrome Web Store</a>, select <strong><span data-youtube-chrome-label="Add to Chrome">Get</span></strong>, then <strong>Add extension</strong>.</p>
     </li>
     <li>
       <h3 class="youtube-guide-step-title"><span class="youtube-guide-number" aria-hidden="true">2.</span>Open YouTube</h3>
@@ -944,6 +944,17 @@
     </li>
   </ol>
 </section>
+<script>
+  (() => {
+    const isChrome = navigator.userAgentData?.brands?.some(({ brand }) => brand === 'Google Chrome')
+      || /\bCriOS\//.test(navigator.userAgent);
+    if (!isChrome) return;
+
+    document.querySelectorAll('[data-youtube-chrome-label]').forEach((label) => {
+      label.textContent = label.dataset.youtubeChromeLabel;
+    });
+  })();
+</script>
 
 
 
