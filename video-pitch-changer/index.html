@@ -313,24 +313,10 @@
       "inLanguage": "en",
       "mainEntity": [{
         "@type": "Question",
-        "name": "Can I export the video with the new pitch?",
+        "name": "What if my video won’t open?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The export contains only the pitch-shifted audio."
-        }
-      },{
-        "@type": "Question",
-        "name": "Which video files can I use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Try an MP4 or WebM file. Compatibility depends on how the video's picture and sound are encoded and what your browser supports."
-        }
-      },{
-        "@type": "Question",
-        "name": "Can I use a video longer than 10 minutes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can play longer videos and change their pitch. You can export audio from videos up to 10 minutes long."
+          "text": "Try an MP4 or WebM copy with sound. Compatibility depends on how the video’s picture and sound are encoded and what your browser supports."
         }
       },{
         "@type": "Question",
@@ -338,13 +324,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "All processing happens locally in your browser. Your video file never leaves your device."
-        }
-      },{
-        "@type": "Question",
-        "name": "Can I paste a YouTube link?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "This tool opens video files. To change the pitch of videos playing on YouTube and other websites, use Pitch Changer Extension."
         }
       }]
     }
@@ -380,7 +359,7 @@
       <label class="text-3xl">Choose video file<input data-role="file" type="file" accept="video/*,.mp4,.webm,.mov,.m4v" aria-label="Choose video file" /></label>
       <span class="text-3xl">or drop one here</span>
     </div>
-    <p class="pw-intro text-xl text-gray-500 dark:text-gray-400">Watch your video and adjust the pitch as it plays. Export audio if needed.</p>
+    <p class="pw-intro text-xl text-gray-500 dark:text-gray-400">Watch your video and adjust the pitch as it plays. If you need to save the shifted audio, choose a video up to 10 minutes long.</p>
   </div>
   <div class="pw-file" data-role="file-details" hidden>
     <span class="pw-filename" data-role="filename"></span><time data-role="duration"></time>
@@ -424,33 +403,25 @@
   <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="instructions-title">
     <h2 id="instructions-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">How to change a video's pitch</h2>
 
-    <p class="mb-4">A video pitch changer raises or lowers the sound in a video while keeping the tempo steady. Use it to put a song in a key that fits your voice or instrument.</p>
-
     <ol class="mb-4 list-decimal list-inside space-y-4">
 <li>Select "Choose video file" or drop a video onto the tool.</li>
-<li>Press Play and adjust Pitch in semitones as you listen. Negative values lower the sound; positive values raise it. You can shift from −12 to +12 semitones.</li>
-<li>Use Reset pitch to compare with the original. Then return to the setting you want.</li>
-<li>Select Download audio to save the shifted sound.</li>
+<li>Press <strong>Play</strong> and find the passage you want to practice. Move <strong>Pitch in semitones</strong> left to lower the sound or right to raise it. The tempo stays steady.</li>
+<li>Select <strong>Reset pitch</strong> to hear the original key. Reapply your shift to bring back <strong>Download audio</strong>.</li>
+<li>For videos up to 10 minutes long, select <strong>Download audio</strong> to save a separate audio file. For longer videos, keep watching in the new key or open a shorter copy of the passage to save its audio.</li>
 </ol>
   </section>
 
   <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="example-title">
-    <h2 id="example-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Try a lower key</h2>
-    <p>If a backing track is in D major and feels too high, set the pitch to −2 semitones to hear it in C major. The tempo stays the same. Voices and instruments shift together.</p>
+    <h2 id="example-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Match the key you’ll rehearse in</h2>
+    <p>If your rehearsal video is in E-flat major and your group plays in D major, set the pitch to −1 semitone. Play along with the chorus to check the fit before saving.</p>
   </section>
 
   <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" id="faq" aria-labelledby="faq-title">
     <h2 id="faq-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Frequently asked questions</h2>
-<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I export the video with the new pitch?</h3>
-<p class="mb-4">The export contains only the pitch-shifted audio.</p>
-<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Which video files can I use?</h3>
-<p class="mb-4">Try an MP4 or WebM file. Compatibility depends on how the video's picture and sound are encoded and what your browser supports.</p>
-<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I use a video longer than 10 minutes?</h3>
-<p class="mb-4">You can play longer videos and change their pitch. You can export audio from videos up to 10 minutes long.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">What if my video won’t open?</h3>
+<p class="mb-4">Try an MP4 or WebM copy with sound. Compatibility depends on how the video’s picture and sound are encoded and what your browser supports.</p>
 <h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Does my video get uploaded?</h3>
 <p class="mb-4">All processing happens locally in your browser. Your video file never leaves your device.</p>
-<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I paste a YouTube link?</h3>
-<p class="mb-4">This tool opens video files. To change the pitch of videos playing on YouTube and other websites, use <a class="underline" href="https://chromewebstore.google.com/detail/pitch-changer/ledkjiplmbjfmnblpkpckbahgphoajfb" target="_blank" rel="noopener">Pitch Changer Extension</a>.</p>
 </section>
 </main>
 
