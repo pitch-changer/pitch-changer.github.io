@@ -57,11 +57,11 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 
-    <link rel="stylesheet" href="/assets/widget/css-132dc7b76668aa26.css" />
+    <link rel="stylesheet" href="/assets/widget/css-b2f0ae6dcb3dd5de.css" />
 
 
 
-    <script type="module" src="/assets/widget/chord-ui-5b10169cf1785cca.js"></script>
+    <script type="module" src="/assets/widget/chord-ui-16bc07da055c9872.js"></script>
 
 
 
@@ -364,7 +364,7 @@
 
 
 <main>
-  <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12" data-ui-review="task-hero">
+  <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12" data-ui-review="task-hero">
     <div class="mt-6 text-center">
       <h1 id="task-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Transposition of chords</h1>
 
@@ -393,16 +393,23 @@
           <option value="flats">Flats (♭)</option>
         </select>
       </div>
-      <button type="button" class="chord-reset" data-role="reset" disabled>Reset pitch</button>
+      <div class="chord-option-actions">
+        <button type="button" data-role="reset" disabled>Reset pitch</button>
+        <button type="button" class="chord-width-toggle" data-role="width-toggle" aria-controls="chord-editors"
+          data-full-width="Full width" data-side-by-side="Side by side" hidden>Full width</button>
+      </div>
     </div>
   </fieldset>
-  <div class="chord-editors">
+  <div id="chord-editors" class="chord-editors">
     <div class="chord-editor">
       <label for="chord-original">Original chords</label>
       <textarea id="chord-original" data-role="original" rows="7"
         aria-describedby="chord-help" spellcheck="false" autocapitalize="off" autocomplete="off">C     G/B   Am7   F
 G     F     C</textarea>
     </div>
+    <div class="chord-divider" data-role="divider" role="separator" tabindex="0" aria-orientation="vertical"
+      aria-label="Resize chord fields" aria-controls="chord-original"
+      aria-valuemin="30" aria-valuemax="70" aria-valuenow="50" hidden></div>
     <div class="chord-editor">
       <label for="chord-result">Transposed chords</label>
       <textarea id="chord-result" data-role="result" rows="7" placeholder="Result appears here." readonly></textarea>
