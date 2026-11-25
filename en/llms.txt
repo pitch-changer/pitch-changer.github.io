@@ -6,7 +6,7 @@ This reference covers the available Pitch Changer pages in this language and kee
 
 ## Site
 
-- [Pitch Changer](https://pitch-changer.com/): Start here to see how Pitch Changer helps singers, teachers, instrumentalists, producers, and DJs change key, transpose songs, and choose between the browser extension for websites and the offline app for files.- [Video pitch changer](https://pitch-changer.com/video-pitch-changer/): Watch a video file while raising or lowering its audio without changing the tempo, then save the shifted audio for rehearsal.- [YouTube pitch changer](https://pitch-changer.com/youtube-pitch-changer/): Try a sample video in a different key, then use Pitch Changer Extension to change the pitch of songs on YouTube at the original tempo.
+- [Pitch Changer](https://pitch-changer.com/): Start here to see how Pitch Changer helps singers, teachers, instrumentalists, producers, and DJs change key, transpose songs, and choose between the browser extension for websites and the offline app for files.- [Video pitch changer](https://pitch-changer.com/video-pitch-changer/): Watch a video file while raising or lowering its audio without changing the tempo, then save the shifted audio for rehearsal.- [YouTube pitch changer](https://pitch-changer.com/youtube-pitch-changer/): Try a sample video in a different key, then use Pitch Changer Extension to change the pitch of songs on YouTube at the original tempo.- [Transposition of chords](https://pitch-changer.com/transposition-of-chords/): Paste a chord chart, shift it up or down in semitones, and copy the result for rehearsal.
 
 
 ## Choose the right version

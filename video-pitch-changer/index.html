@@ -57,8 +57,11 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 
-    <link rel="stylesheet" href="/assets/widget/css-1493df019a3e2b6b.css" />
-    <script type="module" src="/assets/widget/ui-e93806e26179cef9.js"></script>
+    <link rel="stylesheet" href="/assets/widget/css-132dc7b76668aa26.css" />
+
+
+    <script type="module" src="/assets/widget/ui-7372753f31e0f9d3.js"></script>
+
 
 
 
@@ -142,14 +145,18 @@
         .site-navigation {
           grid-column: 1 / -1;
           grid-row: 2;
-          flex-wrap: wrap;
+          gap: 0.25rem;
         }
 
         .site-navigation a {
-          flex: 1;
-          padding-inline: 0.375rem;
+          display: grid;
+          place-items: center;
+          flex: 1 1 auto;
+          min-width: 0;
+          padding-inline: 0.125rem;
           font-size: 0.875rem;
           text-align: center;
+          white-space: normal;
         }
 
         .site-topbar-locale {
@@ -362,6 +369,7 @@
 <a href="/">For songs</a>
 <a href="/video-pitch-changer/" aria-current="page">For videos</a>
 <a href="/youtube-pitch-changer/">For YouTube</a>
+<a href="/transposition-of-chords/">For chords</a>
 </nav>
 
   </div>
@@ -372,7 +380,7 @@
 <main>
   <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12" data-ui-review="task-hero">
     <div class="mt-6 text-center">
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Video pitch changer</h1>
+      <h1 id="task-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Video pitch changer</h1>
 
       <section class="pitch-widget" data-pitch-widget="pitch-widget-video" data-ui-review="pitch-widget-video" aria-labelledby="pitch-widget-video-title">
   <div data-role="empty-state">
@@ -396,15 +404,20 @@
         <div class="pw-times" aria-hidden="true"><span data-role="elapsed">0:00</span><span data-role="total">0:00</span></div>
       </div>
     </div>
-    <div class="pw-pitch-label"><label for="pitch-widget-video-pitch">Pitch in semitones</label><output data-role="pitch-value" for="pitch-widget-video-pitch">0</output></div>
-    <div class="pw-pitch-controls">
-      <button type="button" class="text-xl" data-role="minus" aria-label="Lower pitch by one semitone" disabled>−</button>
-      <div>
-        <input id="pitch-widget-video-pitch" type="range" data-role="pitch" min="-12" max="12" step="1" value="0" disabled />
-        <div class="pw-pitch-scale" aria-hidden="true"><span>−12</span><span>0</span><span>+12</span></div>
-      </div>
-      <button type="button" class="text-xl" data-role="plus" aria-label="Raise pitch by one semitone" disabled>+</button>
-    </div>
+    
+    <div class="pw-pitch-label">
+  <label for="pitch-widget-video-pitch">Pitch in semitones</label>
+  <output data-role="pitch-value" for="pitch-widget-video-pitch">0</output>
+</div>
+<div class="pw-pitch-controls">
+  <button type="button" class="text-xl" data-role="minus" aria-label="Lower pitch by one semitone" disabled>−</button>
+  <div>
+    <input id="pitch-widget-video-pitch" type="range" data-role="pitch" min="-12" max="12" step="1" value="0" aria-valuetext="0 semitones" disabled />
+    <div class="pw-pitch-scale" aria-hidden="true"><span>−12</span><span>0</span><span>+12</span></div>
+  </div>
+  <button type="button" class="text-xl" data-role="plus" aria-label="Raise pitch by one semitone" disabled>+</button>
+</div>
+
     <div class="pw-actions" data-role="actions" hidden>
       <button type="button" class="text-xl" data-role="reset" disabled>Reset pitch</button>
       <button type="button" data-role="download" class="pw-primary text-xl" disabled>Download result</button>

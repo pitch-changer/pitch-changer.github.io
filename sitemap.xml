@@ -715,4 +715,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/youtube-pitch-changer/" />
 
   </url>
+
+  <url>
+    <loc>https://pitch-changer.com/transposition-of-chords/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://pitch-changer.com/transposition-of-chords/" />
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/transposition-of-chords/" />
+
+  </url>
 </urlset>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transposition of Chords - Pitch Changer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Transpose a chord chart up or down in semitones. Choose sharps or flats and copy the chords in the new key." />
+    <meta property="og:title" content="Transposition of Chords - Pitch Changer" />
+    <meta property="og:description" content="Transpose a chord chart up or down in semitones. Choose sharps or flats and copy the chords in the new key." />
+    <meta property="og:url" content="https://pitch-changer.com/transposition-of-chords/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pitch-changer.com/extension.png" />
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var hasManualDark = root.classList.contains("dark");
+
+        if (typeof window.matchMedia !== "function") {
+          return;
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyTheme(isDark) {
+          if (hasManualDark) {
+            root.classList.add("dark");
+            return;
+          }
+
+          root.classList.toggle("dark", isDark);
+        }
+
+        applyTheme(mediaQuery.matches);
+
+        function handleThemeChange(event) {
+          applyTheme(event.matches);
+        }
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleThemeChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleThemeChange);
+        }
+      })();
+    </script>
+    <link rel="icon" sizes="32x32" type="image/png" href="/icons/32.png" />
+    <link rel="icon" sizes="16x16" type="image/png" href="/icons/16.png" />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMQN6C9B1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BMQN6C9B1Q');
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="/assets/widget/css-132dc7b76668aa26.css" />
+
+
+
+    <script type="module" src="/assets/widget/chord-ui-5b10169cf1785cca.js"></script>
+
+
+
+
+    <link rel="canonical" href="https://pitch-changer.com/transposition-of-chords/" />
+<link rel="alternate" hreflang="en" href="https://pitch-changer.com/transposition-of-chords/" />
+<link rel="alternate" hreflang="x-default" href="https://pitch-changer.com/transposition-of-chords/" />
+<style>
+      .site-topbar-shell {
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .site-topbar {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 2rem;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 1.25rem 3rem;
+      }
+
+      .site-brand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        white-space: nowrap;
+      }
+
+      .site-navigation {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .site-navigation a {
+        padding: 0.625rem 1rem;
+        border-radius: 0.5rem;
+        color: #4b5563;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .site-navigation a:hover,
+      .site-navigation a[aria-current="page"] {
+        background: #eff6ff;
+        color: #1d4ed8;
+      }
+
+      .site-brand:focus-visible,
+      .site-navigation a:focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 3px;
+      }
+
+      .site-topbar .locale-switcher-menu {
+        right: 0;
+        left: auto;
+      }
+
+      html.dark .site-topbar-shell {
+        border-color: #374151;
+      }
+
+      html.dark .site-navigation a {
+        color: #d1d5db;
+      }
+
+      html.dark .site-navigation a:hover,
+      html.dark .site-navigation a[aria-current="page"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      @media (max-width: 767px) {
+        .site-topbar {
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .site-navigation {
+          grid-column: 1 / -1;
+          grid-row: 2;
+          gap: 0.25rem;
+        }
+
+        .site-navigation a {
+          display: grid;
+          place-items: center;
+          flex: 1 1 auto;
+          min-width: 0;
+          padding-inline: 0.125rem;
+          font-size: 0.875rem;
+          text-align: center;
+          white-space: normal;
+        }
+
+        .site-topbar-locale {
+          grid-column: 2;
+          grid-row: 1;
+        }
+      }
+
+      .locale-switcher {
+        position: relative;
+        display: inline-flex;
+      }
+
+      .hero-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .hero-topbar-spacer {
+        display: none;
+      }
+
+      .hero-topbar-update {
+        max-width: 100%;
+      }
+
+      .hero-topbar-switcher {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .locale-switcher summary {
+        list-style: none;
+      }
+
+      .locale-switcher summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .locale-switcher-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 20;
+        min-width: 13rem;
+        border: 1px solid #d1d5db;
+        border-radius: 1.5rem;
+        background: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+      }
+
+      .locale-switcher-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        color: #111827;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .locale-switcher-link:hover,
+      .locale-switcher-link:focus-visible {
+        background: #eff6ff;
+        color: #1d4ed8;
+        outline: none;
+      }
+
+      .locale-switcher-link[aria-current="true"] {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+
+      .locale-switcher-abbr {
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      html.dark .locale-switcher-menu {
+        border-color: #374151;
+        background: #111827;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      html.dark .locale-switcher-link {
+        color: #f3f4f6;
+      }
+
+      html.dark .locale-switcher-link:hover,
+      html.dark .locale-switcher-link:focus-visible {
+        background: #1f2937;
+        color: #93c5fd;
+      }
+
+      html.dark .locale-switcher-link[aria-current="true"] {
+        background: #1e3a8a;
+        color: #dbeafe;
+      }
+
+      html.dark .locale-switcher-abbr {
+        color: #9ca3af;
+      }
+
+      @media (max-width: 640px) {
+        .locale-switcher-menu {
+          right: auto;
+          left: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero-topbar {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        }
+
+        .hero-topbar-spacer {
+          display: block;
+        }
+
+        .hero-topbar-update {
+          justify-self: center;
+        }
+
+        .hero-topbar-switcher {
+          justify-self: end;
+          width: auto;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://pitch-changer.com/transposition-of-chords/#webpage",
+        "url": "https://pitch-changer.com/transposition-of-chords/",
+        "name": "Transposition of chords",
+        "description": "Transpose a chord chart up or down in semitones. Choose sharps or flats and copy the chords in the new key.",
+        "inLanguage": "en"
+      }
+    </script>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://pitch-changer.com/transposition-of-chords/#faq",
+      "url": "https://pitch-changer.com/transposition-of-chords/",
+      "inLanguage": "en",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can I paste chords together with lyrics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Put chords on their own lines or use brackets for chords within a lyric line, as in “[C]Sing it [G]again.” Keep section headings and other notes on separate lines."
+        }
+      },{
+        "@type": "Question",
+        "name": "What happens to minor and seventh chords?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The chord quality stays the same. For example, moving the slider to +2 turns Am7 into Bm7 and D7 into E7."
+        }
+      },{
+        "@type": "Question",
+        "name": "Why do the chords look the same at +12 or −12?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Twelve semitones make an octave. The same chord names apply in either octave, so the chart keeps its original spelling."
+        }
+      }]
+    }
+  </script>
+
+
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+<div class="site-topbar-shell" data-ui-review="site-topbar">
+  <div class="site-topbar">
+    <a class="site-brand" href="/">Pitch Changer</a>
+    <nav class="site-navigation" aria-label="Main navigation">
+<a href="/">For songs</a>
+<a href="/video-pitch-changer/">For videos</a>
+<a href="/youtube-pitch-changer/">For YouTube</a>
+<a href="/transposition-of-chords/" aria-current="page">For chords</a>
+</nav>
+
+  </div>
+</div>
+
+
+
+<main>
+  <header class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-12" data-ui-review="task-hero">
+    <div class="mt-6 text-center">
+      <h1 id="task-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Transposition of chords</h1>
+
+      <section class="pitch-widget chord-widget" data-chord-widget data-ui-review="chord-widget" aria-labelledby="task-title"
+  data-pitch-value="VALUE semitones" data-copied="Copied to clipboard." data-copy-failed="The result is selected for manual copying.">
+  <p id="chord-help" class="pw-intro">Paste your chord chart and move the slider to put it in a new key.</p>
+  <fieldset class="chord-controls" data-role="controls" disabled>
+    <div class="pw-pitch-label">
+  <label for="chord-pitch">Shift in semitones</label>
+  <output data-role="pitch-value" for="chord-pitch">0</output>
+</div>
+<div class="pw-pitch-controls">
+  <button type="button" class="text-xl" data-role="minus" aria-label="Lower chords by one semitone" disabled>−</button>
+  <div>
+    <input id="chord-pitch" type="range" data-role="pitch" min="-12" max="12" step="1" value="0" aria-valuetext="0 semitones" disabled />
+    <div class="pw-pitch-scale" aria-hidden="true"><span>−12</span><span>0</span><span>+12</span></div>
+  </div>
+  <button type="button" class="text-xl" data-role="plus" aria-label="Raise chords by one semitone" disabled>+</button>
+</div>
+
+    <div class="chord-options">
+      <div class="chord-spelling">
+        <label for="chord-accidentals">Spell notes with</label>
+        <select id="chord-accidentals" data-role="accidentals">
+          <option value="sharps">Sharps (♯)</option>
+          <option value="flats">Flats (♭)</option>
+        </select>
+      </div>
+      <button type="button" class="chord-reset" data-role="reset" disabled>Reset pitch</button>
+    </div>
+  </fieldset>
+  <div class="chord-editors">
+    <div class="chord-editor">
+      <label for="chord-original">Original chords</label>
+      <textarea id="chord-original" data-role="original" rows="7" placeholder="C     G/B   Am7   F
+G     F     C"
+        aria-describedby="chord-help" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+    </div>
+    <div class="chord-editor">
+      <label for="chord-result">Transposed chords</label>
+      <textarea id="chord-result" data-role="result" rows="7" placeholder="Result appears here." readonly></textarea>
+      <div class="chord-result-actions">
+        <button type="button" class="pw-primary" data-role="copy" disabled>Copy result</button>
+        <span data-role="copy-status" role="status"></span>
+      </div>
+    </div>
+  </div>
+  <noscript><p class="pw-noscript">Enable JavaScript to transpose your chords.</p></noscript>
+</section>
+
+
+    </div>
+  </header>
+
+
+
+  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" aria-labelledby="example-title">
+    <h2 id="example-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Move a progression from C to D</h2>
+    <p>D is two semitones above C. Set the slider to <strong>+2</strong> to turn <code>C G/B Am7 F</code> into <code>D A/C# Bm7 G</code> with sharps selected. The bass note in <code>G/B</code> moves up two semitones, too.</p>
+  </section>
+
+  <section class="py-8 px-4 mx-auto max-w-screen-xl text-left text-xl lg:py-12" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 dark:text-white">Frequently asked questions</h2>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Can I paste chords together with lyrics?</h3>
+<p class="mb-4">Yes. Put chords on their own lines or use brackets for chords within a lyric line, as in “[C]Sing it [G]again.” Keep section headings and other notes on separate lines.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">What happens to minor and seventh chords?</h3>
+<p class="mb-4">The chord quality stays the same. For example, moving the slider to +2 turns Am7 into Bm7 and D7 into E7.</p>
+<h3 class="mb-4 mt-10 text-3xl tracking-tight text-gray-900 dark:text-gray-100">Why do the chords look the same at +12 or −12?</h3>
+<p class="mb-4">Twelve semitones make an octave. The same chord names apply in either octave, so the chart keeps its original spelling.</p>
+</section>
+</main>
+
+
+<footer class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        <nobr>© 2024–<script>document.write(new Date().getFullYear())</script>
+          <a href="https://extensions.ee/" class="underline">extensions.ee</a>.
+        </nobr>
+        <nobr>Contact: info@extensions.ee.</nobr>
+        <nobr>Payments and refunds:
+          <a href="https://paddle.net/" class="underline">Paddle</a>,
+          <a href="https://support.apple.com/billing" class="underline">Apple</a>.
+        </nobr>
+      </div>
+    </div>
+    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
+      <li><a href="/terms-and-conditions.html" class="hover:underline me-4 md:me-6">Terms and Conditions</a></li>
+      <li><a href="/refund-policy.html" class="hover:underline me-4 md:me-6">Refund Policy</a></li>
+      <li><a href="/privacy-policy.html" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+  <div class="block text-sm text-gray-500 dark:text-gray-400 sm:text-left">
+<p class="mb-4">Purchases made through our website are processed by our online reseller Paddle.com, which is the Merchant of Record for these orders. Paddle provides customer service for website orders and handles returns, billing and applicable taxes.</p>
+<p class="mb-4">Purchases made through the App Store are processed directly by Apple, which acts as the Merchant of Record for App Store orders. Apple manages billing, receipts, taxes, refunds and all related customer service inquiries for App Store purchases.</p>
+<p class="mb-4">If you are unsure where you purchased, please check your order confirmation email or receipt sent by Paddle or Apple.</p>
+<p>
+      Third-party trademarks and components are listed on the
+      <a href="https://extensions.ee/acknowledgements.html?from=pitch-changer.com" class="underline">Acknowledgements</a>
+      page.
+    </p>
+  </div>
+</footer>
+
+    <script>
+      (function() {
+        var localeLinks = document.querySelectorAll("[data-locale-link]");
+        var currentSearch = window.location.search || "";
+        var currentHash = window.location.hash || "";
+
+        function updateSectionLinks() {
+          currentHash = window.location.hash || "";
+
+          localeLinks.forEach(function(link) {
+            var targetPath = link.getAttribute("href").split(/[?#]/)[0];
+            link.href = targetPath + currentSearch + currentHash;
+          });
+        }
+
+        updateSectionLinks();
+        window.addEventListener("hashchange", updateSectionLinks);
+
+        localeLinks.forEach(function(link) {
+          var localeCode = link.getAttribute("data-locale-code");
+
+          link.addEventListener("click", function() {
+            if (!localeCode) return;
+
+            try {
+              window.localStorage.setItem("preferred_locale", localeCode);
+            } catch (error) {
+            }
+          });
+        });
+
+        var source = (new URLSearchParams(window.location.search)).get("utm_source");
+        if (source) {
+          document.querySelectorAll("a").forEach(function(link) {
+            if (link.href.startsWith("https://chromewebstore.google.com/")) {
+              link.href += "?utm_source=" + encodeURIComponent(source);
+            } else if (link.href.startsWith("https://apps.apple.com/")) {
+              link.href += "?ct=" + encodeURIComponent(source);
+            }
+          });
+        }
+
+        
+
+        document.addEventListener("click", function(event) {
+          document.querySelectorAll("[data-locale-switcher]").forEach(function(details) {
+            if (!details.contains(event.target)) {
+              details.removeAttribute("open");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
