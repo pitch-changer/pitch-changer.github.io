@@ -85,6 +85,9 @@
       }
 
       .site-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
         font-size: 1.25rem;
         font-weight: 800;
         letter-spacing: -0.025em;
@@ -135,7 +138,7 @@
         color: #dbeafe;
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: 959px) {
         .site-topbar {
           grid-template-columns: minmax(0, 1fr) auto;
           gap: 1rem;
@@ -364,7 +367,10 @@
 
 <div class="site-topbar-shell" data-ui-review="site-topbar">
   <div class="site-topbar">
-    <a class="site-brand" href="/">Pitch Changer</a>
+    <a class="site-brand" href="/">
+      <img src="/icons/128.png" width="32" height="32" alt="" />
+      Pitch Changer
+    </a>
     <nav class="site-navigation" aria-label="Main navigation">
 <a href="/">For songs</a>
 <a href="/video-pitch-changer/" aria-current="page">For videos</a>
